@@ -1,0 +1,24 @@
+Einleitung
+
+Dieser Versuch verdeutlicht die Funktionsweise eines Lock-In-Verstärkers. Der Verstärker zeichnet sich durch einen integrierten Phasenempfindlichen Detektor aus. Er ist somit in der Lage, stark verrauschte Signale mit großen Güten zu filtern.
+
+
+Theorie
+
+Der Lock-In-Verstärker ist aus vier grundlegenden Bauteilen aufgebaut. Ein Bandpaßfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal, das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann. Ein Tiefpaßfilter dient schließlich als Integrierglied und glättet das Signal.
+
+Hiernach gilt für das Ausgangssignal:
+
+U_out \propto U_o cos \phi (1)
+
+Für diesen Versuch wird als Eingangssignal ein Signal U_0 mit bekannter Frequenz \omega_0 benutzt und mit einem Rauschen versehen. Der Bandpaßfilter filtert alle Frequenzen \omega << \omega_0 und \omega >> \omega_0 heraus. Danach wird U_0 mit einem Referenzsignal U_ref mit konstanter Amplitude und der Frequenz \omega_0 multipliziert. Diese Frequenz kann durch den Phasenschieber mit U_0 synchronisiert werden. Das so variierte Signal kann nun durch den Tiefpaß integriert werden, wobei \tau = RC >> 1/\omega_0 gilt. Durch diese Integration wird das Signal geglättet, sodass die Identität (1) erfüllt ist.
+Damit lässt sich die Güte eines einfachen Bandpaßfilters von q = 1 000 auf bis zu Q = 100 000 verbessern.
+
+Skizze Versuchsaufbau
+
+Im folgenden Beispiel wird das Eingangssignal
+
+U_sig = U_0 sin(\omega t)
+
+betrachtet.
+
