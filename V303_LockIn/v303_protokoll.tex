@@ -28,20 +28,20 @@
 	\section{Theorie}
 
 		Der Lock-In-Verst"arker ist aus vier grundlegenden Bauteilen aufgebaut.
-		Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal,
-		das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann.
+		Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem ReferenzSignal,
+		das durch einen Phasenschieber mit dem EingangsSignal in Phase gebracht werden kann.
 		Ein Tiefpa"sfilter dient schlie"slich als Integrierglied und gl"attet das Signal.
 
-		Hiernach gilt f"ur das Ausgangssignal:
+		Hiernach gilt f"ur das AusgangsSignal:
 
 		\begin{equation}
 			\label{gl1}
 			U_{out} \propto U_o cos \phi (1)
 		\end{equation}
 
-		F"ur diesen Versuch wird als Eingangssignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
+		F"ur diesen Versuch wird als EingangsSignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
 		Der Bandpa"sfilter filtert alle Frequenzen $\omega << \omega_0$ und $\omega >> \omega_0$ heraus.
-		Danach wird $U_0$ mit einem Referenzsignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0 + \phi$ multipliziert ($\phi$ ist die Phasendifferenz zwischen $U_0$ und $U_{ref}$).
+		Danach wird $U_0$ mit einem ReferenzSignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0 + \phi$ multipliziert ($\phi$ ist die Phasendifferenz zwischen $U_0$ und $U_{ref}$).
 		Diese Frequenz kann durch den Phasenschieber mit $U_0$ synchronisiert werden ($\phi = 0$). Das so variierte Signal kann nun durch den Tiefpa"s integriert werden,
 		wobei $\tau = RC >> 1/\omega_0$ gilt.
 		Durch diese Integration wird das Signal gegl"attet, sodass die Identit"at \ref{gl1} erf"ullt ist.
@@ -53,14 +53,14 @@
 		\label{beispiel}
 		\subsection{Beispiel} 
 
-			Dies dient der Veranschaulichung. Es wird das Eingangssignal
+			Dies dient der Veranschaulichung. Es wird das EingangsSignal
 
 			\begin{displaymath}
 				U_{sig} = U_0 sin(\omega t)
 			\end{displaymath}
 
 			betrachtet. Wie oben beschrieben,
-			wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
+			wird dies nun mit einer Rechteckspannung als RefenzSignal multipliziert:
 
 			\begin{eqnarray*}
 				U_{ref} &=& \frac{4}{\pi}
@@ -86,7 +86,7 @@
 		 
 
 			\begin{equation}
-				U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
+				U_{out} = \frac{2}{\pi} U_0 \cos{\phi} \label{theorie}
 			\end{equation}
 
 
@@ -115,18 +115,18 @@
 		\subsection{Messaufgaben}
 
 			\begin{enumerate}
-				\item \label{a0} Messen des Augsangssignals nach jedem Modul
-				\item \label{a1} Messen des Ausgangssignals nach dem Detektor ohne Rauschen mit verschiedenen Phasen
-				\item \label{a2} Messen des Ausgangssignals nach dem Integrierglied ohne Rauschen mit verschiedenen Phasen
-				\item \label{a3} Messen des Ausgangssignals nach dem Detektor mit Rauschen mit verschiedenen Phasen
-				\item \label{a4} Messen des Ausgangssignals nach dem Integrierglied mit Rauschen mit verschiedenen Phasen
-				\item \label{a5} Messen des Ausgangssignals mit verschiedenen Abständen der LED zum Photodetektor
+				\item \label{a0} Messen des AugsangsSignals nach jedem Modul
+				\item \label{a1} Messen des AusgangsSignals nach dem Detektor ohne Rauschen mit verschiedenen Phasen
+				\item \label{a2} Messen des AusgangsSignals nach dem Integrierglied ohne Rauschen mit verschiedenen Phasen
+				\item \label{a3} Messen des AusgangsSignals nach dem Detektor mit Rauschen mit verschiedenen Phasen
+				\item \label{a4} Messen des AusgangsSignals nach dem Integrierglied mit Rauschen mit verschiedenen Phasen
+				\item \label{a5} Messen des AusgangsSignals mit verschiedenen Abständen der LED zum Photodetektor
 			\end{enumerate}
 
 		\subsection{Durchf"uhrung}
 
 			Zun"achst wurden die Module schrittweise in die Schaltung eingebunden.
-			Nach jeder neuen Konfiguration wurde das Ausgangssignal am Oszilloskop ausgegeben und gespei-chert,
+			Nach jeder neuen Konfiguration wurde das AusgangsSignal am Oszilloskop ausgegeben und gespei-chert,
 			um den Einfluss der einzelnen Module zu veranschaulichen (Aufgabe \ref{a0}).
 
 			Hiernach wurden verschiedene Phasendifferenzen eingestellt und hinter dem Detektor gemessen.
@@ -147,7 +147,7 @@
 		\subsection{Module des Verst"arkers}
 
 			Die in \ref{module} aufgef"urten Module des Verst"arkers werden im Folgenden erl"autert.
-			Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das Eingangssignal beobachtet werden.
+			Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das EingangsSignal beobachtet werden.
 
 			\subsubsection{Funktionsgenerator (Oszilloskop)}
 
@@ -170,7 +170,7 @@
 
 			\subsubsection{Vorverst"arker}
 
-				Die Amplitude des Eingangssignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
+				Die Amplitude des EingangsSignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
 				Der Unterschied zwischen der Verst"arkung 2 (Abb. 1.3) und der Verst"arkung 5 (Abb. 1.4) beträgt bei gleicher 
 				Eingangsspannung von $\SI{320}{\milli\volt}$ ungefähr $\SI{1,44}{\volt}$. In unseren Messreihen wurde dauerhaft die Verst"arkung 2 verwendet. 
 
@@ -187,18 +187,18 @@
 
 			\subsubsection{Phasenschieber}
 
-				Das Referenzsignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
-				Dadurch kann das Eingangssignal $U_0$ mit dem Referenzsignal $U_{ref}$ in Phase gebracht werden,
+				Das ReferenzSignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
+				Dadurch kann das EingangsSignal $U_0$ mit dem ReferenzSignal $U_{ref}$ in Phase gebracht werden,
 				damit es im Mischer Gleichgerichtet wird (Abb. 5).
 
 			\subsubsection{Mischer (Lock-In-Detektor)}
 
-				Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem Referenzsignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \ref{beispiel}) (Abb. 6.4).
+				Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem ReferenzSignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \vref{beispiel}) (Abb. 6.4).
 
 			\subsubsection{Integrierglied (Tiefpa"s-Verst"arker)}
 
 				Das letzte Modul in der Schaltung integriert das Signal aus dem Detektor "uber mehrere Perioden.
-				Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde.
+				Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde (Abb. 7).
 
 		\subsection{LED-PD Schaltung}
 
@@ -220,5 +220,10 @@
 
 
 	\section{Diskussion}
+
+		Die Ergebnisse verdeutlichen, dass man mit dem Lock-in Verst"arker in der Lage ist verrauschte Signale gut zu filtern.
+		Am Beispiel der LED-PD Schaltun ist der Praxisbezug besonders deutlich geworden. Wenn die zu filternde Frequenz bekannt ist, 
+		werden sehr gute Ergebnisse erzielt. Der Umgang mit dem Oszilloskop ist durch den Versuch geschult worden und die Grundlagen
+		der Funktionsweise des Lock-in Verst"arkers sind deutlich geworden.
 
 \end{document}
