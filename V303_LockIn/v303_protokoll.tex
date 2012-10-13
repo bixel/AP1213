@@ -1,93 +1,105 @@
 \documentclass{scrartcl}
-\usepackage{ngerman}
-\usepackage{siunitx}
+	%ngerman für Umlaute, Anführungszeichen, etc.%
+	\usepackage{ngerman}
 
-\parindent0pt
+	%siunitx für SI-Einheitesnsystem%
+	\usepackage{siunitx}
+
+	%graphicx für Bildeinbindung%
+	\usepackage{graphicx}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent0pt
 
 \begin{document}
 
-\section{Einleitung}
+	\section{Einleitung}
 
-Dieser Versuch verdeutlicht die Funktionsweise eines Lock-In-Verst"arkers.
-Der Verst"arker zeichnet sich durch einen integrierten Phasenempfindlichen Detektor aus.
-Er ist somit in der Lage, stark verrauschte Signale mit gro"sen G"uten zu filtern.
-
-
-\section{Theorie}
-
-Der Lock-In-Verst"arker ist aus vier grundlegenden Bauteilen aufgebaut.
-Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal,
-das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann.
-Ein Tiefpa"sfilter dient schlie"slich als Integrierglied und gl"attet das Signal.
-
-Hiernach gilt f"ur das Ausgangssignal:
-
-\begin{equation}
-\label{gl1}
-U_{out} \propto U_o cos \phi (1)
-\end{equation}
-
-F"ur diesen Versuch wird als Eingangssignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
-Der Bandpa"sfilter filtert alle Frequenzen $\omega << \omega_0$ und $\omega >> \omega_0$ heraus.
-Danach wird $U_0$ mit einem Referenzsignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0 + \phi$ multipliziert ($\phi$ ist die Phasendifferenz zwischen $U_0$ und $U_{ref}$).
-Diese Frequenz kann durch den Phasenschieber mit $U_0$ synchronisiert werden ($\phi = 0$). Das so variierte Signal kann nun durch den Tiefpa"s integriert werden,
-wobei $\tau = RC >> 1/\omega_0$ gilt.
-Durch diese Integration wird das Signal gegl"attet, sodass die Identit"at \ref{gl1} erf"ullt ist.
-Damit l"asst sich die G"ute eines einfachen Bandpa"sfilters von q = 1 000 auf bis zu Q = 100 000 verbessern.
+	Dieser Versuch verdeutlicht die Funktionsweise eines Lock-In-Verst"arkers.
+	Der Verst"arker zeichnet sich durch einen integrierten Phasenempfindlichen Detektor aus.
+	Er ist somit in der Lage, stark verrauschte Signale mit gro"sen G"uten zu filtern.
 
 
-Skizze Versuchsaufbau
+	\section{Theorie}
+
+	Der Lock-In-Verst"arker ist aus vier grundlegenden Bauteilen aufgebaut.
+	Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal,
+	das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann.
+	Ein Tiefpa"sfilter dient schlie"slich als Integrierglied und gl"attet das Signal.
+
+	Hiernach gilt f"ur das Ausgangssignal:
+
+	\begin{equation}
+	\label{gl1}
+	U_{out} \propto U_o cos \phi (1)
+	\end{equation}
+
+	F"ur diesen Versuch wird als Eingangssignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
+	Der Bandpa"sfilter filtert alle Frequenzen $\omega << \omega_0$ und $\omega >> \omega_0$ heraus.
+	Danach wird $U_0$ mit einem Referenzsignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0 + \phi$ multipliziert ($\phi$ ist die Phasendifferenz zwischen $U_0$ und $U_{ref}$).
+	Diese Frequenz kann durch den Phasenschieber mit $U_0$ synchronisiert werden ($\phi = 0$). Das so variierte Signal kann nun durch den Tiefpa"s integriert werden,
+	wobei $\tau = RC >> 1/\omega_0$ gilt.
+	Durch diese Integration wird das Signal gegl"attet, sodass die Identit"at \ref{gl1} erf"ullt ist.
+	Damit l"asst sich die G"ute eines einfachen Bandpa"sfilters von q = 1 000 auf bis zu Q = 100 000 verbessern.
 
 
-Folgendes Beispiel dient der Veranschaulichung. Es wird das Eingangssignal
+	Skizze Versuchsaufbau
 
-\begin{displaymath}
-	U_{sig} = U_0 sin(\omega t) \nonumber
-\end{displaymath}
 
-betrachtet. Wie oben beschrieben, wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
+	Folgendes Beispiel dient der Veranschaulichung. Es wird das Eingangssignal
 
-\begin{displaymath}
-	U_{ref} = \frac{4}{\pi} 
-		\left(\sin(\omega t + \phi) + 
-			\frac{1}{3} \sin(3 \omega t + \phi) + 
-			\frac{1}{5} \sin(5 \omega t + \phi) + 
+	\begin{displaymath}
+		U_{sig} = U_0 sin(\omega t)
+	\end{displaymath}
+
+	betrachtet. Wie oben beschrieben,
+	wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
+
+	\begin{eqnarray*}
+		U_{ref} &=& \frac{4}{\pi}
+			\left( \sin(\omega t + \phi) + 
+				\frac{1}{3} \sin(3 \omega t + \phi) + 
+				\frac{1}{5} \sin(5 \omega t + \phi) + 
+				\cdots 
+			\right)	\\
+		U_{sig} \times U_{ref} &=& \frac{2}{\pi} U_0 
+		\left(
+			1 - 
+			\frac{2}{3}\cos(2 \omega t + \phi) + 
+			\frac{2}{15} \cos(4 \omega t + \phi) + 
+			\frac{2}{35} \cos(6 \omega t + \phi) + 
 			\cdots 
-		\right) \\
+		\right)
+	\end{eqnarray*}
 
-	U_{sig} \times U_{ref} = \frac{2}{\pi} U_0 
-	\left(
-		1 - 
-		\frac{2}{3}\cos(2 \omega t + \phi) + 
-		\frac{2}{15} \cos(4 \omega t + \phi) + 
-		\frac{2}{35} \cos(6 \omega t + \phi) + 
-		\cdots 
-	\right)
-\end{displaymath}
+	Nach der Intefration durch den Tiefpa"sfilter fallen alle $\cos$ - Anteile weg und wir erhalten eine zur Signalspannung proportionale Gleichspannung:
 
-Nach der Intefration durch den Tiefpa"sfilter fallen alle $\cos$ - Anteile weg und wir erhalten eine zur Signalspannung proportionale Gleichspannung:
-
-\begin{equation}
-	U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
-\end{equation}
-
+<<<<<<< HEAD
 Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
  
+=======
+	\begin{equation}
+		U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
+	\end{equation}
+>>>>>>> 13e0568432d87918d0ee9bffed4eeb83957943ac
 
-\section{Aufbau und Durchf"uhrung}
+	Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
 
-Für diesen Versuch stand ein modular aufgebauter Lock-In-Verst"arker und ein Oszilloskop zur Verf"ugung.
-Der Verst"arker beinhaltete folgende unabhängige Module:
+	\section{Aufbau und Durchf"uhrung}
 
-Vorverst"arker
-Filter (Tiefpa"s, Hochpa"s, Bandpa"s)
-Amplituden-/Lock-In-Detektor
-Tiefpa"s Verst"arker (Integrierglied)
-Rauschgenerator
-Phasenschieber
-Funktionsgenerator (Oszillator)
+	Für diesen Versuch stand ein modular aufgebauter Lock-In-Verst"arker und ein Oszilloskop zur Verf"ugung.
+	Der Verst"arker beinhaltete folgende unabhängige Module:
 
-Skizze (Aufbau Lock-In-Verst"arker)
+	\begin{itemize}
+		\item Vorverst"arker
+		\item Filter (Tiefpa"s, Hochpa"s, Bandpa"s)
+		\item Amplituden-/Lock-In-Detektor
+		\item Tiefpa"s Verst"arker (Integrierglied)
+		\item Rauschgenerator
+		\item Phasenschieber
+		\item Funktionsgenerator (Oszillator)
+	\end{itemize}
+	Skizze (Aufbau Lock-In-Verst"arker)
 
 \subsection{Messaufgaben}
 
@@ -98,14 +110,14 @@ Skizze (Aufbau Lock-In-Verst"arker)
 \item \label{a4} Messen des Ausgangssignals nach dem Integrierglied mit Rauschen mit verschiedenen Phasen
 \end{enumerate}
 
-Zun"achst wurden die Module schrittweise in die Schaltung eingebunden.
-Nach jeder neuen Konfiguration wurde das Ausgangssignal am Oszilloskop ausgegeben und gespeichert,
-um den Einfluss der einzelnen Module zu veranschaulichen (Aufgabe 1).
+	Zun"achst wurden die Module schrittweise in die Schaltung eingebunden.
+	Nach jeder neuen Konfiguration wurde das Ausgangssignal am Oszilloskop ausgegeben und gespeichert,
+	um den Einfluss der einzelnen Module zu veranschaulichen (Aufgabe 1).
 
-Hiernach wurden verschiedene Phasendifferenzen eingestellt und hinter dem Detektor gemessen.
-Dabei wurde der Rauschgenerator zun"achst "uberbr"uckt.
-Dies wurde hinter dem Integrierglied wiederholt.
+	Hiernach wurden verschiedene Phasendifferenzen eingestellt und hinter dem Detektor gemessen.
+	Dabei wurde der Rauschgenerator zun"achst "uberbr"uckt.
+	Dies wurde hinter dem Integrierglied wiederholt.
 
-Im n"achsten Schritt 
+	Im n"achsten Schritt 
 
 \end{document}
