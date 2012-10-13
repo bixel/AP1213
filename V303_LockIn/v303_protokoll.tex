@@ -20,167 +20,196 @@
 
 	\section{Einleitung}
 
-	Dieser Versuch verdeutlicht die Funktionsweise eines Lock-In-Verst"arkers.
-	Der Verst"arker zeichnet sich durch einen integrierten Phasenempfindlichen Detektor aus.
-	Er ist somit in der Lage, stark verrauschte Signale mit gro"sen G"uten zu filtern.
+		Dieser Versuch verdeutlicht die Funktionsweise eines Lock-In-Verst"arkers.
+		Der Verst"arker zeichnet sich durch einen integrierten Phasenempfindlichen Detektor aus.
+		Er ist somit in der Lage, stark verrauschte Signale mit gro"sen G"uten zu filtern.
 
 
 	\section{Theorie}
 
-	Der Lock-In-Verst"arker ist aus vier grundlegenden Bauteilen aufgebaut.
-	Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal,
-	das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann.
-	Ein Tiefpa"sfilter dient schlie"slich als Integrierglied und gl"attet das Signal.
+		Der Lock-In-Verst"arker ist aus vier grundlegenden Bauteilen aufgebaut.
+		Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal,
+		das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann.
+		Ein Tiefpa"sfilter dient schlie"slich als Integrierglied und gl"attet das Signal.
 
-	Hiernach gilt f"ur das Ausgangssignal:
+		Hiernach gilt f"ur das Ausgangssignal:
 
-	\begin{equation}
-	\label{gl1}
-	U_{out} \propto U_o cos \phi (1)
-	\end{equation}
+		\begin{equation}
+			\label{gl1}
+			U_{out} \propto U_o cos \phi (1)
+		\end{equation}
 
-	F"ur diesen Versuch wird als Eingangssignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
-	Der Bandpa"sfilter filtert alle Frequenzen $\omega << \omega_0$ und $\omega >> \omega_0$ heraus.
-	Danach wird $U_0$ mit einem Referenzsignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0 + \phi$ multipliziert ($\phi$ ist die Phasendifferenz zwischen $U_0$ und $U_{ref}$).
-	Diese Frequenz kann durch den Phasenschieber mit $U_0$ synchronisiert werden ($\phi = 0$). Das so variierte Signal kann nun durch den Tiefpa"s integriert werden,
-	wobei $\tau = RC >> 1/\omega_0$ gilt.
-	Durch diese Integration wird das Signal gegl"attet, sodass die Identit"at \ref{gl1} erf"ullt ist.
-	Damit l"asst sich die G"ute eines einfachen Bandpa"sfilters von q = 1 000 auf bis zu Q = 100 000 verbessern.
+		F"ur diesen Versuch wird als Eingangssignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
+		Der Bandpa"sfilter filtert alle Frequenzen $\omega << \omega_0$ und $\omega >> \omega_0$ heraus.
+		Danach wird $U_0$ mit einem Referenzsignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0 + \phi$ multipliziert ($\phi$ ist die Phasendifferenz zwischen $U_0$ und $U_{ref}$).
+		Diese Frequenz kann durch den Phasenschieber mit $U_0$ synchronisiert werden ($\phi = 0$). Das so variierte Signal kann nun durch den Tiefpa"s integriert werden,
+		wobei $\tau = RC >> 1/\omega_0$ gilt.
+		Durch diese Integration wird das Signal gegl"attet, sodass die Identit"at \ref{gl1} erf"ullt ist.
+		Damit l"asst sich die G"ute eines einfachen Bandpa"sfilters von q = 1 000 auf bis zu Q = 100 000 verbessern.
 
 
-	Skizze Versuchsaufbau
+		Skizze Versuchsaufbau
 
-	\label{beispiel}
-	Folgendes Beispiel dient der Veranschaulichung. Es wird das Eingangssignal
+		\label{beispiel}
+		Folgendes Beispiel dient der Veranschaulichung. Es wird das Eingangssignal
 
-	\begin{displaymath}
-		U_{sig} = U_0 sin(\omega t)
-	\end{displaymath}
+		\begin{displaymath}
+			U_{sig} = U_0 sin(\omega t)
+		\end{displaymath}
 
-	betrachtet. Wie oben beschrieben,
-	wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
+		betrachtet. Wie oben beschrieben,
+		wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
 
-	\begin{eqnarray*}
-		U_{ref} &=& \frac{4}{\pi}
-			\left( \sin(\omega t + \phi) + 
-				\frac{1}{3} \sin(3 \omega t + \phi) + 
-				\frac{1}{5} \sin(5 \omega t + \phi) + 
+		\begin{eqnarray*}
+			U_{ref} &=& \frac{4}{\pi}
+				\left( \sin(\omega t + \phi) + 
+					\frac{1}{3} \sin(3 \omega t + \phi) + 
+					\frac{1}{5} \sin(5 \omega t + \phi) + 
+					\cdots 
+				\right)	\\
+			U_{sig} \times U_{ref} &=& \frac{2}{\pi} U_0 
+			\left(
+				1 - 
+				\frac{2}{3}\cos(2 \omega t + \phi) + 
+				\frac{2}{15} \cos(4 \omega t + \phi) + 
+				\frac{2}{35} \cos(6 \omega t + \phi) + 
 				\cdots 
-			\right)	\\
-		U_{sig} \times U_{ref} &=& \frac{2}{\pi} U_0 
-		\left(
-			1 - 
-			\frac{2}{3}\cos(2 \omega t + \phi) + 
-			\frac{2}{15} \cos(4 \omega t + \phi) + 
-			\frac{2}{35} \cos(6 \omega t + \phi) + 
-			\cdots 
-		\right)
-	\end{eqnarray*}
+			\right)
+		\end{eqnarray*}
 
-	Nach der Intefration durch den Tiefpa"sfilter fallen alle $\cos$ - Anteile weg und wir erhalten eine zur Signalspannung proportionale Gleichspannung:
+		Nach der Intefration durch den Tiefpa"sfilter fallen alle $\cos$ - Anteile weg und wir erhalten eine zur Signalspannung proportionale Gleichspannung:
 
 
-Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
- 
+		Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
+	 
 
-	\begin{equation}
-		U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
-	\end{equation}
-
-
-	Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
-
-	\section{Aufbau und Durchf"uhrung}
-
-	Für diesen Versuch stand ein modular aufgebauter Lock-In-Verst"arker und ein Oszilloskop zur Verf"ugung.
-	Der Verst"arker beinhaltete folgende unabhängige Module:\label{module}
-
-	\begin{itemize}
-		\item Vorverst"arker
-		\item Filter (Tiefpa"s, Hochpa"s, Bandpa"s)
-		\item Amplituden-/Lock-In-Detektor
-		\item Tiefpa"s Verst"arker (Integrierglied)
-		\item Rauschgenerator
-		\item Phasenschieber
-		\item Funktionsgenerator (Oszillator)
-	\end{itemize}
-	Skizze (Aufbau Lock-In-Verst"arker)
-
-\subsection{Messaufgaben}
-
-\begin{enumerate}
-\item \label{a1} Messen des Ausgangssignals nach dem Detektor ohne Rauschen mit verschiedenen Phasen
-\item \label{a2} Messen des Ausgangssignals nach dem Integrierglied ohne Rauschen mit verschiedenen Phasen
-\item \label{a3} Messen des Ausgangssignals nach dem Detektor mit Rauschen mit verschiedenen Phasen
-\item \label{a4} Messen des Ausgangssignals nach dem Integrierglied mit Rauschen mit verschiedenen Phasen
-\end{enumerate}
-
-	Zun"achst wurden die Module schrittweise in die Schaltung eingebunden.
-	Nach jeder neuen Konfiguration wurde das Ausgangssignal am Oszilloskop ausgegeben und gespeichert,
-	um den Einfluss der einzelnen Module zu veranschaulichen (Aufgabe 1).
-
-	Hiernach wurden verschiedene Phasendifferenzen eingestellt und hinter dem Detektor gemessen.
-	Dabei wurde der Rauschgenerator zun"achst "uberbr"uckt.
-	Dies wurde hinter dem Integrierglied wiederholt.
-
-	Im n"achsten Schritt 
+		\begin{equation}
+			U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
+		\end{equation}
 
 
-\section{Auswertung}
+		Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
 
-\subsection{Module des Verst"arkers}
+		\section{Aufbau und Durchf"uhrung}
 
-Die in \ref{module} aufgef"urten Module des Verst"arkers werden im Folgenden erl"autert.
-Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das Eingangssignal beobachtet werden.
+		Für diesen Versuch stand ein modular aufgebauter Lock-In-Verst"arker und ein Oszilloskop zur Verf"ugung.
+		Der Verst"arker beinhaltete folgende unabhängige Module:\label{module}
 
-\subsubsection{Funktionsgenerator (Oszilloskop)}
+		\begin{itemize}
+			\item Vorverst"arker
+			\item Filter (Tiefpa"s, Hochpa"s, Bandpa"s)
+			\item Amplituden-/Lock-In-Detektor
+			\item Tiefpa"s Verst"arker (Integrierglied)
+			\item Rauschgenerator
+			\item Phasenschieber
+			\item Funktionsgenerator (Oszillator)
+		\end{itemize}
+		Skizze (Aufbau Lock-In-Verst"arker)
 
-Hier wird das Signal f"ur unseren Versuch generiert.
-Der Funktionsgenerator kann eine Sinus- oder Rechteckspannung im Bereich von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$ ausgeben.
-Das Modul besitzt zudem zwei Ausg"ange. Der erste Ausgang liefert das zu messende Signal.
-Hier kann die Spannung von $\SI{1}{\volt}$ bis $\SI{10}{\volt}$ varriert und mit dem Faktor $\frac{1}{100}$ multipliziert werden.
-Der Zweite Ausgang liefert die Referenzsspannung, mit der das Signal im Detektor gemischt wird.
-Die Amplitude betrug bei unserem Ger"at konstante $\SI{23.2(5)}{\volt}$.
-Ausser-dem gibt der zweite Ausgang lediglich eine Sinusspannung aus.
+		\subsection{Messaufgaben}
 
-F"ur die Messungen \ref{a1} bis \ref{a3} haben wir eine Sinuspaunnung von $\SI{1}{\volt}$ und eine Frequenz von $\SI{1}{\kilo\hertz}$ eingestellt.
-Die Messung \ref{a4} wurde mit einer Rechteckspannung durchgef"uhrt.
+			\begin{enumerate}
+				\item \label{a0} Messen des Augsangssignals nach jedem Modul
+				\item \label{a1} Messen des Ausgangssignals nach dem Detektor ohne Rauschen mit verschiedenen Phasen
+				\item \label{a2} Messen des Ausgangssignals nach dem Integrierglied ohne Rauschen mit verschiedenen Phasen
+				\item \label{a3} Messen des Ausgangssignals nach dem Detektor mit Rauschen mit verschiedenen Phasen
+				\item \label{a4} Messen des Ausgangssignals nach dem Integrierglied mit Rauschen mit verschiedenen Phasen
+				\item \label{a5} Messen des Ausgangssignals mit verschiedenen Abständen der LED zum Photodetektor
+			\end{enumerate}
 
-\subsubsection{Rauschgenerator}
+		\subsection{Durchf"uhrung}
 
-Das Signal aus dem Funktionsgenerator kann hier mit einem Rauschen belegt werden.
-Die Amplitude l"asst sich zwischen $\SI{e-5}{\volt}$ und $\SI{1}{\volt}$ einstellen.
-F"ur die Messungen \ref{a1} und \ref{a2} wurde der Rauschgenerator "uberbr"uckt. Die weiteren Messungen wurde mit einem Rauschen von $\SI{e-1}{\volt}$ durchgef"uhrt.
+			Zun"achst wurden die Module schrittweise in die Schaltung eingebunden.
+			Nach jeder neuen Konfiguration wurde das Ausgangssignal am Oszilloskop ausgegeben und gespei-chert,
+			um den Einfluss der einzelnen Module zu veranschaulichen (Aufgabe \ref{a0}).
 
-\subsubsection{Vorverst"arker}
+			Hiernach wurden verschiedene Phasendifferenzen eingestellt und hinter dem Detektor gemessen.
+			Dabei wurde der Rauschgenerator zun"achst "uberbr"uckt (Aufgabe \ref{a1}).
+			Dies wurde hinter dem Integrierglied wiederholt (Aufgabe \ref{a2}).
 
-Die Amplitude des Eingangssignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
-In unseren Messreihen wurde dauerhaft die Verst"arkung 2 verwendet.
+			Im n"achsten Schritt wurde ein Rauschen in der Gr"o"senordnung der Signalspannung hinzugefügt und die Messungen
+			wiederholt (Aufgabe \ref{a3}, Aufgabe \ref{a4}).
 
-\subsubsection{Filter}
+			Anschließend wurde der Rauschgenerator durch eine LED und eine Photozelle(PD) ersetzt.
+			Die Signalfrequenz sollte auf $\SI{50}{\hertz}-\SI{500}{\hertz}$ eingestellt werden.
+			Zus"atzlich wird die Signalspannung am Schalter von Sinus auf Rechtechsspannung umgestellt.
+			Während der Messungen wurde der Abstand zwischen LED und PD vergrößert und so der Maximale Abstand ermittelt,
+			bei dem das Licht noch nachgewiesen werden konnte (Aufgabe \ref{a5}).
 
-Hier wird das Signal aus dem Vorverst"arker gefiltert. Es stehen Tiefpa"s-, Hochpa"s- und Bandpa"sfilter zur Verf"ugung.
-Wir nutzten ausschlie"slich den Bandpa"sfilter. Durch Kombination eines Tiefpa"s- und Hochpa"sglied werden alle Frequenzen
-$\omega >> \omega_0$ und $\omega << \omega_0$ aus dem Signal eliminiert.
-$\omega_0$ kann hierbei im Frequenzspektrum des Funktionsgenerators (von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$) gew"ahlt werden.
-Alle Frequenzen, die sich also stark von $\omega_0$ unterscheiden werden hier also gefiltert.
-Das Rauschen, welches wir in den Messungen \ref{a3} und \ref{a4} auf das Signal gelegt haben kann hierdurch stark reduziert werden.
+	\section{Auswertung}
 
-\subsubsection{Phasenschieber}
+		\subsection{Module des Verst"arkers}
 
-Das Referenzsignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
-Dadurch kann das Eingangssignal $U_0$ mit dem Referenzsignal $U_{ref}$ in Phase gebracht werden,
-damit es im Mischer Gleichgerichtet wird.
+		Die in \ref{module} aufgef"urten Module des Verst"arkers werden im Folgenden erl"autert.
+		Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das Eingangssignal beobachtet werden.
 
-\subsubsection{Mischer (Lock-In-Detektor)}
+			\subsubsection{Funktionsgenerator (Oszilloskop)}
 
-Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem Referenzsignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \ref{beispiel}).
+			Hier wird das Signal f"ur unseren Versuch generiert.
+			Der Funktionsgenerator kann eine Sinus- oder Rechteckspannung im Bereich von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$ ausgeben.
+			Das Modul besitzt zudem zwei Ausg"ange. Der erste Ausgang liefert das zu messende Signal.
+			Hier kann die Spannung von $\SI{1}{\volt}$ bis $\SI{10}{\volt}$ varriert und mit dem Faktor $\frac{1}{100}$ multipliziert werden.
+			Der Zweite Ausgang liefert die Referenzsspannung, mit der das Signal im Detektor gemischt wird.
+			Die Amplitude betrug bei unserem Ger"at konstante $\SI{23.2(5)}{\volt}$.
+			Ausser-dem gibt der zweite Ausgang lediglich eine Sinusspannung aus.
 
-\subsubsection{Integrierglied (Tiefpa"s-Verst"arker)}
+			F"ur die Messungen \ref{a1} bis \ref{a3} haben wir eine Sinuspaunnung von $\SI{1}{\volt}$ und eine Frequenz von $\SI{1}{\kilo\hertz}$ eingestellt.
+			Die Messung \ref{a4} wurde mit einer Rechteckspannung durchgef"uhrt.
 
-Das letzte Modul in der Schaltung integriert das Signal aus dem Detektor "uber mehrere Perioden.
-Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde.
+			\subsubsection{Rauschgenerator}
+
+			Das Signal aus dem Funktionsgenerator kann hier mit einem Rauschen belegt werden.
+			Die Amplitude l"asst sich zwischen $\SI{e-5}{\volt}$ und $\SI{1}{\volt}$ einstellen.
+			F"ur die Messungen \ref{a1} und \ref{a2} wurde der Rauschgenerator "uberbr"uckt. Die weiteren Messungen wurde mit einem Rauschen von $\SI{e-1}{\volt}$ durchgef"uhrt.
+
+			\subsubsection{Vorverst"arker}
+
+			Die Amplitude des Eingangssignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
+			In unseren Messreihen wurde dauerhaft die Verst"arkung 2 verwendet.
+
+			\subsubsection{Filter}
+
+			Hier wird das Signal aus dem Vorverst"arker gefiltert. Es stehen Tiefpa"s-, Hochpa"s- und Bandpa"sfilter zur Verf"ugung.
+			Wir nutzten ausschlie"slich den Bandpa"sfilter. Durch Kombination eines Tiefpa"s- und Hochpa"sglied werden alle Frequenzen
+			$\omega >> \omega_0$ und $\omega << \omega_0$ aus dem Signal eliminiert.
+			$\omega_0$ kann hierbei im Frequenzspektrum des Funktions-generators (von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$) gew"ahlt werden.
+			Alle Frequenzen, die sich also stark von $\omega_0$ unterscheiden werden hier also gefiltert.
+			Das Rauschen, welches wir in den Messungen \ref{a3} und \ref{a4} auf das Signal gelegt haben kann hierdurch stark reduziert werden.
+
+			\subsubsection{Phasenschieber}
+
+			Das Referenzsignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
+			Dadurch kann das Eingangssignal $U_0$ mit dem Referenzsignal $U_{ref}$ in Phase gebracht werden,
+			damit es im Mischer Gleichgerichtet wird.
+
+			\subsubsection{Mischer (Lock-In-Detektor)}
+
+			Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem Referenzsignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \ref{beispiel}).
+
+			\subsubsection{Integrierglied (Tiefpa"s-Verst"arker)}
+
+			Das letzte Modul in der Schaltung integriert das Signal aus dem Detektor "uber mehrere Perioden.
+			Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde.
+
+			\subsection{LED-PD Schaltung}
+
+			Der letzte Versuchsaufbau lieferte ein \"echt\" verrauschtes Signal.
+			Die LED wurde in verschie-denen Abst"anden zu einem Photodetektor aufgebaut und mit einer Rechteckspannung gespeist.
+			Durch das wei"se Umgebungslicht im Versuchsraum erreichte das Signal der LED den PD nur sehr verrauscht.
+			Das Signal des PD wurde vom den Lock-In-Verst"arker detektiert.
+			Wir erwarteten eine Abnahme des Signals im Verh"altnis $\frac{1}{r^2}$ mit dem Abstand $r$ zwischen LED und PD.
+			Die LED wurde mit einer Frequenz von $\SI{125,25}{\hertz}$ betrieben. Die Messung ergab folgende Daten:
 
 
+			Messdaten
+
+
+			Tr"agt man die Daten auf einen Graphen, l"asst sich das erwartete verhalten leicht erkennen:
+
+
+			Graph
+
+
+	\section{Diskussion}
 
 \end{document}
