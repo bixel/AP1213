@@ -1,0 +1,48 @@
+\documentclass{scrartcl}
+\usepackage{ngerman}
+\usepackage{siunitx}
+
+\parindent0pt
+
+\begin{document}
+
+\section{Einleitung}
+
+Dieser Versuch verdeutlicht die Funktionsweise eines Lock-In-Verst"arkers.
+Der Verst"arker zeichnet sich durch einen integrierten Phasenempfindlichen Detektor aus.
+Er ist somit in der Lage, stark verrauschte Signale mit gro"sen G"uten zu filtern.
+
+
+\section{Theorie}
+
+Der Lock-In-Verst"arker ist aus vier grundlegenden Bauteilen aufgebaut.
+Ein Bandpa"sfilter dient als Vorfilter. Ein Mischer multipliziert das gefilterte Signal mit einem Referenzsignal,
+das durch einen Phasenschieber mit dem Eingangssignal in Phase gebracht werden kann.
+Ein Tiefpa"sfilter dient schlie"slich als Integrierglied und gl"attet das Signal.
+
+Hiernach gilt f"ur das Ausgangssignal:
+
+\begin{equation}
+\label{gl1}
+U_{out} \propto U_o cos \phi (1)
+\end{equation}
+
+F"ur diesen Versuch wird als Eingangssignal ein Signal $U_0$ mit bekannter Frequenz $\omega_0$ benutzt und mit einem Rauschen versehen.
+Der Bandpa"sfilter filtert alle Frequenzen $\omega << \omega_0$ und $\omega >> \omega_0$ heraus.
+Danach wird $U_0$ mit einem Referenzsignal $U_{ref}$ mit konstanter Amplitude und der Frequenz $\omega_0$ multipliziert.
+Diese Frequenz kann durch den Phasenschieber mit $U_0$ synchronisiert werden. Das so variierte Signal kann nun durch den Tiefpa"s integriert werden,
+wobei $\tau = RC >> 1/\omega_0$ gilt.
+Durch diese Integration wird das Signal gegl"attet, sodass die Identit"at \ref{gl1} erf"ullt ist.
+Damit l"asst sich die G"ute eines einfachen Bandpa"sfilters von q = 1 000 auf bis zu Q = 100 000 verbessern.
+
+Skizze Versuchsaufbau
+
+Im folgenden Beispiel wird das Eingangssignal
+
+\begin{displaymath}
+U_{sig} = U_0 sin(\omega t) \nonumber
+\end{displaymath}
+
+betrachtet.
+
+\end{document}
