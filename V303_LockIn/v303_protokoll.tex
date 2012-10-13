@@ -4,6 +4,11 @@
 
 	%siunitx für SI-Einheitesnsystem%
 	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
 
 	%graphicx für Bildeinbindung%
 	\usepackage{graphicx}
@@ -45,7 +50,7 @@
 
 	Skizze Versuchsaufbau
 
-
+	\label{beispiel}
 	Folgendes Beispiel dient der Veranschaulichung. Es wird das Eingangssignal
 
 	\begin{displaymath}
@@ -88,7 +93,7 @@ Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in P
 	\section{Aufbau und Durchf"uhrung}
 
 	Für diesen Versuch stand ein modular aufgebauter Lock-In-Verst"arker und ein Oszilloskop zur Verf"ugung.
-	Der Verst"arker beinhaltete folgende unabhängige Module:
+	Der Verst"arker beinhaltete folgende unabhängige Module:\label{module}
 
 	\begin{itemize}
 		\item Vorverst"arker
@@ -119,5 +124,63 @@ Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in P
 	Dies wurde hinter dem Integrierglied wiederholt.
 
 	Im n"achsten Schritt 
+
+
+\section{Auswertung}
+
+\subsection{Module des Verst"arkers}
+
+Die in \ref{module} aufgef"urten Module des Verst"arkers werden im Folgenden erl"autert.
+Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das Eingangssignal beobachtet werden.
+
+\subsubsection{Funktionsgenerator (Oszilloskop)}
+
+Hier wird das Signal f"ur unseren Versuch generiert.
+Der Funktionsgenerator kann eine Sinus- oder Rechteckspannung im Bereich von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$ ausgeben.
+Das Modul besitzt zudem zwei Ausg"ange. Der erste Ausgang liefert das zu messende Signal.
+Hier kann die Spannung von $\SI{1}{\volt}$ bis $\SI{10}{\volt}$ varriert und mit dem Faktor $\frac{1}{100}$ multipliziert werden.
+Der Zweite Ausgang liefert die Referenzsspannung, mit der das Signal im Detektor gemischt wird.
+Die Amplitude betrug bei unserem Ger"at konstante $\SI{23.2(5)}{\volt}$.
+Ausser-dem gibt der zweite Ausgang lediglich eine Sinusspannung aus.
+
+F"ur die Messungen \ref{a1} bis \ref{a3} haben wir eine Sinuspaunnung von $\SI{1}{\volt}$ und eine Frequenz von $\SI{1}{\kilo\hertz}$ eingestellt.
+Die Messung \ref{a4} wurde mit einer Rechteckspannung durchgef"uhrt.
+
+\subsubsection{Rauschgenerator}
+
+Das Signal aus dem Funktionsgenerator kann hier mit einem Rauschen belegt werden.
+Die Amplitude l"asst sich zwischen $\SI{e-5}{\volt}$ und $\SI{1}{\volt}$ einstellen.
+F"ur die Messungen \ref{a1} und \ref{a2} wurde der Rauschgenerator "uberbr"uckt. Die weiteren Messungen wurde mit einem Rauschen von $\SI{e-1}{\volt}$ durchgef"uhrt.
+
+\subsubsection{Vorverst"arker}
+
+Die Amplitude des Eingangssignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
+In unseren Messreihen wurde dauerhaft die Verst"arkung 2 verwendet.
+
+\subsubsection{Filter}
+
+Hier wird das Signal aus dem Vorverst"arker gefiltert. Es stehen Tiefpa"s-, Hochpa"s- und Bandpa"sfilter zur Verf"ugung.
+Wir nutzten ausschlie"slich den Bandpa"sfilter. Durch Kombination eines Tiefpa"s- und Hochpa"sglied werden alle Frequenzen
+$\omega >> \omega_0$ und $\omega << \omega_0$ aus dem Signal eliminiert.
+$\omega_0$ kann hierbei im Frequenzspektrum des Funktionsgenerators (von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$) gew"ahlt werden.
+Alle Frequenzen, die sich also stark von $\omega_0$ unterscheiden werden hier also gefiltert.
+Das Rauschen, welches wir in den Messungen \ref{a3} und \ref{a4} auf das Signal gelegt haben kann hierdurch stark reduziert werden.
+
+\subsubsection{Phasenschieber}
+
+Das Referenzsignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
+Dadurch kann das Eingangssignal $U_0$ mit dem Referenzsignal $U_{ref}$ in Phase gebracht werden,
+damit es im Mischer Gleichgerichtet wird.
+
+\subsubsection{Mischer (Lock-In-Detektor)}
+
+Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem Referenzsignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \ref{beispiel}).
+
+\subsubsection{Integrierglied (Tiefpa"s-Verst"arker)}
+
+Das letzte Modul in der Schaltung integriert das Signal aus dem Detektor "uber mehrere Perioden.
+Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde.
+
+
 
 \end{document}
