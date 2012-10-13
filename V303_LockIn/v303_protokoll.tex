@@ -51,60 +51,66 @@
 		Skizze Versuchsaufbau
 
 		\label{beispiel}
-		Folgendes Beispiel dient der Veranschaulichung. Es wird das Eingangssignal
+		\subsection{Beispiel} 
 
-		\begin{displaymath}
-			U_{sig} = U_0 sin(\omega t)
-		\end{displaymath}
+			Dies dient der Veranschaulichung. Es wird das Eingangssignal
 
-		betrachtet. Wie oben beschrieben,
-		wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
+			\begin{displaymath}
+				U_{sig} = U_0 sin(\omega t)
+			\end{displaymath}
 
-		\begin{eqnarray*}
-			U_{ref} &=& \frac{4}{\pi}
-				\left( \sin(\omega t + \phi) + 
-					\frac{1}{3} \sin(3 \omega t + \phi) + 
-					\frac{1}{5} \sin(5 \omega t + \phi) + 
+			betrachtet. Wie oben beschrieben,
+			wird dies nun mit einer Rechteckspannung als Refenzsignal multipliziert:
+
+			\begin{eqnarray*}
+				U_{ref} &=& \frac{4}{\pi}
+					\left( \sin(\omega t + \phi) + 
+						\frac{1}{3} \sin(3 \omega t + \phi) + 
+						\frac{1}{5} \sin(5 \omega t + \phi) + 
+						\cdots 
+					\right)	\\
+				U_{sig} \times U_{ref} &=& \frac{2}{\pi} U_0 
+				\left(
+					1 - 
+					\frac{2}{3}\cos(2 \omega t + \phi) + 
+					\frac{2}{15} \cos(4 \omega t + \phi) + 
+					\frac{2}{35} \cos(6 \omega t + \phi) + 
 					\cdots 
-				\right)	\\
-			U_{sig} \times U_{ref} &=& \frac{2}{\pi} U_0 
-			\left(
-				1 - 
-				\frac{2}{3}\cos(2 \omega t + \phi) + 
-				\frac{2}{15} \cos(4 \omega t + \phi) + 
-				\frac{2}{35} \cos(6 \omega t + \phi) + 
-				\cdots 
-			\right)
-		\end{eqnarray*}
+				\right)
+			\end{eqnarray*}
 
-		Nach der Intefration durch den Tiefpa"sfilter fallen alle $\cos$ - Anteile weg und wir erhalten eine zur Signalspannung proportionale Gleichspannung:
+			Nach der Intefration durch den Tiefpa"sfilter fallen alle $\cos$ - Anteile weg und wir erhalten eine zur Signalspannung proportionale Gleichspannung:
 
 
-		Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
-	 
+			Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
+		 
 
-		\begin{equation}
-			U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
-		\end{equation}
+			\begin{equation}
+				U_{out} = \frac{2}{\pi} U_0 \cos{\phi}
+			\end{equation}
 
 
-		Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
+			Man sieht, dass die Ausgangsspannung maximal wird, wenn Signal und Referenz in Phase sind.
 
-		\section{Aufbau und Durchf"uhrung}
+	\section{Aufbau und Durchf"uhrung}
+
 
 		Für diesen Versuch stand ein modular aufgebauter Lock-In-Verst"arker und ein Oszilloskop zur Verf"ugung.
-		Der Verst"arker beinhaltete folgende unabhängige Module:\label{module}
-
-		\begin{itemize}
-			\item Vorverst"arker
-			\item Filter (Tiefpa"s, Hochpa"s, Bandpa"s)
-			\item Amplituden-/Lock-In-Detektor
-			\item Tiefpa"s Verst"arker (Integrierglied)
-			\item Rauschgenerator
-			\item Phasenschieber
-			\item Funktionsgenerator (Oszillator)
-		\end{itemize}
-		Skizze (Aufbau Lock-In-Verst"arker)
+		
+		\subsection{Aufbau}
+	
+			Der Verst"arker beinhaltete folgende unabhängige Module:\label{module}
+	
+			\begin{itemize}
+				\item Vorverst"arker
+				\item Filter (Tiefpa"s, Hochpa"s, Bandpa"s)
+				\item Amplituden-/Lock-In-Detektor
+				\item Tiefpa"s Verst"arker (Integrierglied)
+				\item Rauschgenerator
+				\item Phasenschieber
+				\item Funktionsgenerator (Oszillator)
+			\end{itemize}
+			Skizze (Aufbau Lock-In-Verst"arker)
 
 		\subsection{Messaufgaben}
 
@@ -140,58 +146,61 @@
 
 		\subsection{Module des Verst"arkers}
 
-		Die in \ref{module} aufgef"urten Module des Verst"arkers werden im Folgenden erl"autert.
-		Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das Eingangssignal beobachtet werden.
+			Die in \ref{module} aufgef"urten Module des Verst"arkers werden im Folgenden erl"autert.
+			Durch das st"uckweise Hinzuschalten konnte der Einfluss auf das Eingangssignal beobachtet werden.
 
 			\subsubsection{Funktionsgenerator (Oszilloskop)}
 
-			Hier wird das Signal f"ur unseren Versuch generiert.
-			Der Funktionsgenerator kann eine Sinus- oder Rechteckspannung im Bereich von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$ ausgeben.
-			Das Modul besitzt zudem zwei Ausg"ange. Der erste Ausgang liefert das zu messende Signal.
-			Hier kann die Spannung von $\SI{1}{\volt}$ bis $\SI{10}{\volt}$ varriert und mit dem Faktor $\frac{1}{100}$ multipliziert werden.
-			Der Zweite Ausgang liefert die Referenzsspannung, mit der das Signal im Detektor gemischt wird.
-			Die Amplitude betrug bei unserem Ger"at konstante $\SI{23.2(5)}{\volt}$.
-			Ausser-dem gibt der zweite Ausgang lediglich eine Sinusspannung aus.
+				Hier wird das Signal f"ur unseren Versuch generiert.
+				Der Funktionsgenerator kann eine Sinus- oder Rechteckspannung im Bereich von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$ ausgeben.
+				Das Modul besitzt zudem zwei Ausg"ange. Der erste Ausgang liefert das zu messende Signal (Abb. 1.1, 1.2).
+				Hier kann die Spannung von $\SI{1}{\volt}$ bis $\SI{10}{\volt}$ varriert und mit dem Faktor $\frac{1}{100}$ multipliziert werden.
+				Der Zweite Ausgang liefert die Referenzsspannung, mit der das Signal im Detektor gemischt wird (Abb. 2).
+				Die Amplitude betrug bei unserem Ger"at konstante $\SI{23.2(5)}{\volt}$.
+				Ausser-dem gibt der zweite Ausgang lediglich eine Sinusspannung aus.
 
-			F"ur die Messungen \ref{a1} bis \ref{a3} haben wir eine Sinuspaunnung von $\SI{1}{\volt}$ und eine Frequenz von $\SI{1}{\kilo\hertz}$ eingestellt.
-			Die Messung \ref{a4} wurde mit einer Rechteckspannung durchgef"uhrt.
+				F"ur die Messungen \ref{a1} bis \ref{a3} haben wir eine Sinuspaunnung von $\SI{1}{\volt}$ und eine Frequenz von $\SI{1}{\kilo\hertz}$ eingestellt.
+				Die Messung \ref{a4} wurde mit einer Rechteckspannung durchgef"uhrt.
 
 			\subsubsection{Rauschgenerator}
 
-			Das Signal aus dem Funktionsgenerator kann hier mit einem Rauschen belegt werden.
-			Die Amplitude l"asst sich zwischen $\SI{e-5}{\volt}$ und $\SI{1}{\volt}$ einstellen.
-			F"ur die Messungen \ref{a1} und \ref{a2} wurde der Rauschgenerator "uberbr"uckt. Die weiteren Messungen wurde mit einem Rauschen von $\SI{e-1}{\volt}$ durchgef"uhrt.
+				Das Signal aus dem Funktionsgenerator kann hier mit einem Rauschen belegt werden.
+				Die Amplitude l"asst sich zwischen $\SI{e-5}{\volt}$ und $\SI{1}{\volt}$ einstellen (Abb. 4).
+				F"ur die Messungen \ref{a1} und \ref{a2} wurde der Rauschgenerator "uberbr"uckt. Die weiteren Messungen wurde mit einem Rauschen von $\SI{e-1}{\volt}$ durchgef"uhrt.
 
 			\subsubsection{Vorverst"arker}
 
-			Die Amplitude des Eingangssignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
-			In unseren Messreihen wurde dauerhaft die Verst"arkung 2 verwendet.
+				Die Amplitude des Eingangssignales wird hier verst"arkt. Es k"onnen Verst"arkungen von 1 bis $e3$ eingestellt werden.
+				Der Unterschied zwischen der Verst"arkung 2 (Abb. 1.3) und der Verst"arkung 5 (Abb. 1.4) beträgt bei gleicher 
+				Eingangsspannung von $\SI{320}{\milli\volt}$ ungefähr $\SI{1,44}{\volt}$. In unseren Messreihen wurde dauerhaft die Verst"arkung 2 verwendet. 
 
 			\subsubsection{Filter}
 
-			Hier wird das Signal aus dem Vorverst"arker gefiltert. Es stehen Tiefpa"s-, Hochpa"s- und Bandpa"sfilter zur Verf"ugung.
-			Wir nutzten ausschlie"slich den Bandpa"sfilter. Durch Kombination eines Tiefpa"s- und Hochpa"sglied werden alle Frequenzen
-			$\omega >> \omega_0$ und $\omega << \omega_0$ aus dem Signal eliminiert.
-			$\omega_0$ kann hierbei im Frequenzspektrum des Funktions-generators (von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$) gew"ahlt werden.
-			Alle Frequenzen, die sich also stark von $\omega_0$ unterscheiden werden hier also gefiltert.
-			Das Rauschen, welches wir in den Messungen \ref{a3} und \ref{a4} auf das Signal gelegt haben kann hierdurch stark reduziert werden.
+				Hier wird das Signal aus dem Vorverst"arker gefiltert. Es stehen Tiefpa"s-, Hochpa"s- und Bandpa"sfilter zur Verf"ugung.
+				Wir nutzten ausschlie"slich den Bandpa"sfilter. Durch Kombination eines Tiefpa"s- und Hochpa"sglieds werde n alle Frequenzen
+				$\omega >> \omega_0$ und $\omega << \omega_0$ aus dem Signal eliminiert.
+				$\omega_0$ kann hierbei im Frequenzspektrum des Funktions-generators (von $\SI{3}{\hertz}$ bis $\SI{3}{\kilo\hertz}$) gew"ahlt werden.
+				Alle Frequenzen, die sich also stark von $\omega_0$ unterscheiden werden hier also gefiltert.
+				Das Rauschen, welches wir in den Messungen \ref{a3} und \ref{a4} auf das Signal gelegt haben kann hierdurch stark reduziert werden(Abb. 3).
+				Zudem kann an diesesm noch die Güte angepasst werden, was einen weiteren Einfluss auf die Amplitude der Spannung hat (Abb. 6.1, 6.2, 6.3).
+				Kleine Güten ergeben kleinere Amplituden.
 
 			\subsubsection{Phasenschieber}
 
-			Das Referenzsignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
-			Dadurch kann das Eingangssignal $U_0$ mit dem Referenzsignal $U_{ref}$ in Phase gebracht werden,
-			damit es im Mischer Gleichgerichtet wird.
+				Das Referenzsignal kann hier um einen Winkel $0$ bis $\pi$ verschoben werden.
+				Dadurch kann das Eingangssignal $U_0$ mit dem Referenzsignal $U_{ref}$ in Phase gebracht werden,
+				damit es im Mischer Gleichgerichtet wird (Abb. 5).
 
 			\subsubsection{Mischer (Lock-In-Detektor)}
 
-			Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem Referenzsignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \ref{beispiel}).
+				Der Mischer multipliziert das zu Messende Signal $U_0$ mit dem Referenzsignal $U_{ref}$ des Funktionsgenerators. Wenn beide Signale in Phase sind wird $U_0$ dadurch gleichgerichtet (siehe \ref{beispiel}) (Abb. 6.4).
 
 			\subsubsection{Integrierglied (Tiefpa"s-Verst"arker)}
 
-			Das letzte Modul in der Schaltung integriert das Signal aus dem Detektor "uber mehrere Perioden.
-			Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde.
+				Das letzte Modul in der Schaltung integriert das Signal aus dem Detektor "uber mehrere Perioden.
+				Hierdurch erhalten wir ein Signal $U_{out} \propto U_0$, wie in \ref{theorie} erl"autert wurde.
 
-			\subsection{LED-PD Schaltung}
+		\subsection{LED-PD Schaltung}
 
 			Der letzte Versuchsaufbau lieferte ein \"echt\" verrauschtes Signal.
 			Die LED wurde in verschie-denen Abst"anden zu einem Photodetektor aufgebaut und mit einer Rechteckspannung gespeist.
