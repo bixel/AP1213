@@ -1,0 +1,60 @@
+\documentclass{scrartcl}
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage{ngerman}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent0pt
+
+\begin{document}
+	
+	\section{Theorie}
+
+		\subsection{Ableitung einer allgemeinen Relaxationsgleichung und ihre Anwendung auf den RC-Kreis}
+
+			Wenn ein System aus seinem Ausgangszustand entfernt wird und es wieder nicht-oszillatorisch in denselben zurückkehrt, treten Relaxationserscheinungen auf. Die "Anderungsgeschwindigkeit zum Zeitpunkt $t$ der physikalischen Gr"o"se $A$ ist dabei in den meisten F"allen proportional zur Abweichung der Gr"o"se $A$ vom Endzustand $A(\infty)$. Dieser ist nur asymptotisch errechenbar.
+
+			\begin{equation}
+				\frac{\mathrm{d} A}{\mathrm{d} t} = c \left[ A(t) - A(\infty) \right]
+			\end{equation}
+
+			durch Integration vom Zeitpunkt 0 bis t liefert:
+
+			\begin{equation}
+				\int_{A(0)}^{A(t)} \! \frac{\mathrm{d} A'}{A' - A(\infty)} = \int_0^t \! c \, \mathrm{d} t'
+			\end{equation}
+
+			oder
+
+			\begin{equation}
+				\ln{\frac{A(t) - A(\infty)}{A(0) - A(\infty)}} = c t
+			\end{equation}
+
+			und daraus folgt:
+
+			\begin{equation}
+				A(t) = A(\infty) + \left[ A(0) - A(\infty) \right] \, e^{c t} 
+			\end{equation}
+
+
+	\section{Auswertung}
+
+		\subsection{Messaufgaben}
+
+			\begin{enumerate}
+				\item Man bestimme die Zeitkonstante eines RC-Gliedes durch Beobachtung des Auf oder Entladevorganges des Kondensators.
+				\item Man messe die Amplitude der Kondensatorspannung an einem RC-Glied, welches an einem Sinusspannungsgenerator angeschlossen ist, in Abhängigkeit von der Frequenz.
+				\item Man messe die Phasenverschiebung zwischen Generator- und Kondensatorspannung an einem RC-Glied in Abhängigkeit von der Frequenz.
+				\item Man zeige, dass ein RC-Kreis unter bestimmten Voraussetzungen als Integrator arbeiten kann.
+			\end{enumerate}
+\end{document}
