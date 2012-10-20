@@ -1,0 +1,64 @@
+\documentclass{scrartcl}
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage{ngerman}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent0pt
+
+\begin{document}
+
+	\section{Aufbau und Durchf"uhrung}
+
+		F"ur den Versuch stand ein RC-Glied, ein Oszillator, ein Millivoltmeter und ein digitales Zweikanaloszilloskop zu Verf"ugung.
+
+
+		\subsection{Messaufgaben}
+
+			\begin{enumerate}
+				\item \label{aufg_1} Bestimmung der Zeitkonstante $\lambda$ des gegebenen RC-Gliedes
+
+				durch Beobachtung des Auf- oder Entladevorganges des Kondensators
+				\item \label{aufg_2} Messung der Amplitude der Kondensatorspannung $U_C$ unter einer sinusf"ormigen Eingangsspannung $U_{sig}$ in Abh"angigkeit der Frequenz $\omega$
+
+				\item \label{aufg_3} Messung der Phasenverschiebung $\delta \phi$ zwischen Generatorspannung $U_{sig}$ und Kon\-den\-sator\-spannung $U_C$ in Abh"angigkeit der Frequenz $\omega$
+
+				\item \label{aufg_4} Veranschaulichung des RC-Gliedes als Integrierglied, wenn $\omega >> \frac{1}{RC}$
+
+			\end{enumerate}
+
+		\subsection{Durchf"uhrung}
+
+			F"ur die Bestimmung der Zeitkonstante $\lambda$ (Aufg. \ref{aufg_1}) wurde das RC-Glied an eine Rechteck\-spannung $U_{sig}$ angeschlossen.
+			Mit Hilfe des Oszilloskopes wurden dann Messwerte der Kondensatorspannung $U_C$ zu verschiedenen Zeitpunkten $t$ aufgenommen.
+			$t$ wurde dabei so gew"ahlt, dass alle Werte auf der Kurve eines Auf- bzw. Entladevorganges lagen,
+			um daraus sp"ater die Zeitkonstante $\lambda$ zu ermitteln.
+			Abbildung \ref{abb_aufbau_1} und \ref{abb_aufbau_2} zeigen den Versuchsaufbau und einen Screenshot des Oszilloskopes.\\
+
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width = 2cm]{homer.png}
+					\caption {Ohmscher Widerstand}
+			\end{figure}
+
+			Um die sperrende Eigenschaft des RC-Gliedes f"ur gro"se Frequenzen $\omega$ zu pr"ufen, haben wir nun die Kondensatorspannung $U_C$ mit einem Millivoltmeter gemessen.
+			Der Funktions\-generator wurde auf eine Sinusspannung eingestellt und die Frequenz $\omega$ von $\SI{25}{\hertz}$ bis $\SI{5}{\kilo\hertz}$ variiert. Abbildung \ref{abb_aufbau_3} zeigt den neuen Versuchsaufbau.
+
+			\begin{figure}[ht]
+				\centering
+				\includegraphics[width=1in, keepaspectratio=true]{pa.jpeg}
+					\caption {Versuchsaufbau f"ur Amplitudenmessung an zwei Kondensatorplatten}
+			\end{figure}
+
+
+\end{document}
