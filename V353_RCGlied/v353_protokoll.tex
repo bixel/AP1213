@@ -25,27 +25,103 @@
 			Wenn ein System aus seinem Ausgangszustand entfernt wird und es wieder nicht-oszillatorisch in denselben zurückkehrt, treten Relaxationserscheinungen auf. Die "Anderungsgeschwindigkeit zum Zeitpunkt $t$ der physikalischen Gr"o"se $A$ ist dabei in den meisten F"allen proportional zur Abweichung der Gr"o"se $A$ vom Endzustand $A(\infty)$. Dieser ist nur asymptotisch errechenbar.
 
 			\begin{equation}
-				\frac{\mathrm{d} A}{\mathrm{d} t} = c \left[ A(t) - A(\infty) \right]
+				\frac{\mathrm{d} A}{\mathrm{d} t} = c \left[ A(t) - A(\infty) \right] \label{1}
 			\end{equation}
 
 			durch Integration vom Zeitpunkt 0 bis t liefert:
 
 			\begin{equation}
-				\int_{A(0)}^{A(t)} \! \frac{\mathrm{d} A'}{A' - A(\infty)} = \int_0^t \! c \, \mathrm{d} t'
+				\int_{A(0)}^{A(t)} \! \frac{\mathrm{d} A'}{A' - A(\infty)} = \int_0^t \! c \, \mathrm{d} t' \label{2}
 			\end{equation}
 
 			oder
 
 			\begin{equation}
-				\ln{\frac{A(t) - A(\infty)}{A(0) - A(\infty)}} = c t
+				\ln{\frac{A(t) - A(\infty)}{A(0) - A(\infty)}} = c t \label{3}
 			\end{equation}
 
 			und daraus folgt:
 
 			\begin{equation}
-				A(t) = A(\infty) + \left[ A(0) - A(\infty) \right] \, e^{c t} 
+				A(t) = A(\infty) + \left[ A(0) - A(\infty) \right] \, e^{c t} \label{4}
 			\end{equation}
 
+			wobei in \ref{4} $c>0$ sein muss, damit $A$ beschr"ankt bleibt.
+
+			\subsubsection{Relaxationsvorg"ange am Beispiel eines Kondensators}
+
+				Der Auf- und Entladevorgang eines Kondensators "uber einen Widerstand stellt einen Relaxationsvorgang da.
+
+				Entladevorgang:
+
+				Wenn auf den Platten eines Kondensators mit der Kapazität $C$ die Ladung $Q$ liegt, so liegt zwischen ihnen die Spannung $U_\mathrm{C}$:
+
+				\begin{equation}
+					U_\mathrm{C} = \frac{Q}{C} \label{5}
+				\end{equation}
+
+				Nach dem ohmschen Gesetz f"uhrt bedingt diese einen Strom durch den Widerstand $R$:
+
+				\begin{equation}
+					I = \frac{U_\mathrm{C}}{R} \label{6}
+				\end{equation}
+
+				Da auf dem Zeitintervall $\mathrm{d}t$ die Ladung $-\mathrm{d} I$ flie"st, "andert sich die Ladung auf dem Kondensator um: 
+
+				\begin{equation}
+					\mathrm{d} Q = -\mathrm{d}I \label{7}
+				\end{equation}
+
+				Mit Hilfe der GLeichungen \ref{5}, \ref{6} und \ref{7} kann $U_\mathrm{C}$ und $I$ eliminiert werden und eine Differentialgleichung entsteht.
+
+				\begin{equation}
+					\frac{\mathrm{d}Q}{\mathrm{d}t} = -\frac{1}{RC}Q(t)
+				\end{equation}
+
+				mit der Anfangsbedingung
+
+				\begin{equation}
+					U(\infty) = 0
+				\end{equation}
+
+				Daraus liefert die Integration aus \ref{2}
+
+				\begin{equation}
+					Q(t) = Q(0) \exp{ \left( -\frac{t}{RC} \right) }
+				\end{equation}
+
+				Aufladevorgang:
+
+				Wie beim Entladevorgang l"asst sich der Aufladevorgang berechnen, doch werden hier die Anfangsbedingungen
+
+				\begin{equation}
+					Q(0) = 0 \, \, \, \mathrm{und} \, \, \, Q(\infty) = C U_\mathrm{0}
+				\end{equation}
+
+				genutzt, wodurch sich f"ur den Aufladevorgang ergibt
+
+				\begin{equation}
+					Q(t) = C U_\mathrm{0} \left( 1 - \exp{ \left( -\frac{t}{RC} \right) } \right)
+				\end{equation}
+
+				wobei $RC$ als Zeitkonstante bezeichnet wird und ist ein Ma"s f"ur die Geschwindigkeit des jeweiligen Vorgangs. W"ahrend des Zeitraums 
+				$\Delta T = RC$ "andert sich die Ladung des Kondensators um
+
+				\begin{equation}
+					\frac{Q(t = RC)}{Q(0)} = \frac{1}{e} (ungef"ahr) 0,368
+				\end{equation}
+
+				$=>$ Nach $\Delta T = 2,3 \, RC$ sind noch $10 \%$ des Ausgangswerts vorhanden und nach $\Delta T = 4,6 \, RC$ noch etwa $1 \%$.
+
+		\subsection{Relaxationsph"anomene, die unter dem Einfluss einer periodischen Auslenkung aus der Gleichgewichtslage auftreten}
+
+			Im Folgenden wird das wiederum das Verhalten des RC-Kreises, an welchem eine Sinusspannung anliegt, betrachtet, da dies eine enge Analogie zu einem mechanischen System besitzt, welches unter dem Einfluss einer Kraft mit sinusf"ormiger Zeitabh"angigkeit steht.
+
+
+			Wenn f"ur die Kreisfrequenz $\omega$ der "au"seren Wechselspannung $U(t)$ mit
+			\begin{equation}
+				U(t) = U_\mathrm{0} \cos{\omega t}
+			\end{equation}
 
 	\section{Auswertung}
 
