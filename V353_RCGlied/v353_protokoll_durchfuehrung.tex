@@ -31,19 +31,19 @@
 				durch Beobachtung des Auf- oder Entladevorganges des Kondensators
 				\item \label{aufg_2} Messung der Amplitude der Kondensatorspannung $U_{\mathrm{C}}$ unter einer sinusf"ormigen Eingangsspannung $U_0$ in Abh"angigkeit der Frequenz $\omega$
 
-				\item \label{aufg_3} Messung der Phasenverschiebung $\delta \phi$ zwischen Generatorspannung $U_0$ und Kon\-den\-sator\-spannung $U_{\mathrm{C}}$ in Abh"angigkeit der Frequenz $\omega$
+				\item \label{aufg_3} Messung der Phasenverschiebung $\phi$ zwischen Generatorspannung $U_0$ und Kon\-den\-sator\-spannung $U_{\mathrm{C}}$ in Abh"angigkeit der Frequenz $\omega$
 
-				\item \label{aufg_4} Veranschaulichung des RC-Gliedes als Integrierglied, wenn $\omega >> \frac{1}{RC}$
+				\item \label{aufg_4} Veranschaulichung der Funktion des RC-Gliedes als Integrierglied, wenn $\omega \gg \frac{1}{RC}$
 
 			\end{enumerate}
 
 		\subsection{Durchf"uhrung}
 
 			F"ur die Bestimmung der Zeitkonstante $\lambda$ (Aufg. \ref{aufg_1}) wurde das RC-Glied an eine Rechteck\-spannung $U_0$ angeschlossen.
-			Mit Hilfe des Oszilloskopes wurden dann Messwerte der Kondensatorspannung $U_{\mathrm{C}}$ zu verschiedenen Zeitpunkten $t$ aufgenommen.
-			$t$ wurde dabei so gew"ahlt, dass alle Werte auf der Kurve eines Auf- bzw. Entladevorganges lagen,
-			um daraus sp"ater die Zeitkonstante $\lambda$ zu ermitteln.
-			Abbildung *Aufbau 1*\ref{abb_aufbau_1} und *002*\ref{abb_aufbau_2} zeigen den Versuchsaufbau und einen Screenshot der Kondensatorspannung $U_C$ am Oszilloskopes.\\
+			Diese simuliert den f"ur die Messung notwendigen konstanten Endzustand $A(\infty)$.
+			Mit Hilfe des Oszilloskopes wurden dann Messwerte der Konden\-sator\-spannung $U_{\mathrm{C}}$ zu verschiedenen Zeitpunkten $t$ aufgenommen.
+			$t$ wurde dabei so gew"ahlt, dass alle Werte auf der Kurve eines Auf- bzw. Entladevorganges lagen.
+			Ab\-bil\-dung *Aufbau 1*\ref{abb_aufbau_1} und *002*\ref{abb_aufbau_2} zeigen den Versuchsaufbau und einen Screenshot der Konden\-sator\-spannung $U_C$ am Oszilloskopes.\\
 
 			\begin{figure}[ht]
 				\centering
@@ -60,21 +60,23 @@
 					\caption {Versuchsaufbau f"ur Amplitudenmessung an zwei Kondensatorplatten}
 			\end{figure}
 
-			Die Phasenverschiebung zwischen Generatorspannung und Kondensatorspannung konnte mit Hilfe des Zweikanaloszilloskopes gemessen werden (Aufgabe \ref{aufg_3}).
-			Die Signale wurden auf dieselbe Nulllage gebracht und bei verschiedenen Frequenzen drei Messwerte $a_1$, $a_2$ und $b_1$ genommen.
+			Die Phasenverschiebung zwischen Generatorspannung $U_0$ und Kondensatorspannung $U_{\mathrm{C}}$ konnte mit Hilfe des Zweikanaloszilloskopes gemessen werden (Aufgabe \ref{aufg_3}).
+			Die Signale wurden auf dieselbe Nulllage gebracht und bei verschiedenen Frequenzen $\omega$ drei Mes\-swerte $a_1$, $a_2$ und $b_1$ genommen.
 			Aus diesen Werten konnten wir mit der Identit"at
 
 			\begin{equation}
-				\phi = \frac{a}{b} 2 \pi
+				\phi = \frac{a}{b} 2 \pi, \qquad
+				a = a_2 - a_1, \qquad b = b_1 - a_1
 			\end{equation}
 
 			die Phasenverschiebung $\phi$ berechnen.
 			Abbildung *007*\ref{abb_ss_phase} zeigt die "ubereinandergelegten Signale $U_0$ und $U_{\mathrm{C}}$. Die Messpunkte wurden nachtr"aglich markiert.\\
 
-			Schlie"slich haben wir eine Frequenz von $\SI{10}{\kilo\hertz}$ eingestellt, und somit $\omega >> \frac{1}{RC}$ gew"ahlt.
+			Schlie"slich haben wir eine Frequenz von $\omega = \SI{10}{\kilo\hertz} \gg \frac{1}{RC}$ eingestellt.
 			Dadurch diente das RC-Glied als Integrator (siehe \ref{theorie_integrierglied}).
-			Anhand von verschieden geformten Eingangssignalen $U_0$ konnte die Integration sehr gut veranschaulicht werden (Aufgabe \ref{aufg_4}).
+			Anhand von verschiedenen markanten Ein\-gangs\-sig\-nalen $U_0$ konnte die Integration sehr gut veranschaulicht werden (Aufgabe \ref{aufg_4}).
 			Die Abbildungen *009*\ref{abb_integriergl_1} bis *014*\ref{abb_integriergl_4} zeigen die Ergebnisse.
-			Es wurden Eingangsspannungen $U_0$ mit Sinus-, Dreieck- und Rechteckform eingestellt.
+
+			* Abildungen *
 
 \end{document}
