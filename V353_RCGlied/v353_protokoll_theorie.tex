@@ -17,42 +17,35 @@
 	\parindent0pt
 
 \begin{document}
+
+	\section{Einleitung}
+
+		Wenn ein System aus seinem Ausgangszustand entfernt wird und es wieder nicht-oszillatorisch in denselben zur"uckkehrt, treten Relaxationserscheinungen auf. Die "Anderungsgeschwindigkeit zum Zeitpunkt $t$ der physikalischen Gr"o"se $A$ ist dabei in den meisten F"allen proportional zur Abweichung der Gr"o"se $A$ vom Endzustand $A(\infty)$. Dieser ist nur asymptotisch errechenbar.
 	
 	\section{Theorie}
 
 		\subsection{Ableitung einer allgemeinen Relaxationsgleichung und ihre Anwendung auf den RC-Kreis}
 
-			Wenn ein System aus seinem Ausgangszustand entfernt wird und es wieder nicht-oszillatorisch in denselben zurückkehrt, treten Relaxationserscheinungen auf. Die "Anderungsgeschwindigkeit zum Zeitpunkt $t$ der physikalischen Gr"o"se $A$ ist dabei in den meisten F"allen proportional zur Abweichung der Gr"o"se $A$ vom Endzustand $A(\infty)$. Dieser ist nur asymptotisch errechenbar.
+			Die Gleichung
 
 			\begin{equation}
 				\frac{\mathrm{d} A}{\mathrm{d} t} = c \left[ A(t) - A(\infty) \right] \label{1}
 			\end{equation}
 
-			durch Integration vom Zeitpunkt 0 bis t liefert:
+			ergibt durch Integration vom Zeitpunkt 0 bis t 
+			\begin{eqnarray}
+				\int_{A(0)}^{A(t)} \! \frac{\mathrm{d} A'}{A' - A(\infty)} &=& \int_0^t \! c \, \mathrm{d} t' \label{2}\\
+				\Rightarrow \ln{\frac{A(t) - A(\infty)}{A(0) - A(\infty)}} &=& c t \label{3}\\
+				\Rightarrow A(t) &=& A(\infty) + \left[ A(0) - A(\infty) \right] \, e^{c t} \label{4}
+			\end{eqnarray}
 
-			\begin{equation}
-				\int_{A(0)}^{A(t)} \! \frac{\mathrm{d} A'}{A' - A(\infty)} = \int_0^t \! c \, \mathrm{d} t' \label{2}
-			\end{equation}
-
-			oder
-
-			\begin{equation}
-				\ln{\frac{A(t) - A(\infty)}{A(0) - A(\infty)}} = c t \label{3}
-			\end{equation}
-
-			und daraus folgt:
-
-			\begin{equation}
-				A(t) = A(\infty) + \left[ A(0) - A(\infty) \right] \, e^{c t} \label{4}
-			\end{equation}
-
-			wobei in \ref{4} $c>0$ sein muss, damit $A$ beschr"ankt bleibt.
+			wobei in \ref{4} $c \l 0$ sein muss, damit $A$ beschr"ankt bleibt.
 
 			\subsubsection{Relaxationsvorg"ange am Beispiel eines Kondensators}
 
-				Der Auf- und Entladevorgang eines Kondensators "uber einen Widerstand stellt einen Relaxationsvorgang da.
+				Der Auf- und Entladevorgang eines Kondensators "uber einen Widerstand stellt einen Relaxationsvorgang dar. \\[0.1cm]
 
-				Entladevorgang:
+				\textbf{Entladevorgang:}
 
 				Wenn auf den Platten eines Kondensators mit der Kapazität $C$ die Ladung $Q$ liegt, so liegt zwischen ihnen die Spannung $U_\mathrm{C}$:
 
@@ -60,68 +53,163 @@
 					U_\mathrm{C} = \frac{Q}{C} \label{5}
 				\end{equation}
 
-				Nach dem ohmschen Gesetz f"uhrt bedingt diese einen Strom durch den Widerstand $R$:
+				Nach dem ohmschen Gesetz f"uhrt diese einen Strom durch den Widerstand $R$:
 
 				\begin{equation}
 					I = \frac{U_\mathrm{C}}{R} \label{6}
 				\end{equation}
 
-				Da auf dem Zeitintervall $\mathrm{d}t$ die Ladung $-\mathrm{d} I$ flie"st, "andert sich die Ladung auf dem Kondensator um: 
+				Da auf dem Zeitintervall $\mathrm{d}t$ die Ladung $-I \mathrm{d} t$ flie"st, "andert sich die Ladung auf dem Kondensator um: 
 
 				\begin{equation}
-					\mathrm{d} Q = -\mathrm{d}I \label{7}
+					\mathrm{d} Q = -I\mathrm{d}t \label{7}
 				\end{equation}
 
 				Mit Hilfe der GLeichungen \ref{5}, \ref{6} und \ref{7} kann $U_\mathrm{C}$ und $I$ eliminiert werden und eine Differentialgleichung entsteht.
 
 				\begin{equation}
-					\frac{\mathrm{d}Q}{\mathrm{d}t} = -\frac{1}{RC}Q(t)
+					\frac{\mathrm{d}Q}{\mathrm{d}t} = -\frac{1}{RC}Q(t) \label{8}
 				\end{equation}
 
 				mit der Anfangsbedingung
 
 				\begin{equation}
-					U(\infty) = 0
+					U(\infty) = 0 \label{9}
 				\end{equation}
 
-				Daraus liefert die Integration aus \ref{2}
+				\Rightarrow	aus \ref{2}
 
 				\begin{equation}
-					Q(t) = Q(0) \exp{ \left( -\frac{t}{RC} \right) }
-				\end{equation}
+					 Q(t) = Q(0) \exp{ \left( -\frac{t}{RC} \right) } \label{9}
+				\end{equation}\\[0.5cm]
 
-				Aufladevorgang:
+				
+				\textbf{Aufladevorgang:}
 
 				Wie beim Entladevorgang l"asst sich der Aufladevorgang berechnen, doch werden hier die Anfangsbedingungen
 
 				\begin{equation}
-					Q(0) = 0 \, \, \, \mathrm{und} \, \, \, Q(\infty) = C U_\mathrm{0}
+					Q(0) = 0 \qquad \mathrm{und} \qquad Q(\infty) = C U_\mathrm{0} \label{10}
 				\end{equation}
 
 				genutzt, wodurch sich f"ur den Aufladevorgang ergibt
 
 				\begin{equation}
-					Q(t) = C U_\mathrm{0} \left( 1 - \exp{ \left( -\frac{t}{RC} \right) } \right)
+					Q(t) = C U_\mathrm{0} \left( 1 - \exp{ \left( -\frac{t}{RC} \right) } \right) \label{11}
 				\end{equation}
 
 				wobei $RC$ als Zeitkonstante bezeichnet wird und ist ein Ma"s f"ur die Geschwindigkeit des jeweiligen Vorgangs. W"ahrend des Zeitraums 
 				$\Delta T = RC$ "andert sich die Ladung des Kondensators um
 
 				\begin{equation}
-					\frac{Q(t = RC)}{Q(0)} = \frac{1}{e} (ungef"ahr) 0,368
+					\frac{Q(t = RC)}{Q(0)} = \frac{1}{e} \approx 0,368 \label{11}
 				\end{equation}
 
-				$=>$ Nach $\Delta T = 2,3 \, RC$ sind noch $10 \%$ des Ausgangswerts vorhanden und nach $\Delta T = 4,6 \, RC$ noch etwa $1 \%$.
+				$\Rightarrow$ Nach $\Delta T = 2,3 \, RC$ sind noch $10 \%$ des Ausgangswerts vorhanden und nach $\Delta T = 4,6 \, RC$ noch etwa $1 \%$.
 
+		\newpage
 		\subsection{Relaxationsph"anomene, die unter dem Einfluss einer periodischen Auslenkung aus der Gleichgewichtslage auftreten}
 
-			Im Folgenden wird das wiederum das Verhalten des RC-Kreises, an welchem eine Sinusspannung anliegt, betrachtet, da dies eine enge Analogie zu einem mechanischen System besitzt, welches unter dem Einfluss einer Kraft mit sinusf"ormiger Zeitabh"angigkeit steht.
-
+			Im Folgenden wird das Verhalten des RC-Kreises unter Wechselspannung betrachtet, da dies eine enge Analogie zu einem mechanischen System besitzt, welches unter dem Einfluss einer Kraft mit sinusf"ormiger Zeitabh"angigkeit steht.
 
 			Wenn f"ur die Kreisfrequenz $\omega$ der "au"seren Wechselspannung $U(t)$ mit
+			
 			\begin{equation}
-				U(t) = U_\mathrm{0} \cos{\omega t}
+				U(t) = U_\mathrm{0} \cos{\omega t} \label{12}
 			\end{equation}
+
+			$\omega \ll \frac{1}{RC}$ gilt, wird die Spannung $U_{\mathrm{C}}(t)$ praktisch gleich $U(t)$ sein. Mit zunehmender Frequenz bleibt die Auf- und Entladung immer weiter zur"uck und es kommt zu einer Phasenverschiebung $\phi$ zwischen beiden Spannungen, wobei gleichzeitig die Amplitude $A$ der Kondensatorspannung $U_{\mathrm{C}}$ abnimmt.
+
+			Die Frequenzabh"angigkeit von Amplitude $A$ und Phase $\phi$ von $U_{\mathrm{C}}$ wird nun n"aher betrachtet.
+
+
+			Es wird versucht eine L"osung mit dem Ansatz
+
+			\begin{equation}
+				U_{\mathrm{C}}(t) = A(\omega) \cos(\omega t + \phi {\omega}) \label{13}
+			\end{equation}
+
+			zu finden.
+
+			Das 2. Kirchhoff'sche Gesetz sagt:
+
+			\begin{eqnarray}
+				U(t) &=& U_{\mathrm{R}}(t) + U_{\mathrm{C}}(t) \label{14} \\ 
+				\Rightarrow U_{\mathrm{C}} \cos{\omega t} &=& I(t)R + A(\omega) \cos{\left( \omega t + \phi \right) } \label{15}.
+			\end{eqnarray}
+
+			Wobei $R_{\mathrm{i}}$ der Spannungsquelle null ist.
+
+			Mithilfe von \ref{3} und \ref{5} l"asst sich $I(t)$ durch $U_{\mathrm{C}}$ ausdr"ucken und durch \ref{13}, \ref{15} und \ref{16} weiter verarbeiten
+
+			\begin{eqnarray}
+				I(t) &=& \frac{\mathrm{d}Q}{\mathrm{d}t} = C \frac{\mathrm{d}U_{\mathrm{C}}}{\mathrm{d}t} \label{16}\\ 
+				\Rightarrow U_{\mathrm{C}} \cos{\omega t} &=& -A\omega RC \sin{\left( \omega t + \phi \right)} + A(\omega)\cos{\left( \omega t + \phi \right)} \label{17}.
+			\end{eqnarray}
+
+			Dabei muss \ref{17} f"ur alle $t$ g"ultig sein.
+
+			F"ur $\omega = \frac{\pi}{2}$ erhalten wir:
+
+			\begin{equation}
+				0 = -\omega RC \sin{\left( \frac{\pi}{2} + \phi \right) } + \cos{\left( \frac{\pi}{2} + \phi \right) } \label{18}
+			\end{equation}
+
+			und damit
+
+			\begin{equation}
+				\phi(\omega) = \arctan{-\omega RC} \label{19}.
+			\end{equation}
+
+			\newpage
+
+			Wie bei der Beziehung erwartet geht also $\phi(\omega \ll RC) \rightarrow 0$ und $\phi(\omega \gg RC) \rightarrow \frac{\pi}{2}$.
+
+			Um die Amplitude $A$ zu berechnen nutzen wir $\omega t + \phi = \frac{\pi}{2}$ eingesetzt in \ref{17} und erhalten
+
+			\begin{eqnarray}
+				U_{\mathrm{0}} \cos{\left( \frac{\pi}{2} - \phi \right)} &=& -A \omega RC \label{20}\\
+				\Rightarrow A(\omega) &=& -\frac{\sin{\phi}}{\omega RC}U_{\mathrm{0}} \label{21}.
+			\end{eqnarray}
+
+			Aus \ref{19} kann man mit $\sin^2{\phi} + \cos^2{\phi} = 1$ die Beziehung
+
+			\begin{equation}
+				\sin{\phi} = \frac{\omega RC}{\sqrt{1 + \omega^2 R^2 C^2}}
+			\end{equation}
+
+			ableiten und daraus erh"alt man die frequenzabh"angige Amplitude
+
+			\begin{equation}
+				A(\omega) = \frac{U_{\mathrm{0}}}{\sqrt{1+\omega^2 R^2 C^2}} \label{23}.
+			\end{equation}
+
+			Die Grenzwertbetrachtungen zeigen hier, dass f"ur $\omega \rightarrow 0$ $A(\omega)$ gegen $U_0$ geht und f"ur $\omega \rightarrow \infty$ $A(\omega)$ verschwindet. $A(\frac{1}{RC}) = \frac{U_0}{\sqrt{2}}$. Aufgrund dieser Eigenschaft k"onnen RC-Glieder als Tiefp"asse verwendet werden. Nachteilig f"ur viele Anwendungen ist allerdings, dass nach \ref{23} $A(\omega)$ nur mit $\frac{1}{\omega}$ gegen $0$ geht.
+
+		\subsection{Der RC-Kreis als Integrator}
+
+			Aus dem Kirchhoff'schen und dem Ohmschen Gesetz folgt
+
+			\begin{equation}
+				U(t) = U_{\mathrm{R}}(t) + U_{\mathrm{C}}(t) = I(t)R + U_{\mathrm{C}}(t) \label{24}.
+			\end{equation}
+
+			Mithilfe von \ref{5} und \ref{7} ergibt sich
+
+			\begin{eqnarray}
+				I(t) &=& \frac{\mathrm{d}Q}{\mathrm{d}t} = C \frac{\mathrm{d}U_{\mathrm{C}}}{\mathrm{d}t}\label{25}\\
+				\Rightarrow U(t) &=& RC \frac{\mathrm{d}U_{\mathrm{C}}}{\mathrm{d}t} + U_{\mathrm{C}}(t). \label{26}
+			\end{eqnarray}
+
+			Wenn $\omega \gg \frac{1}{RC}$ ist, ergibt sich $|U_{\mathrm{C}}| \ll |U_{\mathrm{R}}|$ und $|U_{\mathrm{C}}| \ll |U|$. Somit kann man n"aherungsweise schreiben
+
+			\begin{eqnarray}
+				U(t) &=& RC\frac{\mathrm{d}U_{\mathrm{C}}}{\mathrm{d}t} \label{27} \\
+				\Rightarrow U_{\mathrm{C}}(t) &=& \frac{1}{RC} \int_0^t \, U(t') \, \mathrm{d}t'. \label{28}
+			\end{eqnarray}
+
+
+
 
 	\section{Auswertung}
 
