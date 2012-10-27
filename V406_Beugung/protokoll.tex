@@ -1,0 +1,32 @@
+\documentclass{scrartcl}
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage{ngerman}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent0pt
+
+	%Titelseiten Parameter
+	\title{V406 - Beugung am Spalt}
+	\date{27. Oktober 2012}
+	\author{Kevin Heinicke und Markus Stabrin}
+
+\begin{document}
+
+	\maketitle
+
+	\newpage
+
+	\input{theorie_einleitung.tex}
+
+\end{document}
