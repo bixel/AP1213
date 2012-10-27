@@ -7,13 +7,18 @@ x, y = np.genfromtxt('daten_mr_1.txt', unpack=True)
 x -= 25
 # x um 25 nach links verschieben (Maximum zentrieren)
 
-x_ticks = range(-25, 26, 5)
-# Schritte fuer x-Skalierung festlegen
+y /= max(y)
+# y normieren
+
+x_ticks = np.arange(-25, 26, 5)
+y_ticks = np.arange(0, 1.2, .1)
+# Schritte fuer Skalierung festlegen
 
 plt.plot(x, y, 'kx')
 plt.title('Messreihe 1')
 plt.xlabel('x [mm]')
 plt.ylabel('I [nA]')
 plt.xticks(x_ticks)
+plt.yticks(y_ticks)
 plt.grid(b = True, which = "major")
 plt.show()
