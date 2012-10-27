@@ -15,7 +15,7 @@ y_ticks = np.arange(0, 1.2, .1)
 # Schritte fuer Skalierung festlegen
 
 plt.plot(x, y, 'kx')
-plt.title('Messreihe 1')
+plt.title('Messreihe 2')
 plt.xlabel('x [mm]')
 plt.ylabel('I [nA]')
 plt.xticks(x_ticks)
