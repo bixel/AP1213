@@ -57,13 +57,13 @@
 		Um die Amplitude $B(z, t, \varphi)$ zu bestimmen muss "uber alle Elementarwellen -- also "uber die gesamte Spaltbreite $b$ -- integriert werden:
 
 		\begin{eqnarray}
-			B(z, t, \varphi) & = & A_0 \int \limits_0^b e^{\left(i \omega t - \frac{2 \pi z}{\lambda} + \delta \right)} \mathrm{dx} \nonumber \\
-			& = & A_0 e^{\left(i \omega t - \frac{2 \pi z}{\lambda}\right)} \int \limits_0^b e^{\left(\frac{2 \pi i x \sin{\varphi}}{\lambda}\right)} \mathrm{dx} \nonumber\\
-			\Rightarrow \qquad
-			B(z, t, \varphi) & = & A_0 \exp{\left[ i \left( \omega t - \frac{2\pi z}{\lambda}
-			\right) \right] }
-			\exp{\left[i \left( \frac{\pi b \sin{\varphi}}{\lambda} \right)\right]} \cdot \nonumber \\ 
-			& & \cdot \frac{\lambda}{\pi \sin{\varphi}}
+			B(z, t, \varphi) &=& A_0 \int \limits_0^b e^{\left(i \omega t - \frac{2 \pi z}{\lambda} + \delta \right)} \mathrm{dx} \nonumber \\
+			&=& A_0 e^{\left(i \omega t - \frac{2 \pi z}{\lambda}\right)} \int \limits_0^b e^{\left(\frac{2 \pi i x \sin{\varphi}}{\lambda}\right)} \mathrm{dx} \nonumber\\
+			\Rightarrow \enspace
+			B(z, t, \varphi) &=& A_0 \exp{\left[ i \left( \omega t - \frac{2\pi z}{\lambda}
+			\right) \right] } 
+			\exp{\left[i \left( \frac{\pi b \sin{\varphi}}{\lambda} \right)\right]}  \cdot \nonumber \\
+			&\cdot& \frac{\lambda}{\pi \sin{\varphi}}
 			\sin{\left( \frac{\pi b \sin{\varphi}}{\lambda} \right)} \label{eqn:allgemeine_lsg}
 		\end{eqnarray}
 
@@ -86,15 +86,50 @@
 			B(\varphi) & = & A_0 b \frac{\sin{\eta}}{\eta} \nonumber \\
 			\Rightarrow \qquad
 			I(\varphi) & \propto & A_0^2 b^2 \left(\frac{\sin{\eta}}{\eta}\right)^2
+			\label{prop_einzelspalt}
 		\end{eqnarray}
 
 		Man erkennt, dass die H"ohe der Maxima n"aherungsweise mit dem Quadrat des Winkels abnimmt.
 		Ausserdem entsteht ein Hauptmaximum bei $\varphi = 0$. Symmetrisch auf beiden Seiten entstehen etliche Nebenmaxima.
-		Ein Minimum liegt vor, wenn $I(\varphi) = 0$. Das gilt f"ur
+		Ein Minimum liegt vor, wenn $I(\varphi) = 0$ ist. Das gilt f"ur
 
 		\begin{equation}
-			\sin{\varphi_n} = \pm n \frac{\lambda}{b} \quad , \quad n = 1, 2, \dots
+			\sin{\varphi_n} = \pm \, n \frac{\lambda}{b} \quad , \quad n = \left(1, 2, \dots\right)
 		\end{equation}
 
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height = 10cm]{theorie_1.png}
+			\caption{Theoretischer Intensit"ats- und Amplitudenverlauf}
+		\end{figure}
 
+	\subsection{Fourier-Transformation}
+		\label{subsec:fourier}
+
+		Die Amplitudenverteilung l"asst sich bei diesem Aufbau auch durch eine 
+		Fourier-Transformation der einzelnen Amplitudenverteilungen der einfallenden Wellen beschreiben.
+		Transformiert man die Funktion $f(x)$ mit
+
+		\begin{equation}
+			f(x) = \left\{
+			\begin{array}{ll}
+			 	 A_0 & \qquad 0 \leq x \leq b \\
+			 	 0 & \qquad \mathrm{sonst} 
+			 \end{array}
+			 \right.
+		\end{equation}
+		
 	\subsection{Beugungsmuster am Doppelspalt}
+		\label{sec:muster_doppelspalt}
+
+		Der Doppelspalt l"asst sich als "Uberlagerung zweier Einzelspalte im Abstand $s$ beschreiben.
+		Hieraus bekommt man zus"atzlich zur Abh"angigkeit \ref{prop_einzelspalt} einen Cosinus-Anteil,
+		der den Gangunterschied durch den Spaltabstand ber"ucksichtigt:
+
+		\begin{equation}
+			I(\varphi) \propto B(\varphi) = 
+			4 \cos^2{\left( \frac{\pi s \sin{\varphi}}{\lambda} \right)}
+			\left( \frac{\lambda}{\pi b \sin{\varphi}} \right)
+			\sin^2{\left( \frac{\pi b \sin{\varphi}}{\lambda} \right)}
+			\label{prop_doppelspalt}
+		\end{equation}
