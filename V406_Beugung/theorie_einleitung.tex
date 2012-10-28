@@ -1,8 +1,8 @@
 \section{Einleitung}
 	\label{sec:einleitung}
 	In diesem Versuch wird das Verhalten von monochromatischem Licht bei Beugung an d"unnen Spalten untersucht.\\
-	Unter der Annahmen, dass sich Licht wellenartig ausbreitet wird der Intensitätsverlauf des Beugungsmusters hinter einem Einfach-, sowie einem Doppelspalt untersucht.
-	Aus den Messwerten l"asst sich schlie"slich auf die Spaltbreite schlie"sen.
+	Unter der Annahme, dass sich Licht wellenartig ausbreitet wird der Intensit"atsverlauf des Beugungsmusters hinter einem Einfach-, sowie einem Doppelspalt untersucht.
+	Aus den Messwerten l"asst sich schlie"slich eine Aussage "uber die Spaltbreite machen.
 
 \section{Theorie}
 	\label{sec:theorie}
@@ -13,25 +13,26 @@
 	\subsection{Das Huygenssche Prinzip}
 
 		Um die Natur des Lichtes detailliert beschreiben zu k"onnen, muss man es quan\-ten\-me\-cha\-nisch betrachten.
-		F"ur etliche Ph"anomene reicht es jedoch aus, "uber gro"se Zahlen von Lichtquanten zu mitteln und diese durch das klassische Wellenmodell n"aherungsweise zu beschreiben.\\
+		F"ur etliche Ph"anomene reicht es jedoch aus, "uber gro"se Zahlen von Lichtquanten zu mitteln und diese durch das klassische Wellenmodell n"aherungsweise zu beschreiben.
+		Diese N"aherung wird hier gemacht.
 
 		Das Huygenssche Prinzip geht von der Welleneigenschaft des Lichtes aus.
 		Es besagt, dass jeder Punkt einer Wellenfl"ache zur gleichen Zeit Elementarwellen aussendet.
 		Diese Kugelwellen interferieren miteineander und bilden eine neue Wellenfront,
-		die die Ein\-h"ul\-len\-de der Elementarwellen ist.
+		die die Ein\-h"ul\-len\-de der Elementarwellen ist und wiederum neue Elementarwellen aussendet.
 		Die "Uberlagerung aller Elementarwellen an einem Ort im Raum beschreibt dann den dortigen Schwingungszustand der Welle.
 
 	\subsection{Fresnel- und Fraunhoferbeugung}
 		\label{subsec:beugung}
 
-		F"ur die Beschreibung von Beugungserscheinungen gibt es grunds"atzlich zwei verschiedene Versuchsanordnungen.
+		F"ur die Beschreibung von Beugungserscheinungen gibt es grunds"atzlich zwei verschiedene Versuchsanordnungen. Abb. \ref{abb_fresnel_fraunhofer} skizziert diese.
 
 		\subsubsection{Fresnelbeugung}
 			\label{subsubsec:fresnel}
 
 			Die Fresnelsche Anordnung betrachtet eine Lichtquelle, die sich im endlichen Abstand vor dem Spalt befindet.
 			Dadruch divergieren die Strahlenb"undel und das Licht wird am Spalt in unterschiedlichen Winkeln gebeugt.
-			Schlu"sfolgerung auf den Versuchsaufbau durch Messung des Intensit"atsverlaufes werden damit sehr schwierig.
+			Schlu"sfolgerungen auf den Versuchsaufbau durch Messung des Intensit"atsverlaufes werden damit sehr schwierig.
 
 		\subsubsection{Fraunhoferbeugung}
 			\label{subsubsec:fraunhofer}
@@ -39,13 +40,27 @@
 			Diese Anordnung geht von parallelen Lichtb"undeln aus, die von einer unendlich weit entferten Lichtquelle entsandt werden.
 			Hierdurch werden Lichtb"undel gleicher Phase im gleichen Winkel abelenkt.
 			Die Beschreibung wird hier wesentlich einfacher, weil lediglich der Gangunterschied bei \emph{einem} Winkel, betrachtet werden muss.
-			Die unendlich entfernte Lichtquelle l"asst sich gut durch einen Laser realisieren.\\
+			Die unendlich entfernte Lichtquelle l"asst sich gut durch einen Laser realisieren.
 
-			Aus diesem Grund und weil der Fraunhoferaufbau eine leichtere Beschreibung liefert, wird der Versuch damit durchgef"urt.
+			Aus diesem Grund und weil der Fraunhoferaufbau eine leichtere Beschreibung der Beugung liefert, wird der Versuch damit durchgef"urt.
+
+			\begin{figure}[h]
+				\centering
+				\includegraphics[width = 14cm]{fresnel_fraunhofer.jpg}
+				\caption{Unterschied zwischen Fresnelschem und Fraunhoferschem Versuchsaufbau}
+				\label{abb_fresnel_fraunhofer}
+			\end{figure}
 
 	\subsection{Beugungsmuster am Einzelspalt}
 		\label{subsec:herleitung}
 		\label{subsec:muster_einzelspalt}
+
+		\begin{figure}[h]
+				\centering
+				\includegraphics[width = 9cm]{spalt.jpg}
+				\caption{Einzelspalt}
+				\label{abb_spalt}
+		\end{figure}
 
 		Betrachtet man nun den Spalt genauer, l"asst sich die Phasendifferenz $\delta$ zweier Strahlenb"undel einfach beschreiben. Die durch Elementarwellen bestimmten B"undel haben dann unter dem Winkel $\varphi$ die Phasendifferenz $\delta$
 
@@ -57,8 +72,8 @@
 		Um die Amplitude $B(z, t, \varphi)$ zu bestimmen muss "uber alle Elementarwellen -- also "uber die gesamte Spaltbreite $b$ -- integriert werden:
 
 		\begin{eqnarray}
-			B(z, t, \varphi) &=& A_0 \int \limits_0^b e^{\left(i \omega t - \frac{2 \pi z}{\lambda} + \delta \right)} \mathrm{dx} \nonumber \\
-			&=& A_0 e^{\left(i \omega t - \frac{2 \pi z}{\lambda}\right)} \int \limits_0^b e^{\left(\frac{2 \pi i x \sin{\varphi}}{\lambda}\right)} \mathrm{dx} \nonumber\\
+			B(z, t, \varphi) &=& A_0 \int \limits_0^b \exp{\left(i \omega t - \frac{2 \pi z}{\lambda} + \delta \right)} \mathrm{dx} \nonumber \\
+			&=& A_0 \exp{\left(i \omega t - \frac{2 \pi z}{\lambda}\right)} \int \limits_0^b \exp{\left(\frac{2 \pi i x \sin{\varphi}}{\lambda}\right)} \mathrm{dx} \nonumber\\
 			\Rightarrow \enspace
 			B(z, t, \varphi) &=& A_0 \exp{\left[ i \left( \omega t - \frac{2\pi z}{\lambda}
 			\right) \right] } 
@@ -69,9 +84,11 @@
 
 		Dies beschreibt die Beugung an einem Parallelspalt.
 		Die ersten beiden exponentiellen Anteile aus Gleichung \ref{eqn:allgemeine_lsg} beschreiben die Amplitude in Abh"angigkeit der Zeit $t$ und des Ortes $z$ (senkrecht auf der Schirmfl"ache).
-		Die einfallenden Lichtb"undel werden "uber lange Zeit gemessen.\\
-		Wegen der hohen Frequenz $\omega$ des Lichtes k"onnn wir nur die "uber einige Zeit gemittelte Intensit"at $I$ messen. Der Anteil der Zeitabh"angigkeit f"allt also weg.\\
-		Zudem bewegen wir uns lediglich entlag der Schirmfl"ache -- also in x-Richtung --, wodurch auch der zweite, z-abh"angige Term nicht betrachtet werden muss.\\
+
+		Die einfallenden Lichtb"undel werden "uber lange Zeit gemessen.
+		Wegen der hohen Frequenz $\omega$ des Lichtes k"onnn wir nur die "uber einige Zeit gemittelte Intensit"at $I$ messen. Der Anteil der Zeitabh"angigkeit f"allt also weg.
+
+		Zudem bewegen wir uns lediglich entlag der Schirmfl"ache -- also in x-Richtung --, wodurch auch der zweite, z-abh"angige Term nicht betrachtet werden muss.
 		Dann gilt:
 
 		\begin{eqnarray}
@@ -83,7 +100,7 @@
 		\begin{eqnarray}
 			\eta(\varphi) & := & \frac{\pi b \sin{\varphi}}{\lambda} \nonumber \\
 			\Rightarrow \qquad
-			B(\varphi) & = & A_0 b \frac{\sin{\eta}}{\eta} \nonumber \\
+			B(\varphi) & = & A_0 b \frac{\sin{\eta}}{\eta} \label{amplitude_einfach} \\
 			\Rightarrow \qquad
 			I(\varphi) & \propto & A_0^2 b^2 \left(\frac{\sin{\eta}}{\eta}\right)^2
 			\label{prop_einzelspalt}
@@ -107,7 +124,7 @@
 		\label{subsec:fourier}
 
 		Die Amplitudenverteilung l"asst sich bei diesem Aufbau auch durch eine 
-		Fourier-Transformation der einzelnen Amplitudenverteilungen der einfallenden Wellen beschreiben.
+		Four\-ier-Trans\-for\-ma\-tion der einzelnen Amplitudenverteilungen der einfallenden Wellen beschreiben.
 		Transformiert man die Funktion $f(x)$ mit
 
 		\begin{equation}
@@ -118,6 +135,30 @@
 			 \end{array}
 			 \right.
 		\end{equation}
+
+		erh"alt man f"ur die Fourier-Transformation
+
+		\begin{equation}
+			g(\xi) := \int \limits_{-\infty}^{\infty} f(x) e^{ix \xi} \mathrm{dx} =
+			\frac{A_0}{i \xi} \left(-1 + e^{i \xi b}\right)
+			\label{amplitude_fourier}
+		\end{equation}
+
+		unter Anwendung der Eulerschen Formel und mit
+
+		\begin{equation}
+			g(\xi) = \frac{2 \pi \sin{\varphi}}{\lambda}
+		\end{equation}
+
+		stimmen \ref{amplitude_fourier} und \ref{amplitude_einfach} "uberein.
+		Das Huygensche Prinzip wird hierdurch also mathematisch formuliert.
+		Das Integral beschreibt dabei die Summation "uber alle Elementarwellen.
+		Die Aperturfunktion $f(x)$ kann zudem hierbei einfach um eine Variable $y$ erweitert werden,
+		was die Beschreibung der Beugung an zweidimensionalen Objekten erm"oglicht. \\
+		F"ur die Auswertung dieses Experimentes ist besonders wichtig, dass sich die Fourier-Transformation umkehren l"asst.
+		Wir k"onnen somit aus den Messwerten der Intensit"at $I(\varphi)$,
+		die proportional zu $B^2(\varphi)$ ist, auf die Gestalt der Aperturfunktion $f(x)$
+		--  also auf unseren Spalt -- schlie"sen.
 		
 	\subsection{Beugungsmuster am Doppelspalt}
 		\label{sec:muster_doppelspalt}

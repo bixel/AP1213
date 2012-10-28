@@ -10,4 +10,6 @@ plt.title('Theoriekurve')
 plt.grid(b = True, which = "major")
 plt.xlabel('x [mm]')
 plt.ylabel('B, I [normiert auf 1]')
+
+plt.savefig('theorie_1')
 plt.show()

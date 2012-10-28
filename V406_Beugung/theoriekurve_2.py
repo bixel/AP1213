@@ -17,5 +17,5 @@ plt.xlabel('x [mm]')
 plt.xticks(x_ticks, x_labels)
 plt.ylabel('B, I [normiert auf 1]')
 
-plt.savefig('theorie_1')
+plt.savefig('theorie_2')
 plt.show()
