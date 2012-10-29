@@ -1,0 +1,86 @@
+\section{Auswertung}
+	\label{sec:Auswertung}
+
+	\subsection{Bestimmung des Dunkelstroms}
+		\label{sub:bestimmung_des_dunkelstroms}
+		
+		Um die Messwerte mit der Theorie vergleichen zu k"onnen muss zuerst der Dunkelstrom $I_\mathrm{du}$ gemessen werden.
+
+		Dazu wurde unter Versuchsbedingungen, jedoch mit ausgeschaltetem Laser, eine Messung durchgef"uhrt.
+
+		F"ur den Dunkelstrom ergab sich:
+
+		\begin{equation}
+			I_\mathrm{du} = \SI{0.13}{\nano \ampere}
+		\end{equation}
+
+		Die Aufgetragenenen Messwerte in den Tabellen sind noch nicht um diesen Wert reduziert.
+
+	\subsection{Bestimmung der Spaltbreite eines festen Einfachspalts}
+		\label{sub:bestimmung_der_spaltbreite_eines_festen_einfachspalts}
+		
+		Im folgenden wird die Spaltbreite eines Einfachspalts auf zwei verschiedene Weisen gemessen. Einmal mithilfe des Beugungsmusters und einmal mit Hilfe eines Mikroskops.
+
+		\subsubsection{Bestimmung mit Hilfe des Beugungsmusters}
+			\label{sub:Bestimmung_mit_Hilfe_des_Beugungsmusters}
+
+			Wie die Spaltbreite bestimmt wird, wird bereits in \ref{sec:messung} erl"autert. Die bereinigten Messwerte finden sich in Tabelle \ref{tabelle_1} wieder.
+
+			Die gemessene Intensit"at wurde in Grafik \ref{graf_1} gegen die Detektorposition aufgetragen und eine Theoriekurve nach Gleichung \ref{prop_einzelspalt} eingef"ugt um die Kurven vergleichen zu k"onnen.
+
+			Zur Anpassung wurde PyPlot benutzt.
+
+			Es ergibt sich mithilfe der Formel:
+
+			\begin{equation}
+				f(x) = a^2 b^2 \left(\frac{\lambda}{\pi b sin(\frac{x-x_\mathrm{0}}{d})}\right)^2 sin^2 \left( \frac{\pi b sin(\frac{x-x_\mathrm{0}}{d})}{\lambda} \right)
+			\end{equation}
+
+			f"ur die Werte ergaben sich:
+
+			\input{tabelle1.tex}
+			\input
+
+
+			blablabla auswertung
+
+		\subsubsection{Bestimmung mit Hilfe des Mikroskops}
+			\label{sub:Bestimmung_mit_Hilfe_des_mikroskops}
+
+			Das Ausmessen mithilfe des Mikroskops wurde bereits in \ref{sec:messung_mikro} erkl"art.
+			Es wurde auf das Objektmikrometer fokussiert. Nun wurde der Spalt unter das Objektiv gelegt und mithilfe eines verschiebbaren Teilstrichs die Spaltkanten "uberdeckt. Diese Fixierung wurde dann auf die Mikrometerskala des Objektmikrometers gelegt und ausgemessen.
+			Aufgrund von Unsch"arfen wurde ein Fehler von $\sigma_0 = \SI{10}{\micro \meter}$ angenommen.
+
+			Es ergab sich f"ur die Spaltbreite b:
+
+			\begin{equation}
+				b = \SI{70}{\micro \meter}
+			\end{equation}
+
+			Damit ergibt sich f"ur die gemessene Spaltbreite $b_\mathrm{mikro} = \SI{70 (10)}{\micro \meter}$.
+			Es besteht ein gro"ser Unterschied zwischen der gemessenen und der angegebenen Spaltbreite von $b = \SI{80}{\micro \meter}$.
+			Auf Fehlerquellen wird in der Diskussion eingegangen.
+
+			\newpage
+
+	\subsection{Bestimmung der Spaltbreite eines variablen Einfachspalts} 
+		\label{sub:bestimmung_der_spaltbreite_eines_variablen_einfachspalts}
+		
+		Nun sollte die Breite $b$ eines variablen Einfachspalts gemessen werden. Das Messverfahren ist dasselbe wie zuvor.
+
+		Die dazugeh"origen Intensit"atswerte abh"angig von der Detektorposition finden sich in Tabelle \ref{tabelle_2}. Weiter wurde eine Theoriekurve in die Grafik \ref{graph1} einge"ugt, sodass ein Vergleich zwischen Theorie und Experiment m"oglich ist. Daf"ur wurde Gnuplot verwendet.
+
+		Es ergab sich:
+
+		\begin{equation}
+			b = \SI{7.46 (170)}{\micro \meter}
+		\end{equation}
+
+		\input{tabelle2.tex}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 14cm]{graph1.jpg}
+			\caption{Graphische Darstellung der des festen Einfachspalt}
+			\label{graph1}
+		\end{figure}

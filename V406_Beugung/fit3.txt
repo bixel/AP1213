@@ -1,0 +1,14 @@
+set sample 1000000
+set term jpeg
+set output "graph3.jpg"
+c = 633*10**(-9)
+d = 0.00025
+b = 0.00004
+h(x) = (sin(pi*b*sin((x-23)*10**(-3))/c)/(pi*b*sin((x-23)*10**(-3))/c))**2
+f(x) = x<23?h(x)\
+:x>23?h(x)\
+:1
+g(x) = (cos(pi*(b+d)*sin((x-23)*10**(-3))/c))**2
+z(x) = f(x)*g(x) 
+fit z(x) "daten_mr_3.dat" using 1:(($2-0.13)/(38-0.13)) via b, d
+plot z(x) title "Theoriekurve Doppelspalt", f(x) title "Theoriekurve Einfachspalt",  "daten_mr_3.dat" u 1:(($2-0.13) / (38-0.13))  title "Messreihe"

@@ -1,0 +1,9 @@
+set term jpeg
+set output "graph2.jpg"
+c = 633*10**(-9)
+b = 0.000015
+f(x) = x<24?(sin(pi*b*sin((x-24)*10**(-3))/c)/(pi*b*sin((x-24)*10**(-3))/c))**2\
+:x>24?(sin(pi*b*sin((x-24)*10**(-3))/c)/(pi*b*sin((x-24)*10**(-3))/c))**2\
+:1
+fit f(x) "daten_mr_2.dat" using 1:(($2-0.13)/(165-0.13)) via b
+plot f(x) title "Theoriekurve Einfachspalt", "daten_mr_2.dat" u 1:(($2-0.13) / (165-0.13))  title "Messreihe"
