@@ -28,21 +28,33 @@
 
 			Die gemessene Intensit"at wurde in Grafik \ref{graf_1} gegen die Detektorposition aufgetragen und eine Theoriekurve nach Gleichung \ref{prop_einzelspalt} eingef"ugt um die Kurven vergleichen zu k"onnen.
 
-			Zur Anpassung wurde PyPlot benutzt.
+			Zur Anpassung wurde Gnuplot benutzt.
 
 			Es ergibt sich mithilfe der Formel:
 
 			\begin{equation}
-				f(x) = a^2 b^2 \left(\frac{\lambda}{\pi b sin(\frac{x-x_\mathrm{0}}{d})}\right)^2 sin^2 \left( \frac{\pi b sin(\frac{x-x_\mathrm{0}}{d})}{\lambda} \right)
+				f(x) = a^2 b^2 \left(\frac{\lambda}{\pi b \sin(\frac{x-x_\mathrm{0}}{d})}\right)^2 \sin^2 \left( \frac{\pi b \sin(\frac{x-x_\mathrm{0}}{d})}{\lambda} \right)
 			\end{equation}
 
-			f"ur die Werte ergaben sich:
+			der Wert:
+
+			\begin{equation}
+				b = \SI{74.6 (17)}{\micro \meter}
+			\end{equation}
 
 			\input{tabelle1.tex}
-			\input
 
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width = 14cm]{graph1.jpg}
+				\caption{Graphische Darstellung der Beugung eines festen Einfachspalt}
+				\label{graph1}
+			\end{figure}
 
-			blablabla auswertung
+			Die errechnete Spaltbreite $b$ entspricht nicht exakt der vorgegebenen von $b = \SI{80}{\micro \meter}$, ist aber gr"o"sentechnisch nicht weit davon weg.
+
+			Auf m"ogliche Fehlerquellen wird in der Diskussion eingegangen.
+			\newpage
 
 		\subsubsection{Bestimmung mit Hilfe des Mikroskops}
 			\label{sub:Bestimmung_mit_Hilfe_des_mikroskops}
@@ -60,7 +72,7 @@
 			Damit ergibt sich f"ur die gemessene Spaltbreite $b_\mathrm{mikro} = \SI{70 (10)}{\micro \meter}$.
 			Es besteht ein gro"ser Unterschied zwischen der gemessenen und der angegebenen Spaltbreite von $b = \SI{80}{\micro \meter}$.
 			Auf Fehlerquellen wird in der Diskussion eingegangen.
-
+			\clearpage
 			\newpage
 
 	\subsection{Bestimmung der Spaltbreite eines variablen Einfachspalts} 
@@ -73,14 +85,45 @@
 		Es ergab sich:
 
 		\begin{equation}
-			b = \SI{7.46 (170)}{\micro \meter}
+			b = \SI{100.0 (23)}{\micro \meter}
 		\end{equation}
 
 		\input{tabelle2.tex}
 
-		\begin{figure}[h]
+		\begin{figure}[H]
 			\centering
-			\includegraphics[width = 14cm]{graph1.jpg}
-			\caption{Graphische Darstellung der des festen Einfachspalt}
-			\label{graph1}
+			\includegraphics[width = 14cm]{graph2.jpg}
+			\caption{Graphische Darstellung der Beugung eines variablen Einfachspalt}
+			\label{graph2}
 		\end{figure}
+
+		F"ur die Spaltbreite $b$ hat sich in der Messung ein Wert innerhalb des Bereiches von $20-200 \SI{}{\micro \meter}$ ergeben. Da es sich um einen variablen Einfachspalt mit unbekannter Gr"o"se handelt, kann nicht genau gesagt werden wie weit vom tats"achlichen Wert abgewichen wurde. Es ist jedoch mit einem Fehler zu rechnen.
+
+\clearpage
+		\newpage
+		\newpage
+	\subsection{Bestimmung der Spaltbreite eines festen Doppelspalts} 
+	\label{sub:bestimmung_der_spaltbreite_eines_festen_doppelspalts}
+	
+		Auch hier wurde dasselbe Verfahren wie bei den vorherigen Messungen angewendet.
+		Die Messwerte sind in Tabelle \ref{tabelle_3} zu finden und der dazugeh"orige Graph mit Theorikurve nach Gleichung \ref{prop_doppelspalt} in Grafik \ref{graph3}.
+
+		F"ur die Spaltbreite $b$ und den Abstand zwischen den Spalten $d$ ergab sich:
+
+		\begin{eqnarray*}
+			b &=& \SI{33.5 (16)}{\micro \meter}\\
+			d &=& \SI{226.7 (23)}{\micro \meter}
+		\end{eqnarray*}
+
+		Die gemessenen Werte weichen abermals nicht sehr von den ablesbaren Werten auf der Messscheibe $b = \SI{40}{\micro \meter}$ und $d = \SI{250}{\micro \meter}$ ab.
+		M"ogliche Fehlerquellen kommen in der Diskussion.
+
+		\input{tabelle3.tex}
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width = 14cm]{graph3.jpg}
+			\caption{Graphische Darstellung der Beugung eines festen Doppelspalts}
+			\label{graph3}
+		\end{figure}
+		\clearpage
