@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy as sp
+from scipy.optimize import curve_fit
 
 x, y = np.genfromtxt('daten_mr_3.txt', unpack=True)
 # Datensatz in x und y einlesen
@@ -30,8 +31,8 @@ vor_werte = [b_vorsch, s_vorsch]
 theorie_funktion = lambda t, b, s: np.cos(np.pi * s * (t / 1000) / l) ** 2 * (np.sin(np.pi * b * (t / 1000) / l) / ((np.pi * b * (t / 1000)) / l)) ** 2
 theorie_funktion_2 = lambda t, b: (np.sin(np.pi * b * (t / 1000) / l) / ((np.pi * b * (t / 1000)) / l)) ** 2
 
-p, cov = sp.optimize.curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte), maxfev = 2000)
-p2, cov2 = sp.optimize.curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte), maxfev = 2000)
+p, cov = curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte), maxfev = 2000)
+p2, cov2 = curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte), maxfev = 2000)
 
 print(p)
 
