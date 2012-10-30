@@ -1,9 +1,11 @@
 set term jpeg
 set output "graph1.jpg"
+set xlabel "Detektorstellung[mm]"
+set ylabel "Intensitaet normiert"
 c = 633*10**(-9)
 b = 80*10**(-6)
-f(x) = x<25?(sin(pi*b*sin((x-25)*10**(-3))/c)/(pi*b*sin((x-25)*10**(-3))/c))**2\
-:x>25?(sin(pi*b*sin((x-25)*10**(-3))/c)/(pi*b*sin((x-25)*10**(-3))/c))**2\
+f(x) = x<0?(sin(pi*b*sin((x-0)*10**(-3))/c)/(pi*b*sin((x-0)*10**(-3))/c))**2\
+:x>0?(sin(pi*b*sin((x-0)*10**(-3))/c)/(pi*b*sin((x-0)*10**(-3))/c))**2\
 :1
-fit f(x) "daten_mr_1.dat" using 1:(($2-0.13) / (72-0.13)) via b
-plot f(x) title "Theoriekurve Einfachspalt", "daten_mr_1.dat" u 1:(($2-0.13) / (72-0.13))  title "Messreihe"
+fit f(x) "daten_mr_1.dat" using ($1-25):(($2-0.13) / (72-0.13)) via b
+plot f(x) title "Theoriekurve Einfachspalt", "daten_mr_1.dat" u ($1-25):(($2-0.13) / (72-0.13))  title "Messreihe"
