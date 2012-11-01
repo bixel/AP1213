@@ -1,0 +1,75 @@
+\documentclass{scrartcl}
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage{ngerman}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent 0pt
+
+	%Titelseiten Parameter
+	\title{V406 - Beugung am Spalt}
+	\date{27. Oktober 2012}
+	\author{Kevin Heinicke und Markus Stabrin}
+
+\begin{document}
+
+	%\maketitle
+
+	\begin{center}
+		\large
+		TU Dortmund
+	\end{center}
+
+	\begin{center}
+		\Huge
+		V406 - Beugung am Spalt
+	\end{center}
+
+	\vspace{9cm}
+	\begin{center}
+		\begin{minipage}[b]{8cm}
+			\large
+			Markus Stabrin \\
+			\small
+			markus.stabrin@tu-dortmund.de \\
+
+			\large
+			Kevin Heinicke\\
+			\small
+			kevin.heinicke@tu-dortmund.de \\
+			\\
+			\\
+
+			Versuchsdatum: 23. Oktober 2012 \\
+			\\
+			Abgabedatum: 30. Oktober 2012
+		\end{minipage}
+	\end{center}
+
+	\newpage
+
+	\input{theorie_einleitung.tex}
+
+	\newpage
+
+	\input{durchfuehrung.tex}
+
+	\newpage
+
+	\input{auswertung.tex}
+
+	\newpage
+
+	\input{diskussion_literatur.tex}
+
+\end{document}
