@@ -2,8 +2,8 @@ set term jpeg
 set output "501a.jpg"
 set yrange[-0.3:-0.1]
 set xrange[0.002:0.0055]
-set ylabel "Empfindlichkeit D/U_d [in/V]"
+set ylabel "Empfindlichkeit D/U_d [1/4 in/V]"
 set xlabel "Spannung 1/U_b [1/V]"
-f(x) = m*x+b
+f(x) = 4*m*x+b
 fit f(x) "tabelle501a.dat" using (1/$2):1 via b, m
 plot f(x) title "Steigung a", "tabelle501a.dat" u (1/$2):1 title "Messdaten"
