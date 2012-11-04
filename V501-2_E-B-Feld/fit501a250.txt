@@ -1,0 +1,9 @@
+set term jpeg
+set output "501a250.jpg"
+set yrange[-5:5]
+set xrange[-20:40]
+set ylabel "Abstand D [1/4 in]"
+set xlabel "Spannung U_d [V]"
+f(x) = m*x+b
+fit f(x) "tabelle501a250.dat" using 1:2 via b, m
+plot f(x) title "D/U_d", "tabelle501a250.dat" u 1:2 title "Messdaten"

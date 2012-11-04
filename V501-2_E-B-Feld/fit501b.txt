@@ -1,0 +1,10 @@
+set term jpeg
+set output "501b.jpg"
+set xrange[0:4]
+set yrange[0:200]
+set ylabel "Saegezahnfrequenz[Hz]"
+set xlabel "n"
+unset logscale
+f(x) = m/x
+fit f(x) "tabelle501b.dat" using 1:2 via m
+plot f(x) title "Theorikurve", "tabelle501b.dat" u 1:2 title "Messdaten"
