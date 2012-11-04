@@ -1,0 +1,5 @@
+set ylabel "Saegezahnfrequenz[Hz]"
+set xlabel "B[T]"
+f(x) = m*x+b
+fit f(x) "tabelle502a250.dat" using (6.377*10**(-5)*$1):2 via m, b
+plot f(x) title "Theorikurve", "tabelle502a250.dat" u (6.377*10**(-5)*$1):2 title "Messdaten"

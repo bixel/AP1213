@@ -1,5 +1,0 @@
-set ylabel "Saegezahnfrequenz[Hz]"
-set xlabel "n"
-f(x) = m*x+b
-fit f(x) "tabelle502a250.dat" using 1:2 via m, b
-plot f(x) title "Theorikurve", "tabelle502a250.dat" u 1:2 title "Messdaten"
