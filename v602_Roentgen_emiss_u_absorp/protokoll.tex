@@ -1,0 +1,71 @@
+\documentclass{scrartcl}
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage{ngerman}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent 0pt
+
+	%Titelseiten Parameter
+	\title{V406 - Beugung am Spalt}
+	\date{27. Oktober 2012}
+	\author{Kevin Heinicke und Markus Stabrin}
+
+\begin{document}
+
+	%\maketitle
+	
+	\vspace*{3cm}
+
+	\begin{center}
+		\large
+		TU Dortmund
+	\end{center}
+
+	\begin{center}
+		\Huge
+		V501, V502 - Elekronen im E- und B-Feld
+	\end{center}
+
+	\vspace{6cm}
+	\begin{center}
+		\begin{minipage}[b]{8cm}
+			\Large
+			Markus Stabrin \\
+			\normalsize
+			markus.stabrin@tu-dortmund.de \\
+
+			\Large
+			Kevin Heinicke\\
+			\normalsize
+			kevin.heinicke@tu-dortmund.de \\
+			\\
+			\\
+
+			Versuchsdatum: 30. Oktober 2012 \\
+			\\
+			Abgabedatum: 6. November 2012
+		\end{minipage}
+	\end{center}
+
+	\newpage
+
+	\input{theorie_einleitung.tex}
+
+	\input{durchfuehrung.tex}
+
+	\input{auswertung.tex}
+
+	\input{diskussion_literatur.tex}
+
+\end{document}
