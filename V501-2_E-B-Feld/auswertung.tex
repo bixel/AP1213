@@ -1,0 +1,131 @@
+\section{Auswertung}
+\label{sec:auswertung}
+
+	\subsection{Versuch 501} % (fold)
+	\label{sub:versuch_501}
+	
+	% subsection versuch_501 (end)
+		
+		F"ur Aufgabe 501a ergaben sich die Messwerte aus den Tabellen \ref{tabelle_1} und \ref{tabelle_2}. Die dazugeh"ohrigen Graphen sind die Graphen \ref{501a200} bis \ref{501a400}.
+		Es ist zu erkennen, dass sich der Elektronenstrahl bei h"ohen Beschleunigungsspannungen $U_B$ weniger Stark abl"anken l"asst. Daraus folgt, dass auch die Empfindlichkeit $D/U_d$ mit gr"o"serem $U_B$ abnimmt. Dies ist in Tabelle \ref{tabelle_5} und dem dazugeh"origen Graphen \ref{501a}, wo die Empfindlichkeit gegen $1/U_B$ aufgetragen ist.
+		Als Steigung $a$ Ausgleichsgeraden ergibt sich $a = \SI{35.848 (947)}{\centi\meter}$.
+		Bei der Berechnung des Proportionalit"atsfaktors $\frac{pL}{2d}$ muss darauf geachtet werden, dass die Ablenkplatten nicht "uberall parallel zueinander liegen. Daraus folgt als Mittelwert f"ur $d$:
+
+		\begin{eqnarray*}
+			d_1 &=& \SI{0.38}{\centi \meter}\\
+			\delta p_1 &=& \frac{\SI{1.03}{\centi \meter}}{\SI{1.9}{\centi \meter}}\\
+			d_2 &=& \frac{\SI{0.38}{\centi \meter}+\SI{0.95}{\centi\meter}}{2}\\
+			\delta P_2 &=& \frac{\SI{1.9}{\centi \meter}-\SI{1.03}{\centi\meter}}{\SI{1.9}{\centi\meter}}\\
+			\Rightarrow \qquad d &=& d_1 * \delta p_1 + d_2 * \delta p_2 = \SI{26.61}{\centi\meter}
+		\end{eqnarray*} 
+
+		Somit ergibt sich f"ur $\frac{pL}{2d}$:
+
+		\begin{eqnarray*}
+			p &=& \SI{1.9}{\centi \meter}\\
+			L &=& \SI{14.3}{\centi \meter}\\
+			d &=& \SI{0.29}{\centi \meter}\\
+			\Rightarrow \qquad \frac{pL}{2d} &=& \SI{46.84}{\centi\meter}
+		\end{eqnarray*}
+
+		F"ur Aufgabe 501b ergaben sich die Werte in der Tabelle \ref{tabelle_5}. Eine nicht lineare Regression des Graphen \ref{501a} ergab f"ur die Sinusfrequenz $\nu_{si} = \SI{79.467 (98)}{\hertz}$.
+		\newpage
+
+		\input{tabelle1.tex}
+		\input{tabelle2.tex}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width = 12cm]{img/501a200.jpg}
+			\caption{Messergebniss zu a bei $U_B = 200$}
+			\label{501a200}
+		
+			\centering
+			\includegraphics[width = 12cm]{img/501a250.jpg}
+			\caption{Messergebniss zu a bei $U_B = 250$}
+			\label{501a250}
+		\end{figure}
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width = 12cm]{img/501a300.jpg}
+			\caption{Messergebniss zu a bei $U_B = 300$}
+			\label{501a300}
+		
+			\centering
+			\includegraphics[width = 12cm]{img/501a350.jpg}
+			\caption{Messergebniss zu a bei $U_B = 350$}
+			\label{501a350}
+		\end{figure}
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width = 12cm]{img/501a400.jpg}
+			\caption{Messergebniss zu a bei $U_B = 400$}
+			\label{501a400}
+		\end{figure}
+
+		\input{tabelle5.tex}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 12cm]{img/501a.jpg}
+			\caption{Empfindlichkeit von D/Ud gegen 1/Ub}
+			\label{501a}
+		\end{figure}
+
+		\input{tabelle3.tex}
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width = 12cm]{img/501b.jpg}
+			\caption{n-Fache der S"agezahnspannung}
+			\label{501b}
+		\end{figure}
+
+		\newpage
+
+	\subsection{Versuch 502} % (fold)
+	\label{sub:versuch_502}
+		
+		In Aufgabenteil 502a ergab sich f"ur die Ausgleichsrechnug der Daten aus Tabelle \ref{tabelle_4}, mithilfe der Graphen \ref{502a250} und \ref{502a450}, ergab:
+
+		\begin{eqnarray*}
+			L &=& \SI{17.3}{\centi\meter}\\
+			N &=& 20\\
+			R &=& \SI{0.282}{\meter}\\
+			B &=& \mu_0 \frac{8}{\sqrt{125}} \frac{NI}{R} = 6.377*10^{-5}*I\,\SI{}{\tesla}\\
+			\Rightarrow\\
+			a &=& \SI{9756.13 (14810)}{1\per\meter\tesla}\\
+			b &=& \SI{7281.19 (7729)}{1\per\meter\tesla}
+		\end{eqnarray*}
+
+		Mit Hilfe der Proportionalit"atsfaktoren $a, b$ und der Gleichung $a, b = \sqrt{\frac{e_0}{8 U_B m_0}}$ ergibt sich f"ur die spezifische Ladung der Elektronen:
+
+		\begin{eqnarray*}
+			\frac{e_0}{m_0} &=& 8*\SI{250}{\volt}*(\SI{9756.13 (14810)}{1\per\meter\tesla})^2 = \SI{1.936}{\coulomb\per\kilo\gram}*10^{11}\\
+			\frac{e_0}{m_0} &=& 8*\SI{450}{\volt}*(\SI{7281.19 (7729)}{1\per\meter\tesla})^2 = \SI{1.909}{\coulomb\per\kilo\gram}*10^{11}
+		\end{eqnarray*}
+
+		F"ur Aufgabenteil 502b ergab sich bei einer Beschleunigungsspannung $U_B = \SI{200 (5)}{\volt}$ f"ur den Ausgleichsstorm ein Wert von $\SI{0.26}{\ampere}$. Die Messung des Inklinationswinkels ergab $\varphi = 70$ Grad. Daraus folgt f"ur das Erdmagnetfeld:
+
+		\begin{eqnarray*}
+			B_\mathrm{hor} &=& 6.377*10^{-5}*I\,\SI{}{\tesla} = \SI{16.58}{\micro\tesla}\\
+			\Rightarrow \qquad B_\mathrm{total} &=& \frac{B_{hor}}{\cos(\varphi)} = \SI{48.48}{\micro\tesla}
+		\end{eqnarray*}
+
+
+		\newpage
+
+		\input{tabelle4.tex}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 14cm]{img/502a250.jpg}
+			\caption{Graph zur Berechnung des Proportionalit"atsfaktors a}
+			\label{502a250}
+
+			\includegraphics[width = 14cm]{img/502a450.jpg}
+			\caption{Graph zur Berechnung des Proportionalit"atsfaktors b}
+			\label{502a450}
+		\end{figure}		
+
+		\newpage
