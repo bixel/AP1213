@@ -1,0 +1,196 @@
+% ==================================================
+%	Festlegung der Dokumentenklasse
+% ==================================================
+
+
+\documentclass[paper=a4, 		% Layout für DinA4
+	ngerman				% Deutsche Spracheinstellungen
+	]
+	{scrartcl} 			% Dokumentklasse für Aufsätze oder z.B. Praktikumsprotokolle
+
+\usepackage{fixltx2e}			% Behebt ein paar Fehler in Latex
+
+% ==================================================
+%	Einstellen des Encodings
+% ==================================================
+
+\usepackage{ifxetex}
+\usepackage{ifluatex} 
+
+\ifxetex
+	\usepackage{fontspec}
+  	\usepackage{xunicode}
+	\usepackage{xltxtra}
+    \defaultfontfeatures{Mapping=tex-text} 	% To support LaTeX quoting style
+	\setmainfont{Linux Libertine}
+=======
+    \defaultfontfeatures{Mapping=tex-text} % To support LaTeX quoting style
+	\setmainfont{Linux Libertine} % Hier gewünschte Schriftart einfügen
+\else
+	\ifluatex
+		\usepackage{fontspec}		% Falls das nicht funktioniert: \usepackage{luainputenc}
+  		\usepackage{xunicode}
+  		\defaultfontfeatures{Mapping=tex-text} % To support LaTeX quoting style
+		\setmainfont{Linux Libertine} % Hier gewünschte Schriftart einfügen
+	\else %pdfTeX
+	  \usepackage[utf8]{inputenc}
+	  \usepackage[T1]{fontenc}
+	 \fi
+\fi
+
+
+% ==================================================
+%	Spracheinstellungen
+% ==================================================
+
+\usepackage[ngerman]{babel,		% neue deutsche Rechtschreibung
+	varioref}			% Bei Referenzen wird der Name des Objektes vor die Refernznummer geschrieben: z.B. \ref{bsp} liefert Seite 1
+
+% ==================================================
+%	Referenzen und Links
+% ==================================================
+
+\usepackage{hyperref}			% Verlinkungen innerhalb und außerhalb des PDF-Dokuments
+\usepackage{url}			% Formattiert URLs, so dass sie sich z.B. besser vom Text abheben
+\urlstyle{tt}				% TrueType-Schrift für URLs		
+
+
+
+% ==================================================
+%	Bibliograhphie
+% ==================================================
+%Zwei verschiedene Möglichkeiten Bibliographien einzubinden:
+
+%	Möglichkeit 1:
+% ========================
+	\usepackage[numbers]{natbib}	%Paket für Bibliograhien
+
+	%Bibtex: Nachnamen in Kapitälchen
+	%\renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}
+	\newcommand*{\mkbibnamelast}[1]{\textsc{#1}}
+
+	% Makros für Anhang + Referenzen
+	\newcommand{\anhang}{
+		\clearpage		% Anhang auf eine extra Seite packen
+		\setcounter{page}{0}	
+		\pagenumbering{Roman}	% Anhang wird in römischen Seitenzahlen numeriert
+		\appendix		% Kapitelnummerierung in Großbuchstaben statt Zahlen.
+	}
+
+	\newcommand{\referenzen}{
+		\bibliographystyle{alphadin} 			% Alphabetisch sortiert im DIN-Format
+		\addcontentsline{toc}{section}{Referenzen}
+		\phantomsection					% Referenzen ins Inhaltsverzeichnis
+		\renewcommand{\refname}{\section*{Referenzen}\vspace*{-1em}} % Benennt das Kapitel um
+		\bibliography{../include/Bibliographie.bib} 	% Die BibTeX-Datei einbinden
+	}
+%Zu Verwenden mit \bibliography{BIBDATEI}
+% ========================
+%	Möglichkeit 2:
+% ========================
+	%\usepackage{csquotes}				%Wird für Biblatex benötigt
+	%\usepackage[style=alphabetic]{biblatex}	%Paket für Bibliograhphien mit Biblatex
+%Zu Verwenden mit \bibliography{BIBDATEI} und \printbibliography oder \printbibliography[heading=bibintoc] (falls ein Inhaltsverzeichns verwendet wird)
+% ==================================================
+
+
+
+% ==================================================
+%	Grafiken, Abbildungen und Tabellen
+% ==================================================
+
+\usepackage{graphicx}                   % zum Einbinden von Grafiken
+\usepackage{xcolor}			% Für die Verwendung von Farben
+\usepackage[font=small,			% kleine Schrift für Bildunterschriften
+	labelfont=bf			% Fettgedruckte Bildunterschriften
+	]
+	{caption}			% Für Bildunterschriften
+
+\usepackage{subcaption}			% Für mehrere Objekte nebeneinander mit eigenen Bildunterschriften
+
+\usepackage{tabularx}			% Erweiterte Befehle für Tabellen
+\usepackage{booktabs}			% Für professionele Tabellen, siehe Manual
+\usepackage{longtable}			% Für Tabellen, die nicht mehr auf eine Seite passen.
+
+\usepackage{rotating}			% Zum Verdrehen von Objekten. Nur mäßig verwenden.
+
+%\graphicspath{{figs/}{bilder/}}	% Bildverzeichnisse MUSS ÜBERPRÜFT WERDEN!!!
+
+% ==================================================
+%	Mathematikumgebungen und Einheiten
+% ==================================================
+
+\usepackage{amsmath}			% Paket für mathematische Umgebungen und Funktionen
+\usepackage{amsfonts}			% Zusätzliche Mathematische Schriftarten
+\usepackage{amssymb}			% Zusätzliche Mathematische Symbole
+%\usepackage{amscd}			% Zum Setzen Kommutativer Diagramme
+\usepackage{amstext}			% Textsatz in der Matheumgebung
+\usepackage{upgreek}			% Aufrechte griechische Buchstaben
+
+
+% Diagramme mit tikz und Gnuplot zeichnen
+%	\usepackage{tikz}
+%	\usepackage{tikz-qtree}
+%	\usepackage{gnuplot-lua-tikz}
+
+% ==================================================
+% SIUnitX: Einheiten werden vollautomatisch gesetzt
+% ==================================================
+\usepackage[
+    separate-uncertainty = true, 		% Stellt den Fehler separat dar: Siehe SIUnitX-Manual
+    mode 			= text, 	% Stellt Einheiten (Kelvin etc.) Nichtkursiv dar
+    quotient-mode	= 	fraction,	% Bruchstriche nutzen
+    repeatunits           = false, 
+    range-phrase          = {\,bis\,},  
+]{siunitx}
+\sisetup{
+	per-mode = fraction, 			% Bruchstriche nutzen
+	output-decimal-marker = {,}, 		% Setzt das Dezimaltrennzeichen als Komma
+	multi-part-units = brackets,
+	exponent-product = \cdot,
+}
+
+\addto\extrasgerman{\sisetup{locale = DE}}	% "Deutsche" Einheiten
+\usepackage{cancel}				% Kürzen von Einheiten in SIUnitX ermöglichen
+
+
+% ==================================================
+%	Sonstiges
+% ==================================================
+
+%\usepackage[official]{eurosym}			% offizielles Eurosymbol
+
+% ==================================================
+%	Seitenlayout
+% ==================================================
+
+% Kein Einrücken der Absätze (Einrücken = Null)
+	\setlength{\parindent}{0pt}             % kein Einrücken der ersten Zeile in einem neuen Absatz
+
+% Vermeidung von "Schusterjungen"
+	\clubpenalty = 3000			% Höchstwert 10000, dann dürfen theoretisch keine Schusterjungen mehr auftreten.
+% Vermeidkung von "Hurenkindern"
+	\widowpenalty = 3000			% Höchstwert 10000, dann dürfen theoretisch keine Hurenkinder mehr auftreten.
+	\displaywidowpenalty = 3000		% Es werden beide Einstellungen benötigt.
+
+% Seitenlayout ändern mit Fancy
+	\usepackage{fancyhdr}			% Paket zum bequemeren Verändern des Seitenlayouts
+
+	% Tabellen ändern:
+		\renewcommand{\thetable}{\arabic{section}.\arabic{table}} % figures bekommen die richtige Nummerierung: x.y
+		\makeatletter \@addtoreset{table}{section} \makeatother      % nach jeder section wird neu gezählt
+
+	% Kapitelüberschriften in der Kopfzeile:
+		\renewcommand*{\sectionmark}[1]{\markboth{}{\thesection\ #1}}
+		%\renewcommand*{\subsectionmark}[1]{\markboth{}{\thesubsection\ #1}}
+		\renewcommand*{\subsectionmark}[1]{\markboth{}{}} % keine Unterüberschriften in der Kopfzeile
+		\renewcommand{\plainheadrulewidth}{0.4pt}
+	
+	% Seitennummern rechts in der Kopfzeile:
+		\lhead[\fancyplain{\thepage}{\thepage}]{\fancyplain{}{\rightmark}}
+		\rhead[\fancyplain{}{\leftmark}]{\fancyplain{\thepage}{\thepage}}
+	
+	%Fußzeilen bleiben leer
+		\lfoot{}
+		\cfoot{}
+		\rfoot{}
