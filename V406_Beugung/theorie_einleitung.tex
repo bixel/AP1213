@@ -18,7 +18,7 @@
 
 		Das Huygenssche Prinzip geht von der Welleneigenschaft des Lichtes aus.
 		Es besagt, dass jeder Punkt einer Wellenfl"ache zur gleichen Zeit Elementarwellen aussendet.
-		Diese Kugelwellen interferieren miteineander und bilden eine neue Wellenfront,
+		Diese Kugelwellen interferieren miteinander und bilden eine neue Wellenfront,
 		die die Ein\-h"ul\-len\-de der Elementarwellen ist und wiederum neue Elementarwellen aussendet.
 		Die "Uberlagerung aller Elementarwellen an einem Ort im Raum beschreibt dann den dortigen Schwingungszustand der Welle.
 
@@ -62,28 +62,30 @@
 				\label{abb_spalt}
 		\end{figure}
 
-		Betrachtet man nun den Spalt genauer, l"asst sich die Phasendifferenz $\delta$ zweier Strahlenb"undel einfach beschreiben. Die durch Elementarwellen bestimmten B"undel haben dann unter dem Winkel $\varphi$ die Phasendifferenz $\delta$
+		Betrachtet man nun den Spalt genauer, l"asst sich die Phasendifferenz $\delta$ zweier Strah\-len\-b"un\-del einfach beschreiben. Die durch Elementarwellen bestimmten B"undel haben dann unter dem Winkel $\varphi$ die Phasendifferenz $\delta$
 
 		\begin{equation}
-			\delta = \frac{2 \pi s}{\lambda} = \frac{2 \pi x \sin(\varphi)}{\lambda}
+			\delta = \frac{2 \pi s}{\lambda} = \frac{2 \pi x \sin(\varphi)}{\lambda} .
 		\end{equation}
 
-		Hierbei ist $s$ gerade der Gangunterschied der B"undel und $\lambda$ die Wellenl"ange des einfallenden Lichtes.\\
+		Hierbei ist $s$ gerade der Gangunterschied der B"undel und $\lambda$ die Wellenl"ange des ein\-fal\-len\-den Lichtes.\\
 		Um die Amplitude $B(z, t, \varphi)$ zu bestimmen muss "uber alle Elementarwellen -- also "uber die gesamte Spaltbreite $b$ -- integriert werden:
 
 		\begin{eqnarray}
-			B(z, t, \varphi) &=& A_0 \int \limits_0^b \exp{\left(i \omega t - \frac{2 \pi z}{\lambda} + \delta \right)} \mathrm{dx} \nonumber \\
-			&=& A_0 \exp{\left(i \omega t - \frac{2 \pi z}{\lambda}\right)} \int \limits_0^b \exp{\left(\frac{2 \pi i x \sin{\varphi}}{\lambda}\right)} \mathrm{dx} \nonumber\\
+			B(z, t, \varphi) &=& A_0 \int \limits_0^b \exp{\left[i \left(\omega t - \frac{2 \pi z}{\lambda} + \delta \right)\right]} \mathrm{dx} \nonumber \\
+			&=& A_0 \exp{\left[i \left(\omega t - \frac{2 \pi z}{\lambda}\right)\right]} \int \limits_0^b \exp{\left(\frac{2 \pi i x \sin{\varphi}}{\lambda}\right)} \mathrm{dx} \nonumber\\
 			\Rightarrow \enspace
 			B(z, t, \varphi) &=& A_0 \exp{\left[ i \left( \omega t - \frac{2\pi z}{\lambda}
 			\right) \right] } 
 			\exp{\left[i \left( \frac{\pi b \sin{\varphi}}{\lambda} \right)\right]}  \cdot \nonumber \\
 			&\cdot& \frac{\lambda}{\pi \sin{\varphi}}
-			\sin{\left( \frac{\pi b \sin{\varphi}}{\lambda} \right)} \label{eqn:allgemeine_lsg}
+			\sin{\left( \frac{\pi b \sin{\varphi}}{\lambda} \right)}
+			.
+			\label{eqn:allgemeine_lsg}
 		\end{eqnarray}
 
 		Dies beschreibt die Beugung an einem Parallelspalt.
-		Die ersten beiden exponentiellen Anteile aus Gleichung \ref{eqn:allgemeine_lsg} beschreiben die Amplitude in Abh"angigkeit der Zeit $t$ und des Ortes $z$ (senkrecht auf der Schirmfl"ache).
+		Die ersten beiden exponentiellen Anteile aus Gleichung \eqref{eqn:allgemeine_lsg} beschreiben die Amplitude in Abh"angigkeit der Zeit $t$ und des Ortes $z$ (senkrecht auf der Schirmfl"ache).
 
 		Die einfallenden Lichtb"undel werden "uber lange Zeit gemessen.
 		Wegen der hohen Frequenz $\omega$ des Lichtes k"onnn wir nur die "uber einige Zeit gemittelte Intensit"at $I$ messen. Der Anteil der Zeitabh"angigkeit f"allt also weg.
@@ -92,17 +94,18 @@
 		Dann gilt:
 
 		\begin{eqnarray}
-			I(\varphi) & \propto & B^2(\varphi) \nonumber
+			I(\varphi) & \propto & B^2(\varphi) 
+		 . \nonumber
 		\end{eqnarray}
 
 		Mit einer Abk"urzung l"asst sich der Zusammenhang "ubersichtlich darstellen:
 
 		\begin{eqnarray}
-			\eta(\varphi) & := & \frac{\pi b \sin{\varphi}}{\lambda} \nonumber \\
+			\eta(\varphi) & := & \frac{\pi b \sin{\varphi}}{\lambda} , \nonumber \\
 			\Rightarrow \qquad
-			B(\varphi) & = & A_0 b \frac{\sin{\eta}}{\eta} \label{amplitude_einfach} \\
+			B(\varphi) & = & A_0 b \frac{\sin{\eta}}{\eta} , \label{amplitude_einfach} \\
 			\Rightarrow \qquad
-			I(\varphi) & \propto & A_0^2 b^2 \left(\frac{\sin{\eta}}{\eta}\right)^2
+			I(\varphi) & \propto & A_0^2 b^2 \left(\frac{\sin{\eta}}{\eta}\right)^2  .
 			\label{prop_einzelspalt}
 		\end{eqnarray}
 
@@ -111,7 +114,7 @@
 		Ein Minimum liegt vor, wenn $I(\varphi) = 0$ ist. Das gilt f"ur
 
 		\begin{equation}
-			\sin{\varphi_n} = \pm \, n \frac{\lambda}{b} \quad , \quad n = \left(1, 2, \dots\right)
+			\sin{\varphi_n} = \pm \, n \frac{\lambda}{b} \quad , \quad n = \left(1, 2, \dots\right) .
 		\end{equation}
 
 		\begin{figure}[h]
@@ -132,7 +135,7 @@
 			\begin{array}{ll}
 			 	 A_0 & \qquad 0 \leq x \leq b \\
 			 	 0 & \qquad \mathrm{sonst} 
-			 \end{array}
+			 \end{array} ,
 			 \right.
 		\end{equation}
 
@@ -140,11 +143,11 @@
 
 		\begin{equation}
 			g(\xi) := \int \limits_{-\infty}^{\infty} f(x) e^{ix \xi} \mathrm{dx} =
-			\frac{A_0}{i \xi} \left(-1 + e^{i \xi b}\right)
+			\frac{A_0}{i \xi} \left(-1 + e^{i \xi b}\right) .
 			\label{amplitude_fourier}
 		\end{equation}
 
-		unter Anwendung der Eulerschen Formel und mit
+		Unter Anwendung der Eulerschen Formel und mit
 
 		\begin{equation}
 			g(\xi) = \frac{2 \pi \sin{\varphi}}{\lambda}
@@ -164,14 +167,14 @@
 		\label{sec:muster_doppelspalt}
 
 		Der Doppelspalt l"asst sich als "Uberlagerung zweier Einzelspalte im Abstand $s$ beschreiben.
-		Hieraus bekommt man zus"atzlich zur Abh"angigkeit \ref{prop_einzelspalt} einen Cosinus-Anteil,
+		Hieraus bekommt man zus"atzlich zur Abh"angigkeit \eqref{prop_einzelspalt} einen Cosinus-Anteil,
 		der den Gangunterschied durch den Spaltabstand ber"ucksichtigt:
 
 		\begin{equation}
-			I(\varphi) \propto B(\varphi) = 
+			I(\varphi) \propto B^2(\varphi) = 
 			4 \cos^2{\left( \frac{\pi s \sin{\varphi}}{\lambda} \right)}
 			\left( \frac{\lambda}{\pi b \sin{\varphi}} \right)^2
-			\sin^2{\left( \frac{\pi b \sin{\varphi}}{\lambda} \right)}
+			\sin^2{\left( \frac{\pi b \sin{\varphi}}{\lambda} \right)} .
 			\label{prop_doppelspalt}
 		\end{equation}
 

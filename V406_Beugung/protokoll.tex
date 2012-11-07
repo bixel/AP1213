@@ -1,6 +1,8 @@
-\documentclass{scrartcl}
+%Dokumentklasse Festlegen
+\documentclass[paper = a4, ngerman]{scrartcl}
+
 	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
-	\usepackage{ngerman}
+	\usepackage[ngerman]{babel, varioref}
 
 	%siunitx fur SI-Einheitesnsystem%
 	\usepackage{siunitx}
@@ -12,6 +14,60 @@
 
 	%graphicx fur Bildeinbindung%
 	\usepackage{graphicx}
+
+	%enthaelt eqnref{}-Operator
+	\usepackage{amsmath}
+
+	%Links innerhalb und ausserhalb des Dokuments
+	\usepackage{hyperref}
+
+	%Formatiert urls
+	\usepackage{url}
+
+	%Bibliographie
+	\usepackage[numbers]{natbib}
+
+		%Bibtex: Nachnamen in Kapitälchen
+		%\renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}
+		\newcommand*{\mkbibnamelast}[1]{\textsc{#1}}
+
+		% Makros für Anhang + Referenzen
+		\newcommand{\anhang}{
+			\clearpage		% Anhang auf eine extra Seite packen
+			\setcounter{page}{0}	
+			\pagenumbering{Roman}	% Anhang wird in römischen Seitenzahlen numeriert
+			\appendix		% Kapitelnummerierung in Großbuchstaben statt Zahlen.
+		}
+
+		\newcommand{\referenzen}{
+			\bibliographystyle{alphadin} 			% Alphabetisch sortiert im DIN-Format
+			\addcontentsline{toc}{section}{Referenzen}
+			\phantomsection					% Referenzen ins Inhaltsverzeichnis
+			\renewcommand{\refname}{\section*{Referenzen}\vspace*{-1em}} % Benennt das Kapitel um
+			\bibliography{../bib.bib} 	% Die BibTeX-Datei einbinden
+		}
+
+	% Seitenlayout ändern mit Fancy
+	\usepackage{fancyhdr}	% Paket zum bequemeren Verändern des Seitenlayouts
+
+		% Tabellen ändern:
+			\renewcommand{\thetable}{\arabic{section}.\arabic{table}} % figures bekommen die richtige Nummerierung: x.y
+			\makeatletter \@addtoreset{table}{section} \makeatother      % nach jeder section wird neu gezählt
+
+		% Kapitelüberschriften in der Kopfzeile:
+			\renewcommand*{\sectionmark}[1]{\markboth{}{\thesection\ #1}}
+			%\renewcommand*{\subsectionmark}[1]{\markboth{}{\thesubsection\ #1}}
+			\renewcommand*{\subsectionmark}[1]{\markboth{}{}} % keine Unterüberschriften in der Kopfzeile
+			\renewcommand{\plainheadrulewidth}{0.4pt}
+		
+		% Seitennummern rechts in der Kopfzeile:
+			\lhead[\fancyplain{\thepage}{\thepage}]{\fancyplain{}{\rightmark}}
+			\rhead[\fancyplain{}{\leftmark}]{\fancyplain{\thepage}{\thepage}}
+		
+		%Fußzeilen bleiben leer
+			\lfoot{}
+			\cfoot{}
+			\rfoot{}
 
 	%Texteinzug vor Absatz entfernen%
 	\parindent 0pt
@@ -25,6 +81,9 @@
 
 	%\maketitle
 
+	% ANFANG Titelseite %
+	\vspace*{3cm}
+
 	\begin{center}
 		\large
 		TU Dortmund
@@ -35,17 +94,17 @@
 		V406 - Beugung am Spalt
 	\end{center}
 
-	\vspace{9cm}
+	\vspace{6cm}
 	\begin{center}
 		\begin{minipage}[b]{8cm}
-			\large
+			\Large
 			Markus Stabrin \\
-			\small
+			\normalsize
 			markus.stabrin@tu-dortmund.de \\
 
-			\large
+			\Large
 			Kevin Heinicke\\
-			\small
+			\normalsize
 			kevin.heinicke@tu-dortmund.de \\
 			\\
 			\\
@@ -55,6 +114,8 @@
 			Abgabedatum: 30. Oktober 2012
 		\end{minipage}
 	\end{center}
+
+	% ENDE Titelseite %
 
 	\newpage
 
@@ -71,5 +132,7 @@
 	\newpage
 
 	\input{diskussion_literatur.tex}
+
+	\anhang
 
 \end{document}
