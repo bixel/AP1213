@@ -24,29 +24,6 @@
 	%Formatiert urls
 	\usepackage{url}
 
-	%Bibliographie
-	\usepackage[numbers]{natbib}
-
-		%Bibtex: Nachnamen in Kapitälchen
-		%\renewcommand*{\mkbibnamelast}[1]{\textsc{#1}}
-		\newcommand*{\mkbibnamelast}[1]{\textsc{#1}}
-
-		% Makros für Anhang + Referenzen
-		\newcommand{\anhang}{
-			\clearpage		% Anhang auf eine extra Seite packen
-			\setcounter{page}{0}	
-			\pagenumbering{Roman}	% Anhang wird in römischen Seitenzahlen numeriert
-			\appendix		% Kapitelnummerierung in Großbuchstaben statt Zahlen.
-		}
-
-		\newcommand{\referenzen}{
-			\bibliographystyle{alphadin} 			% Alphabetisch sortiert im DIN-Format
-			\addcontentsline{toc}{section}{Referenzen}
-			\phantomsection					% Referenzen ins Inhaltsverzeichnis
-			\renewcommand{\refname}{\section*{Referenzen}\vspace*{-1em}} % Benennt das Kapitel um
-			\bibliography{../bib.bib} 	% Die BibTeX-Datei einbinden
-		}
-
 	% Seitenlayout ändern mit Fancy
 	\usepackage{fancyhdr}	% Paket zum bequemeren Verändern des Seitenlayouts
 
@@ -133,6 +110,6 @@
 
 	\input{diskussion_literatur.tex}
 
-	\anhang
+	%\anhang
 
 \end{document}

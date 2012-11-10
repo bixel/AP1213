@@ -10,10 +10,9 @@ plt.plot(x, (np.sin(x) / x) ** 2, 'r-')
 plt.plot(x, (np.sin(x) / x), 'k-')
 plt.title('Theoriekurve')
 plt.grid(b = True, which = "major")
-plt.xlabel('x [mm]')
+plt.xlabel(r'$\varphi \quad [10^{-3}\,\mathrm{rad}]$')
 plt.ylabel('B, I auf 1 normiert')
 
-plt.legend((r'Intensit\" at I($\varphi$)', r'Amplitude $B^2(\varphi)$'))
+plt.legend((r'Intensit\" at I($\varphi$)', r'Amplitude $B(\varphi)$'))
 
-plt.savefig('theorie_1')
-plt.show()
+plt.savefig('theorie_1.png')

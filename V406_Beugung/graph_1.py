@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import scipy as sp
+from scipy.optimize import curve_fit
+from matplotlib import rc
 
 x, y = np.genfromtxt('daten_mr_1.txt', unpack=True)
 # Datensatz in x und y einlesen
@@ -17,7 +18,7 @@ y -= .13
 y /= max(y)
 # y normieren
 
-x_ticks = np.arange(-25, 26, 5)
+x_ticks = np.arange(-28, 28.001, 4)
 y_ticks = np.arange(0, 1.2, .1)
 # Schritte fuer Skalierung festlegen
 
@@ -28,20 +29,19 @@ vor_werte = [b_vorsch]
 
 theorie_funktion = lambda t, b: (np.sin(np.pi * b * (t / 1000) / l) / ((np.pi * b * (t / 1000)) / l)) ** 2
 
-p, cov = sp.optimize.curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte))
+p, cov = curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte))
 
 print(p)
 
 plt.plot(x, y, 'kx')
 plt.plot(x_theorie, theorie_funktion(x_theorie, p[0]), 'r-')
 plt.title('Messreihe 1')
-plt.xlabel('x [mm]')
-plt.ylabel('I [nA]')
+plt.xlabel(r"$\varphi \quad [10^{-3} \mathrm{rad}]$")
+plt.ylabel(r"$I \quad [72\,\mathrm{nA}]$")
 plt.xticks(x_ticks)
 plt.yticks(y_ticks)
 plt.grid(b = True, which = "major")
 
-plt.legend(('Messpunkge', 'nicht-lineare Regression'))
+plt.legend(('Messpunkte', 'nicht-lineare Regression'), bbox_to_anchor=(1.1, 1))
 
 plt.savefig('graph_1')
-plt.show()
