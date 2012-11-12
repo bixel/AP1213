@@ -18,12 +18,12 @@ y -= .13
 y /= max(y)
 # y normieren
 
-x_ticks = np.arange(-25, 26, 5)
+x_ticks = np.arange(-28, 28.001, 4)
 y_ticks = np.arange(0, 1.2, .1)
 # Schritte fuer Skalierung festlegen
 
 b_vorsch = .04
-s_vorsch = .16
+s_vorsch = .250
 l = .000633
 
 vor_werte = [b_vorsch, s_vorsch]
@@ -37,16 +37,21 @@ p2, cov2 = curve_fit(theorie_funktion, x, y, p0 = np.array(vor_werte), maxfev = 
 print(p)
 
 plt.plot(x, y, 'kx')
-plt.plot(x_theorie, theorie_funktion(x_theorie, p[0], p[1]), 'r-')
+line1 = plt.plot(x_theorie, theorie_funktion(x_theorie, p[0], p[1]))
+
+plt.setp(line1, linewidth = .5, color = 'r', ls = '-', aa = True)
+
 plt.plot(x_theorie, theorie_funktion_2(x_theorie, p2[0]), 'b--')
 plt.title('Messreihe 3')
-plt.xlabel('x [mm]')
-plt.ylabel('I [nA]')
+plt.xlabel(r"$\varphi \quad [10^{-3} \mathrm{rad}]$")
+plt.ylabel(r"$I \quad [38\,\mathrm{nA}]$")
 plt.xticks(x_ticks)
 plt.yticks(y_ticks)
 plt.grid(b = True, which = "major")
 
-plt.legend(('Messpunkge', 'nicht-lineare Regression'))
+plt.legend(('Messpunkte', 'nicht-lineare Regression', 'Einzelspaltmuster'), bbox_to_anchor=(1.1, 1))
 
-plt.savefig('graph_2')
-plt.show()
+fig = plt.gcf()
+fig.set_size_inches(9, 6)
+
+plt.savefig('graph_3.png', pad_inches = 0)
