@@ -1,0 +1,70 @@
+\documentclass{scrartcl}
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage{ngerman}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%enthaelt eqnref{}-Operator
+	\usepackage{amsmath}
+
+	%damit lualatex formeln richtig darstellt
+	%\usepackage{unicode-math}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent 0pt
+
+\begin{document}
+	
+	\vspace*{3cm}
+
+	\begin{center}
+		\large
+		TU Dortmund
+	\end{center}
+
+	\begin{center}
+		\Huge
+		V702 - Aktivierung mit Neutronen
+	\end{center}
+
+	\vspace{6cm}
+	\begin{center}
+		\begin{minipage}[b]{8cm}
+			\Large
+			Markus Stabrin \\
+			\normalsize
+			markus.stabrin@tu-dortmund.de \\
+
+			\Large
+			Kevin Heinicke\\
+			\normalsize
+			kevin.heinicke@tu-dortmund.de \\
+			\\
+			\\
+
+			Versuchsdatum: 13. November 2012 \\
+			\\
+			Abgabedatum: 20. November 2012
+		\end{minipage}
+	\end{center}
+
+	\newpage
+
+	\input{01_theorie_einleitung.tex}
+
+	\input{02_durchfuehrung.tex}
+
+	\input{03_auswertung.tex}
+
+	\input{04_diskussion_literatur.tex}
+
+\end{document}
