@@ -62,11 +62,11 @@ if data == 'rhodium':
 
 	gerade_1, = plt.plot(x1_theorie, funk(x1_theorie, p[0], p[1]), 'r-')
 	plt.plot(x1_theorie_punkte, funk(x1_theorie_punkte, p[0], p[1]), 'r--')
-	werte_1 = plt.errorbar(x1, y1, yerr = 1 / np.sqrt(y1 ** 2 + N_Dunkel), fmt = 'gx')
+	werte_1 = plt.errorbar(x1, y1, yerr = np.sqrt(y1 + N_Dunkel) / (y1 - N_Dunkel), fmt = 'gx')
 
 	gerade_2, = plt.plot(x2_theorie, funk(x2_theorie, p2[0], p2[1]), 'b-')
 	plt.plot(x2_theorie_punkte, funk(x2_theorie_punkte, p2[0], p2[1]), 'b--')
-	werte_2 = plt.errorbar(x2, y2, yerr = 1 / np.sqrt(y2 ** 2 + N_Dunkel), fmt = 'yx')
+	werte_2 = plt.errorbar(x2, y2, yerr = np.sqrt(y2 + N_Dunkel) / (y2 - N_Dunkel), fmt = 'yx')
 
 	plt.legend((werte_1, gerade_1, werte_2, gerade_2), (r'$\ln{\left(N_{\Delta t} - N_{\Delta , l} - N_0 \right)}$', r'$\mathrm{Theoriekurve\ 1}$', r'$\ln{\left( N_{\Delta t} - N_0 \right)}$', r'$\mathrm{Theoriekurve\ 2}$'))
 
@@ -81,19 +81,19 @@ elif data == 'indium':
 
 	x *= 240
 
-	y -= 256 / 900 * 240
-	y = np.log(y)
-
 	y_error = np.sqrt(y)
-	#y_error = np.log(y)
-	#y = np.log(y)
+
+	N_Dunkel = 256 / 900 * 240
+	y -= N_Dunkel
+
+	y = np.log(y)
 
 	x_theorie = np.arange(0, 4001, 1)
 
 	plt.xlabel(r'$t\,[\mathrm{s}]$')
 	plt.ylabel(r'$\mathrm{Zerf\"alle}\,[1 / 240\mathrm{s}]$')
 
-	m_vorschlag = 2.127e-4
+	m_vorschlag = np.log(2) / 60
 	n_0_vorschlag = 50000
 	vor_werte = np.array([m_vorschlag, n_0_vorschlag])
 
@@ -104,7 +104,7 @@ elif data == 'indium':
 	print(p)
 	plt.plot(x_theorie, funk(x_theorie, p[0], p[1]), 'r-')
 
-	plt.errorbar(x, y, yerr = 1 / np.sqrt((y_error ** 2) + 256 / 900 * 240), fmt = 'kx')
+	plt.errorbar(x, y, yerr = np.sqrt(y + N_Dunkel) / (y - N_Dunkel), fmt = 'kx')
 
 	t_halb = np.log(2) / p[0]
 	print('=> lambda: ' + str(p[0]))

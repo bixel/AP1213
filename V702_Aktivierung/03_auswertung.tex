@@ -1,2 +1,27 @@
 \section{Auswertung}
 	\label{sec:auswertung}
+	Vor allen Messungen musste der Nulleffekt ermittelt werden, um unsere Messwerte sp"ater von diesem zu bereinigen.
+	Hierf"ur wurden die Zerf"alle $N_0$, die ohne Probe ermittelt werden, "uber lange Zeit gez"ahlt.
+	Anschlie"send konnten die eigentlichen Messungen durchgef"uhrt werden.
+	
+
+	Um auf die Halbwertszeiten zu schlie"sen konnten die Beziehungen \eqref{bla} aus Kapitel \ref{sec:theorie} verwendet werden.
+	Weil die Messwerte Poisson-verteilt sind, betrug der Fehler auf die Messwerte
+
+	\begin{eqnarray}
+		\Delta N_{\Delta t, \mathrm{roh}} & = & \sqrt{N_{\Delta t, \mathrm{roh}}}, \\
+		\Delta N_0 & = & \sqrt{N_0},\\
+		\Rightarrow \Delta N_{\Delta t} & = & \sqrt{N_{\Delta t, \mathrm{roh}} + N_0}.
+	\end{eqnarray}
+
+	Um eine Ausgleichsrechnung durchzuf"uhren wurden die Werte linearisiert, was einen weiteren Fehler durch Gau"s'sche Fehlerfortpflanzung erzeugt:
+
+	\begin{equation}
+		\Delta N = \frac{\partial}{\partial N} \ln{\left( N_{\Delta t, \mathrm{roh}} - N_0 \right)} \cdot \Delta N_{\Delta t} = \frac{\Delta N_{\Delta t}}{N_{\Delta t, \mathrm{roh}} - N_0}
+	\end{equation}
+
+	\subsection{Halbwertszeit von Indium}
+		\label{subsec:indium}
+
+	\subsection{Halbwertszeit von Rhodium}
+		\label{subsec:rhodium}
