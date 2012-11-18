@@ -4,7 +4,7 @@ import scipy as sp
 from scipy.optimize import curve_fit
 import datetime as dt
 
-data = 'indium'
+data = 'rhodium'
 
 if data == 'rhodium':
 	# Graph fuer Rhodium
@@ -12,15 +12,17 @@ if data == 'rhodium':
 
 	x *= 12
 
-	y -= 256 / 900 * 12
+	N_Dunkel = 256 / 900 * 12
+	y -= N_Dunkel
 
-	y_splitted = np.split(y, 2)
-	x_splitted = np.split(x, 2)
+	y_splitted = np.split(y, [19, 21, 40])
+	x_splitted = np.split(x, [19, 21, 40])
+
 	y1 = y_splitted[0]
 	x1 = x_splitted[0]
 
-	y2 = y_splitted[1]
-	x2 = x_splitted[1]
+	y2 = y_splitted[2]
+	x2 = x_splitted[2]
 
 	print(y2)
 
@@ -32,31 +34,30 @@ if data == 'rhodium':
 	funk = lambda t, m, n_0: n_0 * (1 - np.e ** (-m * 12)) * np.e**(- m * t)
 
 	vor_werte = np.array([m_vorschlag, n_0_vorschlag])
-	p, cov = curve_fit(funk, x1, y1, p0 = vor_werte, maxfev = 1000)
-	print('Erster Teil: ')
-	print(p)
-
-	m_vorschlag = .001
-	n_0_vorschlag = 1.0
-
-	vor_werte = np.array([m_vorschlag, n_0_vorschlag])
 	p2, cov2 = curve_fit(funk, x2, y2, p0 = vor_werte, maxfev = 1000)
 	print('Zweiter Teil: ')
 	print(p2)
+
+	y1 -= p2[1] * (1 - np.e ** (- p2[0] * 12)) * np.e ** (- p2[0] * x1)
+
+	vor_werte = np.array([m_vorschlag, n_0_vorschlag])
+	p, cov = curve_fit(funk, x1, y1, p0 = vor_werte, maxfev = 1000)
+	print('Erster Teil: ')
+	print(p)
 
 	plt.xlabel(r'$t\,[\mathrm{s}]$')
 	plt.ylabel(r'$\mathrm{Zerf\"alle}\,[1 / 12\mathrm{s}]$')
 
 	plt.plot(x_theorie, funk(x_theorie, p[0], p[1]), 'r-')
-	plt.errorbar(x1, y1, yerr = np.sqrt(y1), fmt = 'kx')
+	plt.errorbar(x1, y1, yerr = np.sqrt(y1), fmt = 'gx')
 
 	plt.plot(x_theorie, funk(x_theorie, p2[0], p2[1]), 'b-')
-	plt.errorbar(x2, y2, yerr = np.sqrt(y2), fmt = 'kx')
+	plt.errorbar(x2, y2, yerr = np.sqrt(y2), fmt = 'yx')
 
 	t_halb1 = np.log(2) / p[0]
 	t_halb2 = np.log(2) / p2[0]
 
-	print('Halbwertszeiten 1 und 2: ' + str(t_halb1) + '; ' + str(t_halb2))
+	print('=> Halbwertszeiten 1 und 2: ' + str(t_halb1) + 's1 = ' + str(dt.timedelta(seconds = t_halb1)) + '; ' + str(t_halb2) + 's2 = ' + str(dt.timedelta(seconds = t_halb2)))
 
 elif data == 'indium':
 	# Graph fuer Indium
@@ -93,5 +94,6 @@ elif data == 'indium':
 
 	print('Halbwertszeit: ' + str(t_halb) + 's = ' + str(dt.timedelta(seconds = t_halb)))
 
+plt.grid(which = 'both')
 plt.savefig('../img/graph_' + data + '.png')
 plt.clf()
