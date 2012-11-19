@@ -5,7 +5,7 @@ from scipy.optimize import curve_fit
 import datetime as dt
 import pylab
 
-data = 'rhodium'
+data = 'indium'
 
 if data == 'rhodium':
 	# Graph fuer Rhodium
@@ -71,7 +71,7 @@ if data == 'rhodium':
 	plt.plot(x2_theorie_punkte, funk(x2_theorie_punkte, p2[0], p2[1]), 'b--')
 	werte_2 = plt.errorbar(x2, y2, yerr = np.sqrt(y2 + N_Dunkel) / (y2 - N_Dunkel), fmt = 'yx')
 
-	plt.legend((werte_1, gerade_1, werte_2, gerade_2), (r'$\ln{\left(N_{\Delta t} - N_{\Delta , l} - N_0 \right)}$', r'$\mathrm{Theoriekurve\ 1}$', r'$\ln{\left( N_{\Delta t} - N_0 \right)}$', r'$\mathrm{Theoriekurve\ 2}$'))
+	plt.legend((werte_1, gerade_1, werte_2, gerade_2), (r'$\ln{\left(N_{\Delta t} - N_{\Delta , l} - N_0 \right)}$', r'$\mathrm{Regressionsgerade\ 1}$', r'$\ln{\left( N_{\Delta t} - N_0 \right)}$', r'$\mathrm{Regressionsgerade\ 2}$'))
 
 	t_halb1 = np.log(2) / p[0]
 	t_halb2 = np.log(2) / p2[0]
@@ -110,9 +110,10 @@ elif data == 'indium':
 	p, cov = curve_fit(funk, x, y, p0 = vor_werte, sigma = y_error, maxfev = 1000)
 	print(p)
 	print(cov)
-	plt.plot(x_theorie, funk(x_theorie, p[0], p[1]), 'r-')
 
-	plt.errorbar(x, y, yerr = np.sqrt(y + N_Dunkel) / (y - N_Dunkel), fmt = 'kx')
+	gerade, = plt.plot(x_theorie, funk(x_theorie, p[0], p[1]), 'r-')
+	werte = plt.errorbar(x, y, yerr = np.sqrt(y + N_Dunkel) / (y - N_Dunkel), fmt = 'kx')
+	plt.legend((gerade, werte), (r'$\mathrm{Regressionsgerade}$', r'$\ln{\left( N_{\Delta t} - N_0 \right)}$'))
 
 	t_halb = np.log(2) / p[0]
 	t_halb_err = np.log(2) * np.sqrt(cov[0][0]) / (p[0] ** 2)
@@ -122,6 +123,9 @@ elif data == 'indium':
 	print('=> Halbwertszeit: ' + str(t_halb) + ' s = ' + str(dt.timedelta(seconds = t_halb)))
 	print('=> Fehler T_h: ' + str(t_halb_err) + ' = ' + str(t_halb_err / t_halb * 100) + '%')
 
+fig = plt.gcf() #Gibt Referent auf die aktuelle Figur - "get current figure"
+fig.set_size_inches(9, 6)
+
 plt.grid(which = 'both')
-plt.savefig('../img/graph_' + data + '_linearisiert.png')
+plt.savefig('../img/graph_' + data + '_linearisiert.png', bbox_inches='tight')
 plt.clf()
