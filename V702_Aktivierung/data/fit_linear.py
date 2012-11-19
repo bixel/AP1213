@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import scipy as sp
 from scipy.optimize import curve_fit
 import datetime as dt
+import pylab
 
 data = 'rhodium'
 
@@ -32,8 +33,8 @@ if data == 'rhodium':
 	x2_theorie = np.arange(300, 500.1, .2)
 	x2_theorie_punkte = np.arange(0, 300.1, .2)
 
-	m_vorschlag = .001
-	n_0_vorschlag = 1000
+	m_vorschlag = .01
+	n_0_vorschlag = 3000
 
 	funk = lambda t, m, n_0: np.log(n_0 * (1 - np.e ** (-m * 12))) - m * t
 
@@ -44,6 +45,7 @@ if data == 'rhodium':
 	p2, cov2 = curve_fit(funk, x2, y2, p0 = vor_werte, maxfev = 1000)
 	print('Zweiter Teil: ')
 	print(p2)
+	print(np.sqrt(cov2[0][0]))
 
 	# danach fuer kleine t: lambda_l muss dann herausgerechnet werden
 	y1 -= p2[1] * (1 - np.e ** (- p2[0] * 12)) * np.e ** (- p2[0] * x1)
@@ -53,6 +55,7 @@ if data == 'rhodium':
 	p, cov = curve_fit(funk, x1, y1, p0 = vor_werte, maxfev = 1000)
 	print('Erster Teil: ')
 	print(p)
+	print(np.sqrt(cov[0][0]))
 
 	# m_vorschlag = .001
 	# n_0_vorschlag = 1.0
@@ -72,8 +75,13 @@ if data == 'rhodium':
 
 	t_halb1 = np.log(2) / p[0]
 	t_halb2 = np.log(2) / p2[0]
+	t_halb1_error = np.log(2) * np.sqrt(cov[0][0]) / (p[0] ** 2)
+	t_halb2_error = np.log(2) * np.sqrt(cov2[0][0]) / (p2[0] ** 2)
 
-	print('=> Halbwertszeiten 1 und 2: ' + str(t_halb1) + 's1 = ' + str(dt.timedelta(seconds = t_halb1)) + '; ' + str(t_halb2) + 's2 = ' + str(dt.timedelta(seconds = t_halb2)))
+	print('=> Halbwertszeiten 1 und 2: ' + str(t_halb1) + ' s1 = ' + str(dt.timedelta(seconds = t_halb1)) + '; ' + str(t_halb2) + ' s2 = ' + str(dt.timedelta(seconds = t_halb2)))
+	print('=> Fehler 1: ' + str(t_halb1_error) + ' = ' + str(t_halb1_error / t_halb1 * 100) + '%; Fehler 2: ' + str(t_halb2_error) + ' = ' + str(t_halb2_error / t_halb2 * 100) + '%')
+
+	print(np.log(2))
 
 elif data == 'indium':
 	# Graph fuer Indium
@@ -99,17 +107,20 @@ elif data == 'indium':
 
 	funk = lambda t, m, n_0: np.log(n_0 * (1 - np.e ** (-m * 240))) - m * t
 
-	p, cov = curve_fit(funk, x, y, p0 = vor_werte, maxfev = 1000)
-	print('Erster Teil: ')
+	p, cov = curve_fit(funk, x, y, p0 = vor_werte, sigma = y_error, maxfev = 1000)
 	print(p)
+	print(cov)
 	plt.plot(x_theorie, funk(x_theorie, p[0], p[1]), 'r-')
 
 	plt.errorbar(x, y, yerr = np.sqrt(y + N_Dunkel) / (y - N_Dunkel), fmt = 'kx')
 
 	t_halb = np.log(2) / p[0]
+	t_halb_err = np.log(2) * np.sqrt(cov[0][0]) / (p[0] ** 2)
 	print('=> lambda: ' + str(p[0]))
+	print('=> Fehler lambda: ' + str(np.sqrt(cov[0][0])))
 	print('=> N_0: ' + str(p[1]))
-	print('=> Halbwertszeit: ' + str(t_halb) + 's = ' + str(dt.timedelta(seconds = t_halb)))
+	print('=> Halbwertszeit: ' + str(t_halb) + ' s = ' + str(dt.timedelta(seconds = t_halb)))
+	print('=> Fehler T_h: ' + str(t_halb_err) + ' = ' + str(t_halb_err / t_halb * 100) + '%')
 
 plt.grid(which = 'both')
 plt.savefig('../img/graph_' + data + '_linearisiert.png')

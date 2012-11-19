@@ -20,8 +20,92 @@
 		\Delta N = \frac{\partial}{\partial N} \ln{\left( N_{\Delta t, \mathrm{roh}} - N_0 \right)} \cdot \Delta N_{\Delta t} = \frac{\Delta N_{\Delta t}}{N_{\Delta t, \mathrm{roh}} - N_0}
 	\end{equation}
 
+	Schlie"slich konnte eine lineare Regression durchgef"uhrt werden, welche $\lambda$ und somit die Halbwertszeiten $T$ lieferte.
+
 	\subsection{Halbwertszeit von Indium}
 		\label{subsec:indium}
+		Es wurden 15 Messungen "uber jeweils $\Delta t = \SI{240}{\second}$ durchgef"uhrt.
+		Anschlie"send konnte, wie oben beschrieben, durch lineare Regression $T_\mathrm{In}$ ermittelt werden. Es musste dabei wiederum ein Gau"s'scher Fehler ber"uchsichtigt werden:
+
+		\begin{equation}
+			\Delta T = \left|\frac{\partial T}{\partial \lambda} \cdot \Delta \lambda \right| = \frac{\Delta \lambda}{\lambda^2} \ln{2}
+		\end{equation}
+
+
+		Es ergaben sich die Werte
+
+		\begin{eqnarray}
+			\lambda & = & \SI{18.212 (94)e-3}{\per \second} , \\
+			T_\mathrm{In} & = & \SI{3823 (195)}{\second} = \SI{1}{\hour}\,\SI{3.417 (3250)}{\minute} .
+		\end{eqnarray}
+
+		\begin{table}
+			\begin{center}
+				\label{tabelle:indium}
+				\caption{Messwerte f"ur Indium-116}
+				\begin{tabular}{|c|c||c|c|}
+					\hline 
+					Messung & $N_{\Delta t, \mathrm{roh}}[1 / 240\,\mathrm{s}]$ & Messung & $N_{\Delta t, \mathrm{roh}}[1 / 240\,\mathrm{s}]$\\
+					\hline 
+					\input{data/indium_raw.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[width = 15cm]{img/graph_indium_linearisiert.png}
+			\caption{Bereinigte Messwerte und Graph f"ur Indium-116}
+			\label{fig:indium}
+		\end{figure}
+
+	\newpage
 
 	\subsection{Halbwertszeit von Rhodium}
 		\label{subsec:rhodium}
+		Bei dieser Messung war zu beachten, dass die Probe zwei verschiedene Isotope ${}_{45}^{104}\mathrm{Rh}$ und das angeregte ${}_{45}^{104i}\mathrm{Rh}$ enthielt.
+		Weil beide Isotope aber unterschiedliche Halbwertszeiten $T_\mathrm{Rh}$ haben,
+		konnte zun"achst, wie in \ref{theorie} beschrieben, die gr"o"sere Halbwertszeit $T_{\mathrm{Rh}, 2}$ bestimmt werden.
+
+		Anschlie"send wurden die hierdurch verursachten Zerf"alle von den ersten 19 Messwerten abgezogen und wie in Kapitel \ref{subsec:indium} fortgefahren.
+
+		$T_{\mathrm{Rh}, 1}$ bezeichnet im Folgenden die Halbwertszeit f"ur die ersten 19 Messwerte, also ${}_{45}^{104i}\mathrm{Rh}$ und $T_{\mathrm{Rh}, 2}$ f"ur die letzten 19 Messwerte, also ${}_{45}^{104}\mathrm{Rh}$.
+
+		Zwei mittlere Messwerte wurden ausgelassen, weil die statistischen Schwankungen zu fehlern in der Rechnung f"uhrten.
+
+
+		F"ur ${}_{45}^{104}\mathrm{Rh}$ ergab sich dann
+
+		\begin{eqnarray}
+			\lambda & = & \SI{16.85 (93)e-3}{\per \second} , \\
+			T_\mathrm{In} & = & \SI{41.146 (2270)}{\second} .
+		\end{eqnarray}
+
+		F"ur ${}_{45}^{104i}\mathrm{Rh}$ lieferten die Werte
+
+		\begin{eqnarray}
+			\lambda & = & \SI{2.418 (840)e-3}{\per \second} , \\
+			T_\mathrm{In} & = & \SI{286.63 (9958)}{\second} = \SI{4.78 (66)}{\minute} .
+		\end{eqnarray}
+
+		\begin{table}
+			\begin{center}
+				\caption{Messwerte f"ur Rhodium}
+				\label{tabelle:rhodium}
+				\begin{tabular}{|c|c||c|c|}
+					\hline 
+					Messung & $N_{\Delta t, \mathrm{roh}}[1 / 12\,\mathrm{s}]$ & Messung & $N_{\Delta t, \mathrm{roh}}[1 / 12\,\mathrm{s}]$\\
+					\hline 
+					\input{data/rhodium_raw.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 15cm]{img/graph_rhodium_linearisiert.png}
+			\caption{Bereinigte Messwerte und Graph f"ur Rhodium-104 und Rhodium 104i}
+			\label{fig:the_label}
+		\end{figure}
