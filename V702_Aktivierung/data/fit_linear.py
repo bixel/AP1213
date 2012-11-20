@@ -5,7 +5,7 @@ from scipy.optimize import curve_fit
 import datetime as dt
 import pylab
 
-data = 'indium'
+data = 'rhodium'
 
 if data == 'rhodium':
 	# Graph fuer Rhodium
@@ -28,10 +28,10 @@ if data == 'rhodium':
 	y = np.log(y)
 	#plt.errorbar(x, y, yerr = 1 / np.sqrt(y ** 2 + N_Dunkel), fmt = 'kx')
 
-	x1_theorie = np.arange(0, 260.1, .2)
-	x1_theorie_punkte = np.arange(260, 370.1, .2)
-	x2_theorie = np.arange(300, 500.1, .2)
-	x2_theorie_punkte = np.arange(0, 300.1, .2)
+	x1_theorie = np.arange(0, 230.1, .2)
+	x1_theorie_punkte = np.arange(230, 370.1, .2)
+	x2_theorie = np.arange(260, 500.1, .2)
+	x2_theorie_punkte = np.arange(0, 260.1, .2)
 
 	m_vorschlag = .01
 	n_0_vorschlag = 3000
