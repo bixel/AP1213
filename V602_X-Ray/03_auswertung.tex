@@ -2,10 +2,10 @@
 	\label{sec:auswertung}
 	
 	Begonnen wurde mit Messaufgabe \ref{aufg:4}, da hierdurch schnell "uberpr"uft werden konnte, ob die Apparatur richtig justiert ist.
-	Anschlie"send konnten alle anderen Messungen abgearbeitet werden.
+	Anschlie"send konnten alle anderen Messungen durchgef"uhrt werden.
 
 	Die Schwierigkeit lag dabei in der Bestimmung der Winkel $\theta$, an denen die Intensit"at theoretisch sprunghaft, in der Realit"at jedoch stetig abnimmt.
-	Hier haben wir zun"achst die Intensit"at gegen die Energie aufgetragen, die sich nach 
+	Hier wurde zun"achst die Intensit"at gegen die Energie aufgetragen, die sich nach 
 
 	\begin{equation}
 		E = \frac{\hbar c n}{2 d \sin{\theta}}
@@ -21,9 +21,9 @@
 		E = \frac{1}{n} \sum_i^n E_i \nonumber
 	\end{equation}
 
-	ein Mittelwert "uber alle Energien $E_i$, die im Bereich der Katen in Frage kommen gebildet.
+	ein Mittelwert "uber alle Energien $E_i$, die im Bereich der Kanten in Frage kommen gebildet.
 	Abbildung \ref{fig:germanium} zeigt exemplarisch eine Messreihe f"ur ${}_{32}^{}\mathrm{Ge}$.
-	Wir haben die einzelnen Mess\-pun\-kte miteinander verbunden, damit starke "Anderungen, die auf eine Kante hinweisen, besser zu erkennen sind.
+	Die einzelnen Mess\-pun\-kte werden miteinander verbunden, damit starke "Anderungen, die auf eine Kante hinweisen, besser zu erkennen sind.
 
 	\begin{figure}[h!]
 		\centering
@@ -32,7 +32,7 @@
 		\label{fig:germanium}
 	\end{figure}
 
-	Durch die Messungenauigkeit $\Delta \theta = \SI{.1}{\degree}$ im Winkel erhalten wir mit Gau"s'scher Feh\-ler\-fort\-pflanz\-ung den Fehler
+	Durch die Messungenauigkeit $\Delta \theta = \SI{.1}{\degree}$ im Winkel erh"alt man mit Gau"s'scher Feh\-ler\-fort\-pflanz\-ung den Fehler
 
 	\begin{equation}
 		\Delta E = \left| \frac{\partial E}{\partial \theta} \right| \Delta \theta = 
@@ -54,7 +54,7 @@
 		\end{figure}
 
 		In der Abbildung \ref{fig:aufloesung} wurde die Winkelbreite $\theta_{1/2}$ der CuK-Emissionslinie markiert.
-		Wir erhalten damit $\theta_1 = \SI{27.2}{\degree}$ und $\theta_2 = \SI{28.9}{\degree}$ woraus sich mit \eqref{eqn:energie} die Energien $E_1 = \SI{6747.3}{\electronvolt}$ und $E_2 = \SI{6381.7}{\electronvolt}$ ergeben.
+		Damit errechnen sich die Winkel zu $\theta_1 = \SI{27.2}{\degree}$ und $\theta_2 = \SI{28.9}{\degree}$ woraus sich mit \eqref{eqn:energie} die Energien $E_1 = \SI{6747.3}{\electronvolt}$ und $E_2 = \SI{6381.7}{\electronvolt}$ ergeben.
 
 		Die Apparatur hat dann eine Aufl"osung von
 
@@ -68,26 +68,27 @@
 	\subsection{Abschirmzahlen $\sigma_{1,0}$ von ${}_{32}^{}\mathrm{Ge}$ und ${}_{41}^{}\mathrm{Nb}$}
 		\label{subsec:abschirm1}
 		Wie oben beschrieben wird die gemittelte Energie $E_\mathrm{K}$ bestimmt, an dem die K-Kanten von Germanium und Niob liegen. 
-		Dadurch konnten wir mit 
+		Dadurch konnte mit 
 
 		\begin{equation}
 			\sigma_{1,0} = z - \sqrt{\frac{E_\mathrm{K}}{R_\infty} - \alpha^2 \frac{z^4}{4}} \nonumber
 		\end{equation}
 
-		die Abschirmungszahl $\sigma_{1,0}$ f"ur Elemente mit Kernladungszahl $z$ zwischen ungef"ahr 30 und 40 berechnen.
-		$R_\infty$ bezeichnet dabei die Rydberg-Energie, $\alpha$ die Sommerfeldsche Feinstrukturkonstante.
+		die Abschirmungszahl $\sigma_{1,0}$ f"ur Elemente mit Kernladungszahl $z$ zwischen ungef"ahr 30 und 40 berechnet werden.
+		Der Wert $R_\infty$ bezeichnet dabei die Rydberg-Energie, $\alpha$ die Sommerfeldsche Feinstrukturkonstante.
 
-		Zudem erhalten wir mittels Gau"s`scher Fehlerfortplanzung einen Weiteren Fehler
+		Zudem ergibt sich mittels Gau"s`scher Fehlerfortplanzung ein weiterer Fehler
 
 		\begin{equation}
 			\Delta \sigma_{1,0} = \left| \frac{\partial \sigma_{1,0}}{\partial E_\mathrm{K}} \right| \Delta E_\mathrm{K} =
-			\frac{1}{2 R_{\infty}} \sqrt{\frac{E_\mathrm{K}}{R_\infty} - \frac{1}{4} z^2 \alpha^2}^{-1}
+			\frac{1}{2 R_{\infty}} \sqrt{\frac{E_\mathrm{K}}{R_\infty} - \frac{1}{4} z^4 \alpha^2}^{-1}
 			\cdot \Delta E_\mathrm{K} . \nonumber
 		\end{equation}
 
 		\begin{table}[h!]
 			\centering
 			\begin{tabular}{|c|c|c|}
+				\caption{Abschirmungszahlen f"ur Germanium und Niob. Die Energien wurden dabei direkt aus den entsprechenden Diagrammen entnommen.}
 				\hline
 				Element & 
 				$E_\mathrm{K}\,[\SI{}{\kilo \electronvolt}]$ & 
@@ -112,7 +113,13 @@
 			\left( 1 + \frac{19}{32}\alpha^2 \frac{E_\mathrm{L}}{R_\infty} \right)} . \nonumber
 		\end{equation}
 
-		Auch diese Gr"o"se ist fehlerbehaftet.
+		Auch diese Gr"o"se ist fehlerbehaftet. Gau"s'sche Fehlerfortpflanzung liefert
+
+		\begin{eqnarray*}
+			\Delta s_{2,1} & = & \right\frac{\partial s_{2,1}}{\partial E_\mathrm{L}}\left| \cdot \Delta E_\mathrm{L} = \\
+			& = & \frac{-95 \alpha^3 E_\mathrm{L}^{3/2} + 57 \alpha^2 E_\mathrm{L} \sqrt{R_\infty} - 80\alpha R_\infty \sqrt{E_\mathrm{L}} + 32 r_\infty^{3/2}}{4 \alpha R_\infty^2 sqrt{E_\mathrm{L} \left( \frac{4E_\mathrm{L}^{1/2}}{\alpha R_\infty^{1/2}} - \frac{5E_\mathrm{L}}{R_\infty} \right) \left( \frac{19 \alpha^2 E_\mathrm{L}}{R_\infty} + 32 \right)}}
+		\end{eqnarray*}
+
 		Da sich die Entwicklung nach $E_\mathrm{L}$ jedoch als sehr schwierig erweist, sch"atzen wir den Fehler auf dieselbe Dimension wie den relativen Fehler auf $E_\mathrm{L}$. Wir erhalten:
 
 		\begin{table}[h!]
