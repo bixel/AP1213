@@ -1,6 +1,6 @@
 \documentclass{scrartcl}
 	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
-	\usepackage{ngerman}
+	\usepackage[ngerman]{babel}
 
 	%siunitx fur SI-Einheitesnsystem%
 	\usepackage{siunitx}
@@ -13,19 +13,26 @@
 	%graphicx fur Bildeinbindung%
 	\usepackage{graphicx}
 
+	%UTF-8 encoding
+	%\usepackage[applemac]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{lmodern}
+
 	%enthaelt eqnref{}-Operator
 	\usepackage{amsmath}
+
+	%enthaelt pfeile mit text
+	\usepackage{amssymb}
+
+	%ermoeglicht Hyperlinks - Schein aber KACKE zu sein :D
+	\usepackage{url}
 
 	%damit lualatex formeln richtig darstellt
 	%\usepackage{unicode-math}
 
 	%Texteinzug vor Absatz entfernen%
 	\parindent 0pt
-
-	%Titelseiten Parameter
-	\title{V406 - Beugung am Spalt}
-	\date{27. Oktober 2012}
-	\author{Kevin Heinicke und Markus Stabrin}
 
 \begin{document}
 	
@@ -38,7 +45,7 @@
 
 	\begin{center}
 		\Huge
-		V602 - R"ontgenemissions- und Absorptionsspektren
+		V602 - R"ontgen-Emissions- und Absorptionsspektren
 	\end{center}
 
 	\vspace{6cm}
@@ -56,9 +63,9 @@
 			\\
 			\\
 
-			Versuchsdatum: 30. Oktober 2012 \\
+			Versuchsdatum: 6. November 2012 \\
 			\\
-			Abgabedatum: 6. November 2012
+			Abgabedatum: 27. November 2012
 		\end{minipage}
 	\end{center}
 
