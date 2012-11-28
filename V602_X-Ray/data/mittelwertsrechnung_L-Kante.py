@@ -12,17 +12,17 @@ c = 299792458
 d = 201e-12
 deg_to_rad = 2 * np.pi / 360
 
-z = 80
-x_1 = np.array([45.2, 45.5, 46.0])
-x_2 = np.array([40.8, 41.2, 41.5])
+# z = 80
+# x_1 = np.array([45.2, 45.5, 46.0])
+# x_2 = np.array([40.8, 41.2, 41.5])
 
 # z = 79
 # x_1 = np.array([45.2, 45.5, 46.0])
 # x_2 = np.array([40.4, 40.8, 41.2, 41.5])
 
-# z = 29
-# x_1 = np.array([45.2, 45.5, 46.0])
-# x_2 = np.array([40.8, 41.2, 41.5])
+z = 29
+x_1 = np.array([45.2, 45.5, 46.0])
+x_2 = np.array([40.8, 41.2, 41.5])
 
 x_1 /= 2
 x_2 /= 2
@@ -69,7 +69,7 @@ if x_2_sum > x_1_sum:
 else:
 	x_delta = x_1_sum - x_2_sum
 
-#x_delta = 2000
+#x_delta = 1814.9		
 
 sig = z - np.sqrt((4 / alpha * np.sqrt(x_delta / rydberg) - 5 * x_delta / rydberg) * (1 + 19/32 * (alpha ** 2) * x_delta / rydberg))
 #sig = 0

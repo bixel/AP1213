@@ -36,7 +36,9 @@ x_sum = 0
 for val in x:
 	x_sum += val
 
-x_sum /= x.size.sin(x_sum * (2 * np.pi / 360))) / e
+x_sum /= x.size
+
+#x_sum = 18985.6
 
 sig = z - np.sqrt((x_sum / rydberg - (alpha ** 2) * (z ** 2 / 4)))
 
