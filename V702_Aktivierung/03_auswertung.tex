@@ -14,14 +14,14 @@
 		\Rightarrow \Delta N_{\Delta t} & = & \sqrt{N_{\Delta t, \mathrm{gem}} + N_{\Delta t, \mathrm{u}}} .
 	\end{eqnarray*}
 
-	$N_{\Delta t, \mathrm{u}}$ bezeichnet dabei den Nulleffekt pro Messung.
-	Um eine Ausgleichsrechnung durch\-zu\-f"uh\-ren wurden die Werte linearisiert, was einen weiteren Fehler durch Gau"s'sche Fehlerfortpflanzung erzeugt:
+	$N_{\Delta t, \mathrm{u}}$ bezeichnet dabei den Nulleffekt pro Messung. Dieser betrug f"ur das Messintervall $\Delta t$
 
 	\begin{equation*}
-		\Delta N_{l} = \frac{\partial}{\partial N_{\Delta t, \mathrm{gem}}} \ln{\left( N_{\Delta t, \mathrm{gem}} - N_{\Delta t, \mathrm{u}} \right)} \cdot \Delta N_{\Delta t} = \frac{\Delta N_{\Delta t}}{N_{\Delta t, \mathrm{gem}} - N_{\Delta t, \mathrm{u}}} .
+		\Delta N_{\Delta t, \mathrm{u}} = \frac{256}{900} \SI{}{\per \second} \cdot \Delta t .
 	\end{equation*}
 
-	Schlie"slich konnte eine lineare Regression mit scipy durchgef"uhrt werden, welche $\lambda$ und somit die Halbwertszeiten $T$ lieferte.
+	Um eine Ausgleichsrechnung durch\-zu\-f"uh\-ren wurden die Werte linearisiert.
+	Danach konnte eine lineare Regression mit scipy durchgef"uhrt werden, welche $\lambda$ und somit die Halb\-werts\-zei\-ten $T$ lieferte.
 
 	\subsection{Halbwertszeit von Indium}
 		\label{subsec:indium}
@@ -36,18 +36,19 @@
 		Es ergaben sich die Werte
 
 		\begin{eqnarray*}
-			\lambda & = & \SI{18.212 (94)e-3}{\per \second} , \\
-			T_\mathrm{In} & = & \SI{3823 (195)}{\second} = \SI{1}{\hour}\,\SI{3.417 (3250)}{\minute} .
+			\lambda & = & \SI{188.9 (10)e-6}{\per \second} , \\
+			T_\mathrm{In} & = & \SI{3668 (186)}{\second} .
 		\end{eqnarray*}
 
 		\begin{table}[!h]
 			\begin{center}
 				\label{tabelle:indium}
 				\caption{Messwerte f"ur Indium-116}
-				\begin{tabular}{|c|c||c|c|}
+				\begin{tabular}{|c|c|c||c|c|c|}
 					\hline 
-					Messung & $N_{\Delta t, \mathrm{gem}}[1 / 240\,\mathrm{s}]$ & Messung & $N_{\Delta t, \mathrm{gem}}[1 / 240\,\mathrm{s}]$\\
+					Messung & $N_{\Delta t, \mathrm{gem}}$ & $N_{\Delta t}$ & Messung & $N_{\Delta t, \mathrm{gem}}$ & $N_{\Delta t}$\\
 					\hline 
+					\hline
 					\input{data/indium_raw.tex}
 					\hline 
 				\end{tabular}
@@ -56,7 +57,7 @@
 
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[width = 15cm]{img/graph_indium_linearisiert.png}
+			\includegraphics[width = 15cm]{img/graph_indium_linearisiert.pdf}
 			\caption{Bereinigte Messwerte und Graph f"ur Indium-116}
 			\label{fig:indium}
 		\end{figure}
@@ -69,26 +70,26 @@
 		Weil beide Isotope aber unterschiedliche Halbwertszeiten $T_\mathrm{Rh}$ haben,
 		konnte zun"achst, wie in Kapitel \ref{sec:theorie} beschrieben, die gr"o"sere Halbwertszeit $T_{\mathrm{Rh}, 2}$ bestimmt werden.
 
-		Anschlie"send wurden die hierdurch verursachten Zerf"alle von den ersten 19 Messwerten abgezogen und wie in Kapitel \ref{subsec:indium} fortgefahren.
+		Anschlie"send wurden die hierdurch verursachten Zerf"alle von den ersten 18 Messwerten abgezogen und wie in Kapitel \ref{subsec:indium} fortgefahren.
 
-		$T_{\mathrm{Rh}, 1}$ bezeichnet im Folgenden die Halbwertszeit f"ur die ersten 19 Messwerte, also ${}_{45}^{104i}\mathrm{Rh}$ und $T_{\mathrm{Rh}, 2}$ f"ur die letzten 19 Messwerte, also ${}_{45}^{104}\mathrm{Rh}$.
-
-		Zwei mittlere Messwerte wurden ausgelassen, weil die statistischen Schwankungen zu fehlern in der Rechnung f"uhrten.
+		Hierbei wurde "uber jeweils $\Delta t = \SI{12}{\second}$ gemessen.
+		Die Zeit $t^*$ wurde zu $\SI{312}{\second}$ gew"ahlt.
+		$T_{\mathrm{Rh}, 1}$ bezeichnet im Folgenden die Halbwertszeit f"ur die ersten 18 Messwerte, also ${}_{45}^{104}\mathrm{Rh}$ und $T_{\mathrm{Rh}, 2}$ f"ur die letzten 14 Messwerte, also ${}_{45}^{104i}\mathrm{Rh}$.
 		\newline
 
 
 		F"ur ${}_{45}^{104}\mathrm{Rh}$ ergab sich dann
 
 		\begin{eqnarray*}
-			\lambda & = & \SI{16.85 (93)e-3}{\per \second} , \\
-			T_\mathrm{In} & = & \SI{41.146 (2270)}{\second} .
+			\lambda & = & \SI{16.04 (86)e-3}{\per \second} , \\
+			T_\mathrm{In} & = & \SI{43.2 (233)}{\second} .
 		\end{eqnarray*}
 
 		F"ur ${}_{45}^{104i}\mathrm{Rh}$ lieferten die Messwerte
 
 		\begin{eqnarray*}
-			\lambda & = & \SI{2.418 (840)e-3}{\per \second} , \\
-			T_\mathrm{In} & = & \SI{286.63 (9958)}{\second} = \SI{4.78 (66)}{\minute} .
+			\lambda & = & \SI{2.74 (18)e-3}{\per \second} , \\
+			T_\mathrm{In} & = & \SI{253.2 (1683)}{\second} .
 		\end{eqnarray*}
 
 		\clearpage
@@ -97,10 +98,11 @@
 			\begin{center}
 				\caption{Messwerte f"ur Rhodium}
 				\label{tabelle:rhodium}
-				\begin{tabular}{|c|c||c|c||c|c|}
+				\begin{tabular}{|c|c|c||c|c|c||c|c|c|}
 					\hline 
-					Messung & $N_{\Delta t, \mathrm{gem}}[1 / 12\,\mathrm{s}]$ & Messung & $N_{\Delta t, \mathrm{gem}}[1 / 12\,\mathrm{s}]$ & Messung & $N_{\Delta t, \mathrm{gem}}[1 / 12\,\mathrm{s}]$\\
+					Messung & $N_{\Delta t, \mathrm{gem}}$ & $N_{\Delta t}$ & Messung & $N_{\Delta t, \mathrm{gem}}$ & $N_{\Delta t}$ & Messung & $N_{\Delta t, \mathrm{gem}}$ & $N_{\Delta t}$\\
 					\hline 
+					\hline
 					\input{data/rhodium_raw.tex}
 					\hline 
 				\end{tabular}
@@ -111,7 +113,7 @@
 
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[width = 14cm]{img/graph_rhodium_linearisiert.png}
+			\includegraphics[width = 14.2cm]{img/graph_rhodium_linearisiert.pdf}
 			\caption{Bereinigte Messwerte und Graph f"ur Rhodium-104 und Rhodium 104i}
 			\label{fig:the_label}
 		\end{figure}
