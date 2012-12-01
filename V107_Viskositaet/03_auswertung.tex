@@ -1,2 +1,137 @@
 \section{Auswertung}
 	\label{sec:auswertung}
+
+	Um die dynamische Viskosit"at zu bestimmen, m"ussen vorab verschiedene Messungen durchgef"uhrt werden.
+	Zun"achst sollen daf"ur die Gr"o"sen $K$ der Gleichung \eqref{viskositaet_0} und sp"ater die Konstanten $A$ und $B$ der Gleichung \eqref{viskositaet_dyn} ermittelt werden.
+	Schlie"slich wird "uberpr"uft, ob die untersuchte Str"omung tats"achlich laminar ist.
+
+	\subsection{Bestimmung der Apparaturkonstante $K$} % (fold)
+		\label{sub:bestimmung_k}
+
+		Es stehen zwei unterschiedlich gro"se Kugeln zur Verf"ugung, die das Viskositmeter pas\-sie\-ren k"onnen.
+		Die Konstante $K_\mathrm{klein}$ ist f"ur die kleinere Kugel gegeben, wodurch zun"achst die Viskosit"at $\eta_0$ bei Raumtemperatur ($T = \SI{20}{\celsius}$) bestimmt werden kann.
+		Mit Kenntnis dieser Gr"o"se l"asst sich anschlie"send die entsprechende Konstante $K$ f"ur die sp"ater ver\-wen\-de\-te gro"se Kugel bestimmen.
+
+		Es werden zehn Messwerte f"ur die Fallzeit $t$ der kleinen Kugel aufgenommen:
+
+		\begin{table}[h!]
+			\centering
+			\caption{Messwerte der Fallzeit $t$ der kleinen Kugel bei Raumtemperatur}
+			\begin{tabular}{|c|c||c|c|}
+				\hline
+				Messung & $t [\mathrm{s}]$ & Messung & $t [\mathrm{s}]$ \\
+				\hline
+				\hline
+				\input{data/klein_raw.tex}
+				\hline
+			\end{tabular}
+		\end{table}
+
+		Bei allen Zeitmessungen wird von einer Menschlichen Reaktonszeit $\Delta t = \SI{100}{\milli \second}$ aus\-ge\-gan\-gen.
+		Diese Fehler addieren sich quadratisch und der Mittelwert $t_\mathrm{klein}$ ergibt sich zu
+
+		\begin{equation*}
+			t_\mathrm{klein} = \SI{12.78 (32)}{\second} .
+		\end{equation*}
+
+		Desweiteren muss aus dem Durchmesser $d_\mathrm{klein}$ und der Masse $m_\mathrm{klein}$ die Dichte $\rho_{K,\mathrm{klein}}$ der Kugel bestimmt werden. Die Masse ist hierbei bekannt, der Durchmesser muss mit einem Messschieber gemessen werden.
+
+		Durch Gau'ssche Fehlerfortpflanzung erh"alt man einen Fehler 
+		\begin{equation*}
+			\Delta \rho = \left| \frac{\partial \rho}{\partial d} \right| \cdot \Delta d = \frac{18m}{\pi d^4} \cdot \Delta d .
+		\end{equation*}
+
+		Damit kann die Dichte bestimmt werden:
+
+		\begin{eqnarray*}
+			d_\mathrm{klein} & = & \SI{15.64 (1)}{\milli \meter} \\ 
+			m_\mathrm{klein} & = & \SI{4.4531}{\gram} \\
+			\Rightarrow \quad \rho_\mathrm{klein} & = & \SI{2.223 (4)}{\gram \per \centi \meter \cubed} .
+		\end{eqnarray*}
+
+		Mit den obigen Gr"o"sen wird $\eta_0$ bestimmt.
+		Auch hier erh"alt man einen Fehler durch Fehlerfortpflanzung:
+
+		\begin{equation*}
+			\Delta \eta = \left| \frac{\partial \eta}{\partial \rho_K} \right| \cdot \Delta \rho_K + \left| \frac{\partial \eta}{\partial t} \right| \cdot \Delta t = K \left(t \cdot \Delta \rho_K + \left(\rho_K - \rho_\mathrm{Fl}\right) \cdot \Delta t \right)
+		\end{equation*}
+
+		Die Dichte $\rho_\mathrm{Fl}$ des Wassers und die Konstante $K_\mathrm{klein}$ sind bekannt. Man erh"alt
+
+		\begin{eqnarray*}
+			K_\mathrm{klein} & = & \SI{.0764}{\milli \pascal \centi \meter \cubed \per \gram} \\
+			\rho_\mathrm{Fl} & = & \SI{.998}{\gram \per \centi \meter \cubed}\\
+			\Rightarrow \quad \eta_0 & = & \SI{1.196 (3)}{\kilo \gram \per \meter \per \second} .
+		\end{eqnarray*}
+
+		Nun kann $K$ der gro"sen Kugel bestimmt werden.
+		Hierf"ur werden die gleichen Messungen mit der zweiten Kugel wiederholt.
+
+		\begin{table}[h!]
+			\centering
+			\caption{Messwerte der Fallzeit $t$ der gro"sen Kugel bei Raumtemperatur}
+			\begin{tabular}{|c|c||c|c|}
+				\hline
+				Messung & $t [\mathrm{s}]$ & Messung & $t [\mathrm{s}]$ \\
+				\hline
+				\hline
+				\input{data/gross_raw.tex}
+				\hline
+			\end{tabular}
+		\end{table}
+
+		\begin{equation*}
+			\overline{t} = \SI{95.22 (32)}{\second}
+		\end{equation*}
+
+		Masse $m$ und Durchmesser $d$ dieser Kugel werden gemessen und Dichte $\rho$ bestimmt.
+		Weil nun auch $m$ fehlerbehaftet ist erh"alt man
+
+		\begin{equation*}
+			\Delta \rho = \frac{6}{\pi d^3} \left( \frac{3 m}{d} \cdot \Delta d + \Delta m \right)
+		\end{equation*}
+
+		\begin{eqnarray*}
+				m & = & \SI{4.60 (5)}{\gram} , \\
+				d & = & \SI{15.82 (1)}{\milli \meter} , \\
+				\Rightarrow \quad \rho & = & \SI{2.219 (66)}{\gram \per \centi \meter \cubed}
+		\end{eqnarray*}
+
+		Durch Umstellen der Gleichung \eqref{bla} erhalten wir
+
+		\begin{equation}
+			K = \frac{\eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) \overline{t}} .
+		\end{equation}
+
+		Mit Gau"s'scher Fehlerfortpflanzung erh"alt man den Fehler
+
+		\begin{equation*}
+			\Delta K = \frac{\Delta \eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) t} + \frac{\eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) t} \left[ \frac{\Delta \rho_K}{\left( \eta_K - \eta_\mathrm{Fl} \right)} + \frac{\Delta t}{t} \right] .
+		\end{equation*}
+
+		\begin{equation*}
+			\Rightarrow \quad K = \SI{10.3 (6)}{\micro \pascal \centi \meter \cubed \per \gram}
+		\end{equation*}
+
+	\subsection{Temperaturabh"angigkeit der Viskosit"at $\eta$ von destilliertem Wasser}
+		\label{sub:temperaturabhaengigkeit}
+
+		Da nun $K$ bekannt ist, kann die dynamische Viskosit"at $\eta (T)$ f"ur verschiedene Tem\-pe\-ra\-tu\-ren $T$ mit Messung der Fallzeit $t$ bestimmt werden.
+		Durch eine lineare Regression der Werte $\log{\eta (T)}$ und $1 / T$ lassen sich die Konstanten $A$ und $B$ aus Gleichung \eqref{blubb} bestimmen.
+
+		Zu jeder Temperatur werden zwei Messwerte aufgenommen. Die folgende Tabelle zeigt die jeweiligen Mittelwerte $\overline{t}_2$:
+
+		\begin{table}[h!]
+			\centering
+			\caption{Mittelwerte $t$ der gro"sen Kugel in Abh"angigkeit der Temperatur $T$}
+			\begin{tabular}{|c|c||c|c|}
+				\hline
+				$T [\SI{}{\celsius}]$ & $\overline{t}_2 [\mathrm{s}]$ & $T [\SI{}{\celsius}]$ & $\overline{t}_2 [\mathrm{s}]$ \\
+				\hline
+				\hline
+				\input{data/temperatur_raw.tex}
+				\hline
+			\end{tabular}
+		\end{table}
+
+
