@@ -97,13 +97,13 @@
 				\Rightarrow \quad \rho & = & \SI{2.219 (66)}{\gram \per \centi \meter \cubed}
 		\end{eqnarray*}
 
-		Durch Umstellen der Gleichung \eqref{bla} erhalten wir
+		Die Gleichung \eqref{bla} l"asst sich umstellen zu
 
 		\begin{equation}
 			K = \frac{\eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) \overline{t}} .
 		\end{equation}
 
-		Mit Gau"s'scher Fehlerfortpflanzung erh"alt man den Fehler
+		Mit Gau"s'scher Fehlerfortpflanzung erh"alt man dann den Fehler
 
 		\begin{equation*}
 			\Delta K = \frac{\Delta \eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) t} + \frac{\eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) t} \left[ \frac{\Delta \rho_K}{\left( \eta_K - \eta_\mathrm{Fl} \right)} + \frac{\Delta t}{t} \right] .
@@ -119,14 +119,14 @@
 		Da nun $K$ bekannt ist, kann die dynamische Viskosit"at $\eta (T)$ f"ur verschiedene Tem\-pe\-ra\-tu\-ren $T$ mit Messung der Fallzeit $t$ bestimmt werden.
 		Durch eine lineare Regression der Werte $\log{\eta (T)}$ und $1 / T$ lassen sich die Konstanten $A$ und $B$ aus Gleichung \eqref{blubb} bestimmen.
 
-		Zu jeder Temperatur werden zwei Messwerte aufgenommen. Die folgende Tabelle zeigt die jeweiligen Mittelwerte $\overline{t}_2$:
+		Zu jeder Temperatur werden zwei Messwerte aufgenommen. Die folgende Tabelle zeigt die jeweiligen Mittelwerte $\overline{t}$. Der jeweilige Fehler betr"agt $\Delta \overline{t} = \SI{.14}{\second}$.
 
 		\begin{table}[h!]
 			\centering
-			\caption{Mittelwerte $t$ der gro"sen Kugel in Abh"angigkeit der Temperatur $T$}
+			\caption{Mittelwerte der Fallzeit $\overline{t}$ der gro"sen Kugel in Abh"angigkeit der Temperatur $T$}
 			\begin{tabular}{|c|c||c|c|}
 				\hline
-				$T [\SI{}{\celsius}]$ & $\overline{t}_2 [\mathrm{s}]$ & $T [\SI{}{\celsius}]$ & $\overline{t}_2 [\mathrm{s}]$ \\
+				$T [\SI{}{\celsius}]$ & $\overline{t} [\mathrm{s}]$ & $T [\SI{}{\celsius}]$ & $\overline{t} [\mathrm{s}]$ \\
 				\hline
 				\hline
 				\input{data/temperatur_raw.tex}
@@ -134,4 +134,55 @@
 			\end{tabular}
 		\end{table}
 
+		Aus jedem Wert kann nun mit Gleichung \eqref{bla} die Viskosit"at $\eta (T)$ bestimmt werden.
+		Die oben beschriebene lineare Regression liefert dann
 
+		\begin{eqnarray*}
+			A & = & \SI{.396 (42)}{\kilo \gram \per \meter \per \second} \\
+			B & = & \SI{27.37 (159)}{\second} .
+		\end{eqnarray*}
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 15cm]{img/plot.pdf}
+			\caption{Werte und Ausgleichsgerade der linearen Regression f"ur $\ln{\eta}$ und $1 / T$}
+			\label{fig:regression}
+		\end{figure}
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 15cm]{img/plot2.pdf}
+			\caption{Werte und Theoriekurve f"ur $\eta(T)$ und $T$}
+			\label{fig:graph}
+		\end{figure}
+
+	\clearpage
+
+	\subsection{"Uberpr"ufung auf laminare Str"omung}
+		\label{sub:laminar}
+
+		Schlie"slich wird "uberpr"uft, ob die vorliegende Str"omung laminar ist -- ob also keine Turbulenzen im Wasser auftreten.
+		Dazu muss die Reynoldszahl $Re$ deutlich unter $Re_\mathrm{krit} = 2050$ liegen.
+		Der Wert berechnet sich nach
+
+		\begin{equation*}
+			Re = \frac{\rho v d_\mathrm{B}}{\eta} ,
+		\end{equation*}
+
+		wobei $v$ die charakteristische Str"omungsgeschwindigkeit der Fl"ussigkeit gegen"uber dem K"orper und $d$ die Bezugsl"ange bezeichnet.
+
+		Es wird der maximale Wert $Re_\mathrm{max}$ ermittelt, der in diesem Versuch erreicht wird.
+		Mit einer Gef"a"sl"ange von $x = \SI{10}{\centi \meter}$ erh"alt man die Geschwindigkeit $v_\mathrm{max}$, f"ur die die Reynoldszahl maximal wird.
+		Au"serdem w"ahlt man aus den Messwerten die Viskosit"at $\eta_\mathrm{max}$, f"ur welche dies ebenfalls gilt.
+		Die Bezugsl"ange $d_\mathrm{B}$ entspricht hierbei dem Durchmesser der Kugel ($d_\mathrm{B} = d$).
+		Dann gilt:
+
+		\begin{eqnarray*}
+			v_\mathrm{max} & = & \frac{\SI{10}{\centi \meter}}{\SI{50.565}{\second}} = \SI{1.98}{\milli \meter \per \second} , \\
+			\eta_\mathrm{max} & = & \SI{.636}{\kilo \gram \per \meter \per \second} , \\
+			d & = & \SI{15.82}{\milli \meter} \\
+			\Rightarrow \quad Re & = & \SI{49.15}{} \ll Re_\mathrm{krit} .
+		\end{eqnarray*}
+
+		Somit liegt hier eine laminare Str"omung vor.
+		Die Messfehler wurden dabei nicht betrachtet, weil sie einige Gr"o"senordnungen kleiner sind als der Wert der Reynoldszahl.
