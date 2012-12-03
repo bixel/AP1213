@@ -10,7 +10,7 @@
 
 		Es stehen zwei unterschiedlich gro"se Kugeln zur Verf"ugung, die das Viskositmeter pas\-sie\-ren k"onnen.
 		Die Konstante $K_\mathrm{klein}$ ist f"ur die kleinere Kugel gegeben, wodurch zun"achst die Viskosit"at $\eta_0$ bei Raumtemperatur ($T = \SI{20}{\celsius}$) bestimmt werden kann.
-		Mit Kenntnis dieser Gr"o"se l"asst sich anschlie"send die entsprechende Konstante $K$ f"ur die sp"ater ver\-wen\-de\-te gro"se Kugel bestimmen.
+		Mit Kenntnis dieser Gr"o"se l"asst sich anschlie"send die entsprechende Konstante $K_\mathrm{gro"s}$ f"ur die sp"ater ver\-wen\-de\-te gro"se Kugel bestimmen.
 
 		Es werden zehn Messwerte f"ur die Fallzeit $t$ der kleinen Kugel aufgenommen:
 
@@ -36,7 +36,7 @@
 
 		Desweiteren muss aus dem Durchmesser $d_\mathrm{klein}$ und der Masse $m_\mathrm{klein}$ die Dichte $\rho_{K,\mathrm{klein}}$ der Kugel bestimmt werden. Die Masse ist hierbei bekannt, der Durchmesser muss mit einem Messschieber gemessen werden.
 
-		Durch Gau'ssche Fehlerfortpflanzung erh"alt man einen Fehler 
+		Durch Gau"s'sche Fehlerfortpflanzung erh"alt man einen Fehler 
 		\begin{equation*}
 			\Delta \rho = \left| \frac{\partial \rho}{\partial d} \right| \cdot \Delta d = \frac{18m}{\pi d^4} \cdot \Delta d .
 		\end{equation*}
@@ -64,7 +64,7 @@
 			\Rightarrow \quad \eta_0 & = & \SI{1.196 (3)}{\kilo \gram \per \meter \per \second} .
 		\end{eqnarray*}
 
-		Nun kann $K$ der gro"sen Kugel bestimmt werden.
+		Nun kann $K_\mathrm{gro"s}$ der gro"sen Kugel bestimmt werden.
 		Hierf"ur werden die gleichen Messungen mit der zweiten Kugel wiederholt.
 
 		\begin{table}[h!]
@@ -97,7 +97,11 @@
 				\Rightarrow \quad \rho & = & \SI{2.219 (66)}{\gram \per \centi \meter \cubed}
 		\end{eqnarray*}
 
+<<<<<<< HEAD
+		Durch Umstellen der Gleichung \eqref{viskositaet_0} erhalten wir
+=======
 		Die Gleichung \eqref{bla} l"asst sich umstellen zu
+>>>>>>> 31663736998435deb5639e9b76f3dba6d5992f0c
 
 		\begin{equation}
 			K = \frac{\eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) \overline{t}} .
@@ -116,8 +120,8 @@
 	\subsection{Temperaturabh"angigkeit der Viskosit"at $\eta$ von destilliertem Wasser}
 		\label{sub:temperaturabhaengigkeit}
 
-		Da nun $K$ bekannt ist, kann die dynamische Viskosit"at $\eta (T)$ f"ur verschiedene Tem\-pe\-ra\-tu\-ren $T$ mit Messung der Fallzeit $t$ bestimmt werden.
-		Durch eine lineare Regression der Werte $\log{\eta (T)}$ und $1 / T$ lassen sich die Konstanten $A$ und $B$ aus Gleichung \eqref{blubb} bestimmen.
+		Da nun $K_\mathrm{gro"s}$ bekannt ist, kann die dynamische Viskosit"at $\eta (T)$ f"ur verschiedene Tem\-pe\-ra\-tu\-ren $T$ mit Messung der Fallzeit $t$ bestimmt werden.
+		Durch eine lineare Regression der Werte $\log{\eta (T)}$ und $1 / T$ lassen sich die Konstanten $A$ und $B$ aus Gleichung \eqref{viskositaet_dyn} bestimmen.
 
 		Zu jeder Temperatur werden zwei Messwerte aufgenommen. Die folgende Tabelle zeigt die jeweiligen Mittelwerte $\overline{t}$. Der jeweilige Fehler betr"agt $\Delta \overline{t} = \SI{.14}{\second}$.
 
