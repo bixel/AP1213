@@ -1,5 +1,65 @@
 \section{Einleitung}
 	\label{sec:einleitung}
+	In diesem Versuch wird mit Hilfe des Stefan-Boltzmann Gesetzes das Absorptions- und Emissionsverm"ogen verschiedener Oberfl"achen untersucht.
 
 \section{Theorie}
 	\label{sec:theorie}
+	Jeder K"orper strahlt W"arme in Form von infraroter Strahlung ab oder absorbiert sie.
+	Wie gut die W"arme aufgenommen oder abgegeben werden kann wird durch das E\-mis\-sions\-ver\-m"o\-gen $\epsilon$, beziehungsweise das Absorptionsverm"ogen $A$ beschrieben.
+	Die Gr"o"sen $\epsilon$ und $A$ nehmen dabei Werte zwischen 0 und 1 an und h"angen haupts"achlich von der Temperatur $T$ des K"orpers und der Wellenl"ange $\lambda$ der Strahlung ab.
+	Ein Wert $\epsilon = A = 1$, bedeutet, dass die gesamte Energie abgestrahlt wird.
+	Man bezeichnet den K"orper dann als Wei"sen K"orper.
+	Bei einem Wert 0 strahlt der K"orper keine Energie ab und er hei"st Schwarzer K"orper.
+	Eingestrahlte Energie wird dementsprechend bei $A = 1$ v"ollig absorbiert und bei $A = 0$ reflektiert.
+	Es gilt
+
+	\begin{equation*}
+		\epsilon (\lambda, T) = A(\lambda, T) = 1 - R(\lambda, T) .
+	\end{equation*}
+
+	Dabei bezeichnet $R$ das Reflexionsverm"ogen.
+
+
+	Die Extremf"alle $\epsilon = 0$ und $\epsilon = 1$ treten in der Realit"at jedoch nicht auf.
+	Man erreicht jedoch ann"ahernd Schwarze K"orper, indem man einen Hohlraum mit nur einer kleinen "Offnung benutzt.
+	Strahlung kann hier eintreten und wird im Inneren mehrfach reflektiert, wobei jedes Mal ein Teil der Energie absorbiert wird.
+
+	Alle K"orper, die ein Emissionsverm"ogen < 1 besitzen nennt man Graue K"orper.
+
+	\subsection{Planck'sches Strahlungsgesetz}
+		\label{sub:gesetze}
+
+		Die von einem K"orper abgestrahlte Leistung $P$, die sich "uber einen bestimmten Raum\-win\-kel $\Omega_0$ verteilt,
+		l"asst sich durch das Planck'sche Strahlungsgesetz beschreiben:
+
+		\begin{equation*}
+			P(\lambda, T) = \frac{2 \pi c^2 \hbar}{\Omega_0 \lambda^5} \left[ \exp \left(\frac{c \hbar}{k \lambda T} - 1\right) \right] ^{-1} .
+		\end{equation*}
+
+		Hierbei ist $k$ die Boltzmann-Konstante, $c$ die Lichtgeschwindigkeit und $\hbar$ die Planck-Konstante.
+
+		Es l"asst sich erkennen, dass sich das Maximum der Leistung f"ur h"ohere Temperaturen $T$ zu geringen Wellenl"angen $\lambda$ verschiebt und immer spitzer wird.
+		Durch numerische L"osung der Gleichung
+
+		\begin{equation*}
+			\frac{\partial P(\lambda, T)}{\partial \lambda} = 0
+		\end{equation*}
+
+		folgt f"ur die Wellenl"ange $\lambda_\mathrm{max}$ der maximal abgestrahlten Leistung $P_\mathrm{max}$ bei einer be\-stim\-mten Temperatur $T$:
+
+		\begin{equation*}
+			\lambda_\mathrm{max} T = \SI{2897.8}{\micro \meter \kelvin} .
+		\end{equation*}
+
+
+	\subsection{Stefan-Boltzmann Gesetz}
+
+		Integriert man $P(\lambda, T)$ "uber alle Wellenl"angen, erh"alt man das Stefan-Boltzmann Gesetz.
+		Es beschreibt die gesamte abgestrahlte Leistung in Abh"angigkeit der Temperatur:
+
+		\begin{equation*}
+			\label{boltzmann}
+			P(T) = \epsilon \sigma T^4 .
+		\end{equation*}
+
+		Wobei die Stefan-Boltzmann Konstante $\sigma = \SI{5.67e-8}{\watt \per \meter \squared \per \raiseto{4} \kelvin}$ nicht zu verwechseln ist mit der Boltzmann-Konstante $k$.
