@@ -1,0 +1,5 @@
+set xlabel "Lichtintensitaet[mW/cm^2]"
+set ylabel "Leerlaufspannung[mV]"
+set xrange[0:30]
+set yrange[1900:2100]
+plot "Intensitaet.dat" u 2:4 title "Messpunkte"

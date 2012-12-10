@@ -1,0 +1,6 @@
+set sample 1000
+set xlabel "Lastwiderstand[ohm]"
+set ylabel "Leistung[mW]"
+set xrange[0:350]
+set yrange[0:45]
+plot "abstand718.dat" u ($3/$2):(($3*$2)/1000) title "Messpunkte"

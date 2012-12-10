@@ -1,0 +1,5 @@
+set xlabel "U[mV]"
+set ylabel "I[mA]"
+set xrange[400:2000]
+set yrange[0:60]
+plot "abstand526.dat" u 3:2 title "Messpunkte"

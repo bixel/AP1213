@@ -6,12 +6,16 @@
 
 	\input{tabelleanfang.tex}
 
-	Beim Aufragen von $I_K$ und $U_0$ gegen Intensit"at $J$ ergaben sich die Graphen \eqref{IJ} und \eqref{UJ}.
-	Durch lineare Regression des I-J-Graphen ergab sich f"ur den Proportionalit"atsfaktor $\lambda$:\\
+	Beim Auftragen von $I_K$ und $U_0$ gegen die Intensit"at $J$ ergaben sich die Graphen \eqref{UJ} und \eqref{IJ}.
+	Durch lineare Regression der Messwerte des I-J-Graphen \eqref{IJ} aus Tabelle \eqref{tabelle_anfang} ergab sich:\\  
 
-	\begin{equation*}
-		\lambda = \SI{3.77 (51)}{}
-	\end{equation*}
+	\begin{eqnarray*}
+		m &=& \SI{3.77 (51)}{}\\
+		b &=& 0\\
+		\Rightarrow \lambda &=& \SI{3.77 (51)}{}
+	\end{eqnarray*}
+
+	Da $m$ dabei den Proportionalit"atsfaktor $\lambda$ angibt.
 
 	\begin{figure}[htbp]
 		\centering
@@ -26,7 +30,8 @@
 		\label{IJ}
 	\end{figure}
 
-	F"ur die U-I-Kennlinen \eqref{UI1} bis \eqref{UI4} ergab sich eine Diodenkennlinie mit umgekehrtem Vorzeichen.
+	F"ur die U-I-Kennlinen \eqref{UI1} bis \eqref{UI4} wurden die gemessenen Werte aus den Tabellen \eqref{tabelle_290} bis \eqref{tabelle_718} verwendet.
+	Es ergab sich eine Diodenkennlinie mit umgekehrtem Vorzeichen.
 	Die gelbe Fl"ache gibt dabei die maximale Leistung $P_{max}$ an.\\
 
 	\input{tabelle290.tex}
@@ -37,28 +42,36 @@
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width = 12cm]{img/290.jpg}
-		\caption{Kennlinie bei einem Lampenabstand von 29cm	}
+		\caption{Kennlinie bei einem Lampenabstand von $\SI{29}{\centi\meter}$}
 		\label{UI1}
 
 		\centering
 		\includegraphics[width = 12cm]{img/367.jpg}
-		\caption{Kennlinie bei einem Lampenabstand von 36.7cm}
+		\caption{Kennlinie bei einem Lampenabstand von $\SI{36.7}{\centi\meter}$}
 		\label{UI2}
 	\end{figure}
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width = 12cm]{img/526.jpg}
-		\caption{Kennlinie bei einem Lampenabstand von 52.6cm}
+		\caption{Kennlinie bei einem Lampenabstand von $\SI{52.6}{\centi\meter}$}
 		\label{UI3}
 
 		\centering
 		\includegraphics[width = 12cm]{img/718.jpg}
-		\caption{Kennlinie bei einem Lampenabstand von 71.8cm}
+		\caption{Kennlinie bei einem Lampenabstand von $\SI{71.8}{\centi\meter}$}
 		\label{UI4}
 	\end{figure}
 
 	Die Graphen \eqref{PR1} bis \eqref{PR4} geben die abgegebene Leistung $P$ f"ur unterschiedliche Lastwiderst"ande $R$ an.
-	Dabei kann nicht der eingestellte Widerstand benutzt werden, da sich in der Solarzelle noch ein weiterer Leistungsabh"angiger Widerstand befindet.
+	F"ur die Leistung werden die gemessenen Werte aus den Tabellen \eqref{tabelle_290} bis \eqref{tabelle_718} genutzt.
+	Es ergibt sich f"ur die Leistung $P$ und den Widerstand $R$:
+
+	\begin{eqnarray*}
+		P = U \cdot I\\
+		R = \frac{U}{I}
+	\end{eqnarray*}
+
+	Es kann nicht der eingestellte Widerstand benutzt werden, da sich in der Solarzelle noch ein weiterer leistungsabh"angiger Widerstand befindet.
 	Die Leistung ist Widerstandsabh"angig.
 	Sie steigt bis zu einem Maximalwert an und f"allt anschlie"send kontinuierlich.
 	Dies ist dadurch zu erkl"aren, dass sich die Spannung $U$ langsam $U_0$ ann"ahert, w"ahrend $I_K$ kontinuierlich abf"allt.\\
@@ -66,43 +79,47 @@
 	\begin{figure}[htbp]
 		\centering
 		\includegraphics[width = 12cm]{img/290p.jpg}
-		\caption{Leistung in Abh"angigkeit des Widerstandes}
+		\caption{Leistung in Abh"angigkeit des Widerstandes bei einem Abstand von $\SI{29}{\centi\meter}$}
 		\label{PR1}
 
 		\centering
 		\includegraphics[width = 12cm]{img/367p.jpg}
-		\caption{Leistung in Abh"angigkeit des Widerstandes}
+		\caption{Leistung in Abh"angigkeit des Widerstandes bei einem Abstand von $\SI{36.7}{\centi\meter}$}
 		\label{PR2}
 \end{figure}
 \begin{figure}[htbp]
 		\centering
 		\includegraphics[width = 12cm]{img/526p.jpg}
-		\caption{Leistung in Abh"angigkeit des Widerstandes}
+		\caption{Leistung in Abh"angigkeit des Widerstandes bei einem Abstand von $\SI{52.6}{\centi\meter}$}
 		\label{PR3}
 
 		\centering
 		\includegraphics[width = 12cm]{img/718p.jpg}
-		\caption{Leistung in Abh"angigkeit des Widerstandes}
+		\caption{Leistung in Abh"angigkeit des Widerstandes bei einem Abstand von $\SI{71.8}{\centi\meter}$}
 		\label{PR4}
 	\end{figure}
 \newpage
 	F"ur den Wirkungsgrad $\eta$ ergibt sich:
 
 	\begin{eqnarray*}
-		P_{ein} = A \cdot J\\
-		A = \SI{45.6}{\centi\meter^2}\\
-		P_{aus} = P_{max}\\
-		\Rightarrow \qquad \eta = \frac{P_{max}}{P_{ein}} 
+		P_{ein} &=& A \cdot J\\
+		A &=& \SI{45.6}{\centi\meter^2}\\
+		P_{aus} &=& P_{max}\\
+		\Rightarrow \qquad \eta &=& \frac{P_{max}}{P_{ein}} 
 	\end{eqnarray*}
 
-	Der Wirkungsgrad ist daher abh"angig von der Intensit"at des Lichts und der Maximal erbrachten Leistung.
-	Eine lineare Regression des Graphen \eqref{wirkung} ergiebt:
+	Der Wirkungsgrad ist daher abh"angig von der Intensit"at des Lichts und der maximal erbrachten Leistung.
+	Die Werte f"ur $P_{ein}$ und $P_{max}$ finden sich in tabelle \eqref{tabelle_max}
+	Eine lineare Regression der Messwerte aus dem Graphen \eqref{wirkung} ergibt mit der Formel $y = m \cdot x+b$ f"ur $m$ und $b$:
 
-	\begin{equation*}
-		\eta = \SI{0.161 (20)}{}
-	\end{equation*}
+	\begin{eqnarray*}
+		m &=& \SI{0.131 (9)}{}\\
+		b &=& 0\\
+		\Rightarrow \eta &=& \SI{13.1 (9)}{\%}
+	\end{eqnarray*}
 
-	Damit wird der Literaturwert aus \cite{artikel2} von $16\%$ erreicht.\\
+	Die Steigung $m$ entspricht dem Wirkungsgrad der Solarzelle, welche dementsprechend bei ca. $\SI{13.1 (9)}{\%}$ liegt.
+	Damit weicht der Wirkungsgrad von dem Literaturwert von $16\%$\cite{artikel2} um ca. $20\%$ ab.\\
 
 	\input{tabellemax.tex}
 

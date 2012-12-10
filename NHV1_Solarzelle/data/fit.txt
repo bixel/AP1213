@@ -1,0 +1,8 @@
+set yrange[20:210]
+set xrange[300:1300]
+set xlabel "P_ein[µW]"
+set ylabel "P_aus[µW]"
+b = 0
+f(x) = m*x+b
+fit f(x) "intensitaet.dat" u ($2*$5):($6/1000) via m
+plot f(x) title "fit", "intensitaet.dat" u ($2*$5):($6/1000) title "Messwerte"	

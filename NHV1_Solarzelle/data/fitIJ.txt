@@ -1,0 +1,7 @@
+set xlabel "Lichtintensitaet[mW/cm^2]"
+set ylabel "Kurzschlussstrom[mA]"
+set xrange[0:30]
+set yrange[0:130]
+f(x) = m*x+b
+fit f(x) "Intensitaet.dat" u 2:3 via m,b
+plot f(x) title "fit", "Intensitaet.dat" u 2:3 title "Messpunkte"
