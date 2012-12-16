@@ -1,0 +1,10 @@
+set terminal png enhanced
+set output "matt.png"
+set autoscale
+set xlabel"T^4[K^4]"
+set ylabel"U[V]"
+set yrange[0:0.5]
+set xrange[3*10**9:10**10]
+f(x) = m*x+b
+fit f(x) "matt.dat" u (($1+273.15)**4-(20+273.15)**4):($2) via m,b
+plot f(x) title "fit", "matt.dat" u (($1+273.15)**4-(20+273.15)**4):($2) title "Messpunkte"

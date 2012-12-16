@@ -1,0 +1,9 @@
+set terminal png enhanced
+set output "abstand.png"
+set autoscale
+set xlabel"d[cm]"
+set ylabel"U[V]"
+set yrange[0:0.8]
+f(x) = m/(x+b)**2
+fit f(x) "abstand.dat" u 1:($2) via m, b
+plot f(x) title "fit", "abstand.dat" u 1:($2) title "Messpunkte"
