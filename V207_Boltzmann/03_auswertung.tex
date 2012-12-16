@@ -8,17 +8,18 @@
 	\end{equation*}
 
 	W"ahrend des Versuchs kam es nicht zu Temperaturdrifts.
-	Bei der Messung der Ansprechzeit ergab sich bereits nach $\SI{10}{\seconds}$ eine S"attigung, weshalb wir auch f"ur die Ansprechzeit $\SI{10}{\seconds}$ benutzt haben.
+	Bei der Messung der Ansprechzeit ergab sich bereits nach $\SI{10}{\second}$ eine S"attigung, 
+	weshalb wir auch f"ur die An\-sprech\-zeit $\SI{10}{\second}$ benutzt haben.
 
 	Die Messung der Thermospannung der verschiedenen Oberfl"achen bei verschiedenen Temperaturen ergab die in den Tabellen \eqref{schwarz} bis \eqref{spiegel} gemessenen Werte. Eine lineare Regression der Werte ist in den Graphen \eqref{schwarz_graph} bis \eqref{spiegel_graph} zu erkennen.
 
 	Dabei ergibt sich f"ur den fit mit $m*x+b$ folgende Werte mit $b = -0.1$:
 
 	\begin{eqnarray}
-		m &=& \SI{2.63e-010 (3)}{}
-		m &=& \SI{2.60e-010 (3)}{}
-		m &=& \SI{5.10e-011 (35)}{}
-		m &=& \SI{2.64e-011 (37)}{}
+		m &=& \SI{2.63 (3) e-10}{}\\
+		m &=& \SI{2.60 (3) e-10}{}\\
+		m &=& \SI{5.10 (35) e-11}{}\\
+		m &=& \SI{2.64 (37) e-11}{}
 	\end{eqnarray}
 
 	\begin{center}
@@ -28,26 +29,26 @@
 	Aus dem Zusammenhang:
 
 	\begin{eqnarray*}
-		U &\propto& \epsilon \sigma T^4\\
-		\Rightarrow \mathrm{const} &=& \frac{\epsilon \sigma T^4}{U},\\
-		\Rightarrow \frac{\epsilon \sigma T^4}{U} &=& \frac{\epsilon_\text{Schwarz} \sigma T^4_\text{schwarz}}{U_\text{schwarz}},\\
+		U &\propto& \epsilon\,\sigma\,T^4\\
+		\Rightarrow \mathrm{const} &=& \frac{\epsilon\,\sigma\,T^4}{U},\\
+		\Rightarrow \frac{\epsilon\,\sigma\,T^4}{U} &=& \frac{\epsilon_\mathrm{schwarz}\,\sigma\,T^4_\mathrm{schwarz}}{U_\mathrm{schwarz}},\\
 		\epsilon_{schwarz} &=& 1,\\
-		\Rightarrow \epsilon &=& \frac{T^4_{schwarz}}{U_\text{Schwarz}} \ddot \frac{U}{T^4},\\
+		\Rightarrow \epsilon &=& \frac{T^4_\mathrm{schwarz}}{U_\mathrm{schwarz}} \frac{U}{T^4},\\
 		m &=& \frac{U}{T^4},\\
-		\Rightarrow \epsilon &=& \frac{m}{m_\text{schwarz}},
+		\Rightarrow \epsilon &=& \frac{m}{m_\mathrm{schwarz}},
 	\end{eqnarray*}
 
 	ergibt sich f"ur das Emissionsverm"ogen der einzelnen Oberfl"achen:
 
 	\begin{eqnarray*}
-		\epsilon_\text{schwarz} &=& 1\\
-		\epsilon_\text{weis} &=& 0.99\\
-		\epsilon_\text{matt} &=& 0.19\\
-		\epsilon_\text{spiegelnd} &=& 0.10
+		\epsilon_\mathrm{schwarz} &=& 1\\
+		\epsilon_\mathrm{wei"s} &=& 0.99\\
+		\epsilon_\mathrm{matt} &=& 0.19\\
+		\epsilon_\mathrm{spiegelnd} &=& 0.10
 	\end{eqnarray*}
 
 	Die Literaturwerte \cite{emission} weichen von diesen ab.
-	So wird beispielsweise f"ur wei"s ein Koeffizient von $0.90$ bis $0.95$ angegeben.
+	So wird beispielsweise f"ur wei"s ein Ko\-ef\-fi\-zient von $0.90$ bis $0.95$ angegeben.
 	Dies liegt wohl daran, dass wir die schwarze Fl"ache als schwarzen Strahler angenommen haben, was in wirklichkeit nicht v"ollig richtig ist.
 
 	\begin{figure}[htbp]
@@ -79,12 +80,11 @@
 	\input{matt.tex}
 	\input{spiegel.tex}
 
-	Es handelt sich bei der Abgestrahlten W"armestrahlung um Kugelwellen, deshalb wird mit gr"o"serem Abstand ein $1/r^2$ zusammenhang erwartet.
 	Eine nicht lineare Regression der Messpunkte aus Tabelle \eqref{abstand} mit $m/(x+b)^2$ ergibt:
 
 	\begin{eqnarray*}
 		m = \SI{494.96 (6292)}{}\\
-		b = \SI{11.38 (1.97)}{}
+		b = \SI{11.38 (197)}{}
 	\end{eqnarray*}
 
 	Der $1/r^2$ Zusammenhang wird in Graphik \eqref{abstand_graph} damit graphisch sichtbar.
