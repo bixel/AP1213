@@ -1,0 +1,11 @@
+reset
+set term jpeg
+set output "graph_d.jpg"
+set yrange[0:210]
+set xrange[19:53]
+set xlabel "f[kHz]"
+set ylabel "Phasenverschiebung[°]"
+f(x) = 90
+g(x) = 45
+h(x) = 135
+plot "daten_d.dat" u 1:($4*360) title "Messwerte", f(x) title "90°" with lines, g(x) title "45°" with lines, h(x) title "135°" with steps
