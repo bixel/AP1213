@@ -1,0 +1,9 @@
+reset
+set term jpeg
+set output "graph_c.jpg"
+set xrange[0.01:210]
+set yrange[0:4.5]
+set ylabel "Uc/U"
+set logscale x
+set xlabel "ln(f[kHz]/1[kHz])"
+plot "daten_c.dat" u 1:($2/2.6) title "Messpunkte"

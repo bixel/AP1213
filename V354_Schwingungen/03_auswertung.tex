@@ -1,3 +1,142 @@
 \section{Auswertung}
 	\label{sec:auswertung}
 	\input{aufgabe_c.tex}
+
+	Auf Fehler wird in der Diskussion eingegangen.
+
+	Die Zeitabh"angigkeit der Amplitude einer ged"ampften Schwingung ist in Graph \eqref{amplitude} zu sehen.
+	Aus dem Graphen \eqref{amplitude} wurden die Amplituden aus Tabelle \eqref{amplitude} entnommen. Mit einer Ausgleichsrechnung der Positiven Amplituden ergaben sich der Graph \eqref{amplitude_fit} und f"ur die Werte:
+
+	\begin{eqnarray}
+		f(x) &=& -m \cdot x + b\\ \label{ausgleich}
+		m &=& \SI{0.195 (3)}{} \nonumber\\
+		b &=& \SI{1.692 (11)}{}\nonumber 
+	\end{eqnarray}
+
+	Damit ergibt sich f"ur den Vorfaktor des Expontenen der e-Funktion $2\cdot \pi \cdot \mu  = \SI{0.195 (3)}{\milli\hertz}$.
+	Daraus Folgt f"ur die Abklingdauer und den effektiven D"ampfungswiderstand:
+
+	\begin{eqnarray*}
+		m &=& 2 \cdot \pi \cdot \mu\\
+		L &=& \SI{10.14 (3)}{\milli H}\\
+		\Rightarrow T_\mathrm{ex} &=& \frac{1}{m} = \SI{5.128 (3)}{\micro \second}\\
+		\Rightarrow R_\mathrm{eff} &=& 2 \cdot L \cdot m = \SI{3.954}{\ohm}
+	\end{eqnarray*}
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 12cm]{img/F0006TEK.jpg}
+		\caption{Zeitabh"angigkeit der Amplitude einer ged"ampften Schwingung. Mit rot ist die Einh"ullende gekennzeichnet.}
+		\label{amplitude}
+	\end{figure}
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 12cm]{img/graph_a_2.jpg}
+		\caption{Amplituden aus Graph \eqref{amplitude} mit einer Ausgleichsrechnung mittels \eqref{ausgleich}}
+		\label{amplitude_fit}
+	\end{figure}
+
+	\input{tabelle_a.tex}
+
+	F"ur die Suche nach dem Aperiodischen Grenzfall ergaben sich die Graphiken \eqref{ap_1} bis \eqref{ap_3}.
+	Dabei zeigt Graphik \eqref{ap_2} den Aperiodischen Grenzfall bei etwa :
+
+	\begin{equation*}
+		R_\mathrm{ap} = \SI{3.52}{\kilo\ohm}.
+	\end{equation*}
+		F"ur den errechneten Wert ergab sich :
+	\begin{eqnarray*}
+		C &=& \SI{2.088 e-9}{\farad}\\
+		L &=& \SI{10.14 e-3}{H}\\
+		R_\mathrm{ap} = \frac{4 \cdot L}{C} &=& \SI{3.12 ()}{\kilo\ohm}.
+	\end{eqnarray*}
+
+	\begin{figure}[htbp]
+			\centering
+			\includegraphics[width = 12cm]{img/F0003TEK.jpg}
+			\caption{"Uberd"ampfung}
+			\label{ap_1}
+		\end{figure}	
+
+		\begin{figure}[htbp]
+			\centering
+			\includegraphics[width = 12cm]{img/F0002TEK.jpg}
+			\caption{Aperiodischer Grenzfall}
+			\label{ap_2}
+		\end{figure}
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 12cm]{img/F0001TEK.jpg}
+		\caption{Kriechfall}
+		\label{ap_3}
+	\end{figure}
+
+	Bei der Messung der frequenzabh"angigkeit der Spannung ergaben sich die Werte aus Tabelle \eqref{frequenz}.
+	Diese sind zudem in Graph \eqref{frequenz_1} dargestellt, wobei $U_\mathrm{c} mit U_\mathrm{0} = \SI{2.6}{\volt}$ normiert wurde.
+	Der Bereich um die Resonanzfrequenz ist in Graph \eqref{frequenz_2} dargestellt. Die Schnittpunkte des Graphen mit der Linie stellt dabei die Breite der Resonanzkurve dar.
+	Bei diesem Versuch wurde der Gesamtwiderstand benutzt:
+
+	\begin{eqnarray*}
+		R_\mathrm{2} &=& \SI{237.9}{\ohm}\\
+		R_\mathrm{i} &=& \SI{50}{\ohm}\\
+		R_\mathrm{ges} &=& \SI{573.9}{\ohm}
+	\end{eqnarray*}
+
+	Das Maximum der Kurve gibt die Resonanz"uberh"ohung $q$ an, die Schnittpunkte $f_1 und f_2$.
+	Damit lesen sich die ungef"ahren Werte ab:
+
+	\begin{eqnarray*}
+		q &=& \SI{3.840 (15)}{}\\
+		f_1 &=& \SI{37.5}{}\\
+		f_2 &=& \SI{28.5}{}\\
+		\rightarrow w_1 - w_2 = 2 \cdot \pi \cdot (f_1 - f_2) &=& \SI{56548.66}{}\\
+	\end{eqnarray*}
+
+	Dieser Wert liegt sehr nah an dem Referenzwert $R\L = \SI{56597.63 ()}{\ohm \per H}$.
+
+	\input{aufgabe_c.tex}
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 12cm]{img/graph_c.jpg}
+		\caption{Frequenzabh"angigeit der Spannung}
+		\label{frequenz_1}
+	\end{figure}
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 12cm]{img/graph_c_1.jpg}
+		\caption{Frequenzabh"angigkeit der Spannung im Bereich um die Resonanzfrequenz}
+		\label{frequenz_2}
+	\end{figure}
+
+	Die Messdaten zur Frequenzabh"angigkeit der Phasenverschiebung sind in Tabelle \eqref{phase} dargstellt.
+	Der dazugeh"orige Graph \eqref{phase} zeigt die Messwerte und die Signifikanten stellen bei $\Phi = 45^\circ$, $\Phi = 90^\circ$ und $\Phi = 135^\circ$.
+	Diese entsprechen den Punkten, wo die Frequenz die Werte $f_2$, $f_\mathrm{res}$ und $f_1$ annimmt.
+
+	Es ergibt sich f"ur die abgelesenen Werte:
+
+	\begin{eqnarray*}
+		w_2 = 2 \cdot \pi \cdot f_2 &=& \SI{188.496}{\kilo \hertz}\\
+		w_\mathrm{res} = 2 \cdot \pi \cdot f_\mathrm{res} &=& \SI{210.487}{\kilo \hertz}\\
+		w_1 = 2 \cdot \pi \cdot f_1 &=& \SI{241.903}{\kilo \hertz}
+	\end{eqnarray*}
+
+	Die errechneten Werte ergeben:
+
+	\begin{eqnarray*}
+		w_1 = \frac{R}{2L} + \sqrt{\frac{R^2}{4\,L^2} + \frac{1}{L \, C}} &=& \SI{247.461}{\kilo \hertz}\\
+		w_\mathrm{res} = \sqrt{\frac{1}{L\, C} - \frac{R^2}{2 \, L^2}} &=& \SI{217.290}{\kilo \hertz}\\
+		w_1 = -\frac{R}{2L} + \sqrt{\frac{R^2}{4\,L^2} + \frac{1}{L \, C}} &=& \SI{190.863}{\kilo \hertz}
+	\end{eqnarray*}
+
+	\begin{figure}[htbp]
+		\centering
+		\includegraphics[width = 12cm]{img/graph_d.jpg}
+		\caption{Phase der Spannung in Abh"angigkeit von der Freuquenz}
+		\label{phase}
+	\end{figure}
+
+	\input{tabelle_phase.tex}

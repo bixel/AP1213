@@ -1,0 +1,11 @@
+set sample 1000000
+set term jpeg
+set output "graph_a.jpg"
+set xlabel "t[cm]"
+set ylabel "U[cm]"
+f(x) = a*exp(-b*x)*cos(d*x+e)
+a = 5.4
+b = .2
+d = 10
+fit f(x) "daten_a.dat" u 1:2 via b, d, e
+plot f(x) title "A*exp(-b*x)*cos(d*x+e)", "daten_a.dat" u 1:2 title "Messpunkte"
