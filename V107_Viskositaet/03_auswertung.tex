@@ -60,6 +60,7 @@
 		Auch hier erh"alt man einen Fehler durch Fehlerfortpflanzung:
 
 		\begin{equation*}
+			\label{fehler_eta}
 			\Delta \eta = \left| \frac{\partial \eta}{\partial \rho_K} \right| \cdot \Delta \rho_K + \left| \frac{\partial \eta}{\partial t} \right| \cdot \Delta t = K \left(t \cdot \Delta \rho_K + \left|\rho_K - \rho_\mathrm{Fl}\right| \cdot \Delta t \right)
 		\end{equation*}
 
@@ -169,11 +170,11 @@
 		\label{sub:laminar}
 
 		Schlie"slich wird "uberpr"uft, ob die vorliegende Str"omung laminar ist -- ob also keine Turbulenzen im Wasser auftreten.
-		Dazu muss die Reynoldszahl $Re$ deutlich unter $Re_\mathrm{krit} = 2050$ liegen.
+		Dazu muss die Reynoldszahl $Re$ bei fallenden Kugeln in Fl"ussigkeiten deutlich unter $Re_\mathrm{krit} = \SI{.2}{}$ liegen \cite{walcher}.
 		Der Wert berechnet sich nach
 
 		\begin{equation*}
-			Re = \frac{\rho v d_\mathrm{B}}{\eta} ,
+			Re = \frac{\rho_\mathrm{Fl} v d_\mathrm{B}}{\eta} ,
 		\end{equation*}
 
 		wobei $v$ die charakteristische Str"omungsgeschwindigkeit der Fl"ussigkeit gegen"uber dem K"orper und $d$ die Bezugsl"ange bezeichnet.
@@ -185,18 +186,29 @@
 		Gau"s'sche Fehlerfortpflanzung liefert
 
 		\begin{eqnarray*}
-			\Delta Re & = & \frac{\rho}{\eta} \left( d \Delta v + v \Delta d + \frac{v d}{\eta} \Delta \eta \right) , \\
-			\Delta v & = & \frac{x}{t^2} \Delta t.
+			\Delta Re & = & \frac{\rho_\mathrm{Fl}}{\eta} \left( d \Delta v + v \Delta d + \frac{vd}{\eta} \Delta \eta \right) , \\
+			\Delta v & = & \frac{x}{t^2} \Delta t , \\
+			\Delta \eta & = & \left|\rho_\mathrm{K} - \rho_\mathrm{Fl}\right| t \cdot \Delta K + K \left(t \cdot \Delta \rho_K + \left|\rho_K - \rho_\mathrm{Fl}\right| \cdot \Delta t \right) .
 		\end{eqnarray*}
+
+		F"ur $\Delta t$ ist der Mittlere Fehler
+
+		\begin{equation*}
+			\Delta t = \sqrt{\frac{\sum_{i=1}^{n}{\left(\overline{t} - t_i\right)^2}}{n^2 - n}} .
+		\end{equation*}
+
+		% \begin{eqnarray*}
+		% 	\Delta Re & = & \frac{\rho}{\eta} \left( d \Delta v + v \Delta d + \frac{v d}{\eta} \Delta \eta \right) , \\
+		% 	\Delta v & = & \frac{x}{t^2} \Delta t .
+		% \end{eqnarray*}
 
 		Dann folgt:
 
 		\begin{eqnarray*}
-			v_\mathrm{max} & = & \frac{\SI{10}{\centi \meter}}{\SI{50.565}{\second}} = \SI{.198}{\centi \meter \per \second} , \\
-			\eta_\mathrm{max} & = & \SI{6.36}{\gram \per \centi \meter \per \second} , \\
-			d & = & \SI{1.582}{\centi \meter} \\
-			\Rightarrow \quad Re & = & \SI{.049}{} \ll Re_\mathrm{krit} .
+			v_\mathrm{max} & = & \frac{\SI{10}{\centi \meter}}{\SI{50.565}{\second}} = \SI{.1980 (4)}{\centi \meter \per \second} , \\
+			\eta_\mathrm{max} & = & \SI{6.36 (5)}{\gram \per \centi \meter \per \second} , \\
+			d & = & \SI{1.582 (5)}{\centi \meter} \\
+			\Rightarrow \quad Re & = & \SI{.0487 (7)}{} < Re_\mathrm{krit} .
 		\end{eqnarray*}
 
 		Somit liegt hier eine laminare Str"omung vor.
-		Die Messfehler wurden dabei nicht be\-trach\-tet, weil sie einige Gr"o"senordnungen kleiner sind als der Wert der Reynoldszahl.
