@@ -29,14 +29,19 @@
 			\end{tabular}
 		\end{table}
 
-		Bei allen Zeitmessungen wird von einer Menschlichen Reaktonszeit $\Delta t = \SI{100}{\milli \second}$ aus\-ge\-gan\-gen.
-		Diese Fehler addieren sich quadratisch und der Mittelwert $t_\mathrm{klein}$ ergibt sich zu
+		Es wird ein Mittelwert mit mittlerem Fehler gebildet:
 
 		\begin{equation*}
-			t_\mathrm{klein} = \SI{12.78 (32)}{\second} .
+			t_\mathrm{klein} = \SI{12.78 (04)}{\second} .
 		\end{equation*}
 
-		Desweiteren muss aus dem Durchmesser $d_\mathrm{klein}$ und der Masse $m_\mathrm{klein}$ die Dichte $\rho_{K,\mathrm{klein}}$ der Kugel bestimmt werden. Die Masse ist hierbei bekannt, der Durchmesser muss mit einem Messschieber gemessen werden.
+		Desweiteren muss aus dem Durchmesser $d_\mathrm{klein}$ und der Masse $m_\mathrm{klein}$ die Dichte $\rho_{K,\mathrm{klein}}$ der Kugel bestimmt werden. Es gilt
+
+		\begin{equation*}
+			\rho = \frac{m}{V} = \frac{6 m}{\pi d^3} .
+		\end{equation*}
+
+		Die Masse ist hierbei bekannt, der Durchmesser muss mit einem Messschieber gemessen werden, wobei der Ablesefehler $\Delta d = \SI{.05}{\milli \meter}$ betr"agt.
 
 		Durch Gau"s'sche Fehlerfortpflanzung erh"alt man einen Fehler 
 		\begin{equation*}
@@ -46,24 +51,24 @@
 		Damit kann die Dichte bestimmt werden:
 
 		\begin{eqnarray*}
-			d_\mathrm{klein} & = & \SI{15.64 (1)}{\milli \meter} \\ 
+			d_\mathrm{klein} & = & \SI{15.64 (5)}{\milli \meter} \\ 
 			m_\mathrm{klein} & = & \SI{4.4531}{\gram} \\
-			\Rightarrow \quad \rho_\mathrm{klein} & = & \SI{2.223 (4)}{\gram \per \centi \meter \cubed} .
+			\Rightarrow \quad \rho_\mathrm{klein} & = & \SI{2.223 (21)}{\gram \per \centi \meter \cubed} .
 		\end{eqnarray*}
 
 		Mit den obigen Gr"o"sen wird $\eta_0$ bestimmt.
 		Auch hier erh"alt man einen Fehler durch Fehlerfortpflanzung:
 
 		\begin{equation*}
-			\Delta \eta = \left| \frac{\partial \eta}{\partial \rho_K} \right| \cdot \Delta \rho_K + \left| \frac{\partial \eta}{\partial t} \right| \cdot \Delta t = K \left(t \cdot \Delta \rho_K + \left(\rho_K - \rho_\mathrm{Fl}\right) \cdot \Delta t \right)
+			\Delta \eta = \left| \frac{\partial \eta}{\partial \rho_K} \right| \cdot \Delta \rho_K + \left| \frac{\partial \eta}{\partial t} \right| \cdot \Delta t = K \left(t \cdot \Delta \rho_K + \left|\rho_K - \rho_\mathrm{Fl}\right| \cdot \Delta t \right)
 		\end{equation*}
 
-		Die Dichte $\rho_\mathrm{Fl}$ des Wassers und die Konstante $K_\mathrm{klein}$ sind bekannt. Man erh"alt
+		Die Dichte $\rho_\mathrm{Fl}$ des Wassers und die Konstante $K_\mathrm{klein}$ sind bekannt \cite{uni_magdeburg} \cite{anleitung} . Man erh"alt
 
 		\begin{eqnarray*}
 			K_\mathrm{klein} & = & \SI{.0764}{\milli \pascal \centi \meter \cubed \per \gram} \\
 			\rho_\mathrm{Fl} & = & \SI{.998}{\gram \per \centi \meter \cubed}\\
-			\Rightarrow \quad \eta_0 & = & \SI{1.196 (3)}{\kilo \gram \per \meter \per \second} .
+			\Rightarrow \quad \eta_0 & = & \SI{1.196 (6)}{\kilo \gram \per \meter \per \second} .
 		\end{eqnarray*}
 
 		Nun kann $K_\mathrm{gro"s}$ der gro"sen Kugel bestimmt werden.
@@ -83,10 +88,10 @@
 		\end{table}
 
 		\begin{equation*}
-			\overline{t} = \SI{95.22 (32)}{\second}
+			\overline{t} = \SI{95.22 (13)}{\second}
 		\end{equation*}
 
-		Masse $m$ und Durchmesser $d$ dieser Kugel werden gemessen und Dichte $\rho$ bestimmt.
+		Masse $m$ und Durchmesser $d$ dieser Kugel werden gemessen und Dichte $\rho$ bestimmt. Die Ablesefehler betragen $\Delta m = \SI{.05}{\gram}$ und $\Delta d = \SI{.05}{\milli \meter}$.
 		Weil nun auch $m$ fehlerbehaftet ist erh"alt man
 
 		\begin{equation*}
@@ -95,8 +100,8 @@
 
 		\begin{eqnarray*}
 				m & = & \SI{4.60 (5)}{\gram} , \\
-				d & = & \SI{15.82 (1)}{\milli \meter} , \\
-				\Rightarrow \quad \rho & = & \SI{2.219 (66)}{\gram \per \centi \meter \cubed}
+				d & = & \SI{15.82 (5)}{\milli \meter} , \\
+				\Rightarrow \quad \rho & = & \SI{2.219 (45)}{\gram \per \centi \meter \cubed}
 		\end{eqnarray*}
 
 		Durch Umstellen der Gleichung \eqref{viskositaet_0} erhalten wir
@@ -108,40 +113,40 @@
 		Mit Gau"s'scher Fehlerfortpflanzung erh"alt man dann den Fehler
 
 		\begin{equation*}
-			\Delta K = \frac{\Delta \eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) t} + \frac{\eta}{\left(\rho_K - \rho_\mathrm{Fl}\right) t} \left[ \frac{\Delta \rho_K}{\left( \eta_K - \eta_\mathrm{Fl} \right)} + \frac{\Delta t}{t} \right] .
+			\Delta K = \frac{\Delta \eta}{\left|\rho_K - \rho_\mathrm{Fl}\right| t} + \frac{\eta}{\left|\rho_K - \rho_\mathrm{Fl}\right| t} \left[ \frac{\Delta \rho_K}{\left| \rho_K - \rho_\mathrm{Fl} \right|} + \frac{\Delta t}{t} \right] .
 		\end{equation*}
 
 		\begin{equation*}
-			\Rightarrow \quad K = \SI{10.3 (6)}{\micro \pascal \centi \meter \cubed \per \gram}
+			\Rightarrow \quad K = \SI{10.28 (44)}{\milli \pascal \centi \meter \cubed \per \gram}
 		\end{equation*}
 
 	\subsection{Temperaturabh"angigkeit der Viskosit"at $\eta$ von destilliertem Wasser}
 		\label{sub:temperaturabhaengigkeit}
 
 		Da nun $K_\mathrm{gro"s}$ bekannt ist, kann die dynamische Viskosit"at $\eta (T)$ f"ur verschiedene Tem\-pe\-ra\-tu\-ren $T$ mit Messung der Fallzeit $t$ bestimmt werden.
-		Durch eine lineare Regression der Werte $\log{\eta (T)}$ und $1 / T$ lassen sich die Konstanten $A$ und $B$ aus Gleichung \eqref{viskositaet_dyn} bestimmen.
+		Durch eine lineare Regression der Werte $\ln{\eta (T)}$ und $1 / T$ lassen sich die Konstanten $A$ und $B$ aus Gleichung \eqref{viskositaet_dyn} bestimmen.
 
-		Zu jeder Temperatur werden zwei Messwerte aufgenommen. Die folgende Tabelle zeigt die jeweiligen Mittelwerte $\overline{t}$. Der jeweilige Fehler betr"agt $\Delta \overline{t} = \SI{.14}{\second}$.
+		Zu jeder Temperatur werden zwei Messwerte aufgenommen. Die folgende Tabelle zeigt die Messwerte
 
 		\begin{table}[h!]
 			\centering
 			\caption{Mittelwerte der Fallzeit $\overline{t}$ der gro"sen Kugel in Abh"angigkeit der Temperatur $T$}
 			\begin{tabular}{|c|c||c|c|}
 				\hline
-				$T [\SI{}{\celsius}]$ & $\overline{t} [\mathrm{s}]$ & $T [\SI{}{\celsius}]$ & $\overline{t} [\mathrm{s}]$ \\
+				$T [\SI{}{\celsius}]$ & $t [\mathrm{s}]$ & $T [\SI{}{\celsius}]$ & $t [\mathrm{s}]$ \\
 				\hline
 				\hline
-				\input{data/temperatur_raw.tex}
+				\input{data/temperatur_new.tex}
 				\hline
 			\end{tabular}
 		\end{table}
 
 		Aus jedem Wert kann nun mit Gleichung \eqref{viskositaet_dyn} die Viskosit"at $\eta (T)$ bestimmt werden.
-		Die oben beschriebene lineare Regression liefert dann
+		Die oben beschriebene lineare Regression durch numpy liefert dann
 
 		\begin{eqnarray*}
-			A & = & \SI{.396 (42)}{\kilo \gram \per \meter \per \second} \\
-			B & = & \SI{27.37 (159)}{\second} .
+			A & = & \SI{.396 (28)}{\kilo \gram \per \meter \per \second} \\
+			B & = & \SI{27.37 (107)}{\second} .
 		\end{eqnarray*}
 
 		\begin{figure}[h!]
@@ -177,13 +182,20 @@
 		Mit einer Gef"a"sl"ange von $x = \SI{10}{\centi \meter}$ erh"alt man die Geschwindigkeit $v_\mathrm{max}$, f"ur die die Reynoldszahl maximal wird.
 		Au"serdem w"ahlt man aus den Messwerten die Viskosit"at $\eta_\mathrm{max}$, f"ur welche dies ebenfalls gilt.
 		Die Bezugsl"ange $d_\mathrm{B}$ entspricht hierbei dem Durch\-messer der Kugel ($d_\mathrm{B} = d$).
-		Dann gilt:
+		Gau"s'sche Fehlerfortpflanzung liefert
 
 		\begin{eqnarray*}
-			v_\mathrm{max} & = & \frac{\SI{10}{\centi \meter}}{\SI{50.565}{\second}} = \SI{1.98}{\milli \meter \per \second} , \\
-			\eta_\mathrm{max} & = & \SI{.636}{\kilo \gram \per \meter \per \second} , \\
-			d & = & \SI{15.82}{\milli \meter} \\
-			\Rightarrow \quad Re & = & \SI{49.15}{} \ll Re_\mathrm{krit} .
+			\Delta Re & = & \frac{\rho}{\eta} \left( d \Delta v + v \Delta d + \frac{v d}{\eta} \Delta \eta \right) , \\
+			\Delta v & = & \frac{x}{t^2} \Delta t.
+		\end{eqnarray*}
+
+		Dann folgt:
+
+		\begin{eqnarray*}
+			v_\mathrm{max} & = & \frac{\SI{10}{\centi \meter}}{\SI{50.565}{\second}} = \SI{.198}{\centi \meter \per \second} , \\
+			\eta_\mathrm{max} & = & \SI{6.36}{\gram \per \centi \meter \per \second} , \\
+			d & = & \SI{1.582}{\centi \meter} \\
+			\Rightarrow \quad Re & = & \SI{.049}{} \ll Re_\mathrm{krit} .
 		\end{eqnarray*}
 
 		Somit liegt hier eine laminare Str"omung vor.
