@@ -2,26 +2,39 @@
 	\label{sec:auswertung}
 	\input{aufgabe_c.tex}
 
-	Auf Fehler wird in der Diskussion eingegangen.
-
 	Die Zeitabh"angigkeit der Amplitude einer ged"ampften Schwingung ist in Graph \eqref{amplitude} zu sehen.
-	Aus dem Graphen \eqref{amplitude} wurden die Amplituden aus Tabelle \eqref{amplitude} entnommen. Mit einer Ausgleichsrechnung der Positiven Amplituden ergaben sich der Graph \eqref{amplitude_fit} und f"ur die Werte:
+	Aus dem Graphen \eqref{amplitude} wurden die Amplituden aus Tabelle \eqref{amplitude} entnommen. Mit einer linearen Ausgleichsrechnung der positiven Amplituden mit Gnuplot ergaben sich der Graph \eqref{amplitude_fit}. Die Ausgleichsrechnung f"uhrte auf die Werte:
 
 	\begin{eqnarray}
 		f(x) &=& -m \cdot x + b\\ \label{ausgleich}
-		m &=& \SI{0.195 (3)}{} \nonumber\\
-		b &=& \SI{1.692 (11)}{}\nonumber 
+		m &=& \SI{0.195 (3)}{1\per\centi\meter} \nonumber\\
+		b &=& \SI{1.692 (11)}{\centi\meter}\nonumber 
 	\end{eqnarray}
 
-	Damit ergibt sich f"ur den Vorfaktor des Expontenen der e-Funktion $2\cdot \pi \cdot \mu  = \SI{0.195 (3)}{\milli\hertz}$.
+	Damit ergibt sich f"ur den Vorfaktor des Expontenen $2 \cdot \pi \cdot \mu$ der e-Funktion: 
+	\begin{eqnarray*}
+		\SI{1}{1\per\centi\meter} &=& \SI{0.031}{1\per\micro\second}\\
+		2\cdot \pi \cdot \mu  = 0.031 \cdot m &=&  \SI{6.045 (93)}{\kilo \hertz}
+	\end{eqnarray*}
+
 	Daraus Folgt f"ur die Abklingdauer und den effektiven D"ampfungswiderstand:
 
 	\begin{eqnarray*}
-		m &=& 2 \cdot \pi \cdot \mu\\
-		L &=& \SI{10.14 (3)}{\milli H}\\
-		\Rightarrow T_\mathrm{ex} &=& \frac{1}{m} = \SI{5.128 (3)}{\micro \second}\\
-		\Rightarrow R_\mathrm{eff} &=& 2 \cdot L \cdot m = \SI{3.954}{\ohm}
+		L &=& \SI{10.14 (3)}{\milli \henry }\\
+		\Rightarrow T_\mathrm{ex} &=& \frac{1}{2 \cdot \pi \cdot \mu} = \SI{0.16 (1)}{\milli \second}\\
+		\Rightarrow R_\mathrm{eff} &=& 2 \cdot L \cdot 2 \cdot \pi \cdot \mu = \SI{122.59 (192)}{\ohm}
 	\end{eqnarray*}
+
+	Der Fehler von $R_\mathrm{eff}$ berechnet sich mit:
+
+	\begin{eqnarray*}
+		\Delta R_\mathrm{eff} &=& \sqrt{ \left( |\frac{\partial R}{\partial 2 \cdot \pi \cdot \mu}| \cdot \Delta 2 \cdot \pi \cdot \mu \right)^2 + \left( |\frac{\partial R}{\partial L}| \cdot \Delta L \right)^2}\\ \label{fehler}
+		\Delta 2 \cdot \pi \cdot \mu &=& 93\\
+		\Delta L &=& 0.00003\\
+		\Rightarrow \Delta R_\mathrm{eff} &=& 1.92
+	\end{eqnarray*}
+
+	Der effektive D"ampfungswiderstand von $\SI{122.59 (192)}{\ohm}$ ist gr"o"ser als der verbaute Widerstand $R_\mathrm{1} = \SI{54.7 (1)}{\ohm}$ und der Innenwiderstand $R_\mathrm{i} = \SI{50}{\ohm}$ zusammen. Dies l"asst sich durch die zus"atzlichen Ohm'schen Widest"ande in der Spule und den Leitungen erkl"aren.
 
 	\begin{figure}[htbp]
 		\centering
@@ -39,18 +52,25 @@
 
 	\input{tabelle_a.tex}
 
-	F"ur die Suche nach dem Aperiodischen Grenzfall ergaben sich die Graphiken \eqref{ap_1} bis \eqref{ap_3}.
-	Dabei zeigt Graphik \eqref{ap_2} den Aperiodischen Grenzfall bei etwa :
+	F"ur die Suche nach dem aperiodischen Grenzfall ergaben sich die Graphiken \eqref{ap_1} bis \eqref{ap_3}.
+	Dabei zeigt Graphik \eqref{ap_2} den aperiodischen Grenzfall bei etwa :
 
 	\begin{equation*}
 		R_\mathrm{ap} = \SI{3.52}{\kilo\ohm}.
 	\end{equation*}
 		F"ur den errechneten Wert ergab sich :
 	\begin{eqnarray*}
-		C &=& \SI{2.088 e-9}{\farad}\\
-		L &=& \SI{10.14 e-3}{H}\\
-		R_\mathrm{ap} = \frac{4 \cdot L}{C} &=& \SI{3.12 ()}{\kilo\ohm}.
+		C &=& \SI{2.088 (6)}{\nano \farad}\\
+		L &=& \SI{10.14 (3)}{\milli \henry}\\
+		R_\mathrm{ap} = \sqrt{\frac{4 \cdot L}{C}} &=& \SI{3.12 (652)}{\kilo\ohm}.
 	\end{eqnarray*}
+
+	Dies entspricht einer Abweichung von etwa $\SI{13}{\%}$.
+	Der Fehler berechnet sich nach:
+
+	\begin{equation}
+		\Delta R_\mathrm{ap} = \sqrt{ \left( |\frac{\partial R}{\partial C}| \cdot \Delta C \right)^2 + \left( |\frac{\partial R}{\partial L}| \cdot \Delta L \right)^2}
+	\end{equation}
 
 	\begin{figure}[htbp]
 			\centering
@@ -74,27 +94,29 @@
 	\end{figure}
 
 	Bei der Messung der frequenzabh"angigkeit der Spannung ergaben sich die Werte aus Tabelle \eqref{frequenz}.
-	Diese sind zudem in Graph \eqref{frequenz_1} dargestellt, wobei $U_\mathrm{c} mit U_\mathrm{0} = \SI{2.6}{\volt}$ normiert wurde.
+	Diese sind zudem in Graph \eqref{frequenz_1} dargestellt, wobei $U_\mathrm{c}$ mit $U_\mathrm{0} = \SI{2.6 (1)}{\volt}$ normiert wurde.
 	Der Bereich um die Resonanzfrequenz ist in Graph \eqref{frequenz_2} dargestellt. Die Schnittpunkte des Graphen mit der Linie stellt dabei die Breite der Resonanzkurve dar.
 	Bei diesem Versuch wurde der Gesamtwiderstand benutzt:
 
 	\begin{eqnarray*}
-		R_\mathrm{2} &=& \SI{237.9}{\ohm}\\
+		R_\mathrm{2} &=& \SI{523.9 (5)}{\ohm}\\
 		R_\mathrm{i} &=& \SI{50}{\ohm}\\
-		R_\mathrm{ges} &=& \SI{573.9}{\ohm}
+		R_\mathrm{ges} &=& \SI{573.9 (5)}{\ohm}
 	\end{eqnarray*}
 
-	Das Maximum der Kurve gibt die Resonanz"uberh"ohung $q$ an, die Schnittpunkte $f_1 und f_2$.
-	Damit lesen sich die ungef"ahren Werte ab:
+	Das Maximum der Kurve gibt die Resonanz"uberh"ohung $q$ an, die Schnittpunkte $f_1$ und $f_2$ die Grenzen f"ur die Breite.
+	Ablesen der Werte ergibt ungef"ahr:
 
 	\begin{eqnarray*}
-		q &=& \SI{3.840 (15)}{}\\
-		f_1 &=& \SI{37.5}{}\\
-		f_2 &=& \SI{28.5}{}\\
-		\rightarrow w_1 - w_2 = 2 \cdot \pi \cdot (f_1 - f_2) &=& \SI{56548.66}{}\\
+		q &=& \SI{3.846 (50)}{}\\
+		f_1 &=& \SI{37.5 (5)}{\kilo\hertz}\\
+		f_2 &=& \SI{28.5 (5)}{\kilo\hertz}\\
+		\rightarrow w_1 - w_2 = 2 \cdot \pi \cdot (f_1 - f_2) &=& \SI{56548.66 (1)}{\kilo\hertz}\\
 	\end{eqnarray*}
 
-	Dieser Wert liegt sehr nah an dem Referenzwert $R\L = \SI{56597.63 ()}{\ohm \per H}$.
+	Dieser Wert liegt sehr nah an dem Referenzwert $R/L = \SI{56597.63 (279)}{\ohm \per \henry}$.
+	Der errechnete Wert f"ur $q = \SI{3.840 (136)}{}$ weicht damit um nur etwa $\SI{0.2}{\%}$ vom abgelesenen Wert ab.
+	Der Fehler errechnet sich vom Typ wie in Gleichung \eqref{fehler}.
 
 	\input{aufgabe_c.tex}
 
@@ -113,24 +135,34 @@
 	\end{figure}
 
 	Die Messdaten zur Frequenzabh"angigkeit der Phasenverschiebung sind in Tabelle \eqref{phase} dargstellt.
-	Der dazugeh"orige Graph \eqref{phase} zeigt die Messwerte und die Signifikanten stellen bei $\Phi = 45^\circ$, $\Phi = 90^\circ$ und $\Phi = 135^\circ$.
+	Der dazugeh"orige Graph \eqref{phase} zeigt die Messwerte und die signifikanten stellen bei $\Phi = 45^\circ$, $\Phi = 90^\circ$ und $\Phi = 135^\circ$.
 	Diese entsprechen den Punkten, wo die Frequenz die Werte $f_2$, $f_\mathrm{res}$ und $f_1$ annimmt.
 
 	Es ergibt sich f"ur die abgelesenen Werte:
 
 	\begin{eqnarray*}
-		w_2 = 2 \cdot \pi \cdot f_2 &=& \SI{188.496}{\kilo \hertz}\\
-		w_\mathrm{res} = 2 \cdot \pi \cdot f_\mathrm{res} &=& \SI{210.487}{\kilo \hertz}\\
-		w_1 = 2 \cdot \pi \cdot f_1 &=& \SI{241.903}{\kilo \hertz}
+		w_2 = 2 \cdot \pi \cdot f_2 &=& \SI{188.496 (3142)}{\kilo \hertz}\\
+		w_\mathrm{res} = 2 \cdot \pi \cdot f_\mathrm{res} &=& \SI{210.487 (3142)}{\kilo \hertz}\\
+		w_1 = 2 \cdot \pi \cdot f_1 &=& \SI{241.903 (3142)}{\kilo \hertz}
 	\end{eqnarray*}
 
 	Die errechneten Werte ergeben:
 
 	\begin{eqnarray*}
-		w_1 = \frac{R}{2L} + \sqrt{\frac{R^2}{4\,L^2} + \frac{1}{L \, C}} &=& \SI{247.461}{\kilo \hertz}\\
-		w_\mathrm{res} = \sqrt{\frac{1}{L\, C} - \frac{R^2}{2 \, L^2}} &=& \SI{217.290}{\kilo \hertz}\\
-		w_1 = -\frac{R}{2L} + \sqrt{\frac{R^2}{4\,L^2} + \frac{1}{L \, C}} &=& \SI{190.863}{\kilo \hertz}
+		w_1 = \frac{R}{2L} + \sqrt{\frac{R^2}{4\,L^2} + \frac{1}{L \, C}} &=& \SI{247.461 (414)}{\kilo \hertz}\\
+		w_\mathrm{res} = \sqrt{\frac{1}{L\, C} - \frac{R^2}{2 \, L^2}} &=& \SI{217.290 (440)}{\kilo \hertz}\\
+		w_2 = -\frac{R}{2L} + \sqrt{\frac{R^2}{4\,L^2} + \frac{1}{L \, C}} &=& \SI{190.863 (395)}{\kilo \hertz}
 	\end{eqnarray*}
+
+	Die Fehler errechnen sich nach:
+
+	\begin{eqnarray*}
+		\Delta w_1 &=& \sqrt{ \left( |\frac{\partial w_1}{\partial C}| \cdot \Delta C\right)^2 + \left( |\frac{\partial w_1}{\partial L}| \cdot \Delta L \right)^2 + \left( |\frac{\partial w_1}{\partial R}| \cdot \Delta R \right)^2}\\
+		\Delta w_2 &=& \sqrt{ \left( |\frac{\partial w_2}{\partial C}| \cdot \Delta C\right)^2 + \left( |\frac{\partial w_2}{\partial L}| \cdot \Delta L \right)^2 + \left( |\frac{\partial w_2}{\partial R}| \cdot \Delta R \right)^2}\\
+		\Delta w_\mathrm{res} &=& \sqrt{ \left( |\frac{\partial w_\mathrm{res}}{\partial C}| \cdot \Delta C\right)^2 + \left( |\frac{\partial w_\mathrm{res}}{\partial L}| \cdot \Delta L \right)^2 + \left( |\frac{\partial w_\mathrm{res}}{\partial R}| \cdot \Delta R \right)^2}
+	\end{eqnarray*}
+
+	Die Werte befinden sich in der selben Gr"o"senordung und die Abweichungen lassen sich durch systematische Fehler erkl"aren.
 
 	\begin{figure}[htbp]
 		\centering
