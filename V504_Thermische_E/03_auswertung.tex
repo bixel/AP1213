@@ -1,0 +1,249 @@
+\section{Auswertung}
+	\label{sec:auswertung}
+
+	\subsection{S"attigungsstr"ome und Kennlinien der Hochvakuumdiode}
+		Um den S"attigungsstrom $I_\mathrm{s}$ der Diode abzusch"atzen, werden f"ur f"unf Heizstromst"arken $I_\mathrm{H}$ die Kennlinien aufgetragen.
+		Hierf"ur wird der Diodenstrom $I$ gegen das Diodenpotential $U$ aufgetragen.
+		F"ur Str"ome $I > \SI{1.25}{\milli \ampere}$ zeigt das Strommessger"at eine "Uberlastung an.
+		Weil dieser Wert jedoch bei den Heizstromst"arken $I_\mathrm{H} = \SI{2.9}{\ampere}$ und $I_\mathrm{H} = \SI{3.1}{\ampere}$ erreicht wird, bevor ein Abflachen der Kurve erkannt werden kann, k"onnen lediglich drei S"attigungsstr"ome abgelesen werden:
+
+		\begin{eqnarray*}
+			I_\mathrm{H} = \SI{2}{\ampere}, \, U_\mathrm{H} = \SI{3}{\volt} & \Rightarrow & I_{\mathrm{s},1} = \SI{4}{\nano \ampere}\, \\
+			I_\mathrm{H} = \SI{2.3}{\ampere}, \, U_\mathrm{H} = \SI{3.5}{\volt} & \Rightarrow & I_{\mathrm{s},2} = \SI{40}{\nano \ampere}\, \\
+			I_\mathrm{H} = \SI{2.6}{\ampere}, \, U_\mathrm{H} = \SI{4}{\volt} & \Rightarrow & I_{\mathrm{s},3} = \SI{.32}{\milli \ampere}\, \\
+		\end{eqnarray*}
+
+		Die Folgenden zwei Graphen visualisieren die Messdaten, sowie die gesch"atzten S"attigungsstr"ome $I_\mathrm{s}$.
+		Die Messdaten sind anschlie"sen in Tabelle \ref{messung1} aufgef"uhrt.
+
+		\clearpage
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 15cm]{img/kennlinie1.pdf}
+			\caption{Kennlinien der Hochvakuumdiode f"ur Heizstr"ome von $I_\mathrm{s} = \SI{2}{\ampere}$ bis $I_\mathrm{s} = \SI{3.1}{\ampere}$.}
+			\label{fig:kennlinie1}
+		\end{figure}
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 15cm]{img/kennlinie2.pdf}
+			\caption{Kennlinien der Hochvakuumdiode f"ur Heizstr"ome von $I_\mathrm{s} = \SI{2}{\ampere}$ und $I_\mathrm{s} = \SI{2.3}{\ampere}$. In dieser Aufl"osung lassen sich die Werte besser erkennen.}
+			\label{fig:kennlinie2}
+		\end{figure}
+
+		\clearpage
+
+		\begin{table}[h!]
+			\begin{center}
+				\label{messung1}
+				\caption{Messwerte f"ur die Diodenkennlinien.}
+				\begin{tabular}{|c|c||c|c||c|c||c|c||c|c|}
+					\hline
+						\multicolumn{2}{|c||}{$I_\mathrm{H} = \SI{2}{\ampere}$} &
+						\multicolumn{2}{c||}{$I_\mathrm{H} = \SI{2.3}{\ampere}$} &
+						\multicolumn{2}{c||}{$I_\mathrm{H} = \SI{2.6}{\ampere}$} &
+						\multicolumn{2}{c||}{$I_\mathrm{H} = \SI{2.9}{\ampere}$} &
+						\multicolumn{2}{c|}{$I_\mathrm{H} = \SI{3.1}{\ampere}$} \\
+						\multicolumn{2}{|c||}{$U_\mathrm{H} = \SI{3}{\ampere}$} &
+						\multicolumn{2}{c||}{$U_\mathrm{H} = \SI{3.5}{\ampere}$} &
+						\multicolumn{2}{c||}{$U_\mathrm{H} = \SI{4}{\ampere}$} &
+						\multicolumn{2}{c||}{$U_\mathrm{H} = \SI{5}{\ampere}$} &
+						\multicolumn{2}{c|}{$U_\mathrm{H} = \SI{6}{\ampere}$} \\
+					\hline 
+						$U$ [V] & $I$ [mA] & $U$ [V] & $I$ [mA] & $U$ [V] & $I$ [mA] & $U$ [V] & $I$ [mA] & $U$ [V] & $I$ [mA] \\
+					\hline 
+					\hline
+						\input{data/messung_1.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\clearpage
+
+	\subsection{Verifizierung des Langmuir-Schottkyschen Raumladungsgesetzes}
+		\label{subsec:langmuir}
+		Um die Vorhersage des Langmuir-Schottkyschen Raumladungsgesetzes zu pr"ufen, wurden bei maximalem Heizstrom $I_\mathrm{H} = \SI{3.1}{\ampere}$ m"oglichst viele Werte aufgenommen.
+		Das Gesetz gilt in einem Bereich von $U = 0$ bis zum Wendepunkt der Diodenkennlinie.
+		Weil in dieser Messreihe kein Wendepunkt erkennbar ist wird angenommen, dass das Gesetz f"ur alle Werte erf"ullt ist.
+
+		Es gilt dann
+
+		\begin{eqnarray*}
+			I & \propto & U^a\,, \\
+			\Leftrightarrow \quad \ln{I} & \propto & a \ln{U}\,.
+		\end{eqnarray*}
+
+		Mit einem Konstanten Exponenten $a$, der durch lineare Regression ermittelt werden kann und etwa den Wert $a = 3/2$ annehmen soll.
+
+		Lineare Regression mit Hilfe des Python-Moduls numpy ergibt
+
+		\begin{equation*}
+			a = \SI{1.204 (7)}{}\,.
+		\end{equation*}
+
+		Zus"atzlich wird eine nicht-lineare Regression durch numpy durchgef"uhrt und liefert
+
+		\begin{equation*}
+			a = \SI{1.380 (8)}{}\,.
+		\end{equation*}
+
+		\clearpage
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 10cm]{img/langmuir.pdf}
+			\caption{Lineare Regression der $(\ln{U},\ln{I})$ Wertepaare zur kontrolle des Exponenten des Langmuir-Schottkyschen Raumladungsgesetzes.}
+			\label{fig:langmuir}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 10cm]{img/langmuir_nichtlinear.pdf}
+			\caption{Nicht-lineare Regression der $(U,I)$ Wertepaare zur kontrolle des Exponenten des Langmuir-Schottkyschen Raumladungsgesetzes.}
+			\label{fig:langmuir_nichtlinear}
+		\end{figure}
+
+		\enlargethispage{10cm}
+
+		\clearpage
+
+	\subsection{Bestimmung der Kathodentemperatur...}
+		\subsubsection{...mit Hilfe des Kathodenstromes $I$ und der Kathodenspannung $U$ im Anlaufstromgebiet}
+			\label{subsubsec:temp1}
+			Aus den Wertepaaren $(U,I)$ im Anlaufstromgebiet der Diode bei maximaler Heizleistung ($I_\mathrm{H} = \SI{3.1}{\ampere}$), l"asst sich die Temperatur $T$ der Kathode ermitteln.
+			Wegen der Beziehung
+
+			\begin{equation*}
+				I(U) \propto \exp{\left(-\frac{e_0 U}{kT}\right)}
+			\end{equation*}
+
+			l"asst sich T durch lineare Regression von $\ln{I}$ gegen $c\cdot U$ bestimmen. Die Berechnung durch numpy liefert dann denn Wert f"ur $c$, woraus sich $T$ errechnen l"asst.
+			Es ist zu beachten, dass die gemessene Spannung $U$ um die im Messger"at abfallenden Spannung $U_- = I \cdot \SI{1}{\mega \ohm}$ korrigiert werden muss.
+			Die Regression wird also mit $U_\mathrm{k} = U - U_-$ durchgef"uhrt.
+
+			Die Temperatur $T$ ist dabei au"serdem mit einem Fehler behaftet der mittels Gau"sscher Fehlerfortpflanzung bestimmt wird.
+			Es gilt
+
+			\begin{eqnarray*}
+				c & = & -\frac{e_0}{kT}\,\\
+				\Leftrightarrow \quad T & = & -\frac{e_0}{kc}\,,\\
+				\Delta T & = & \frac{e_0}{kc^2}\Delta c\,,
+			\end{eqnarray*}
+
+			mit der Stefan-Boltzmann Konstante $k = \SI{1.381e-23}{\joule \per \kelvin}$ \cite{nist} und der Elementarladung $e = \SI{1.602e-19}{\coulomb}$ \cite{nist}.
+
+			Die Regression liefert
+
+			\begin{eqnarray*}
+				c & = & \SI{-3.360 (88)}{\coulomb \per \joule}\,\\
+				\Rightarrow \quad T & = & \SI{3453 (90)}{\kelvin}\,.
+			\end{eqnarray*}
+
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[width = 15cm]{img/messung2.pdf}
+				\caption{Lineare Regression von $\ln{I}$ gegen $U_\mathrm{k}$ im Anlaufstrombereich.}
+				\label{fig:messung2}
+			\end{figure}
+
+			\begin{table}[h!]
+				\begin{center}
+					\label{messung1}
+					\caption{Messwerte f"ur Diodenspannung $U$, $U_\mathrm{k}$ und -strom $I$ im Anlaufstrombereich.}
+					\begin{tabular}{|l|l|l||l|l|l|}
+						\hline
+							$U$ [V] & $U_\mathrm{k}$ [V] & $I$ [nA] & $U$ [V] & $U_\mathrm{k}$ [V] & $I$ [nA] \\
+						\hline 
+						\hline
+							\input{data/messung_2.tex}
+						\hline 
+					\end{tabular}
+				\end{center}
+			\end{table}
+
+			\clearpage
+
+		\subsubsection{...mit Hilfe der Heizleistung $U_\mathrm{H}I_\mathrm{H}$}
+			\label{subsubsec:temp2}
+			Anhand der Heizleistung $U_\mathrm{H}I_\mathrm{H}$ der Kathodenheizung l"asst sicht die Temperatur $T$ der Kathode ebenfalls bestimmen.
+			Es gilt dabei
+
+			\begin{equation*}
+				T = \left(\frac{I_\mathrm{H}U_\mathrm{H} - N_\mathrm{WL}}{f \eta \sigma}\right)^{\frac{1}{4}}\,,
+			\end{equation*}
+
+			mit der Stefan-Boltzmannschen Strahlungskonstante $\sigma = \SI{5.670e-8}{\watt \per \meter \squared \per \kelvin \tothe{4}}$ \cite{nist}, der Kathodenoberfl"ache $f = \SI{.35}{\centi \meter \squared}$ \cite{anleitung}, dem Emissionsgrad $\eta = \SI{.28}{}$ \cite{nist} und der W"armeleitung $N_\mathrm{WL} = \SI{.9}{}$ \cite{nist}.
+			Wegen Ablesefehlern des Heizstromes $I_\mathrm{H}$ und der Heizspannung $U_\mathrm{H}$ ist die Temperatur $T$ fehlerbehaftet.
+			F"ur den Fehler gilt nach Gau"sscher Fehlerfortpflanzung
+
+			\begin{equation*}
+				\Delta T = \frac{1}{4} \left(f\eta \sigma\right)^{-\frac{1}{4}} \left| I_\mathrm{H}U_\mathrm{H} - N_\mathrm{WL} \right|^{-\frac{3}{4}} \left(U_\mathrm{H} \Delta I_\mathrm{H} + I_\mathrm{H} \Delta U_\mathrm{H} \right)\,.
+			\end{equation*}
+
+			Damit ergeben sich die Werte
+			\begin{table}[h!]
+				\begin{center}
+					\label{messung1}
+					%\caption{Messwerte f"ur Diodenspannung und -strom im Anlaufstrombereich.}
+					\begin{tabular}{|c|c|c|}
+						\hline
+							$I_\mathrm{H}$ [A] & $U_\mathrm{H}$ [V] & $T$ [K] \\
+							\pm 0,1\,A&\pm 0,1\,V & \\ 
+						\hline 
+						\hline
+							2 & 3 & $\SI{1741 (4)}{}$ \\
+							2,3 & 3,5 & $\SI{1894 (4)}{}$ \\
+							2,6 & 4 & $\SI{2033 (4)}{}$ \\
+							2,9 & 5 & $\SI{2224 (3)}{}$ \\
+							3,1 & 6 & $\SI{2376 (3)}{}$ \\
+						\hline 
+					\end{tabular}
+				\end{center}
+			\end{table}
+
+	\subsection{Bestimmung der Austrittsarbeit}
+		\label{subsec:austrittsarbeit}
+		Mit Hilfe der Richardson-Gleichung l"asst sich schlie"slich aus den S"attigungsstr"omen $I_\mathrm{s}$ die Austrittsarbeit von Elektronen im gegebenen Material bestimmen.
+		Es Gilt
+
+		\begin{equation*}
+			e_0 \Phi = -kT \cdot \ln{\left( \frac{I_\mathrm{s} \hbar^3}{4 \pi e_0 m_0 k^2 T^2} \right)}\,.
+		\end{equation*}
+
+		Hier bezeichnet $\hbar = \SI{6.626e-34}{\joule \second}$ \cite{nist} die Planck-Konstante.
+
+		Man erh"alt
+
+		\begin{table}[h!]
+			\begin{center}
+				\label{messung1}
+				%\caption{Messwerte f"ur Diodenspannung und -strom im Anlaufstrombereich.}
+				\begin{tabular}{|c|c|c|}
+					\hline
+						$I_\mathrm{s}$ [nA] & $T$ [K] & $e_0 \Phi$ [eV] \\
+					\hline 
+					\hline
+						4 & $\SI{1741 (4)}{}$ & 7,24\\
+						40 & $\SI{1894 (4)}{}$ & 5,65 \\
+						320 & $\SI{2033 (4)}{}$ & 7,74 \\
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\clearpage
+
+		Durch Bildung des Mittelwertes "uber alle $n = 3$ Werte und des mittleren Fehlers
+
+		\begin{equation*}
+			\Delta x = \sqrt{\frac{\sum_{i=1}^{n}{\left(\overline{x} - x_i\right)^2}}{n^2 - n}}\,,
+		\end{equation*}
+
+		erh"alt man f"ur die Austrittsarbeit:
+
+		\begin{eqnarray*}
+			\overline{e_0 \Phi} = \SI{6.88 (63)}{\electronvolt}\,.
+		\end{eqnarray*}
+

@@ -1,0 +1,87 @@
+\documentclass{scrartcl}
+	%enthaelt eqnref{}-Operator
+	\usepackage{amsmath}
+
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage[ngerman]{babel}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%UTF-8 encoding
+	%\usepackage[applemac]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{lmodern}
+
+	%enthaelt pfeile mit text
+	\usepackage{amssymb}
+
+	%ermoeglicht Hyperlinks - Schein aber KACKE zu sein :D
+	\usepackage{url}
+
+	%damit lualatex formeln richtig darstellt
+	%\usepackage{unicode-math}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent 0pt
+
+\begin{document}
+	
+	\vspace*{3cm}
+
+	\begin{center}
+		\large
+		TU Dortmund
+	\end{center}
+
+	\begin{center}
+		\Huge
+		V504 - Thermische Elekronenemission
+	\end{center}
+
+	% \begin{center}
+	% 	\large
+	% 	Korrektur
+	% \end{center}
+
+	\vspace{6cm} % Bei Korrektur nur 5cm foer schoeneres Layout sonst 6cm
+	\begin{center}
+		\begin{minipage}[b]{8cm}
+			\Large
+			Markus Stabrin \\
+			\normalsize
+			markus.stabrin@tu-dortmund.de \\
+
+			\Large
+			Kevin Heinicke\\
+			\normalsize
+			kevin.heinicke@tu-dortmund.de \\
+			\\
+			\\
+
+			Versuchsdatum: 15. Januar 2013 \\
+			\\
+			Abgabedatum: 21. Januar 2013
+		\end{minipage}
+	\end{center}
+
+	\newpage
+
+	\input{01_theorie_einleitung.tex}
+
+	\input{02_durchfuehrung.tex}
+
+	\input{03_auswertung.tex}
+
+	\input{04_diskussion_literatur.tex}
+
+\end{document}
