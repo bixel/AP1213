@@ -1,9 +1,9 @@
 reset
-set term jpeg
-set output "graph_c_1.jpg"
+set term pdfcairo
+set output "graph_c.pdf"
 set xrange[25:40]
 set yrange[2:4]
 set ylabel "Uc/U"
 set xlabel "f[kHz]"
 f(x) = 2.719641466
-plot "daten_c.dat" u 1:($2/2.6) title "Messpunkte", f(x) title "q / sqrt(2)"
+plot "daten_c.dat" u 1:($2/2.6) title "Messpunkte", f(x) title "f(x) = q / sqrt(2)"
