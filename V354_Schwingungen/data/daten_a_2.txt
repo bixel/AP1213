@@ -1,8 +1,8 @@
 set sample 1000000
-set term jpeg
-set output "graph_a_2.jpg"
-set xlabel "t[cm]"
-set ylabel "ln(U[cm]/1[cm])"
+set term pdfcairo
+set output "graph_a_2.pdf"
+set xlabel "t[µs]"
+set ylabel "ln(U[V]/1[V])"
 f(x) = -m*x+b
 fit f(x) "daten_a_2.dat" u 1:(log($2)) via m, b
-plot f(x) title "-m*x+b", "daten_a_2.dat" u 1:(log($2)) title "Messpunkte"
+plot f(x) title "f(x)=-m*x+b", "daten_a_2.dat" u 1:(log($2)) title "Messpunkte"
