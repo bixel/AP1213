@@ -1,6 +1,5 @@
 \section{Auswertung}
 	\label{sec:auswertung}
-	\input{aufgabe_c.tex}
 
 	\subsection{Zeitabh"angigkeit der Amplitude eines ged"ampften Schwingung} % (fold)
 	\label{sub:zeitabh"angigkeit_der_amplitude_eines_ged"ampften_schwingung}
@@ -10,24 +9,22 @@
 
 	\begin{eqnarray}
 		f(x) &=& -m \cdot x + b\\ \label{ausgleich}
-		m &=& \SI{0.195 (3)}{1\per\centi\meter} \nonumber\\
-		b &=& \SI{1.692 (11)}{\centi\meter}\nonumber 
+		m &=& \SI{0.005527 (53)}{} \nonumber\\
+		b &=& \SI{5.19 (1)}{}\nonumber 
 	\end{eqnarray}
 
-	Aus der Graphik wurde zur Bestimmung des Exponenten in $cm$ abgelesen.
-	Dabei gilt: $\SI{1.55}{\centi\meter}\, \widehat{=} \,\SI{50}{\micro\second}$.
 	Damit ergibt sich f"ur den Vorfaktor des Expontenen $2 \cdot \pi \cdot \mu$ der e-Funktion: 
-	\begin{eqnarray*}
-		\SI{1}{1\per\centi\meter} &\widehat{=}& \SI{0.031}{1\per\micro\second}\\
-		2\cdot \pi \cdot \mu  = 0.031 \cdot m &=&  \SI{6.045 (93)}{\kilo \hertz}
-	\end{eqnarray*}
+	
+	\begin{equation*}
+		2\cdot \pi \cdot \mu  = m = \SI{5527 (53)}{1\per\second} = \SI{5.527 (53)}{\kilo\hertz}
+	\end{equation*}
 
 	Daraus Folgt f"ur die Abklingdauer und den effektiven D"ampfungswiderstand:
 
 	\begin{eqnarray*}
 		L &=& \SI{10.14 (3)}{\milli \henry }\\
-		\Rightarrow T_\mathrm{ex} &=& \frac{1}{2 \cdot \pi \cdot \mu} = \SI{0.16 (1)}{\milli \second}\\
-		\Rightarrow R_\mathrm{eff} &=& 2 \cdot L \cdot 2 \cdot \pi \cdot \mu = \SI{122.59 (192)}{\ohm}
+		\Rightarrow T_\mathrm{ex} &=& \frac{1}{2 \cdot \pi \cdot \mu} = \SI{0.18 (2)}{\milli \second}\\
+		\Rightarrow R_\mathrm{eff} &=& 2 \cdot L \cdot 2 \cdot \pi \cdot \mu = \SI{112.08 (107)}{\ohm}
 	\end{eqnarray*}
 	\newpage
 
@@ -35,30 +32,32 @@
 
 	\begin{eqnarray*}
 		\Delta R_\mathrm{eff} &=& \sqrt{ \left( |\frac{\partial R}{\partial 2 \cdot \pi \cdot \mu}| \cdot \Delta 2 \cdot \pi \cdot \mu \right)^2 + \left( |\frac{\partial R}{\partial L}| \cdot \Delta L \right)^2}\\ \label{fehler}
-		\Delta 2 \cdot \pi \cdot \mu &=& 93\\
+		\Delta 2 \cdot \pi \cdot \mu &=& 53\\
 		\Delta L &=& 0.00003\\
-		\Rightarrow \Delta R_\mathrm{eff} &=& 1.92
+		\Rightarrow \Delta R_\mathrm{eff} &=& 1.07
 	\end{eqnarray*}
 
-	Der effektive D"ampfungswiderstand von $\SI{122.59 (192)}{\ohm}$ ist gr"o"ser als der verbaute Widerstand $R_\mathrm{eff,theo} = \SI{103.7 (1)}{\ohm}$. Dies l"asst sich durch die zus"atzlichen Ohm'schen Widest"ande in der Spule und den Leitungen erkl"aren.
+	Der effektive D"ampfungswiderstand von $R_\mathrm{eff} = \SI{112.08 (197)}{\ohm}$ ist um $\SI{8}{\%}$ gr"o"ser als der verbaute Widerstand $R_\mathrm{eff,theo} = \SI{103.7 (1)}{\ohm}$. Dies l"asst sich durch die zus"atzlichen Ohm'schen Widest"ande in der Spule und den Leitungen erkl"aren.
 
 	\clearpage
 
-	\begin{figure}[H]
+	\begin{figure}[!h]
 		\centering
 		\includegraphics[width = 12cm]{img/F0006TEK.jpg}
 		\caption{Zeitabh"angigkeit der Amplitude einer ged"ampften Schwingung. Mit rot ist die Einh"ullende gekennzeichnet.}
 		\label{amplitude}
 	\end{figure}
 
-	\begin{figure}[H]
+	\begin{figure}[!h]
 		\centering
-		\includegraphics[width = 12cm]{img/graph_a_2.jpg}
+		\includegraphics[width = 12cm]{img/graph_a_2.pdf}
 		\caption{Amplituden aus Graph \eqref{amplitude} mit einer Ausgleichsrechnung mittels \eqref{ausgleich}}
 		\label{amplitude_fit}
 	\end{figure}
 
 	\input{tabelle_a.tex}
+
+	\newpage
 
 	\subsection{Bestimmung des D"ampfungswiderstands $R_\mathrm{ap}$} % (fold)
 	\label{sub:bestimmung_des_d_ampfungswiderstands_r_}
@@ -83,27 +82,31 @@
 	\begin{equation}
 		\Delta R_\mathrm{ap} = \sqrt{ \left( |\frac{\partial R}{\partial C}| \cdot \Delta C \right)^2 + \left( |\frac{\partial R}{\partial L}| \cdot \Delta L \right)^2}
 	\end{equation}
+
 \clearpage
-	\begin{figure}[H]
+
+	\begin{figure}[!h]
 			\centering
-			\includegraphics[width = 12cm]{img/F0003TEK.jpg}
+			\includegraphics[width = 10cm]{img/F0003TEK.jpg}
 			\caption{"Uberd"ampfung}
 			\label{ap_1}
 		\end{figure}	
 
-		\begin{figure}[H]
+		\begin{figure}[!h]
 			\centering
-			\includegraphics[width = 12cm]{img/F0002TEK.jpg}
+			\includegraphics[width = 10cm]{img/F0002TEK.jpg}
 			\caption{Aperiodischer Grenzfall}
 			\label{ap_2}
 		\end{figure}
 
-	\begin{figure}[H]
+	\begin{figure}[!h]
 		\centering
-		\includegraphics[width = 12cm]{img/F0001TEK.jpg}
+		\includegraphics[width = 10cm]{img/F0001TEK.jpg}
 		\caption{Kriechfall}
 		\label{ap_3}
 	\end{figure}
+
+	\newpage
 
 	\subsection{Frequenzabh"angigkeit der Kondensatorspannung} % (fold)
 	\label{sub:frequenzabh"angigkeit_der_kondensatorspannung}
@@ -133,23 +136,24 @@
 	Der errechnete Wert f"ur $q = \SI{3.840 (136)}{}$ weicht damit um nur etwa $\SI{0.2}{\%}$ vom abgelesenen Wert ab.
 	Der Fehler errechnet sich vom Typ wie in Gleichung \eqref{fehler}.
 
+	\clearpage
 	\input{aufgabe_c.tex}
 
-\clearpage
-
-	\begin{figure}[H]
+	\begin{figure}[!h]
 		\centering
-		\includegraphics[width = 12cm]{img/graph_c.jpg}
+		\includegraphics[width = 10cm]{img/graph_c.jpg}
 		\caption{Frequenzabh"angigeit der Spannung}
 		\label{frequenz_1}
 	\end{figure}
 
-	\begin{figure}[H]
+	\begin{figure}[!h]
 		\centering
-		\includegraphics[width = 12cm]{img/graph_c_1.jpg}
+		\includegraphics[width = 10cm]{img/graph_c.pdf}
 		\caption{Frequenzabh"angigkeit der Spannung im Bereich um die Resonanzfrequenz}
 		\label{frequenz_2}
 	\end{figure}
+
+	\newpage
 
 	\subsection{Frequenzabh"angigkeit der Phase} % (fold)
 	\label{sub:frequenzabh"angigkeit_der_phase}
@@ -185,11 +189,13 @@
 	Die Werte befinden sich in der selben Gr"o"senordung und die Abweichungen lassen sich durch systematische Fehler erkl"aren.
 
 \clearpage
-	\begin{figure}[H]
+	\begin{figure}[!h]
 		\centering
-		\includegraphics[width = 12cm]{img/graph_d.jpg}
+		\includegraphics[width = 10cm]{img/graph_d.jpg}
 		\caption{Phase der Spannung in Abh"angigkeit von der Freuquenz}
 		\label{phase}
 	\end{figure}
 
 	\input{tabelle_phase.tex}
+
+	\newpage
