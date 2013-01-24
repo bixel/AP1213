@@ -16,6 +16,18 @@ while index < 10:
 	print(g1[index], b1[index], g2[index], b2[index])
 	index += 1
 
+print("e:")
+for i in range(0, d.size):
+	print(str(round(e[i], 3)))
+
+print("d:")
+for i in range(0, d.size):
+	print(str(round(d[i], 3)))
+
+print("f:")
+for i in range(0, d.size):
+	print(str(round(f[i], 2)))
+
 f_gesamt = f.sum() / f.size
 print("f_quer = " + str(f_gesamt) + "mm")
 f_fehler = np.sqrt(((f - f_gesamt) ** 2).sum() / (f.size * (f.size - 1)))

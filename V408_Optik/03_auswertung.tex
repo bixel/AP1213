@@ -15,15 +15,15 @@
 		Dazu werden Bildweite $b$, Bildgr"o"se $B$ und Gegenstandsweite $g$ gemessen.
 		Die Gegenstandsgr"o"se wird zu $G = \SI{2.75 (5)}{\centi \meter}$ gemessen und bleibt bei allen folgenden Messungen konstant.
 
-		Die folgende Tabelle enth"alt die Messwerte der Linse mit bekannter Brennweite:
+		Die folgende Tabelle enth"alt die Messwerte der Linse mit bekannter Brennweite, sowie die Abbildungsma"sst"abe $V_1 = b/g$ und $V_2 = B/G$ und deren Verh"altnis $V_1/V_2$:
 
 		\begin{table}[!h]
 			\begin{center}
 				\label{tabelle:bekannt}
 				\caption{Messwerte der bekannten Linse}
-				\begin{tabular}{|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
-					$g [\SI{}{\milli \meter}]$ & $b [\SI{}{\milli \meter}]$ & $B [\SI{}{\milli \meter}]$ \\
+					$g [\SI{}{\milli \meter}]$ & $b [\SI{}{\milli \meter}]$ & $f$\,[mm] & $B [\SI{}{\milli \meter}]$ & $V_1$ & $V_2$ & $V_1/V_2$ \\
 					\hline 
 					\hline
 					\input{data/f_bekannt.tex}
@@ -44,13 +44,11 @@
 			\overline{f}/f_\mathrm{Her} & = & \SI{1.09}{} \, .
 		\end{eqnarray*}
 
-		F"ur den Mittelwert der Abbildungsma"sst"abe $V_{1\mathrm{,i}} = b_\mathrm{i}/g_\mathrm{i}$ und $V_{2\mathrm{,i}} = B_\mathrm{i}/G$ ergibt sich:
+		Der Mittelwert der Abbildungsverh"altnisse $\overline{V_1/V_2}$ sollte zudem etwa 1 betragen, wenn Gleichung \eqref{abbildungsmassstab} gilt.
 
-		\begin{eqnarray*}
-			\overline{V_1} & = & \SI{2.94 (35)}{} \, , \\
-			\overline{V_2} & = & \SI{3.03 (37)}{} \, , \\
-			\overline{V_1}/\overline{V_2} & = & \SI{.97}{} \, .
-		\end{eqnarray*}
+		\begin{equation*}
+			\overline{V_1/V_2} = \SI{.974}{} \, .
+		\end{equation*}
 
 	\clearpage
 
@@ -63,9 +61,9 @@
 			\begin{center}
 				\label{tabelle:unbekannt}
 				\caption{Messwerte der unbekannten Linse}
-				\begin{tabular}{|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
-					$g [\SI{}{\milli \meter}]$ & $b [\SI{}{\milli \meter}]$ & $B [\SI{}{\milli \meter}]$ \\
+					$g [\SI{}{\milli \meter}]$ & $b [\SI{}{\milli \meter}]$ & $f$\,[mm] & $B [\SI{}{\milli \meter}]$ & $V_1$ & $V_2$ & $V_1/V_2$ \\
 					\hline 
 					\hline
 					\input{data/f_unbekannt.tex}
@@ -78,9 +76,7 @@
 
 		\begin{eqnarray*}
 			\overline{f} & = & \SI{120.29 (21)}{\milli \meter} \, , \\
-			\overline{V_1} & = & \SI{2.90 (24)}{} \, , \\
-			\overline{V_2} & = & \SI{3.07 (27)}{} \, , \\
-			\overline{V_1}/\overline{V_2} & = & \SI{.94}{} \, .
+			\overline{V_1/V_2} & = & \SI{.950}{} \, .
 		\end{eqnarray*}
 
 		Die folgenden Grafiken \ref{fig:graph_bekannt} und \ref{fig:graph_unbekannt} zeigen die Wertepaare $(g_\mathrm{i}, b_\mathrm{i})$ auf den Achsen eines Koordinatensystems eingezeichnet.
@@ -89,14 +85,14 @@
 		\begin{figure}[h!]
 			\centering
 			\includegraphics[width = 10cm]{img/graph_bekannt.pdf}
-			\caption{Wertepaare $(g_\mathrm{i}, b_\mathrm{i})$ der bekannten Linse auf die x- und y-Achsen eingetragen. Bei fehlerfreier Messung schneiden sich alle Graphen im Brennpunkt $(f, f)$.}
+			\caption{Wertepaare $(g_\mathrm{i}, b_\mathrm{i})$ der bekannten Linse auf die x- und y-Achsen eingetragen.}
 			\label{fig:graph_bekannt}
 		\end{figure}
 
 		\begin{figure}[h!]
 			\centering
 			\includegraphics[width = 10cm]{img/graph_unbekannt.pdf}
-			\caption{Wertepaare $(g_\mathrm{i}, b_\mathrm{i})$ der unbekannten Linse auf die x- und y-Achsen eingetragen. Bei fehlerfreier Messung schneiden sich alle Graphen im Brennpunkt $(f, f)$.}
+			\caption{Wertepaare $(g_\mathrm{i}, b_\mathrm{i})$ der unbekannten Linse auf die x- und y-Achsen eingetragen.}
 			\label{fig:graph_unbekannt}
 		\end{figure}
 
@@ -104,18 +100,20 @@
 
 	\subsection{Bestimmung der Brennweite einer Linse nach der Methode von Bessel}
 		\label{subsec:bessel}
-		F"ur diese Messung werden bei festem Abstand $e$ zwischen Gegenstand und Schirm zwei Wertepaare $(g_{1,\mathrm{i}}, b_{1,\mathrm{i}})$ und $(g_{2,\mathrm{i}}, b_{2,\mathrm{i}})$ gemessen, an denen das Bild scharf erscheint.
-		Zus"atzlich wird das Licht bei f"unf Messungen durch eine rote oder blaue Folie gef"arbt.
-		Hierduch wird der Effekt der chromatischen Abberation untersucht.
-		Tabelle \ref{tabelle:bessel} zeigt die Messdaten f"ur wei"ses, Tabelle \ref{tabelle:farbe} die f"ur gef"arbtes Licht.
+		% F"ur diese Messung werden bei festem Abstand $e$ zwischen Gegenstand und Schirm zwei Wertepaare $(g_{1,\mathrm{i}}, b_{1,\mathrm{i}})$ und $(g_{2,\mathrm{i}}, b_{2,\mathrm{i}})$ gemessen, an denen das Bild scharf erscheint.
+		% Zus"atzlich wird das Licht bei f"unf Messungen durch eine rote oder blaue Folie gef"arbt.
+		% Hierduch wird der Effekt der chromatischen Abberation untersucht.
+		% Tabelle \ref{tabelle:bessel} zeigt die Messdaten f"ur wei"ses, Tabelle \ref{tabelle:farbe} die f"ur gef"arbtes Licht.
 
-		Mit dem Abstand $d$
+		% Mit dem Abstand $d$
 
-		\begin{equation*}
-			d = g_1 - b_1 = g_2 - b_2 \, ,
-		\end{equation*}
+		% \begin{equation*}
+		% 	d = g_1 - b_1 = g_2 - b_2 \, ,
+		% \end{equation*}
 
-		zwischen beiden Linsenpositionen gilt die Beziehung
+		% zwischen beiden Linsenpositionen gilt die Beziehung
+
+		Nach Gleichung \eqref{bessel} gilt f"ur die Brennweite $f$:
 
 		\begin{equation}
 			f = \frac{e^2 - d^2}{4e} \, .
@@ -125,9 +123,9 @@
 			\begin{center}
 				\label{tabelle:bessel}
 				\caption{Messwerte der Bild- und Gegenstandsweiten f"ur die Methode nach Bessel.}
-				\begin{tabular}{|c|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
-					$g_1 [\SI{}{\milli \meter}]$ & $b_1 [\SI{}{\milli \meter}]$ & $g_2 [\SI{}{\milli \meter}]$ & $b_2 [\SI{}{\milli \meter}]$ \\
+					$g_1 [\SI{}{\milli \meter}]$ & $b_1 [\SI{}{\milli \meter}]$ & $g_2 [\SI{}{\milli \meter}]$ & $b_2 [\SI{}{\milli \meter}]$ & $e [\SI{}{\milli \meter}]$ & $d [\SI{}{\milli \meter}]$ & $f [\SI{}{\milli \meter}]$\\
 					\hline 
 					\hline
 					\input{data/bessel.tex}
