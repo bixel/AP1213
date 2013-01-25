@@ -20,30 +20,47 @@
 	verkn"upft.
 	Dabei ist $\chi$ keinesfalls konstant, sondern h"angt von der Temperatur $T$ und der Beschaffenheit des Feldes $\vec{H}$ ab.
 
-	Ein Atom, Ion oder Molek"ul mit nicht verschwindendem Drehimpuls ist in der Lage, sich an einem "au"seren Magnetfeld auszurichten.
-	Der Gesamtdrehimpuls $\vec{J}$ setzt sich dabei aus den Anteilen des Bahndrehimpulses $\vec{L}$, des Gesamtspins $\vec{S}$ und des zu vernachl"assigenden Kerndrehimpulses ab:
-
-	\begin{equation*}
-		\vec{J} = \vec{L} + \vec{S}\,.
-	\end{equation*}
-
-	Zu den Drehimpulsen $\vec{L}$ und $\vec{S}$ geh"oren, entsprechend der Quantenmechanik, die magnetischen Momente $\vec{\mu}_\mathrm{L}$ und $\vec{\mu}_\mathrm{S}$.
-	Nach einiger Rechnung f"uhren diese Gr"o"sen auf den gen"aherten Betrag des gesamten Magnetischen Moments:
-
-	\begin{equation*}
-		\vec{\mu}_\mathrm{J} = \mu_\mathrm{B} g_\mathrm{J} \sqrt{J(J + 1)}\,.
-	\end{equation*}
-
-	Diese F"ahigkeit wird durch die Temperatur $T$ beeinflusst, weil die Ausrichtung durch thermische Bewegungen gest"ort wird.
-	Das Curiesche Gesetz des Paramagnetismus beschriebt diesen Zusammenhang mit
-
-	\begin{equation*}
-		\chi \propto \frac{1}{T}\,.
-	\end{equation*}
-
-	Bei der Untersuchung der Suszeptibilit"at ist also darauf zu achten, dass Temperaturschwankungen in den Stoffen vermieden werden.
-
-	\subsection{Berechnung der Suszeptibilit"at seltener Erden}
+	\subsection{Berechnung der Suszeptibilit"at}
 		\label{subsec:berechnung}
+		Ein Atom, Ion oder Molek"ul mit nicht verschwindendem Drehimpuls ist in der Lage, sich an einem "au"seren Magnetfeld auszurichten.
+		Der Gesamtdrehimpuls $\vec{J}$ setzt sich dabei aus den Anteilen des Bahndrehimpulses $\vec{L}$, des Gesamtspins $\vec{S}$ und des zu vernachl"assigenden Kerndrehimpulses ab:
+
+		\begin{equation*}
+			\vec{J} = \vec{L} + \vec{S}\,.
+		\end{equation*}
+
+		Zu den Drehimpulsen $\vec{L}$ und $\vec{S}$ geh"oren, entsprechend der Quantenmechanik, die magnetischen Momente $\vec{\mu}_\mathrm{L}$ und $\vec{\mu}_\mathrm{S}$.
+		Nach einiger Rechnung f"uhren diese Gr"o"sen auf den gen"aherten Betrag des gesamten magnetischen Moments:
+
+		\begin{equation*}
+			\vec{\mu}_\mathrm{J} = \mu_\mathrm{B} g_\mathrm{J} \sqrt{J(J + 1)}\,.
+		\end{equation*}
+
+		Dabei bezeichnet $g_\mathrm{J}$ den Land\'e-Faktor, der die Gesamtdrehimpulsquantenzahl $J$, die Spinquantenzahl $S$ und die Bandrehimpulsquantenzahl $L$ des Atoms beinhaltet:
+
+		\begin{equation*}
+			g_\mathrm{J} = \frac{3 J(J + 1) + \{S (S + 1) - L(L + 1)\}}{2J(J + 1)}\,.
+		\end{equation*}
+
+		Der Zeeman-Effekt beschreibt nun, dass die Richtung, in die $\vec{\mu}_\mathrm{J}$ zeigt nur bestimmte Winkel zum Magnetfeld einnimmt, also ebenfalls gequantelt ist.
+		Jede Richtung entspricht dabei einem Energieniveau und es l"asst sich durch Summation "uber alle Niveaus das mittlere Magnetische Moment bestimmen.
+		Die gesuchte Gr"o"se $\chi$ kann dann f"ur die Annahme gro"ser Temperaturen - etwa Zimmertemperatur -  gen"ahert werden.
+		\clearpage
+		Man erh"alt schlie"slich das Curiesche Gesetz des Paramagnetismus:
+
+		\begin{equation}
+			\label{curie}
+			\chi = \frac{\mu_0 \mu_\mathrm{B}^2 g_\mathrm{J}^2 N J(J+1)}{3kT}\,
+		\end{equation}
+
+		mit dem Bohrschen Magneton $\mu_\mathrm{B} = e_0 \hbar / 2 m_0$, das die Elektronenladung $e_0$ und -masse $m_0$, sowie das Plancksche Wirkungsquantum $\hbar$ beinhaltet, der Anzahl $N$ der Momente pro Volumen und der Boltzmannkonstante $k$.
+
+		Weil dabei offensichtlich
+
+		\begin{equation*}
+			\chi \propto \frac{1}{T}
+		\end{equation*}
+
+		gilt, ist bei der Untersuchung der Suszeptibilit"at darauf zu achten, dass Temperaturschwankungen in den Stoffen vermieden werden.
 
 
