@@ -32,7 +32,7 @@
 			\end{center}
 		\end{table}
 
-		Zu jedem Wertepaar $(g_\mathrm{i}, b_\mathrm{i})$ kann die Brennweite $f_\mathrm{i}$ Bestimmt werden.
+		Zu jedem Wertepaar $(g_\mathrm{i}, b_\mathrm{i})$ kann die Brennweite $f_\mathrm{i}$ bestimmt werden.
 		Der Mittelwert $\overline{f}$ wird mit den Herstellerangaben $f_\mathrm{Her}$ verglichen.
 		Auf Abweichungen wird in der Diskussion eingegangen.
 
@@ -82,6 +82,13 @@
 		Die folgenden Grafiken \ref{fig:graph_bekannt} und \ref{fig:graph_unbekannt} zeigen die Wertepaare $(g_\mathrm{i}, b_\mathrm{i})$ auf den Achsen eines Koordinatensystems eingezeichnet.
 		Falls keine Messfehler auftreten, schneiden sich die Geraden im Brennpunkt $(f, f)$.
 
+		Durch Ablesen werden damit die Brennweiten bestimmt zu
+
+		\begin{eqnarray*}
+			f_\mathrm{bekannt} & = & \SI{160 (5)}{\milli \meter}\,,\\
+			f_\mathrm{unbekannt} & = & \SI{120 (5)}{\milli \meter}\,.
+		\end{eqnarray*}
+
 		\begin{figure}[h!]
 			\centering
 			\includegraphics[width = 10cm]{img/graph_bekannt.pdf}
@@ -105,24 +112,26 @@
 		% Hierduch wird der Effekt der chromatischen Abberation untersucht.
 		% Tabelle \ref{tabelle:bessel} zeigt die Messdaten f"ur wei"ses, Tabelle \ref{tabelle:farbe} die f"ur gef"arbtes Licht.
 
-		% Mit dem Abstand $d$
+		Mit dem Abstand $d$
 
-		% \begin{equation*}
-		% 	d = g_1 - b_1 = g_2 - b_2 \, ,
-		% \end{equation*}
+		\begin{equation*}
+			d = |g_1 - b_1| = |g_2 - b_2| \, ,
+		\end{equation*}
 
-		% zwischen beiden Linsenpositionen gilt die Beziehung
+		zwischen beiden Linsenpositionen gilt die Beziehung
 
-		Nach Gleichung \eqref{bessel} gilt f"ur die Brennweite $f$:
+		% Nach Gleichung \eqref{bessel} gilt f"ur die Brennweite $f$:
 
 		\begin{equation}
 			f = \frac{e^2 - d^2}{4e} \, .
 		\end{equation}
 
+		Folgende Tabellen zeigen die Messwerte f"ur wei"ses, rotes und blaues Licht.
+
 		\begin{table}[!h]
 			\begin{center}
 				\label{tabelle:bessel}
-				\caption{Messwerte der Bild- und Gegenstandsweiten f"ur die Methode nach Bessel.}
+				\caption{Messwerte der Bild- und Gegenstandsweiten f"ur die Methode nach Bessel mit wei"sem Licht.}
 				\begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
 					$g_1 [\SI{}{\milli \meter}]$ & $b_1 [\SI{}{\milli \meter}]$ & $g_2 [\SI{}{\milli \meter}]$ & $b_2 [\SI{}{\milli \meter}]$ & $e [\SI{}{\milli \meter}]$ & $d [\SI{}{\milli \meter}]$ & $f [\SI{}{\milli \meter}]$\\
@@ -138,12 +147,12 @@
 			\begin{center}
 				\label{tabelle:farbe}
 				\caption{Messwerte der Bild- und Gegenstandsweiten f"ur die Methode nach Bessel bei blauem und rotem Licht.}
-				\begin{tabular}{|c|c|c|c||c|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|c|c|}
 					\hline 
-					\multicolumn{4}{|c||}{rotes Licht} & \multicolumn{4}{c|}{blaues Licht} \\
+					$g_1 [\SI{}{\milli \meter}]$ & $b_1 [\SI{}{\milli \meter}]$ & $g_2 [\SI{}{\milli \meter}]$ & $b_2 [\SI{}{\milli \meter}]$ & $e [\SI{}{\milli \meter}]$ & $d [\SI{}{\milli \meter}]$ & $f [\SI{}{\milli \meter}]$ \\
+					\hline 
 					\hline
-					$g_1 [\SI{}{\milli \meter}]$ & $b_1 [\SI{}{\milli \meter}]$ & $g_2 [\SI{}{\milli \meter}]$ & $b_2 [\SI{}{\milli \meter}]$ & $g_1 [\SI{}{\milli \meter}]$ & $b_1 [\SI{}{\milli \meter}]$ & $g_2 [\SI{}{\milli \meter}]$ & $b_2 [\SI{}{\milli \meter}]$ \\
-					\hline 
+					\multicolumn{7}{|c|}{rotes Licht}\\
 					\hline
 					\input{data/farben.tex}
 					\hline 
@@ -161,42 +170,43 @@
 			f_\mathrm{Her} & = & \SI{150}{\milli \meter} \, , \\
 			\overline{f}/f_\mathrm{Her} & = & \SI{1.09}{} \, , \\
 			\overline{f_\mathrm{rot}} & = & \SI{164.00 (25)}{\milli \meter} \, , \\
-			\overline{f_\mathrm{blau}} & = & \SI{162.89 (21)}{\milli \meter} \, .
+			\overline{f_\mathrm{blau}} & = & \SI{162.89 (21)}{\milli \meter} \, , \\
+			\overline{f_\mathrm{rot}} - \overline{f_\mathrm{blau}} & = & \SI{1.11 (33)}{\milli \meter}
 		\end{eqnarray*}
 
 	\subsection{Bestimmung der Brennweite eines Linsensystems nach der Methode von Abbe}
 		\label{subsec:abbe}
-		Bei einem Linsensystem kann die Gegenstands- und Bildweite von verschiedenen Hauptebenen aus gemessen werden.
-		Die Gegenstandsweite $g$ wird dabei von der Hauptebene $H$ und die Bildweite $b$ von der Hauptebene $H'$ gemessen.
-		Von einem beliebigen Punkt $A$ im Linsensystem werden nun die Abst"ande $g'$ und $b'$ zu Gegenstand und Bild gemessen.
-		Dabei gilt
+		% Bei einem Linsensystem kann die Gegenstands- und Bildweite von verschiedenen Hauptebenen aus gemessen werden.
+		% Die Gegenstandsweite $g$ wird dabei von der Hauptebene $H$ und die Bildweite $b$ von der Hauptebene $H'$ gemessen.
+		% Von einem beliebigen Punkt $A$ im Linsensystem werden nun die Abst"ande $g'$ und $b'$ zu Gegenstand und Bild gemessen.
+		% Dabei gilt
 
-		\begin{eqnarray}
-			g' & = & g + h \, = \, f_1 \left(1 + \frac{1}{V}\right) + h \, , \label{abbe1}\\
-			b' & = & b + h' \, = \, f_2 \left(1 + {V}\right) + h' \label{abbe2}\\
-		\end{eqnarray}
+		% \begin{eqnarray}
+		% 	g' & = & g + h \, = \, f_1 \left(1 + \frac{1}{V}\right) + h \, , \label{abbe1}\\
+		% 	b' & = & b + h' \, = \, f_2 \left(1 + {V}\right) + h' \label{abbe2}\\
+		% \end{eqnarray}
 
-		\begin{center}
-			\tiny {(Bei fehlerfreien Messung gilt $f_1 = f_2$)}
-		\end{center}
+		% \begin{center}
+		% 	\tiny {(Bei fehlerfreien Messung gilt $f_1 = f_2$)}
+		% \end{center}
 
-		mit
+		% mit
 
-		\begin{eqnarray*}
-			g = g' - h & \Rightarrow & H = A + h \, , \\
-			b = b' - h' & \Rightarrow & H' = A + h' \, .\\
-		\end{eqnarray*}
+		% \begin{eqnarray*}
+		% 	g = g' - h & \Rightarrow & H = A + h \, , \\
+		% 	b = b' - h' & \Rightarrow & H' = A + h' \, .\\
+		% \end{eqnarray*}
 
-		Eine Lineare Regression der f"ur die Gleichungen \eqref{abbe1} und \eqref{abbe2} liefert die Brennweite $f$, sowie die Positionen von $h$ und $h'$.
+		Eine Lineare Regression der Gleichungen \eqref{abbe1} und \eqref{abbe2} liefert die Brennweite $f$, sowie die Positionen von $h$ und $h'$.
 		Die Regression wird mit folgenden Werten durchgef"urt:
 
 		\begin{table}[!h]
 			\begin{center}
 				\label{tabelle:abbe}
 				\caption{Messwerte der Bild- und Gegenstandsweiten zur Hilfsebene $A$ f"ur die Methode nach Abbe.}
-				\begin{tabular}{|c|c|c|c|}
+				\begin{tabular}{|c|c|c|c|c|}
 					\hline 
-					$g' [\SI{}{\milli \meter}]$ & $b' [\SI{}{\milli \meter}]$ & $B [\SI{}{\milli \meter}]$ & $V$ \\
+					$g' [\SI{}{\milli \meter}]$ & $b' [\SI{}{\milli \meter}]$ & $e [\SI{}{\milli \meter}]$ &$B [\SI{}{\milli \meter}]$ & $V$ \\
 					\hline 
 					\hline
 					\input{data/abbe.tex}
@@ -211,7 +221,8 @@
 			f_1 & = & \SI{217.8 (64)}{\milli \meter} \, , \\
 			f_2 & = & \SI{217.4 (34)}{\milli \meter} \, , \\
 			h & = & \SI{-48.8 (96)}{\milli \meter} \, , \\
-			h' & = & \SI{96.7 (123)}{\milli \meter} \, . \\
+			h' & = & \SI{96.7 (123)}{\milli \meter} \, , \\
+			\overline{f} = \frac{f_1 + f_2}{2} & = & \SI{217.6 (50)}{\milli \meter}\,.
 		\end{eqnarray*}
 
 		\begin{figure}[h!]
