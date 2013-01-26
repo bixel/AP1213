@@ -9,9 +9,9 @@
 	Aus diesem lassen sich die Werte f"ur $\nu_\mathrm{0}$, $\nu_\mathrm{+}$ und $\nu_\mathrm{-}$ ablesen:
 
 	\begin{eqnarray*}
-		\nu_\mathrm{0} &=& \SI{34.9}{\kilo\hertz} \\
-		\nu_\mathrm{+} &=& \SI{35.10 (2)}{\kilo\hertz}\\
-		\nu_\mathrm{-} &=& \SI{34.72 (2)}{\kilo\hertz}
+		\nu_\mathrm{0} &=& \SI{34.9}{\kilo\hertz} \, ,\\
+		\nu_\mathrm{+} &=& \SI{35.10 (2)}{\kilo\hertz} \, ,\\
+		\nu_\mathrm{-} &=& \SI{34.72 (2)}{\kilo\hertz} \, .
 	\end{eqnarray*}
 
 	Aus diesen l"asst sich die G"ute mithilfe von Gleichung \eqref{Gleichung:Guete} berechnen.
@@ -23,9 +23,9 @@
 	Der Fehler ergibt sich mittels Gau"s'scher Fehlerfortpflanzung:
 
 	\begin{eqnarray*}
-		|\frac{\partial Q}{\partial\nu_\mathrm{+}}| &=& |\frac{\partial Q}{\partial\nu_\mathrm{-}}| \\
-		\Delta \nu_\mathrm{+} &=& \Delta \nu_\mathrm{-} \\
-		\Delta Q &=& \sqrt{ 2 \cdot \left( |\frac{\partial Q}{\partial\nu_\mathrm{+}}| \Delta \nu_\mathrm{+,-} \right)^2}
+		|\frac{\partial Q}{\partial\nu_\mathrm{+}}| &=& |\frac{\partial Q}{\partial\nu_\mathrm{-}}| \, ,\\
+		\Delta \nu_\mathrm{+} &=& \Delta \nu_\mathrm{-} \, ,\\
+		\Delta Q &=& \sqrt{ 2 \cdot \left( |\frac{\partial Q}{\partial\nu_\mathrm{+}}| \Delta \nu_\mathrm{+,-} \right)^2} \, .
 	\end{eqnarray*}
 
 	Damit weicht die errechnete G"ute Q = $\SI{91.84 (684)}{}$ um etwa $\SI{8.8}{\%}$ von der eingestellten G"ute Q = $100$ ab.
@@ -38,3 +38,28 @@
 		\caption{Filterkurve des Selektivverst"arkers}
 		\label{graph:aufgabe_a}
 	\end{figure}
+
+	\clearpage
+
+
+	\subsection{Bestimmung der Suszeptibilit"at} % (fold)
+	\label{sub:bestimmung_der_suszeptibilit_t}
+
+	F"ur die Messung der Suszeptibilit"at wird eine Spule mit den Eigenschaften:
+
+	\begin{eqnarray*}
+		n &=& 250 \,\\
+		F &=& \SI{0.866}{\centi\meter^2} \, ,\\
+		L &=& \SI{13.5}{\centi\meter} \, , \\
+		R &=& \SI{0.7}{\ohm} \, ,
+	\end{eqnarray*}
+
+	verwendet.
+
+	\input{data/Mittelwerte.tex}
+	\input{data/Probendaten.tex}
+	\input{data/tabelle_Dy.tex}
+	\input{data/tabelle_Nd.tex}
+	\input{data/tabelle_Gd.tex}
+
+	\clearpage
