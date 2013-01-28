@@ -25,7 +25,7 @@
 	\begin{eqnarray*}
 		|\frac{\partial Q}{\partial\nu_\mathrm{+}}| &=& |\frac{\partial Q}{\partial\nu_\mathrm{-}}| \, ,\\
 		\Delta \nu_\mathrm{+} &=& \Delta \nu_\mathrm{-} \, ,\\
-		\Delta Q &=& \sqrt{ 2 \cdot \left( |\frac{\partial Q}{\partial\nu_\mathrm{+}}| \Delta \nu_\mathrm{+,-} \right)^2} \, .
+		\Delta Q &=&  \sqrt{2} \cdot \left( |\frac{\partial Q}{\partial\nu_\text{+,-}}| \Delta \nu_\text{+,-} \right) \, .
 	\end{eqnarray*}
 
 	Damit weicht die errechnete G"ute Q = $\SI{91.84 (684)}{}$ um etwa $\SI{8.8}{\%}$ von der eingestellten G"ute Q = $100$ ab.
@@ -56,8 +56,53 @@
 
 	verwendet.
 
-	\input{data/Mittelwerte.tex}
+	Bei der Messung zur Bestimmung der Suszeptibilit"at ergaben sich die Werte in den Tabellen \ref{tabelle:aufgabe_b_Dy}, \ref{tabelle:aufgabe_b_Nd} und \ref{tabelle:aufgabe_b_Gd}.
+
+	Die Mittelwerte sind in Tabelle \ref{Mittelwerte} aufgef"uhrt.
+
+	Bei der Bestimmung der Suszeptibilit"at mit den Gleichungen \eqref{curie}, \eqref{chi_u} und \eqref{chi_r} wurden zus"atzlich die  Werte aus den Tabellen \ref{daten} und \ref{massen} verwendet.
+
+	$A_\mathrm{real}$ ergiebt sich mithilfe der Gleichung:
+
+	\begin{equation}
+		A_\mathrm{real} = \frac{M}{L \rho} \, .
+	\end{equation}
+
+	Die Verst"arkung durch den Linear- und Selektivverst"arker ergab eine Verst"arkung um einen Faktor von $86.73$.
+
+	F"ur die Berechnung der Suszeptibilit"at nach Gleichung \eqref{curie} wurden die vorgegebenen Werte Verwendet:
+
+	\begin{eqnarray*}
+		S &=& \frac{5}{2} \, ,\\
+		L &=& 6 \, ,\\
+		J &=& \frac{9}{2} \, .
+	\end{eqnarray*}
+
+	F"ur die Temperatur wurden $T = \SI{295}{\kelvin}$ benutzt und f"ur die Anzahl der Momente pro Volumen $N$ die Werte aus Tabelle \ref{massen}.
+
+	Bei der Berechnung nach Gleichung \eqref{chi_u} wird f"ur $A$ der $A_\mathrm{real}$ Wert benutzt. Die $\SI{1}{\volt}$ Eingangsspannung wird durch die Verst"arker auf $U_\mathrm{sp} = \SI{86.73}{\volt}$ verst"arkt.
+	$U_\mathrm{br}$ wird aus Tabelle \ref{Mittelwerte} benutzt.
+
+	F"ur die dritte Methode nach Gl. \eqref{chi_r} wird auch $A_\mathrm{real}$ benutzt. Der feste Widerstand ist mit $R_\mathrm{3} = \SI{998}{\ohm}$ gegeben.
+	$\Delta R$ ergibt sich aus Tabelle \ref{Mittelwerte}.
+
+	Die Ergebnisse sind in Tabelle \ref{suszep} angegeben.
+
+	Die Fehler errechnen sich mithilfe Gau"s'scher Fehlerfortpflanzung:
+
+	\begin{eqnarray*}
+
+	\text{Gl.} \eqref{chi_r} \Rightarrow \Delta \chi &=& |\frac{\partial \chi}{\partial \Delta R}| \Delta (\Delta R)\\
+	\text{Gl.} \eqref{chi_u} \Rightarrow \Delta \chi &=& \sqrt{(|\frac{\partial \chi}{\partial \Delta U_\mathrm{br}}| \Delta U_\mathrm{br})^2 + (|\frac{\partial \chi}{\partial \Delta U_\mathrm{sp}}| \Delta U_\mathrm{sp})^2}\\
+
+	\end{eqnarray*}
+
+	Die Ergebnisse weisen auf einen systematischen Fehler hin, da die gemessenen Werte sehr vom Theoriewert abweichen.
+
+	\input{data/Suszep.tex}
 	\input{data/Probendaten.tex}
+	\input{data/Mittelwerte.tex}
+	\input{data/Massen.tex}
 	\input{data/tabelle_Dy.tex}
 	\input{data/tabelle_Nd.tex}
 	\input{data/tabelle_Gd.tex}
