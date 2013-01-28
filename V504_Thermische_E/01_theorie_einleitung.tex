@@ -15,8 +15,8 @@ Es wird die Kathodentemperatur und die Austrittsarbeit der Kathode bestimmt.
 Metalle sind h"aufig kristalline Festk"orper.
 Die Atome darin sind ionisiert und die Elektronen geh"oren nicht mehr zu einem bestimmten Atom, sondern befinden sich im Kraftfeld s"amtlicher Ionen.
 Darin k"onnen sich die Elektronen frei bewegen, wodurch eine hohe elektrische Leitf"ahigkeit erzeugt wird.
-Um den Metallverband verlassen zu k"onnen, muss das Elektron gegen das Potential $\psi$ anlaufen k"onnen.
-Daf"ur muss die Austrittsarbeit $e_\mathrm{0}\psi$ geleistet werden.
+Um den Metallverband verlassen zu k"onnen, muss das Elektron gegen das Potential $\Phi$ anlaufen k"onnen.
+Daf"ur muss die Austrittsarbeit $e_\mathrm{0}\Phi$ geleistet werden.
 Das Potential des Gitters kann in grober N"aherung als konstant angesehen werden.
 Abb. \ref{potential_topf} stellt das sogenannte Potentialtopfmodell dar.
 
@@ -28,18 +28,18 @@ Abb. \ref{potential_topf} stellt das sogenannte Potentialtopfmodell dar.
 \end{figure}
 
 Die Elektronen des Kristallgitters unterliegen dem Pauli-Verbot, nach dem nur zwei Elektronen mit entgegengesetztem Spin denselben Zustand mit der Energie $E$ haben k"onnen.
-Die Maximalenergie der Elektronen bei T = 0 wird als Grenzenergie $\psi$ bezeichnet.
+Die Maximalenergie der Elektronen bei T = 0 wird als Grenzenergie $\Phi$ bezeichnet.
 Die Wahrscheinlichkeit daf"ur, ob ein Zustand mit der Energie $E$ besetzt wird, wird durch die Fermi-Dirac'sche Verteilungsfunktion angegeben:
 
 \begin{equation}
-	f(E) = \frac{1}{exp( \frac{E - \psi}{kT} ) + 1} \, .
+	f(E) = \frac{1}{exp( \frac{E - \Phi}{kT} ) + 1} \, .
 \end{equation}
 
 Der Verlauf ist in Abb. \ref{fermi} dargestellt.
 Die Exponentialfunktion im Nenner "ubertrifft die Zahl 1 bei weitem, wodurch n"aherungsweise gilt:
 
 \begin{equation}
-	f(E) \propto exp ( \frac{\psi - E}{kT}) \, .
+	f(E) \propto exp ( \frac{\Phi - E}{kT}) \, .
 \end{equation}
 
 \begin{figure}[!h]
@@ -119,7 +119,7 @@ Dieser Strom wird als Anlaufstrom bezeichnet.
 Dabei ergibt sich f"ur den Anlaufstrom in Abh"angigkeit vom "au"seren Potential:
 
 \begin{equation}
-	j(V) = j_\mathrm{0} \exp{ \left( -\frac{e_\mathrm{0} (\phi_\mathrm{A} + V)}{kT} \right)} = \mathrm{const} \exp{ \left( -\frac{e_\mathrm{0}V}{kT} \right)}\, .
+	j(V) = j_\mathrm{0} \exp{ \left( -\frac{e_\mathrm{0} (\phi_\mathrm{A} + V)}{kT} \right)} = \mathrm{const} \cdot \exp{ \left( -\frac{e_\mathrm{0}V}{kT} \right)}\, .
 \end{equation}
 
 \subsection{Die Kennlinie der Hochvakuumdiode} % (fold)
