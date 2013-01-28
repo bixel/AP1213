@@ -88,6 +88,17 @@
 
 	Die Ergebnisse sind in Tabelle \ref{suszep} angegeben.
 
+	Die Fehler errechnen sich mithilfe Gau"s'scher Fehlerfortpflanzung:
+
+	\begin{eqnarray*}
+
+	\text{Gl.} \eqref{chi_r} \Rightarrow \Delta \chi &=& |\frac{\partial \chi}{\partial \Delta R}| \Delta (\Delta R)\\
+	\text{Gl.} \eqref{chi_u} \Rightarrow \Delta \chi &=& \sqrt{(|\frac{\partial \chi}{\partial \Delta U_\mathrm{br}}| \Delta U_\mathrm{br})^2 + (|\frac{\partial \chi}{\partial \Delta U_\mathrm{sp}}| \Delta U_\mathrm{sp})^2}\\
+
+	\end{eqnarray*}
+
+	Die Ergebnisse weisen auf einen systematischen Fehler hin, da die gemessenen Werte sehr vom Theoriewert abweichen.
+
 	\input{data/Suszep.tex}
 	\input{data/Probendaten.tex}
 	\input{data/Mittelwerte.tex}
