@@ -132,7 +132,7 @@
 				\Delta T & = & \frac{e_0}{kc^2}\Delta c\,,
 			\end{eqnarray*}
 
-			mit der Stefan-Boltzmann Konstante $k = \SI{1.381e-23}{\joule \per \kelvin}$ \cite{nist} und der Elementarladung $e = \SI{1.602e-19}{\coulomb}$ \cite{nist}.
+			mit der Stefan-Boltzmann Konstante $k = \SI{1.381e-23}{\joule \per \kelvin}$ \cite{nist} und der Elementarladung $e_0 = \SI{1.602e-19}{\coulomb}$ \cite{nist}.
 
 			Die Regression liefert
 
@@ -154,7 +154,7 @@
 					\caption{Messwerte f"ur Diodenspannung $U$, $U_\mathrm{k}$ und -strom $I$ im Anlaufstrombereich.}
 					\begin{tabular}{|r|r|r||r|r|r|}
 						\hline
-							$U$ [V] & $U_\mathrm{k}$ [V] & $I$ [nA] & $U$ [V] & $U_\mathrm{k}$ [V] & $I$ [nA] \\
+							$U$ [V] & $U_\mathrm{k}$ [V] & $I$ [mA] & $U$ [V] & $U_\mathrm{k}$ [V] & $I$ [mA] \\
 						\hline 
 						\hline
 							\input{data/messung_2.tex}
@@ -212,7 +212,7 @@
 			e_0 \Phi = -kT \cdot \ln{\left( \frac{I_\mathrm{s} \hbar^3}{4 \pi e_0 m_0 k^2 T^2} \right)}\,.
 		\end{equation*}
 
-		Hier bezeichnet $\hbar = \SI{6.626e-34}{\joule \second}$ \cite{nist} die Planck-Konstante.
+		Hier bezeichnet $\hbar = h / 2\pi = \SI{6.582e-16}{\electronvolt}$ \cite{nist} die Planck-Konstante.
 
 		Man erh"alt
 
@@ -238,7 +238,7 @@
 		Durch Bildung des Mittelwertes "uber alle $n = 3$ Werte und des mittleren Fehlers
 
 		\begin{equation*}
-			\Delta x = \sqrt{\frac{\sum_{i=1}^{n}{\left(\overline{x} - x_i\right)^2}}{n^2 - n}}\,,
+			\Delta x = \left(\sum_{i=1}^{n} (\Delta x_i)^2\right)^{\frac{1}{2}}\,,
 		\end{equation*}
 
 		erh"alt man f"ur die Austrittsarbeit:
