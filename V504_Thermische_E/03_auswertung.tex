@@ -138,7 +138,7 @@
 
 			\begin{eqnarray*}
 				c & = & \SI{-3.360 (88)}{\coulomb \per \joule}\,\\
-				\Rightarrow \quad T & = & \SI{3453 (90)}{\kelvin}\,.
+				\Rightarrow \quad T & = & \SI{3454 (90)}{\kelvin}\,.
 			\end{eqnarray*}
 
 			\begin{figure}[h!]
@@ -206,13 +206,16 @@
 	\subsection{Bestimmung der Austrittsarbeit}
 		\label{subsec:austrittsarbeit}
 		Mit Hilfe der Richardson-Gleichung l"asst sich schlie"slich aus den S"attigungsstr"omen $I_\mathrm{s}$ die Austrittsarbeit von Elektronen im gegebenen Material bestimmen.
-		Es Gilt
+		Es gilt
 
-		\begin{equation*}
-			e_0 \Phi = -kT \cdot \ln{\left( \frac{I_\mathrm{s} \hbar^3}{4 \pi e_0 m_0 k^2 T^2} \right)}\,.
-		\end{equation*}
+		\begin{eqnarray*}
+			e_0 \Phi & = & -kT \cdot \ln{\left( \frac{I_\mathrm{s} h^3}{4 \pi e_0 m_0 k^2 T^2} \right)}\,, \\
+			\Delta e_0 \Phi & = & \left| k \ln \left( \frac{I_\mathrm{s} h^3}{4 \pi e_0 m_0 k^2 T^2} \right) \right| \Delta T \,.
+		\end{eqnarray*}
 
-		Hier bezeichnet $\hbar = h / 2\pi = \SI{6.582e-16}{\electronvolt}$ \cite{nist} die Planck-Konstante.
+		Hier bezeichnet $h = \SI{6.626e-34}{\joule \second}$ \cite{nist} das Plancksche Wirkungsquantum und $m_0 = \SI{9.109e-31}{\kilo \gram}$ \cite{nist} die Elektronenmasse.
+
+		\clearpage
 
 		Man erh"alt
 
@@ -225,17 +228,15 @@
 						$I_\mathrm{s}$ [nA] & $T$ [K] & $e_0 \Phi$ [eV] \\
 					\hline 
 					\hline
-						4 & $\SI{1741 (4)}{}$ & 7,24\\
-						40 & $\SI{1894 (4)}{}$ & 5,65 \\
-						320 & $\SI{2033 (4)}{}$ & 7,74 \\
+						4 & $\SI{1741 (4)}{}$ & $\SI{7.240 (2)}{}$\\
+						40 & $\SI{1894 (4)}{}$ & $\SI{5.649 (2)}{}$ \\
+						320 & $\SI{2033 (4)}{}$ & $\SI{7.741 (2)}{}$ \\
 					\hline 
 				\end{tabular}
 			\end{center}
 		\end{table}
 
-		\clearpage
-
-		Durch Bildung des Mittelwertes "uber alle $n = 3$ Werte und des mittleren Fehlers
+		Durch Bildung des Mittelwertes "uber alle $n = 3$ Werte und des Fehlers
 
 		\begin{equation*}
 			\Delta x = \left(\sum_{i=1}^{n} (\Delta x_i)^2\right)^{\frac{1}{2}}\,,
@@ -244,6 +245,6 @@
 		erh"alt man f"ur die Austrittsarbeit:
 
 		\begin{eqnarray*}
-			\overline{e_0 \Phi} = \SI{6.88 (63)}{\electronvolt}\,.
+			\overline{e_0 \Phi} = \SI{6.877 (3)}{\electronvolt}\,.
 		\end{eqnarray*}
 
