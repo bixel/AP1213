@@ -70,13 +70,11 @@
 
 	Die Verst"arkung durch den Linear- und Selektivverst"arker ergab eine Verst"arkung um einen Faktor von $86.73$.
 
-	F"ur die Berechnung der Suszeptibilit"at nach Gleichung \eqref{curie} wurden die vorgegebenen Werte Verwendet:
+	F"ur die Berechnung der Suszeptibilit"at nach Gleichung \eqref{curie} wurden die vorgegebenen Werte verwendet, welche in Tabelle \ref{quanten} zu finden sind.
 
-	\begin{eqnarray*}
-		S &=& \frac{5}{2} \, ,\\
-		L &=& 6 \, ,\\
-		J &=& \frac{9}{2} \, .
-	\end{eqnarray*}
+	\input{data/quanten.tex}
+
+	\clearpage
 
 	F"ur die Temperatur wurden $T = \SI{295}{\kelvin}$ benutzt und f"ur die Anzahl der Momente pro Volumen $N$ die Werte aus Tabelle \ref{massen}.
 
@@ -91,13 +89,13 @@
 	Die Fehler errechnen sich mithilfe Gau"s'scher Fehlerfortpflanzung:
 
 	\begin{eqnarray*}
-
 	\text{Gl.} \eqref{chi_r} \Rightarrow \Delta \chi &=& |\frac{\partial \chi}{\partial \Delta R}| \Delta (\Delta R)\\
 	\text{Gl.} \eqref{chi_u} \Rightarrow \Delta \chi &=& \sqrt{(|\frac{\partial \chi}{\partial \Delta U_\mathrm{br}}| \Delta U_\mathrm{br})^2 + (|\frac{\partial \chi}{\partial \Delta U_\mathrm{sp}}| \Delta U_\mathrm{sp})^2}\\
-
 	\end{eqnarray*}
 
-	Die Ergebnisse weisen auf einen systematischen Fehler hin, da die gemessenen Werte sehr vom Theoriewert abweichen.
+	Die Werte durchs Experiment errechneten Werte weichen um 5\,\% und 8\,\% vom Theoriewert ab.
+	Bei Gadolinium sind es 24.55\,\% und 35.64\,\%. 
+	F"ur Neodym ist der Fehler durch den Widerstand 15.38\,\%. Bei der Methode mittels der Spannung hingegen sind es 200\,\% unterschied.
 
 	\input{data/Suszep.tex}
 	\input{data/Probendaten.tex}

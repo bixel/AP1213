@@ -1,0 +1,11 @@
+
+set xrange[30:40]
+
+f(x) = 1/(c*pi) * a/(a**2 + (x-b)**2) + d
+b = 34.9
+d = 0.13
+c = 1.5
+a = 0.25
+fit f(x) "tabelle_a.dat" u 1:($2/9.8) via a,b,c,d
+
+plot "tabelle_a.dat" u 1:($2/9.8) , f(x)

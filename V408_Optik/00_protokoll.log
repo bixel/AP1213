@@ -1,6 +1,6 @@
-This is LuaTeX, Version beta-0.70.2-2012060719 (MiKTeX 2.9 64-bit)  (format=lualatex 2012.10.13)  30 JAN 2013 15:18
+This is LuaTeX, Version beta-0.70.2-2012060719 (MiKTeX 2.9 64-bit)  (format=lualatex 2012.10.13)  18 JAN 2013 15:57
 **00_protokoll.tex
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/00_protokoll.tex
+(c:/Users/Markus/AP1213/V408_Optik/00_protokoll.tex
 LaTeX2e <2011/06/27>
 LuaTeX adaptation of babel <v3.8m-luatex-1.5> and hyphenation patterns for engl
 ish, loaded.
@@ -857,9 +857,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \Urlmuskip=\muskip17
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/00_protokoll.aux
+(c:/Users/Markus/AP1213/V408_Optik/00_protokoll.aux
 
-LaTeX Warning: Label `subsec:messung_u' multiply defined.
+LaTeX Warning: Label `fig:lin_reg_g' multiply defined.
 
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
@@ -1057,99 +1057,136 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--74
 [1
 
 {C:/Users/Markus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/01_theorie_einleitung.tex
+(c:/Users/Markus/AP1213/V408_Optik/01_theorie_einleitung.tex
 LaTeX Font Info:    Try loading font information for T1+lmss on input line 1.
 
 ("C:/Program Files/MiKTeX 2.9/tex/latex/lm/t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2])
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/02_durchfuehrung.tex
-<img/aufbau.JPG, id=17, 716.6775pt x 768.8725pt>
-File: img/aufbau.JPG Graphic file (type jpg)
- <use img/aufbau.JPG>
-Package pdftex.def Info: img/aufbau.JPG used on input line 12.
-(pdftex.def)             Requested size: 227.62204pt x 244.19057pt.
- [3
+)
+<img/linsen.PNG, id=8, 596.98032pt x 122.70844pt>
+File: img/linsen.PNG Graphic file (type png)
+ <use img/linsen.PNG>
+Package pdftex.def Info: img/linsen.PNG used on input line 16.
+(pdftex.def)             Requested size: 341.43306pt x 70.18045pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 22.
+ [2 <c:/Users/Markus/AP1213/V408_Optik/img/linsen.PNG>])
+(c:/Users/Markus/AP1213/V408_Optik/02_durchfuehrung.tex [3]
+<img/abbe.PNG, id=24, 254.45062pt x 178.41656pt>
+File: img/abbe.PNG Graphic file (type png)
+ <use img/abbe.PNG>
+Package pdftex.def Info: img/abbe.PNG used on input line 47.
+(pdftex.def)             Requested size: 341.43306pt x 239.41722pt.
+ [4])
+(c:/Users/Markus/AP1213/V408_Optik/03_auswertung.tex [5 <c:/Users/Markus/AP1213
+/V408_Optik/img/abbe.PNG>]
+(c:/Users/Markus/AP1213/V408_Optik/data/f_bekannt.tex) [6]
+(c:/Users/Markus/AP1213/V408_Optik/data/f_unbekannt.tex)
+<img/graph_bekannt.pdf, id=38, 498.7963pt x 379.03325pt>
+File: img/graph_bekannt.pdf Graphic file (type pdf)
 
- <c:/Users/Markus/AP1213/V606_Suszeptibilitaet/img/aufbau.JPG>] [4
+<use img/graph_bekannt.pdf>
+Package pdftex.def Info: img/graph_bekannt.pdf used on input line 91.
+(pdftex.def)             Requested size: 284.52756pt x 216.21312pt.
 
-])
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/03_auswertung.tex
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/tabelle_a.tex
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) <img/arschlecken.pdf, id=26, 361.35pt x 216.81pt>
-File: img/arschlecken.pdf Graphic file (type pdf)
- <use img/arschlecken.pdf>
-Package pdftex.def Info: img/arschlecken.pdf used on input line 37.
-(pdftex.def)             Requested size: 398.33858pt x 239.0045pt.
+<img/graph_unbekannt.pdf, id=39, 498.81982pt x 379.03325pt>
+File: img/graph_unbekannt.pdf Graphic file (type pdf)
+
+<use img/graph_unbekannt.pdf>
+Package pdftex.def Info: img/graph_unbekannt.pdf used on input line 98.
+(pdftex.def)             Requested size: 284.52756pt x 216.20155pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5] [6] [7 <c:/Users/Markus/AP1213/V606_Suszeptibilitaet/img/arschlecken.pdf>]
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/quanten.tex) [8
+[7
+
+] [8 <c:/Users/Markus/AP1213/V408_Optik/img/graph_bekannt.pdf> <c:/Users/Markus
+/AP1213/V408_Optik/img/graph_unbekannt.pdf>]
+(c:/Users/Markus/AP1213/V408_Optik/data/bessel.tex)
+(c:/Users/Markus/AP1213/V408_Optik/data/farben.tex) [9
 
 ]
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/Suszep.tex)
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/Probendaten.tex)
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/Mittelwerte.tex
+(c:/Users/Markus/AP1213/V408_Optik/data/abbe.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/Massen.tex
+<img/graph_abbe_g.pdf, id=89, 513.8055pt x 396.097pt>
+File: img/graph_abbe_g.pdf Graphic file (type pdf)
+
+<use img/graph_abbe_g.pdf>
+Package pdftex.def Info: img/graph_abbe_g.pdf used on input line 221.
+(pdftex.def)             Requested size: 426.79134pt x 329.02635pt.
+
+Overfull \hbox (8.53578pt too wide) in paragraph at lines 221--222
+ [][][] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/tabelle_Dy.tex
+<img/graph_abbe_b.pdf, id=90, 520.88664pt x 394.08951pt>
+File: img/graph_abbe_b.pdf Graphic file (type pdf)
+
+<use img/graph_abbe_b.pdf>
+Package pdftex.def Info: img/graph_abbe_b.pdf used on input line 228.
+(pdftex.def)             Requested size: 426.79134pt x 322.90292pt.
+
+Overfull \hbox (8.53578pt too wide) in paragraph at lines 228--229
+ [][][] 
+ []
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/tabelle_Nd.tex
+) (c:/Users/Markus/AP1213/V408_Optik/04_diskussion_literatur.tex [10
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+]
 
-) (c:/Users/Markus/AP1213/V606_Suszeptibilitaet/data/tabelle_Gd.tex
+LaTeX Warning: Text page 11 contains only floats.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [9
+Overfull \vbox (1.306pt too high) has occurred while \output is active []
 
-] [10] [11])
-(c:/Users/Markus/AP1213/V606_Suszeptibilitaet/04_diskussion_literatur.tex)
-[12
+ [11 <c:/Users/Markus/AP1213/V408_Optik/img/graph_abbe_g.pdf>] [12 <c:/Users/Ma
+rkus/AP1213/V408_Optik/img/graph_abbe_b.pdf>]) [13
 
-] (c:/Users/Markus/AP1213/V606_Suszeptibilitaet/00_protokoll.aux)
+]
+(c:/Users/Markus/AP1213/V408_Optik/00_protokoll.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  )
 
 Here is how much of LuaTeX's memory you used:
- 13566 strings out of 495011
+ 13556 strings out of 495011
  100000,319454 words of node,token memory allocated
- 449 words of node memory still in use:
+ 458 words of node memory still in use:
     nodes
-   avail lists: 2:33,3:144,4:3224,5:216,6:2595,7:437,9:816,10:290
- 16433 multiletter control sequences out of 65536+200000
- 59 fonts using 2331131 bytes
- 61i,20n,51p,586b,1015s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiK
+   avail lists: 2:28,3:138,4:1292,5:171,6:2352,7:158,9:422,10:295
+ 16448 multiletter control sequences out of 65536+200000
+ 58 fonts using 2291839 bytes
+ 61i,13n,51p,298b,1011s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiK
 TeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.e
-nc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}<C:/Program Fi
+/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
+it.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 00_protokoll.pdf (12 pages, 269746 bytes).
+lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/lm/lmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr5.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
+msy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on 00_protokoll.pdf (13 pages, 311478 bytes).
 
-PDF statistics: 101 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 268 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

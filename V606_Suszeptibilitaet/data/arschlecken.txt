@@ -1,0 +1,15 @@
+set term pdfcairo
+set output "arschlecken.pdf"
+
+set xrange[34:36]
+set yrange[0:1.1]
+set xlabel "f[Hz]"
+set ylabel "Uaus / Umax"
+set key box inside center bottom
+f(x) = 8.6/8.6
+h(x) = 8.6/(8.6*sqrt(2))
+
+set grid 
+set xtics ("34" 34, "34.2" 34.2, "34.4" 34.4, "34.6" 34.6, "34.8" 34.8, "35" 35, "35.2" 35.2, "35.4" 35.4, "35.6" 35.6, "35.8" 35.8, "36" 36, "34.7" 34.7, "35.1" 35.1) rotate
+
+plot "tabelle_a.dat" u 1:($2/8.6) title "Messwerte", f(x) title "Maximum", h(x) title "1/sqrt(2)"
