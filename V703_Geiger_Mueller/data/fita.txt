@@ -1,0 +1,8 @@
+set term pdfcairo
+set output "charakteristik.pdf"
+set xlabel "U[V]"
+set ylabel "N[1/s]"
+set yrange[80:120]
+f(x) = m*x+b
+fit f(x) "fit.dat" using 1:5 via m,b
+plot f(x) title "Ausgleichsgerade des Plateaus", "aufgabe_a.dat" using 1:5:4 with errorbars title "Messdaten"
