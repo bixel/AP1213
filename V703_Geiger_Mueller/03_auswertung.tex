@@ -7,7 +7,7 @@
 	\input{aufgabea.tex}
 
 	\begin{figure}[!h]
-		\centering
+		\centering	
 		\includegraphics[width = 10cm]{img/charakteristik.pdf}
 		\caption{Darstellung der Charakteristik des Z"ahlrohrs und einer Ausgleichsgeraden des Plateaus.}
 		\label{charakteristik}
@@ -17,15 +17,15 @@
 	F"ur die Messung der Ausgleichsgeraden vom Typ $f(x) = m*x+b$ ergab sich:
 
 	\begin{eqnarray*}
-		m &=& \SI{0.00778 (169)}{\volt\per\second}\\
-		b &=& \SI{85.9993 (9144)}{\volt}
+		m &=& \SI{0.00778 (169)}{1\per\volt\second}\\
+		b &=& \SI{85.9993 (9144)}{1\per\second}
 	\end{eqnarray*}
 
-	Die Steigung der Geraden von $m = \SI{0.00778 (169)}{\volt\per\second}$ entspricht einer Steigung von $\SI{0.99}{\%}$ pro $\SI{100}{\volt}$.
+	Die Steigung der Geraden von $m = \SI{0.00778 (169)}{1\per\volt\second}$ entspricht einer Steigung von $\SI{0.99}{\%}$ pro $\SI{100}{\volt}$.
 	Aus den Messdaten l"asst sich ablesen, dass die Plateaul"ange etwa $\SI{370}{\volt}$ betr"agt.
-	Eine f"ur die Messung geeignete Z"ahlrohrspannung befindet sich am Anfang des Plateaus und liegt etwa bei $\SI{400}{\volt}$. Dies kommt, da sich dort der Arbeitsbereich des Geiger M"uller Z"ahlrohrs befindet und die Anzahl der Nachentladungen sehr gering ist.
+	Eine f"ur die Messung geeignete Z"ahlrohrspannung befindet sich am Anfang des Plateaus und liegt etwa bei $\SI{400}{\volt}$. Dies kommt, da sich dort der Arbeitsbereich des Geiger M"uller Z"ahlrohrs befindet und die Anzahl der Nachentladungen noch gering ist.
 
-	Die in der Tabelle errechneten Fehler der Impulsrate ergibt sich durch $\sqrt{N}$, da diese Poisson-Verteilt sind.
+	Die in der Tabelle errechneten Fehler der Impulsrate ergeben sich durch $\sqrt{N}$, da diese Poisson-Verteilt sind.
 
 	\subsection{Sichtbarmachung von Nachentladungen und Messung der Totzeit mithilfe des Oszilloskops} % (fold)
 	 \label{sub:sichtbarmachung_von_nachentladungen}
@@ -33,7 +33,7 @@
 	\input{aufgabeb.tex}
 	
 	F"ur die Bestimmung des zeitlichen Abstands zwischen Prim"ar- und Nachentladungsimpuls ergaben sich die in Tabelle \ref{tabelleb} aufgelisteten Werte. Daf"ur wurde die Zeit zwischen den auf dem Oszilloskop sichtbaren Maximas abgelesen.
-	Da dies sehr ungenau ist, ist n"aherungsweise die Nachentladungszeit und die Totzeit gleich.
+	Da dies sehr ungenau ist, ist n"aherungsweise die Nachentladungszeit gleich der Totzeit.
 
 	\subsection{Bestimmung der Totzeit mit der Zwei-Quellen-Methode} % (fold)
 	\label{sub:bestimmung_der_totzeit_mit_der_zwei_quellen_methode}
@@ -55,5 +55,5 @@
 		\frac{\partial T}{\partial N_\mathrm{1}} &=& \frac{2 N_\mathrm{1}N_\mathrm{2} - 2 N_\mathrm{2}(N_\mathrm{1} + N_\mathrm{2} - N_\mathrm{12})}{4N_\mathrm{1}^2N_\mathrm{2}^2} \, , \\
 		\frac{\partial T}{\partial N_\mathrm{2}} &=& \frac{2 N_\mathrm{1}N_\mathrm{2} - 2 N_\mathrm{1}(N_\mathrm{1} + N_\mathrm{2} - N_\mathrm{12})}{4N_\mathrm{1}^2N_\mathrm{2}^2} \, ,\\
 		\frac{\partial T}{\partial N_\mathrm{12}} &=& -\frac{1}{2 N_\mathrm{1} N_\mathrm{2}} \, ,\\
-		\Delta T &=& \left( \left( \frac{\partial T}{\partial N_\mathrm{1}} \Delta N_\mathrm{1} \right)^2 + \left( \frac{\partial T}{\partial N_\mathrm{2}} \Delta N_\mathrm{2} \right)^2 + \left( \frac{\partial T}{\partial N_\mathrm{12}} \Delta N_\mathrm{12} \right)^2 \right)^\frac{1}{2}
+		\Delta T &=& \left( \left( |\frac{\partial T}{\partial N_\mathrm{1}}| \Delta N_\mathrm{1} \right)^2 + \left( |\frac{\partial T}{\partial N_\mathrm{2}}| \Delta N_\mathrm{2} \right)^2 + \left( |\frac{\partial T}{\partial N_\mathrm{12}}| \Delta N_\mathrm{12} \right)^2 \right)^\frac{1}{2} \quad .
 	\end{eqnarray*}
