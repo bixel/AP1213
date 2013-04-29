@@ -170,7 +170,6 @@
 			\subsubsection{Der Messingzylinder}
 			\label{subsubsec:holzkugel}
 				\begin{figure}[htbp]
-					
 					\begin{minipage}[t]{8cm}
 						\vspace{0pt}
 						Das Tr"agheitsmoment $I_\mathrm{2, theorie}$ des Zylinders berechnet sich unabh"angig von der H"ohe nach
@@ -225,5 +224,103 @@
 			\clearpage
 			\subsubsection{Puppe}
 			\label{subsubsec:puppe}
-				
+				Die Holzpuppe wird zur Berechnung des Tr"agheitsmomentes n"aherungsweise durch eine Anordnung von Zylindern $Z_\mathrm{i}$ beschrieben.
+				Dabei werden Arme, Beine, Torus und Kopf jeweils als Zylinder betrachtet und mit Hilfe des Steinersches Satzes zu einem Gesamttr"agheitsmoment $I$ zusammengesetzt.
+				Die Indizes $i$ sind stets nach den K"orperteilen bennant.
 
+				Kopf und Torus werden durch die Symmetrieachse gedreht.
+				Die Beine werden parallel zur Symmetrieachse gedreht und m"ussen daher mit dem Steinerschen Satz verschoben werden.
+				Ebenso werden die Arme in der ersten Position der Puppe parallel und in der zweiten Position im rechten Winkel zur Symmetrieachse gedreht. Die Stellungen der Puppe sind in Abbildung \ref{fig:puppd1} und \ref{fig:puppe2} verdeutlicht.
+
+				Alle Zylinderradien $r_\mathrm{i}$ werden "uber zehn Messwerte an verschiedenen Stellen des jeweiligen K"orperteils gemittelt.
+				F"u"se und H"ande werden mit jeweils einem Messwert zu den Beinen, beziehungsweise Armen gez"ahlt.
+
+				\begin{table}[h!]
+					\begin{center}
+						\label{tabelle:puppenradien}
+						\caption{Radien der zylinderf"ormigen K"orperteile der Puppe}
+						\begin{tabular}{|c|c|c|c|}
+							\hline
+							$r_\mathrm{Kopf} [\SI{}{\milli \meter}]$ & $r_\mathrm{Torus} [\SI{}{\milli \meter}]$ & $r_\mathrm{Arm} [\SI{}{\milli \meter}]$ & $r_\mathrm{Bein} [\SI{}{\milli \meter}]$ \\
+							\hline 
+							\hline
+							\input{data/puppe_masse.tex}
+							\hline 
+						\end{tabular}
+					\end{center}
+				\end{table}
+
+				\begin{table}[h!]
+					\begin{center}
+						\label{tabelle:puppenradien}
+						\caption{Ben"otigte Eigenschaften der K"orperteile}
+						\begin{tabular}{|c||c|c|c|c|c|}
+							\hline
+								i &
+								$r_\mathrm{i} [\SI{}{\milli \meter}]$ &
+								$h_\mathrm{i} [\SI{}{\milli \meter}]$ &
+								$V_\mathrm{i} [\SI{}{\centi \meter \cubed}]$ &
+								$m_\mathrm{i} [\SI{}{\gram}]$ &
+								$I_\mathrm{i} [\SI{}{\gram \centi \meter \squared}]$ \\
+							\hline 
+							\hline
+								Kopf &
+								$\SI{13.5 (25)}{} $ &
+								$\SI{65.0 (5)}{}$ &
+								$\SI{37.22}{}$&
+								$\SI{27.64}{}$&
+								$\SI{25.19}{}$\\
+							\hline 
+								Torus &
+								$\SI{22.6 (40)}{} $ &
+								$\SI{133.0 (5)}{}$ &
+								$\SI{213.41}{}$&
+								$\SI{171.83}{}$&
+								$\SI{438.82}{}$\\
+							\hline 
+								Arm 1 &
+								% \multirow{2}{*}{$\SI{22.6 (40)}{}$} &
+								$\SI{8.2 (17)}{}$ &
+								% \multirow{2}{*}{$\SI{170.0 (5)}{}$} &
+								$\SI{170.0 (5)}{}$ &
+								$\SI{35.91}{}$&
+								$\SI{26.66}{}$&
+								$\SI{8.96}{}$\\
+							\hline 
+								Arm 2 &
+								$\SI{8.2 (17)}{}$ &
+								$\SI{170.0 (5)}{}$ &
+								$\SI{35.91}{}$&
+								$\SI{26.66}{}$&
+								$\SI{646.54}{}$\\
+							\hline 
+								Bein &
+								$\SI{10.5 (18)}{}  $& 
+								$\SI{197.0 (5)}{}$ &
+								$\SI{68.23}{}$&
+								$\SI{50.66}{}$&
+								$\SI{27.92}{}$\\
+							\hline 
+						\end{tabular}
+					\end{center}
+				\end{table}
+
+				Die einzelnen Massen $m_\mathrm{i}$ werden dabei aus der Dichte $\rho = M / V = \SI{.743}{\gram \per \centi \meter \cubed}$ mit der Gesamtmasse $M$ und dem Gesamtvolumen $V$ bestimmt.
+
+				F"ur $I$ gilt damit
+
+				\begin{equation*}
+					I = I_\mathrm{Kopf} + I_\mathrm{Torus} + 2 I_\mathrm{Arm} + 2 I_\mathrm{Bein} + 2 m_\mathrm{Arm}a_\mathrm{Arm}^2 + 2 m_\mathrm{Bein}a_\mathrm{Bein}^2 \,.
+				\end{equation*}
+
+				Mit $a_\mathrm{Arm} = r_\mathrm{Torus}$ und $a_\mathrm{Bein} = \SI{3.00 (5)}{\centi \meter}$ folgt f"ur Stellung 1
+
+				\begin{equation*}
+					I_1 = \SI{1721.99}{\gram \centi \meter \squared} \,.
+				\end{equation*}
+
+				Mit $a_\mathrm{Arm} = h_\mathrm{Arm} / 2$ folgt f"ur Stellung 2
+
+				\begin{equation*}
+					I_2 = \SI{6577.18}{\gram \centi \meter \squared} \,.
+				\end{equation*}
