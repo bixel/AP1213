@@ -18,7 +18,15 @@
 		Die folgende Tabelle zeigt die Messwerte. F"ur die Winkelrichtgr"o"se erh"alt man damit
 
 		\begin{equation*}
-			D = \SI{.348 (75)}{\milli \newton \meter} \,.
+			D = \SI{19.9 (43)}{\milli \newton \meter} \,.
+		\end{equation*}
+
+		Berechnet man mit diesem Wert jedoch das Eigentr"agheismoment der Apparatur, ergeben sich negative Werte.
+		Ein besserer Wert ergibt sich durch die lineare Ausgleichsrechnung im folgenden Kapitel \ref{subsec:eigentraegheitsmoment}.
+		Diese ergibt
+
+		\begin{equation*}
+			D = \SI{57.9 (3)}{\milli \newton \meter} \,.
 		\end{equation*}
 
 		\begin{table}[h!]
@@ -63,21 +71,23 @@
 		Das Eigentr"agheitsmoment $I_\mathrm{D}$ kann also durch Messung von $T$ und $a$ mit einer Ausgleichsrechnung bestimmt werden. Es gilt au"serdem
 
 		\begin{eqnarray*}
-			M = \SI{96.28}{\gram} &,& l = \SI{60}{\centi \meter} \\
-			\Rightarrow \quad I_\mathrm{Stange} & = & \frac{1}{12} M l^2 = \SI{2.89}{\gram \meter \squared} \,, \\
-			\Delta I_\mathrm{D} & = & \sqrt{\left(\Delta B\right)^2 + \left(\frac{1}{6}Ml \Delta l \right)^2} \,.
+			M = \SI{96.28 (10)}{\gram} &,& l = \SI{60.00 (5)}{\centi \meter} \\
+			I_\mathrm{Stange} & = & \frac{1}{12} M l^2\,, \\
+			\Delta I_\mathrm{Stange} & = & \frac{1}{12}\sqrt{ \left(l^2 \Delta M\right)^2 +\left(Ml \Delta l \right)^2} \,, \\
+			\Delta I_\mathrm{D} & = & \sqrt{\left(\Delta B\right)^2 + \left(\Delta I_\mathrm{Stange}\right)^2} \,, \\
+			\Rightarrow \quad I_\mathrm{Stange} & = & \SI{2.89 (1)}{\gram \meter \squared} 
 		\end{eqnarray*}
 
 		Die Ausgleichsrechnung durch \emph{python} liefert
 
 		\begin{eqnarray*}
-			B & = & \SI{-.017 (3)}{\gram \meter \squared} \\
-			\Rightarrow \quad I_\mathrm{D} & = & \SI{-2.91 (5)}{\gram \meter \squared} \,.
+			B & = & \SI{5.33 (22)}{\gram \meter \squared} \\
+			\Rightarrow \quad I_\mathrm{D} & = & \SI{2.44 (22)}{\gram \meter \squared} \,.
 		\end{eqnarray*}
 
-		Ein negatives Tr"agheitsmoment ergibt physikalisch keinen Sinn und wird daher im Verlauf nicht mehr genutzt. Fehlerquellen werden in der Diskussion behandelt
-
 		Die zur Berechnung genutzten Daten werden in folgender Tabelle aufgef"uhrt.
+		Da das Eigentr"agheitsmoment jedoch gr"o"ser ist als die Tr"agheitsmomente der untersuchten Objekte, w"urden sich negative Tr"agheitsmomente ergeben.
+		Das macht physikalisch keinen Sinn, weshalb $I_\mathrm{D}$ in den sp"ateren Rechnungen nicht abgezogen wird.
 
 		\begin{table}[h!]
 			\begin{center}
@@ -93,6 +103,13 @@
 				\end{tabular}
 			\end{center}
 		\end{table}
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 15cm]{img/graph2_T.pdf}
+			\caption{Ausgleichsgerade zur Bestimmung von $I_\mathrm{D}$ und $D$}
+			\label{fig:graph2}
+		\end{figure}
 
 		\subsection{Bestimmung der Tr"agheitsmomente $I_\mathrm{k}$ verschiedener K"orper}
 		\label{subsec:versch_momente}
@@ -162,8 +179,8 @@
 				Die Messwerte liefern mit Gleichung \eqref{eqn:schwingungsdauer}
 
 				\begin{eqnarray*}
-					I_\mathrm{1, exp} & = & \SI{1.71 (3)}{\gram \meter \squared} \,, \\
-					\delta_1 & = & \SI{32.4}{\percent} \,.
+					I_\mathrm{1, exp} & = & \SI{1.91 (3)}{\gram \meter \squared} \,, \\
+					\delta_1 & = & \SI{24.5}{\percent} \,.
 				\end{eqnarray*}
 
 			\clearpage
@@ -174,10 +191,10 @@
 						\vspace{0pt}
 						Das Tr"agheitsmoment $I_\mathrm{2, theorie}$ des Zylinders berechnet sich unabh"angig von der H"ohe nach
 
-						\begin{eqnarray*}
-							I_\mathrm{2, theorie} & = & \frac{1}{2}mr^2 \,, \\
-							\Delta I_\mathrm{2, theorie} & = & \frac{1}{2} \sqrt{ \left(r^2 \Delta m\right)^2 + \left( 2 mr \Delta r\right)^2} \,.
-						\end{eqnarray*}
+						\begin{eqnarray}
+							I_\mathrm{2, theorie} & = & \frac{1}{2}mr^2 \,, \label{eqn:zylinder} \\
+							\Delta I_\mathrm{2, theorie} & = & \frac{1}{2} \sqrt{ \left(r^2 \Delta m\right)^2 + \left( 2 mr \Delta r\right)^2} \,. \nonumber
+						\end{eqnarray}
 
 						Mit den gemessenen Werten f"ur die Masse $m$ und den Radius $r$ folgt
 
@@ -217,8 +234,8 @@
 				Die Messwerte liefern mit Gleichung \eqref{eqn:schwingungsdauer}
 
 				\begin{eqnarray*}
-					I_\mathrm{2, exp} & = & \SI{.89 (2)}{\gram \meter \squared} \,, \\
-					\delta_2 & = & \SI{31.5}{\percent} \,.
+					I_\mathrm{2, exp} & = & \SI{1.00 (2)}{\gram \meter \squared} \,, \\
+					\delta_2 & = & \SI{23.1}{\percent} \,.
 				\end{eqnarray*}
 
 			\clearpage
@@ -230,10 +247,75 @@
 
 				Kopf und Torus werden durch die Symmetrieachse gedreht.
 				Die Beine werden parallel zur Symmetrieachse gedreht und m"ussen daher mit dem Steinerschen Satz verschoben werden.
-				Ebenso werden die Arme in der ersten Position der Puppe parallel und in der zweiten Position im rechten Winkel zur Symmetrieachse gedreht. Die Stellungen der Puppe sind in Abbildung \ref{fig:puppd1} und \ref{fig:puppe2} verdeutlicht.
+				Ebenso werden die Arme in der ersten Position der Puppe parallel und in der zweiten Position im rechten Winkel zur Symmetrieachse gedreht. Die Stellungen der Puppe sind in Abbildung \ref{fig:puppe1} und \ref{fig:puppe2} verdeutlicht.
 
 				Alle Zylinderradien $r_\mathrm{i}$ werden "uber zehn Messwerte an verschiedenen Stellen des jeweiligen K"orperteils gemittelt.
 				F"u"se und H"ande werden mit jeweils einem Messwert zu den Beinen, beziehungsweise Armen gez"ahlt.
+
+				\begin{figure}[h]
+					\begin{minipage}[t]{7cm}
+						\vspace{0pt}
+						\centering
+						\includegraphics[height = 8cm]{img/pupp1.jpg}
+						\caption{Puppe in Stellung 1}
+						\label{fig:puppe1}
+					\end{minipage}
+					\hfill
+					\begin{minipage}[t]{7cm}
+						\vspace{0pt}
+						\centering
+						\includegraphics[height = 8cm]{img/pupp2.jpg}
+						\caption{Puppe in Stellung 2}
+						\label{fig:puppe2}
+					\end{minipage}
+				\end{figure}
+
+				Die einzelnen Massen $m_\mathrm{i}$ werden dabei aus der Dichte $\rho = M / V = \SI{.743}{\gram \per \centi \meter \cubed}$ mit der Gesamtmasse $M$ und dem Gesamtvolumen $V$ bestimmt.
+
+				F"ur $I$ gilt damit
+
+				\begin{eqnarray*}
+					I & = & I_\mathrm{Kopf} + I_\mathrm{Torus} + 2 I_\mathrm{Arm} + 2 I_\mathrm{Bein} + 2 m_\mathrm{Arm}a_\mathrm{Arm}^2 + 2 m_\mathrm{Bein}a_\mathrm{Bein}^2 \,, \\
+					\Delta I & = & \left[(\Delta I_\mathrm{K})^2 + (\Delta I_\mathrm{T})^2 + (2 \Delta I_\mathrm{A})^2 + 2(\Delta I_\mathrm{B})^2 +\right. \\
+					&& \left. + (2a_\mathrm{A}^2 \Delta m_\mathrm{A})^2 + (4 a_\mathrm{A}m_\mathrm{A} \Delta a_\mathrm{A})^2 + (2a_\mathrm{B}^2 \Delta m_\mathrm{B})^2 + (4 a_\mathrm{B}m_\mathrm{B} \Delta a_\mathrm{B})^2\right]^\frac{1}{2} \,.
+				\end{eqnarray*}
+
+				Ausserdem gilt
+
+				\begin{eqnarray*}
+					V_\mathrm{i} & = & \pi r_\mathrm{i}^2 h_\mathrm{i} \,, \\
+					\Delta V_\mathrm{i} & = & \pi \sqrt{(r_\mathrm{i} h_\mathrm{i} \Delta r_\mathrm{i})^2 + (r_\mathrm{i}^2 \Delta h_\mathrm{i})} \, \\
+				\end{eqnarray*}
+
+				und $I_\mathrm{i}$ in Stellung 1 wie in Gleichung \eqref{eqn:zylinder} beschrieben. In Stellung 2 gilt
+
+				\begin{eqnarray*}
+					I_\mathrm{Arm} & = & \frac{1}{4}m_\mathrm{Arm}r_\mathrm{Arm}^2 + \frac{1}{12}m_\mathrm{Arm}h_\mathrm{Arm}^2 \,, \\
+					\Delta I_\mathrm{Arm} & = & \sqrt{\left(\frac{1}{4}r_\mathrm{A}^2 + \frac{1}{12}h_\mathrm{A}^2\right)^2 \Delta m_\mathrm{A}^2 + \left(\frac{1}{2}m_\mathrm{A}r_\mathrm{A}\Delta r_\mathrm{A}\right)^2 + \left(\frac{1}{6}m_\mathrm{A}h_\mathrm{A}\Delta h_\mathrm{A}\right)^2}
+				\end{eqnarray*}
+
+				Mit $a_\mathrm{Arm} = r_\mathrm{Torus}$ und $a_\mathrm{Bein} = \SI{3.00 (5)}{\centi \meter}$ folgt f"ur Stellung 1
+
+				\begin{equation*}
+					I_1 = \SI{1.72 (16)}{\kilo \gram \centi \meter \squared} \,.
+				\end{equation*}
+
+				Mit $a_\mathrm{Arm} = h_\mathrm{Arm} / 2$ folgt f"ur Stellung 2
+
+				\begin{equation*}
+					I_2 = \SI{6.58 (17)}{\kilo \gram \centi \meter \squared} \,.
+				\end{equation*}
+
+				Die Messdaten liefern mit Gleichung \eqref{eqn:schwingungsdauer} die Ergebnisse
+
+				\begin{eqnarray*}
+					I_1 & = & \SI{1.84 (15)}{\kilo \gram \centi \meter \squared} \,, \\
+					I_2 & = & \SI{5.02 (30)}{\kilo \gram \centi \meter \squared} \,, \\
+					\delta_1 & = & \SI{7.0}{\percent} \,, \\
+					\delta_2 & = & \SI{23.7}{\percent} \,.
+				\end{eqnarray*}
+
+				\clearpage
 
 				\begin{table}[h!]
 					\begin{center}
@@ -252,7 +334,7 @@
 
 				\begin{table}[h!]
 					\begin{center}
-						\label{tabelle:puppenradien}
+						\label{tabelle:puppeneigenschaften}
 						\caption{Ben"otigte Eigenschaften der K"orperteile}
 						\begin{tabular}{|c||c|c|c|c|c|}
 							\hline
@@ -267,60 +349,55 @@
 								Kopf &
 								$\SI{13.5 (25)}{} $ &
 								$\SI{65.0 (5)}{}$ &
-								$\SI{37.22}{}$&
-								$\SI{27.64}{}$&
-								$\SI{25.19}{}$\\
+								$\SI{37.2 (69)}{}$&
+								$\SI{27.6 (10)}{}$&
+								$\SI{25.2 (93)}{}$\\
 							\hline 
 								Torus &
 								$\SI{22.6 (40)}{} $ &
 								$\SI{133.0 (5)}{}$ &
-								$\SI{213.41}{}$&
-								$\SI{171.83}{}$&
-								$\SI{438.82}{}$\\
+								$\SI{213.4 (378)}{}$&
+								$\SI{171.8 (10)}{}$&
+								$\SI{438.8 (1553)}{}$\\
 							\hline 
 								Arm 1 &
-								% \multirow{2}{*}{$\SI{22.6 (40)}{}$} &
 								$\SI{8.2 (17)}{}$ &
-								% \multirow{2}{*}{$\SI{170.0 (5)}{}$} &
 								$\SI{170.0 (5)}{}$ &
-								$\SI{35.91}{}$&
-								$\SI{26.66}{}$&
-								$\SI{8.96}{}$\\
+								$\SI{35.9 (74)}{}$&
+								$\SI{26.7 (10)}{}$&
+								$\SI{9.0 (37)}{}$\\
 							\hline 
 								Arm 2 &
 								$\SI{8.2 (17)}{}$ &
 								$\SI{170.0 (5)}{}$ &
-								$\SI{35.91}{}$&
-								$\SI{26.66}{}$&
-								$\SI{646.54}{}$\\
+								$\SI{35.9 (74)}{}$&
+								$\SI{26.7 (10)}{}$&
+								$\SI{646.5 (246)}{}$\\
 							\hline 
 								Bein &
 								$\SI{10.5 (18)}{}  $& 
 								$\SI{197.0 (5)}{}$ &
-								$\SI{68.23}{}$&
-								$\SI{50.66}{}$&
-								$\SI{27.92}{}$\\
+								$\SI{68.2 (117)}{}$&
+								$\SI{50.7 (10)}{}$&
+								$\SI{27.9 (96)}{}$\\
 							\hline 
 						\end{tabular}
 					\end{center}
 				\end{table}
 
-				Die einzelnen Massen $m_\mathrm{i}$ werden dabei aus der Dichte $\rho = M / V = \SI{.743}{\gram \per \centi \meter \cubed}$ mit der Gesamtmasse $M$ und dem Gesamtvolumen $V$ bestimmt.
+				\begin{table}[h!]
+					\begin{center}
+						\label{tabelle:puppe}
+						\caption{Schwingungsdauern der Puppe}
+						\begin{tabular}{|c||c||c||c|}
+							\hline
+							$T_1 [\SI{}{\second}]$ & $T_1 [\SI{}{\second}]$ & $T_2 [\SI{}{\second}]$ & $T_2 [\SI{}{\second}]$ \\
+							\hline 
+							\hline
+							\input{data/messung5_puppe.tex}
+							\hline 
+						\end{tabular}
+					\end{center}
+				\end{table}
 
-				F"ur $I$ gilt damit
-
-				\begin{equation*}
-					I = I_\mathrm{Kopf} + I_\mathrm{Torus} + 2 I_\mathrm{Arm} + 2 I_\mathrm{Bein} + 2 m_\mathrm{Arm}a_\mathrm{Arm}^2 + 2 m_\mathrm{Bein}a_\mathrm{Bein}^2 \,.
-				\end{equation*}
-
-				Mit $a_\mathrm{Arm} = r_\mathrm{Torus}$ und $a_\mathrm{Bein} = \SI{3.00 (5)}{\centi \meter}$ folgt f"ur Stellung 1
-
-				\begin{equation*}
-					I_1 = \SI{1721.99}{\gram \centi \meter \squared} \,.
-				\end{equation*}
-
-				Mit $a_\mathrm{Arm} = h_\mathrm{Arm} / 2$ folgt f"ur Stellung 2
-
-				\begin{equation*}
-					I_2 = \SI{6577.18}{\gram \centi \meter \squared} \,.
-				\end{equation*}
+				\clearpage
