@@ -8,8 +8,8 @@
 
 	\begin{figure}[!h]
 		\centering	
-		\includegraphics[width = 10cm]{img/charakteristik.pdf}
-		\caption{Darstellung der Charakteristik des Z"ahlrohrs und einer Ausgleichsgeraden des Plateaus.}
+		\includegraphics[width = 16cm]{img/charakteristik.pdf}
+		\caption{Darstellung der Charakteristik des Z"ahlrohrs und einer Ausgleichsgeraden des Plateaus. Daf"ur wurden die Werte von $\SI{340}{\volt}$ bis $\SI{710}{\volt}$ verwendet.}
 		\label{charakteristik}
 	\end{figure}
 
@@ -17,23 +17,24 @@
 	F"ur die Messung der Ausgleichsgeraden vom Typ $f(x) = m*x+b$ ergab sich:
 
 	\begin{eqnarray*}
-		m &=& \SI{0.00778 (169)}{1\per\volt\second}\\
-		b &=& \SI{85.9993 (9144)}{1\per\second}
+		m &=& \SI{0.008 (2)}{1\per\volt\second}\\
+		b &=& \SI{86.00 (91)}{1\per\second}\\
+		f(x) &=& \SI{0.008 (2)}{1\per\volt\second} * x + \SI{86.00 (91)}{1\per\second}
 	\end{eqnarray*}
 
-	Die Steigung der Geraden von $m = \SI{0.00778 (169)}{1\per\volt\second}$ entspricht einer Steigung von $\SI{0.99}{\%}$ pro $\SI{100}{\volt}$.
+	Die Steigung der Geraden von $m = \SI{0.008 (2)}{1\per\volt\second}$ entspricht einer Steigung von $\SI{0.99}{\%}$ pro $\SI{100}{\volt}$.
 	Aus den Messdaten l"asst sich ablesen, dass die Plateaul"ange etwa $\SI{370}{\volt}$ betr"agt.
-	Eine f"ur die Messung geeignete Z"ahlrohrspannung befindet sich am Anfang des Plateaus und liegt etwa bei $\SI{400}{\volt}$. Da sich dort der Arbeitsbereich des Geiger M"uller Z"ahlrohrs befindet sind die Anzahl der Nachentladungen noch gering.
+	Eine f"ur die Messung geeignete Z"ahlrohrspannung befindet sich am Anfang des Plateaus und liegt etwa bei $\SI{400}{\volt}$. Da sich dort der Arbeitsbereich des Geiger M"uller Z"ahlrohrs befindet, ist die Anzahl der Nachentladungen noch gering.
 
-	Die in der Tabelle errechneten Fehler der Impulsrate ergeben sich durch $\sqrt{N}$, da diese Poisson-Verteilt sind.
+	Die in der Tabelle errechneten Fehler der Impulsrate ergeben sich durch $\sqrt{N}$, da diese Poissonverteilt sind.
 
 	\subsection{Sichtbarmachung von Nachentladungen und Messung der Totzeit mithilfe des Oszilloskops} % (fold)
 	 \label{sub:sichtbarmachung_von_nachentladungen}
 
 	\input{aufgabeb.tex}
 	
-	F"ur die Bestimmung des zeitlichen Abstands zwischen Prim"ar- und Nachentladungsimpuls ergaben sich die in Tabelle \ref{tabelleb} aufgelisteten Werte. Daf"ur wurde die Zeit zwischen den auf dem Oszilloskop sichtbaren Maximas abgelesen.
-	Da dies sehr ungenau ist, ist n"aherungsweise die Nachentladungszeit gleich der Totzeit.
+	F"ur die Bestimmung des zeitlichen Abstands zwischen Prim"ar- und Nachentladungsimpuls ergaben sich die in Tabelle \ref{tabelleb} aufgelisteten Werte. Daf"ur wurde die Zeit zwischen den auf dem Oszilloskop sichtbaren Maxima abgelesen.
+	Da dies sehr ungenau ist, wird die Totzeit gleich der Nachentladungszeit abgesch"atzt.
 
 	\subsection{Bestimmung der Totzeit mit der Zwei-Quellen-Methode} % (fold)
 	\label{sub:bestimmung_der_totzeit_mit_der_zwei_quellen_methode}
@@ -41,15 +42,15 @@
 	\input{aufgabed.tex}
 
 	Bei der Messung ergaben sich die Werte aus Tabelle \ref{tabelled}.
-	F"ur die Berechnung der Totzeit wurde die N"aherung \eqref{totzeit} verwendet.
+	F"ur die Berechnung der Totzeit wurde die N"aherung \eqref{totzeit} verwendet. Da die Z"ahlrate eines Messwertes unter der Grenze von 10000 liegt, wirkt sich dies auf den Fehler der Messung aus.
 	Es ergibt sich daraus:
 
 	\begin{equation*}
-		T_\mathrm{tot} = \SI{779.85 (29354)}{\micro\second} \quad .
+		T_\mathrm{tot} = \SI{779.17 (30163)}{\micro\second} \quad .
 	\end{equation*}
 
 	Die Abweichung bez"uglich der Messung mit dem Oszilloskop k"onnte deshalb kommen, da wirklich nur sehr ungenau abgelesen werden konnte.
-	Der Fehler Berechnet sich durch Gau"s'sche Fehlerfortpflanzung:
+	Der Fehler berechnet sich durch Gau"s'sche Fehlerfortpflanzung:
 
 	\begin{eqnarray*}
 		\frac{\partial T}{\partial N_\mathrm{1}} &=& \frac{2 N_\mathrm{1}N_\mathrm{2} - 2 N_\mathrm{2}(N_\mathrm{1} + N_\mathrm{2} - N_\mathrm{12})}{4N_\mathrm{1}^2N_\mathrm{2}^2} \, , \\
