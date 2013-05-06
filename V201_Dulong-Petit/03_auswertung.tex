@@ -7,11 +7,13 @@
 \input{Kalo.tex}
 
 Bei der Bestimmung der W"armekapazit"at $c_\mathrm{g}m_\mathrm{g}$ des Kalorimeters ergaben sich die Gr"o"sen aus Tabelle \ref{kalo}.
-Mithilfe der Gleichung \eqref{????} ergibt sich f"ur den Wert:
+Mithilfe der Gleichung \eqref{cg} ergibt sich f"ur $c_\mathrm{g}m_\mathrm{g}$:
 
 \begin{equation}
 	c_\mathrm{g}m_\mathrm{g} = \SI{113.88}{\joule\per\kelvin}
 \end{equation}
+
+Dabei werden die Temperaturen mittels der Gleichung \eqref{T} aus der Spannung errechnet.
 
 \subsection{Bestimmung der spezifischen W"armekapazit"at bei Graphit, Blei und Zinn} % (fold)
 \label{sub:bestimmung_der_spezifischen_w_armekapazit_at_bei_graphit_blei_und_zinn}
@@ -20,24 +22,26 @@ Mithilfe der Gleichung \eqref{????} ergibt sich f"ur den Wert:
 \input{Kapa.tex}
 
 Die Daten f"ur die Messung der spezifischen W"armekapazit"at sind in Tabelle \ref{proben} aufgelistet.
-Mit der Gleichung \eqref{???} ergeben sich daraus und dem zuvor errechneten $c_\mathrm{g}m_\mathrm{g}$ die in Tabelle \ref{kapa} aufgelisteten Werte f"ur die spezifische W"armekapazit"at.
+Mit der Gleichung \eqref{ck} ergeben sich daraus und dem zuvor errechneten $c_\mathrm{g}m_\mathrm{g}$ die in Tabelle \ref{kapa} aufgelisteten Werte f"ur die spezifische W"armekapazit"at.
 In Tabelle \ref{mittel} sind die Mittelwerte der spezifischen W"armekapazit"at abgebildet. Dabei ist zu ber"ucksichtigen, dass der Wert f"ur Graphit nicht besonders representativ ist, da die Werte recht weit auseinander liegen.
 
 \input{Mittel.tex}
+
+\clearpage
 
 \subsection{Bestimmung der Molw"arme $C_\mathrm{V}$ bei konstantem Volumen} % (fold)
 \label{sub:bestimmung_der_molw_arme_c_mathrm}
 
 \input{Daten.tex}
 
-F"ur die folgenden Berechnungen werden die Werte aus Tabelle \ref{daten} verwendet.
+F"ur die folgenden Berechnungen werden die Werte aus Tabelle \ref{massen} verwendet.
 Die Molw"arme $C_\mathrm{P}$ bei konstantem druck l"asst sich aus der spezifischen W"armekapazit"at errechnen:
 
 \begin{equation}
 	C_\mathrm{P} = c_\mathrm{k} M \qquad .
 \end{equation}
 
-Aus dieser Gr"o"se erbit sich f"ur die Molw"arme $C_\mathrm{V}$ bei konstantem Druck:
+Aus dieser Gr"o"se ergibt sich f"ur die Molw"arme $C_\mathrm{V}$ bei konstantem Druck:
 
 \begin{equation}
 		C_\mathrm{V} = C_\mathrm{P} - 9 \alpha^2 \kappa \frac{M}{\rho} T
@@ -46,3 +50,5 @@ Aus dieser Gr"o"se erbit sich f"ur die Molw"arme $C_\mathrm{V}$ bei konstantem D
 Dabei wird f"ur $T$ die gemittelte Mischtemperatur eingesetzt.
 
 Es ergeben sich f"ur die Molw"arme die in Tabelle \ref{warm} aufgelisteten Werte.
+
+\input{warm.tex}

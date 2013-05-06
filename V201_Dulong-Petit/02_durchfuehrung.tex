@@ -20,7 +20,7 @@
 		Unter der N"aherung, dass die Messapparatur ein geschlossenes System darstellt -- die Umgebungsluft also keine Energie aufnimmt -- gilt f"ur die spezifische W"armekapazit"at $c_\mathrm{k}$ der Probe:
 
 		\begin{equation}
-			c_\mathrm{k} = \frac{\left(c_\mathrm{w}m_\mathrm{w} + c_\mathrm{g}m_\mathrm{g}\right)\left(T_\mathrm{m} - T_\mathrm{w} \right)}{m_\mathrm{k} \left(T_\mathrm{k} - T_\mathrm{m} \right)} \,.
+			c_\mathrm{k} = \frac{\left(c_\mathrm{w}m_\mathrm{w} + c_\mathrm{g}m_\mathrm{g}\right)\left(T_\mathrm{m} - T_\mathrm{w} \right)}{m_\mathrm{k} \left(T_\mathrm{k} - T_\mathrm{m} \right)} \,. \label{ck}
 		\end{equation}
 
 		Die W"armekapazit"at $c_\mathrm{g}m_\mathrm{g}$ des Kaloriemeters wird dabei bestimmt, indem zwei gleiche Wassermengen $m_\mathrm{x}$ und $m_\mathrm{y}$ unterschiedlicher Temperatur $T_\mathrm{x} < T_\mathrm{y}$ im Gef"a"s gemischt werden.
@@ -28,7 +28,7 @@
 		Nachdem sich nach der Mischung eine Konstante Temperatur $T_\mathrm{z}$ eingestellt hat, l"asst sich die W"armekapazit"at des Kaloriemeters durch
 
 		\begin{equation}
-			c_\mathrm{g}m_\mathrm{g} = \frac{c_\mathrm{w}m_\mathrm{y}\left( T_\mathrm{y} - T_\mathrm{z}\right) - c_\mathrm{w}m_\mathrm{x} \left( T_\mathrm{z} - T_\mathrm{x} \right) }{T_\mathrm{z} - T_\mathrm{x}}
+			c_\mathrm{g}m_\mathrm{g} = \frac{c_\mathrm{w}m_\mathrm{y}\left( T_\mathrm{y} - T_\mathrm{z}\right) - c_\mathrm{w}m_\mathrm{x} \left( T_\mathrm{z} - T_\mathrm{x} \right) }{T_\mathrm{z} - T_\mathrm{x}} \label{cg}
 		\end{equation}
 
 		bestimmen. Dabei ist die spezifische W"armekapazit"at von Wasser bekannt mit $c_\mathrm{w} = \SI{4.18}{\joule \per \gram \per \kelvin}$ \cite{anleitung} bei etwa $T = \SI{40}{\celsius}$.
@@ -51,7 +51,9 @@
 		Die Temperatur l"asst sich dann aus der anliegenden Spannung $U_\mathrm{th}$ errechnen, wobei sich empirisch der folgende Zusammenhang ergibt:
 
 		\begin{equation}
-			T = \SI{25.157}{} U_\mathrm{th} - \SI{.19}{} U_\mathrm{th}^2 \,.
+			T = \SI{25.157}{} U_\mathrm{th} - \SI{.19}{} U_\mathrm{th}^2 \,. \label{T}
 		\end{equation}
 
 		Dabei ist zu beachten, dann die Temperatur $T$ nur im Bereich von $\SI{0}{\celsius}$ bis $\SI{100}{\celsius}$ gemessen werden k"onnen.
+
+		\clearpage
