@@ -1,6 +1,117 @@
 \section{Einleitung} % (fold)
 \label{sec:einleitung}
+	In diesem Versuch wird untersucht, ob die Beschreibung der Atombewegungen in Festk"orpern durch klassische Theorien zufriedenstellend ist oder ob nur die Quantenmechanik eine korrekte Erkl"arung der Vorg"ange liefert.
+
+	Die Stoffeigenschaft Molw"arme $C$ kann durch das Dulong-Petitsche Gesetz, sowie durch die Quantenmechanik berechnet werden und stellt damit eine Vergleichsgr"o"se beider Theorien dar.
+	Sie wird in diesem Versuch gemessen und mit den theoretischen Werten verglichen.
 
 \section{Theorie} % (fold)
 \label{sec:theorie}
+	Bevor die Aussagen des Dulong-Petitschen Gesetzes und die der Quantenmechanik "uber die Molw"arme verglichen werden k"onnen, m"ussen zun"achst die Begriffe der W"armekapazit"at $c$ und der Molw"arme $C$ gekl"art werden.
 
+	\subsection{Spezifische W"armekapazit"at $c$ und Molw"arme $C$}
+	\label{subsec:waermekapazitaet}
+		Die W"armemenge $\Delta Q$, die ein K"orper aufnimmt, wenn er erhitzt wird, ist durch den einfachen Zusammenhang
+
+		\begin{equation*}
+			\Delta Q = c \Delta T
+		\end{equation*}
+
+		gegeben. Dabei bezeichnet $\Delta T$ den Temperaturunterschied des K"orpers vor und nach dem Erhitzen. Die spezifische W"armekapazit"at $c$ ist eine Stoffspezifische Proportionalit"atskonstante mit Dimension
+
+		\begin{equation*}
+			[c] = \frac{\SI{}{\joule}}{\SI{}{\kilo \gram \kelvin}} \,.
+		\end{equation*}
+
+		Die Molw"arme $C$ bezeichnet die W"armemenge $\mathrm{d}Q$, die einem Mol eines Stoffes zugef"uhrt werden muss, um diesen um die Temperatur $\mathrm{d}T$ zu erw"armen.
+
+		Da diese Eigenschaften von "au"seren Bedingungen abh"angen, unterscheidet man die spezifische W"armekapazit"at $c_\mathrm{V}$ bei konstantem Volumen $V$ von der spezifischen W"armekapazit"at $c_\mathrm{p}$ bei konstantem Druck $p$.
+
+		Aus dem ersten Hauptsatz der Thermodynamik folgt zudem
+
+		\begin{equation*}
+			c_\mathrm{V} = \left(\frac{\mathrm{d}U}{\mathrm{d}T}\right)_\mathrm{V} \,.
+		\end{equation*}
+
+		Mit der inneren Energie $U$ eines Mols eines Stoffes vom Volumen $V$.
+
+	\subsection{Aussage des Dulong-Petitschen Gesetzes}
+	\label{subsec:dulong-petit}
+		Nach der klassischen Vorstellung sind die Aufenthaltsorte von Molek"ulen im Festk"orper auf bestimmte Gitterpl"atze beschr"ankt.
+		Auf diesen Pl"atzen k"onnen sie Schwingungen ausf"uhren. F"ur die innere Energie $U$ ist jedoch der "uber einige Zeit $\tau$ gemittelte Wert $\overline{U}$ von interesse.
+		Die mittlere innere Energie $\overline{U}$ ist dann
+
+		\begin{equation*}
+			\overline{U} = E_\mathrm{kin} + E_\mathrm{pot} \,,
+		\end{equation*}
+
+		die Summe aus kinetischer und potentieller Energie.
+		Nach einiger Rechnung ergibt sich zudem
+
+		\begin{eqnarray*}
+			E_\mathrm{pot} & = & E_\mathrm{kin} \\
+			\Rightarrow \quad \overline{U} & = & 2 E_\mathrm{kin} \,.
+		\end{eqnarray*}
+
+		Zus"atzlich l"asst sich aus der kinetischen Theorie der W"arme das "Aquipartitionstheorem ableiten.
+		Hiernach besitzt ein Atom im thermischen Gleichgewicht mit seiner Umgebung der Temperatur $T$ pro Freiheitsgrad die kinetische Energie
+
+		\begin{equation*}
+			E_\mathrm{kin} = \frac{1}{2}kT \,,
+		\end{equation*}
+
+		mit $k$, der Boltzmannschen Konstante. Ein Mol eines bestimmten Stoffes hat dann f"ur alle drei Freiheitsgrade die mittlere innere Energie
+
+		\begin{equation*}
+			\overline{U} = 3RT \,,
+		\end{equation*}
+
+		mit der Loschmidtschen Zahl $N_\mathrm{L} = \SI{6.02e23}{\per \mol}$ und der allgemeinen Gaskonstante
+
+		\begin{equation*}
+			R = kN_\mathrm{L} \,.
+		\end{equation*}
+
+		Das Dulong-Petitsche Gesetz besagt damit, dass der Betrag der Atomw"arme $c_\mathrm{V}$ im festen Aggregatzustand f"ur jedes Element
+
+		\begin{equation}
+			c_\mathrm{V} = 3R \label{eqn:dulong-petit}
+		\end{equation}
+
+		betr"agt.
+
+	\subsection{Quantenmechanische Betrachtung}
+	\label{subsec:quantenmechanik}
+		Die Quantenmechanik macht im Gegensatz zum einfachen Zusammenhang \eqref{eqn:dulong-petit} eine kompliziertere Aussage "uber die Abh"angigkeit von mittlerer Energie $\overline{U}$ von der Temperatur $T$.
+		Ihr zu Grunde liegt die Tatsache, dass ein Molek"ul, das mit der Frequenz $\omega$ in einer Dimension schwingt, nur Energie in Betr"agen von
+
+		\begin{equation*}
+			\Delta u = \hbar \omega
+		\end{equation*}
+
+		abgegeben kann.	Einige Rechnung f"urt damit auf den Ausdruck
+
+		\begin{equation*}
+			\overline{u} = \frac{\hbar \omega}{\exp{\left(\frac{\hbar \omega}{k T}\right)} - 1} \,.
+		\end{equation*}
+
+		F"ur alle drei Freiheitsgrade und die Menge eines Mols folgt also
+
+		\begin{equation}
+			\label{eqn:qm} \overline{U} = \frac{3 N_\mathrm{L} \hbar \omega}{\exp{\left(\frac{\hbar \omega}{k T}\right)} - 1} \,.
+		\end{equation}
+
+		Es f"allt dabei auf, dass die Aussage \eqref{eqn:dulong-petit} des Dulong-Petitschen Gesetzes f"ur den Fall $T \rightarrow \infty$ in der Taylorentwicklung von \eqref{eqn:qm} erhalten ist, also
+
+		\begin{equation*}
+			\overline{U} = \frac{3 N_\mathrm{L} \hbar \omega}{1 + \frac{\hbar \omega}{k T} + \dots - 1} \approx 3 RT \,.
+		\end{equation*}
+
+		Weil f"ur die Frequenz $\omega$ der Schwingenden Molek"ule gilt, dass
+
+		\begin{equation*}
+			\omega \propto \frac{1}{\sqrt{m}}
+		\end{equation*}
+
+		ist, beschriebt die obige N"aherung das verhalten vieler Stoffe schon bei Zimmertemperatur.
+		Stoffe mit geringer Atommasse $m$, wie Bor lassen sich erst bei Temperaturen ab $T = \SI{1000}{\celsius}$ durch die N"aherung beschreiben.
