@@ -25,28 +25,36 @@
 
 		Die Molw"arme $C$ bezeichnet die W"armemenge $\mathrm{d}Q$, die einem Mol eines Stoffes zugef"uhrt werden muss, um diesen um die Temperatur $\mathrm{d}T$ zu erw"armen.
 
-		Da diese Eigenschaften von "au"seren Bedingungen abh"angen, unterscheidet man die spezifische W"armekapazit"at $c_\mathrm{V}$ bei konstantem Volumen $V$ von der spezifischen W"armekapazit"at $c_\mathrm{p}$ bei konstantem Druck $p$.
+		Da diese Eigenschaften von "au"seren Bedingungen abh"angen, unterscheidet man die W"armekapazit"at $C_\mathrm{V}$ bei konstantem Volumen $V$ von der W"armekapazit"at $C_\mathrm{p}$ bei konstantem Druck $p$.
 
 		Aus dem ersten Hauptsatz der Thermodynamik folgt zudem
 
-		\begin{equation*}
+		\begin{equation}
+			\label{eqn:blaa}
 			c_\mathrm{V} = \left(\frac{\mathrm{d}U}{\mathrm{d}T}\right)_\mathrm{V} \,.
-		\end{equation*}
+		\end{equation}
 
 		Mit der inneren Energie $U$ eines Mols eines Stoffes vom Volumen $V$.
 
 	\subsection{Aussage des Dulong-Petitschen Gesetzes}
 	\label{subsec:dulong-petit}
-		Nach der klassischen Vorstellung sind die Aufenthaltsorte von Molek"ulen im Festk"orper auf bestimmte Gitterpl"atze beschr"ankt.
+		Nach der klassischen Vorstellung sind die Aufenthaltsorte von Atomen im Festk"orper auf bestimmte Gitterpl"atze beschr"ankt.
 		Auf diesen Pl"atzen k"onnen sie Schwingungen ausf"uhren. F"ur die innere Energie $U$ ist jedoch der "uber einige Zeit $\tau$ gemittelte Wert $\overline{U}$ von interesse.
 		Die mittlere innere Energie $\overline{U}$ ist dann
 
 		\begin{equation*}
-			\overline{U} = E_\mathrm{kin} + E_\mathrm{pot} \,,
+			\overline{U} = \overline{E}_\mathrm{kin} + \overline{E}_\mathrm{pot} \,,
 		\end{equation*}
 
 		die Summe aus kinetischer und potentieller Energie.
-		Nach einiger Rechnung ergibt sich zudem
+		Die Bewegung der Atome entspricht n"aherungsweise einer harmonischen Oszillation um die Gitterpl"atze.
+		Dies f"urt auf die klassische Differentialgleichung
+
+		\begin{equation*}
+			m\ddot{x} + Dx = 0
+		\end{equation*}
+
+		Die L"osung dieser Gleichung f"uhrt zu
 
 		\begin{eqnarray*}
 			E_\mathrm{pot} & = & E_\mathrm{kin} \\
@@ -72,10 +80,10 @@
 			R = kN_\mathrm{L} \,.
 		\end{equation*}
 
-		Das Dulong-Petitsche Gesetz besagt damit, dass der Betrag der Atomw"arme $c_\mathrm{V}$ im festen Aggregatzustand f"ur jedes Element
+		Das Dulong-Petitsche Gesetz besagt nach Gleichung \eqref{eqn:blaa}, dass der Betrag der Atomw"arme $c_\mathrm{V}$ im festen Aggregatzustand f"ur jedes Element
 
 		\begin{equation}
-			c_\mathrm{V} = 3R \label{eqn:dulong-petit}
+			C_\mathrm{V} = 3R \label{eqn:dulong-petit}
 		\end{equation}
 
 		betr"agt.
@@ -89,7 +97,7 @@
 			\Delta u = \hbar \omega
 		\end{equation*}
 
-		abgegeben kann.	Einige Rechnung f"urt damit auf den Ausdruck
+		aufnehmen kann. Die Summation "uber alle m"oglichen Energien, multipliziert mit ihrer Auftrittswarscheinlichkeit f"uhrt auf eine geometrische Reihe, die die Mittlere Energie beschreibt:
 
 		\begin{equation*}
 			\overline{u} = \frac{\hbar \omega}{\exp{\left(\frac{\hbar \omega}{k T}\right)} - 1} \,.
