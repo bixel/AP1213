@@ -1,2 +1,123 @@
 \section{Auswertung}
 \label{sec:auswertung}
+
+	\subsection{Klemmspannungskurven}
+	\label{subsec:kurven}
+		Zun"achst wird f"ur jede Spannungsquelle eine lineare Ausgleichsrechnung mit Hilfe von \emph{phython} f"ur die Funktion \eqref{eqn:klemmenspannung} durchgef"uhrt.
+		Der y-Achsenabschnitt entpricht dabei der Leerlaufspannung $U_0$ und die Steigung dem Innenwiderstand $R_\mathrm{i}$ der jeweiligen Spannungsquelle.
+		Abbildungen \ref{fig:graph_monozelle} bis \ref{fig:graph_sinus} zeigen die Graphen, Tabelle \ref{table:monozelle} beinhaltet die Messwerte.
+		Die Ungenauigkeit der Messger"ate liegt bei
+
+		\begin{eqnarray*}
+			\Delta I & = & \pm \SI{1.5}{\percent} \,, \\
+			\Delta U & = & \pm \SI{2}{\percent} \,.
+		\end{eqnarray*}
+
+		Zudem gilt f"ur die Leistung $P$:
+
+		\begin{eqnarray*}
+			P & = & UI \,, \\
+			\Delta P & = & \sqrt{(I \Delta U)^2 + (U \Delta I)^2} \,. 
+		\end{eqnarray*}
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Strom- und Spannungswerte der verschiedenen Spannungsquellen bei variierten Lastwiderst"anden $R_\mathrm{a}$. \label{table:monozelle}}
+				\begin{tabular}{|c|c|r||c|c|r||c|c|r|}
+					\hline
+						\multicolumn{3}{|c||}{Monozelle} & \multicolumn{3}{c||}{Rechteckspannung} & \multicolumn{3}{c|}{Sinusspannung} \\
+					\hline
+						$I [\SI{}{\milli \ampere}]$ & $U_\mathrm{k} [\SI{}{\volt}]$ & $P [\SI{}{\milli \watt}]$ &
+						$I [\SI{}{\milli \ampere}]$ & $U_\mathrm{k} [\SI{}{\milli \volt}]$ & $P [\SI{}{\micro \watt}]$ &
+						$I [\SI{}{\milli \ampere}]$ & $U_\mathrm{k} [\SI{}{\volt}]$ & $P [\SI{}{\micro \watt}]$\\
+					\hline 
+					\hline
+						\input{data/messung_monozelle.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 15cm]{img/graph_monozelle.pdf}
+			\caption{Spannungs- Stromkurve der Monozelle. \label{fig:graph_monozelle}}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 15cm]{img/graph_rechteck.pdf}
+			\caption{Spannungs- Stromkurve der Rechteckspannung \label{fig:graph_rechteck}}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 15cm]{img/graph_sinus.pdf}
+			\caption{Spannungs- Stromkurve der Sinusspannung \label{fig:graph_sinus}}
+		\end{figure}
+
+	\clearpage
+
+	\subsection{Innenwiderstand $R_\mathrm{i}$ und Leerlaufspannung $U_0$}
+	\label{subsec:ri-u0}
+		Die Ausgleichsrechnung in Kapitel \ref{subsec:kurven} liefert die Werte f"ur die jeweiligen Innenwiderst"ande $R_\mathrm{i}$ und Leerlaufspannungen $U_0$ der verschiedenen Spannungsquellen.
+		Tabelle \ref{table:ri-u0} beinhaltet die Werte.
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Innenwiderstand $R_\mathrm{i}$ und Leerlaufspannung $U_0$. \label{table:ri-u0}}
+				\begin{tabular}{|r|r|c|}
+					\hline
+						Spannungsquelle & \multicolumn{1}{|c|}{$R_\mathrm{i} [\SI{}{\ohm}]$} & $U_0 [\SI{}{\volt}]$ \\ 
+					\hline 
+					\hline
+						Monozelle & $\SI{15.7 (11)}{}$ & $\SI{1.418 (60)}{}$ \\
+						Monozelle, Gegenspannung & $\SI{20.1 (6)}{}$ & $\SI{1.676 (34)}{}$ \\
+						Rechteckspannung & $\SI{107.6 (30)}{}$ & $\SI{.106 (1)}{}$ \\
+						Sinusspannung & $\SI{8.5 (2)}{}$ & $\SI{.282 (3)}{}$ \\ 
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+	\subsection{Systematische Fehler}
+	\label{subsec:fehler}
+		Der Systematische Fehler $\Delta_\mathrm{s} U_0$ bei der direkten Messung der Leerlaufspannung betr"agt nach Umstellen von Gleichung \eqref{eqn:blaaaaaaa}:
+
+		\begin{equation*}
+			\Delta_\mathrm{s} U_0 = U_\mathrm{k} \frac{R_\mathrm{i}}{R_\mathrm{a}} \,.
+		\end{equation*}
+
+		Mit einem Au"senwiderstand im Voltmeter von $R_\mathrm{a} \approx \SI{10}{\mega \ohm}$ und der direkt gemessenen Spannung
+
+		\begin{equation*}
+			U_0 = \SI{1.65}{\volt} \,,
+		\end{equation*}
+		
+		folgt der Fehler
+
+		\begin{equation*}
+			\Delta_\mathrm{s} U_0 = \SI{2.59}{\micro \ohm} \,.
+		\end{equation*}
+
+		Das entspricht einem relativen Fehler $\delta_\mathrm{s}$ von $\delta_\mathrm{s} = \SI{1.57e-4}{\percent}$.
+
+		Schlie"st man das Voltmeter nicht wie vorgegeben an, sondern hinter dem Amperemeter, f"allt in diesem -- zus"atzlich zur Leerlaufspannung $U_0$ -- eine Spannung $U_\mathrm{A}$ ab.
+
+	\subsection{Leistungsdiagramm}
+	\label{subsec:leistung}
+		Im folgenden Diagramm \ref{fig:graph_monozelle_leistung} ist die Leistung $P$, die im Belastungswiderstand $R_\mathrm{a}$ umgesetzt wird, aufgetragen.
+		Zus"atzlich ist der Graph der theoretisch errechneten Leistungskurve $N = f(R_\mathrm{a})$ eingetragen.
+		Die Leistungskurve berechnet sich mit Gleichung \eqref{eqn:blubbbl} nach
+
+		\begin{equation*}
+			N = I^2 R_\mathrm{a} = - I^2 R_\mathrm{i} + I U_0 \,.
+		\end{equation*}
+
+		Hierbei werden die Werte des Innenwiderstandes $R_\mathrm{i}$ und der Leerlaufspannung $U_0$ ohne Gegenspannung aus Kapitel \ref{subsec:ri-u0} verwendet.
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 15cm]{img/graph_monozelle_leistung.pdf}
+			\caption{Leistungsdiagramm der Monozelle mit theoretischer Leistungskurve. \label{fig:graph_monozelle_leistung}}
+		\end{figure}
