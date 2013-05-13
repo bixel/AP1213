@@ -44,7 +44,7 @@ Das zweite Kirchhoffschen Gesetz lautet:
 F"ur das vorliegende Problem in Abb. \ref{monozelle} ergibt sich aus \eqref{kirch}:
 
 \begin{eqnarray}
-	U_\mathrm{0} &=& I R_\mathrm{i} + I R_\mathrm{i} \qquad , \nonumber
+	U_\mathrm{0} &=& I R_\mathrm{i} + I R_\mathrm{i} \qquad , \nonumber \\
 	U_\mathrm{k} = I R_\mathrm{a} &=& U_\mathrm{0} - I R_\mathrm{i} \qquad . \label{uk}
 \end{eqnarray}
 
@@ -55,12 +55,19 @@ Zudem ergibt sich, dass zu einer direkten Messung der Leerlaufspannung $U_\mathr
 \label{sub:leistungsanpassung}
 
 Der Innenwiderstand $R_\mathrm{i}$ bewirkt, dass sich keine beliebig hohe Leistung der Spannungsquelle entnehmen l"asst.
-Die Leistung $N(R_\mathrm{a}) = I^2 R_\mathrm{a} = ???$ durchl"auft ein Maximum bei $R_\mathrm{a,max} = ???$.
+
+F"ur die Leistung ergibt sich:
+
+\begin{equation}
+	N(R_\mathrm{a}) = I^2 R_\mathrm{a} = \frac{{U_\mathrm{0} }^2 R_\mathrm{a}}{{(R_\mathrm{a} + R_\mathrm{i})}^2} \qquad .
+\end{equation}
+
+Die Leistung $N(R_\mathrm{a})$ durchl"auft ein Maximum bei $R_\mathrm{a,max} = R_\mathrm{i}$.
 Ist gerade $R_\mathrm{a} = R_\mathrm{a,max}$ gew"ahlt, so wird von Leistungsanpassung gesprochen.
 
 In der Nachrichten- und Messtechnik wird davon viel Gebrauch gemacht.
 In der Starkstromtechnik hingegen besitzt dies einige Nachteile, da der Innenwiderstand von z.B. RC-Generatoren oder elektronisch geregelten Spannungskonstanthaltern nicht unbedingt dich den Gleichstromwiderstand gegeben ist.
-In einem solchen Fall ist es notwendig den Innenwiderstand als diefferentielle Gr"o"se einzuf"uhren:
+In einem solchen Fall ist es notwendig den Innenwiderstand als differentielle Gr"o"se einzuf"uhren:
 
 \begin{equation}
 	R_\mathrm{i} = \frac{\mathrm{d}U_\mathrm{k}}{\mathrm{d}I} \qquad .
