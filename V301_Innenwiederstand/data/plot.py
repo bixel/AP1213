@@ -76,10 +76,11 @@ for messung in messungsArray:
 		Rtheorie = np.arange(np.min(R), np.max(R), Rstep)
 		Rtheorie = Rtheorie[::-1]
 
-		plotFunction = lambda i: - i**2 * koeffizienten[1] + i * koeffizienten[0]
+		#plotFunction = lambda i: - i**2 * koeffizienten[1] + i * koeffizienten[0]
+		plotFunction = lambda ra: (koeffizienten[0] ** 2 * ra) / (ra + koeffizienten[1]) ** 2
 
 		plt.errorbar(R, P, xerr = Rerror, yerr = Perror, fmt = "ko")
-		plt.plot(Rtheorie, plotFunction(Itheorie), "r-")
+		plt.plot(Rtheorie, plotFunction(Rtheorie), "r-")
 
 		plt.xlabel(r"$R \, [\Omega]$")
 		plt.ylabel(r"$P \, [\mathrm{W}]$")
