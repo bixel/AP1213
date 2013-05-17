@@ -16,7 +16,13 @@
 
 	\subsection{Bestimmung der Winkelrichtgr"o"se $D$}
 	\label{subsec:winkelrichtgroesse}
-		Zun"achst muss die Winkelrichtgr"o"se $D$ aus Gleichung \eqref{eqn:richtgroesse} bestimmt werden.
+		%Zun"achst muss die Winkelrichtgr"o"se $D$ aus Gleichung \eqref{eqn:richtgroesse} bestimmt werden.
+		Die Winkelrichtgr"o"se berechnet sich nach
+
+		\begin{equation*}
+			D = \frac{F \cdot r}{\varphi} \,.
+		\end{equation*}
+
 		Tabelle \ref{tabelle:winkelrichtgroesse} zeigt die Messwerte.
 		Die Winkel wurden in Radianten umgerechnet.
 		F"ur die Winkelrichtgr"o"se erh"alt man damit
@@ -94,7 +100,7 @@
 			I_\mathrm{Stange} = \SI{2.89}{\gram \meter \squared} \qquad , \qquad I_\mathrm{m,c} = \SI{.058}{\gram \meter \squared} \,.
 		\end{equation*}
 
-		Die Gleichungen \eqref{eqn:schwingungsdauer} und \eqref{eqn:gesamtmoment} liefern dann den Zusammenhang
+		Die Gleichungen \eqref{dauer} und \eqref{eqn:gesamtmoment} liefern dann den Zusammenhang
 
 		\begin{equation*}
 			T^2 = \frac{4 \pi^2}{D} \left(I_\mathrm{D} + I_\mathrm{Stange} + 2\left(I_\mathrm{m,c} + ma^2 \right)\right) \,.
@@ -154,7 +160,7 @@
 			% Schlie"slich werden die Tr"agheitsmomente $I_\mathrm{k}$ f"ur $k$ verschiedene K"orper bestimmt.
 			% Dabei handelt es sich um eine Holzkugel, einen Messingzylinder, sowie eine Holzpuppe, die in zwei verschiedenen K"orperhaltungen eingespannt wird.
 
-			Aus der Periodendauer wird gem"a"s Gleichung \eqref{eqn:schwingungsdauer} das Tr"agheitsmoment berechnet.
+			Aus der Periodendauer wird gem"a"s Gleichung \eqref{dauer} das Tr"agheitsmoment berechnet.
 			Es gilt
 
 			\begin{eqnarray*}
@@ -213,7 +219,7 @@
 					\end{center}
 				\end{table}
 
-				Die Messwerte aus Tabelle \ref{tabelle:kugel} liefern mit Gleichung \eqref{eqn:schwingungsdauer}
+				Die Messwerte aus Tabelle \ref{tabelle:kugel} liefern mit Gleichung \eqref{dauer}
 
 				\begin{eqnarray*}
 					I_\mathrm{1, exp} & = & \SI{4.96 (2)}{\gram \meter \squared} \,, \\
@@ -241,7 +247,7 @@
 							\Rightarrow \quad I_\mathrm{2, t} & = & \SI{1.30 (3)}{\gram \meter \squared} \,.
 						\end{eqnarray*}
 
-						Folgende Tabelle beinhaltet die Messdaten zur experimentellen Bestimmung:
+						Tabelle \ref{tabelle:messingzylinder} beinhaltet die Messdaten zur experimentellen Bestimmung:
 					\end{minipage}
 					\hfill
 					\begin{minipage}[t]{5cm}
@@ -255,7 +261,7 @@
 
 				\begin{table}[h!]
 					\begin{center}
-						\caption{Messwerte f"ur die Bestimmung des Tr"agheitsmomentes $I_\mathrm{2, exp}$ des Messingzylinders \label{tabelle:kugel}}
+						\caption{Messwerte f"ur die Bestimmung des Tr"agheitsmomentes $I_\mathrm{2, exp}$ des Messingzylinders \label{tabelle:messingzylinder}}
 						\begin{tabular}{|c||c||c|}
 							\hline
 							$\overline{T} [\SI{}{\second}]$ & $\overline{T} [\SI{}{\second}]$ & $\overline{T} [\SI{}{\second}]$ \\
@@ -267,7 +273,7 @@
 					\end{center}
 				\end{table}
 
-				Die Messwerte liefern mit Gleichung \eqref{eqn:schwingungsdauer}
+				Die Messwerte liefern mit Gleichung \eqref{dauer}
 
 				\begin{eqnarray*}
 					I_\mathrm{2, exp} & = & \SI{2.59 (1)}{\gram \meter \squared} \,, \\
@@ -347,7 +353,7 @@
 					I_2 = \SI{8.91 (17)}{\kilo \gram \centi \meter \squared} \,.
 				\end{equation*}
 
-				Die Messdaten aus den Tabellen \ref{tabelle:puppeneigenschaften} und \ref{tabelle:puppe} liefern mit Gleichung \eqref{eqn:schwingungsdauer} die Ergebnisse
+				Die Messdaten aus den Tabellen \ref{tabelle:puppeneigenschaften} und \ref{tabelle:puppe} liefern mit Gleichung \eqref{dauer} die Ergebnisse
 
 				\begin{eqnarray*}
 					I_1 & = & \SI{1.84 (15)}{\kilo \gram \centi \meter \squared} \,, \\
