@@ -1,9 +1,10 @@
+\clearpage
 \section{Auswertung}
 \label{sec:auswertung}
 
 	\subsection{Klemmspannungskurven}
 	\label{subsec:kurven}
-		Zun"achst wird f"ur jede Spannungsquelle eine lineare Ausgleichsrechnung mit Hilfe von \emph{phython} f"ur die Funktion \eqref{eqn:klemmenspannung} durchgef"uhrt.
+		Zun"achst wird f"ur jede Spannungsquelle eine lineare Ausgleichsrechnung mit Hilfe von \emph{phython} f"ur die Funktion \eqref{uk} durchgef"uhrt.
 		Der y-Achsenabschnitt entpricht dabei der Leerlaufspannung $U_0$ und die Steigung dem Innenwiderstand $R_\mathrm{i}$ der jeweiligen Spannungsquelle.
 		Abbildungen \ref{fig:graph_monozelle} bis \ref{fig:graph_sinus} zeigen die Graphen, Tabelle \ref{table:monozelle} beinhaltet die Messwerte.
 		Die Ungenauigkeit der Messger"ate liegt bei
@@ -82,7 +83,7 @@
 
 	\subsection{Systematische Fehler}
 	\label{subsec:fehler}
-		Der Systematische Fehler $\Delta_\mathrm{s} U_0$ bei der direkten Messung der Leerlaufspannung betr"agt nach Umstellen von Gleichung \eqref{eqn:blaaaaaaa}:
+		Der Systematische Fehler $\Delta_\mathrm{s} U_0$ bei der direkten Messung der Leerlaufspannung betr"agt nach Umstellen von Gleichung \eqref{uk}:
 
 		\begin{equation*}
 			\Delta_\mathrm{s} U_0 = U_\mathrm{k} \frac{R_\mathrm{i}}{R_\mathrm{a}} \,.
@@ -108,11 +109,11 @@
 	\label{subsec:leistung}
 		Im folgenden Diagramm \ref{fig:graph_monozelle_leistung} ist die Leistung $P$, die im Belastungswiderstand $R_\mathrm{a}$ umgesetzt wird, aufgetragen.
 		Zus"atzlich ist der Graph der theoretisch errechneten Leistungskurve $N = f(R_\mathrm{a})$ eingetragen.
-		Die Leistungskurve berechnet sich mit Gleichung \eqref{eqn:blubbbl} nach
+		Die Leistungskurve berechnet sich mit Gleichung \eqref{eqn:leistung} nach
 
-		\begin{equation*}
-			N = I^2 R_\mathrm{a} = \frac{{U_0}^2 R_\mathrm{a}}{\left(R_\mathrm{i} + R_\mathrm{a}\right)^2} \,.
-		\end{equation*}
+		% \begin{equation*}
+		% 	N = I^2 R_\mathrm{a} = \frac{{U_0}^2 R_\mathrm{a}}{\left(R_\mathrm{i} + R_\mathrm{a}\right)^2} \,.
+		% \end{equation*}
 
 		Hierbei werden die Werte des Innenwiderstandes $R_\mathrm{i}$ und der Leerlaufspannung $U_0$ ohne Gegenspannung aus Kapitel \ref{subsec:ri-u0} verwendet.
 
