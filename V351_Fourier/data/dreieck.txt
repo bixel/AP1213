@@ -1,0 +1,10 @@
+reset
+set term pdfcairo
+set output "dreieck.pdf"
+set sample 10000
+set xlabel "n"
+set ylabel "U[V]"
+set yrange[0:2.5]
+f(x) = a/(x+b)**2
+fit f(x) "dreieck.dat" using 1:2 via b,a
+plot f(x) title "Fit 1/x^2", "dreieck.dat" using 1:2 lt 3 title "Messdaten"

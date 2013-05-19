@@ -1,0 +1,17 @@
+dreieck
+
+b = 0.05
+
+a = 2.43
+
+rechteck
+
+b = -0.06
+
+a = 3.49
+
+Saegezahn
+
+b = 0.06
+
+a = 1.98
