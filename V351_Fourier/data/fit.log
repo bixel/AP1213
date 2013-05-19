@@ -1,0 +1,1920 @@
+
+
+*******************************************************************************
+Fri May 17 12:11:48 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Fri May 17 12:12:12 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Fri May 17 12:13:05 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Fri May 17 12:13:12 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Fri May 17 12:14:22 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Fri May 17 12:14:52 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.92758           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.0839903
+
+initial set of free parameter values
+
+b               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.0889758
+rel. change during last iteration : -2.4365e-006
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.105461
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.011122
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -1.66565         +/- 0.01549      (0.93%)
+
+
+correlation matrix of the fit parameters:
+
+               b      
+b               1.000 
+
+
+*******************************************************************************
+Fri May 17 12:16:00 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Fri May 17 12:16:05 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.98936           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.158552
+
+initial set of free parameter values
+
+b               = 1
+a               = 1
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.00778243
+rel. change during last iteration : -1.68616e-009
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0333433
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00111178
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -0.787093        +/- 0.02848      (3.618%)
+a               = 0.472726         +/- 0.063        (13.33%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.994  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:16:25 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 67.4172           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 23.7944
+
+initial set of free parameter values
+
+b               = -0.787093
+a               = 0.472726
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -5.25728e-009
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:17:48 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -2.07294e-016
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:18:15 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -2.69482e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:23:23 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.92758           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.0853458
+
+initial set of free parameter values
+
+b               = 1
+a               = 1
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -3.57018e-010
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:26:09 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -1.88637e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:27:14 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -9.95009e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:27:40 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -6.4261e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:28:12 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -9.7428e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:28:28 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:30:04 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:31:24 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:31:50 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:32:26 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:33:24 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Fri May 17 12:33:40 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:39:47 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.92758           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.0853458
+
+initial set of free parameter values
+
+b               = 1
+a               = 1
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -3.57018e-010
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:41:06 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -1.88637e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:41:21 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -9.95009e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:41:31 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -6.4261e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:41:54 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : -9.7428e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:42:20 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:42:50 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:42:59 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:43:08 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:43:20 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:43:35 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:43:46 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:44:40 2013
+
+
+FIT:    data read from "dreieck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000130757       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.02516
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000130757
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00432198
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.86795e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0454864        +/- 0.01164      (25.59%)
+a               = 2.42667          +/- 0.05363      (2.21%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.996  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:44:47 2013
+
+
+FIT:    data read from "rechteck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.16951           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.583397
+
+initial set of free parameter values
+
+b               = 0.0454864
+a               = 2.42667
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 0.00271009
+rel. change during last iteration : -1.74346e-010
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0196763
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000387155
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -0.0550671       +/- 0.01641      (29.81%)
+a               = 3.49485          +/- 0.05602      (1.603%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.953  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:45:13 2013
+
+
+FIT:    data read from "rechteck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00271009        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.967383
+
+initial set of free parameter values
+
+b               = -0.0550671
+a               = 3.49485
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.00271009
+rel. change during last iteration : -5.85691e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0196763
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000387155
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -0.0550671       +/- 0.01641      (29.81%)
+a               = 3.49485          +/- 0.05602      (1.603%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.953  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:45:21 2013
+
+
+FIT:    data read from "rechteck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00271009        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.967383
+
+initial set of free parameter values
+
+b               = -0.0550671
+a               = 3.49485
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.00271009
+rel. change during last iteration : -2.89645e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0196763
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000387155
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -0.0550671       +/- 0.01641      (29.81%)
+a               = 3.49485          +/- 0.05602      (1.603%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.953  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:45:40 2013
+
+
+FIT:    data read from "rechteck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.00271009        delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.967383
+
+initial set of free parameter values
+
+b               = -0.0550671
+a               = 3.49485
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.00271009
+rel. change during last iteration : -2.81644e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0196763
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000387155
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -0.0550671       +/- 0.01641      (29.81%)
+a               = 3.49485          +/- 0.05602      (1.603%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.953  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:50:15 2013
+
+
+FIT:    data read from "seagezahn.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 4.73717           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 1.00307
+
+initial set of free parameter values
+
+b               = -0.0550671
+a               = 3.49485
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 0.000945939
+rel. change during last iteration : -3.23497e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0116247
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000135134
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0570084        +/- 0.0166       (29.12%)
+a               = 1.98479          +/- 0.02593      (1.306%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.926  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:50:41 2013
+
+
+FIT:    data read from "seagezahn.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000945939       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.519637
+
+initial set of free parameter values
+
+b               = 0.0570084
+a               = 1.98479
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000945939
+rel. change during last iteration : -4.04934e-011
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0116247
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000135134
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0570086        +/- 0.0166       (29.12%)
+a               = 1.98479          +/- 0.02593      (1.306%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.926  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:52:54 2013
+
+
+FIT:    data read from "seagezahn.dat" using 1:2
+        format = x:z
+	y range restricted to [0.00000 : 10.0000]
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.6825            delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.18734
+
+initial set of free parameter values
+
+b               = 1
+a               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.000945939
+rel. change during last iteration : -3.35575e-010
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0116247
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000135134
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0570089        +/- 0.0166       (29.12%)
+a               = 1.98479          +/- 0.02593      (1.306%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.926  1.000 
+
+
+*******************************************************************************
+Sat May 18 13:53:13 2013
+
+
+FIT:    data read from "seagezahn.dat" using 1:2
+        format = x:z
+	y range restricted to [0.00000 : 10.0000]
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.000945939       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.519637
+
+initial set of free parameter values
+
+b               = 0.0570089
+a               = 1.98479
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.000945939
+rel. change during last iteration : -1.94848e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0116247
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000135134
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = 0.0570089        +/- 0.0166       (29.12%)
+a               = 1.98479          +/- 0.02593      (1.306%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.926  1.000 
+
+
+*******************************************************************************
+Sun May 19 21:52:13 2013
+
+
+FIT:    data read from "rechteck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 11.7765           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.158552
+
+initial set of free parameter values
+
+b               = 1
+a               = 1
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 0.00271009
+rel. change during last iteration : -1.73702e-009
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0196763
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000387155
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+b               = -0.0550671       +/- 0.01641      (29.81%)
+a               = 3.49485          +/- 0.05602      (1.603%)
+
+
+correlation matrix of the fit parameters:
+
+               b      a      
+b               1.000 
+a               0.953  1.000 
+
+
+*******************************************************************************
+Sun May 19 21:52:13 2013
+
+
+FIT:    data read from "rechteck.dat" using 1:2
+        format = x:z
+        #datapoints = 9
+        residuals are weighted equally (unit weight)
+
+function used for fitting: g(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.0447325         delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 0.366053
+
+initial set of free parameter values
+
+a               = 3.49485
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.0068822
+rel. change during last iteration : -6.77472e-008
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0293305
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000860275
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 3.67201          +/- 0.02671      (0.7274%)
+
+
+correlation matrix of the fit parameters:
+
+               a      
+a               1.000 
