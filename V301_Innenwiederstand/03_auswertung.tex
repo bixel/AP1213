@@ -39,6 +39,22 @@
 			\end{center}
 		\end{table}
 
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Strom- und Spannungswerte bei Gegenspannung bei variierten Lastwiderst"anden $R_\mathrm{a}$. \label{table:gegenspannung}}
+				\begin{tabular}{|c|c|r|}
+					\hline
+						\multicolumn{3}{|c|}{Gegenspannung} \\
+					\hline
+						$I [\SI{}{\milli \ampere}]$ & $U_\mathrm{k} [\SI{}{\volt}]$ & $P [\SI{}{\milli \watt}]$ \\
+					\hline 
+					\hline
+						\input{data/messung_gegenspannung.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
 		\begin{figure}[h]
 			\centering
 			\includegraphics[width = 15cm]{img/graph_monozelle.pdf}
@@ -76,6 +92,7 @@
 						Monozelle, Gegenspannung & $\SI{20.1 (6)}{}$ & $\SI{1.676 (34)}{}$ \\
 						Rechteckspannung & $\SI{107.6 (30)}{}$ & $\SI{.106 (1)}{}$ \\
 						Sinusspannung & $\SI{8.5 (2)}{}$ & $\SI{.282 (3)}{}$ \\ 
+						Direkte Messung & --- & $\SI{1.65 (2)}{}$ \\
 					\hline 
 				\end{tabular}
 			\end{center}
@@ -98,12 +115,13 @@
 		folgt der Fehler
 
 		\begin{equation*}
-			\Delta_\mathrm{s} U_0 = \SI{2.59}{\micro \ohm} \,.
+			\Delta_\mathrm{s} U_0 = \SI{2.59}{\micro \volt} \,.
 		\end{equation*}
 
 		Das entspricht einem relativen Fehler $\delta_\mathrm{s}$ von $\delta_\mathrm{s} = \SI{1.57e-4}{\percent}$.
 
-		Schlie"st man das Voltmeter nicht wie vorgegeben an, sondern hinter dem Amperemeter, f"allt in diesem -- zus"atzlich zur Leerlaufspannung $U_0$ -- eine Spannung $U_\mathrm{A}$ ab.
+		Schlie"st man das Voltmeter nicht wie vorgegeben an, sondern hinter dem Amperemeter, f"allt in diesem eine Spannung $U_\mathrm{A}$ ab.
+		Der Wert der Leerlaufspannung $U_0$ wird dann um den Wert $U_\mathrm{A}$ verf"alscht.
 
 	\subsection{Leistungsdiagramm}
 	\label{subsec:leistung}

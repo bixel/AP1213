@@ -27,7 +27,7 @@ for messung in messungsArray:
 
 	Itheorie = np.arange(0, np.max(I), .00001)
 	
-	plt.errorbar(I, U, xerr = .015 * I, yerr = .02 * U, fmt = "ko")
+	plt.errorbar(I, U, xerr = .015 * I, yerr = .02 * U, fmt = "k.")
 
 	fittingFunction = lambda i, u0, ri: u0 - i * ri
 
@@ -42,7 +42,10 @@ for messung in messungsArray:
 
 		koeffizienten2, varianz2 = curve_fit(fittingFunction2, I2, U2, maxfev = 1000)
 
-		plt.errorbar(I2, U2, xerr = .015 * I2, yerr = .02 * U2, fmt = "ko")
+		for i in range(0, np.size(I2)):
+			print(str(round(U2[i] * I2[i], 2)) + " +- " + str(round(np.sqrt((I2[i] * U2[i] * .02) ** 2 + (I2[i] * U2[i] * .015) ** 2), 2)))
+
+		plt.errorbar(I2, U2, xerr = .015 * I2, yerr = .02 * U2, fmt = "k.")
 		plt.plot(I2theorie, fittingFunction2(I2theorie, koeffizienten2[0], koeffizienten2[1]), "b-")
 
 		print("U0gegen = " + str(np.round(koeffizienten2[0], 5)) + " +- " + str(np.round(np.sqrt(varianz2[0][0]), 5)))
@@ -73,12 +76,12 @@ for messung in messungsArray:
 		Istep = (np.max(I) - np.min(I)) / 1000
 		Itheorie = np.arange(np.min(I), np.max(I), Istep)
 		Rstep = (np.max(R) - np.min(R)) / 1000
-		Rtheorie = np.arange(np.min(R), np.max(R), Rstep)
+		Rtheorie = np.arange(np.min(R), np.max(R) * 1.3, Rstep)
 		Rtheorie = Rtheorie[::-1]
 
 		plotFunction = lambda ra: (koeffizienten[0] ** 2 * ra) / (ra + koeffizienten[1]) ** 2
 
-		plt.errorbar(R, P, xerr = Rerror, yerr = Perror, fmt = "ko")
+		plt.errorbar(R, P, xerr = Rerror, yerr = Perror, fmt = "k.")
 		plt.plot(Rtheorie, plotFunction(Rtheorie), "r-")
 
 		plt.xlabel(r"$R \, [\Omega]$")

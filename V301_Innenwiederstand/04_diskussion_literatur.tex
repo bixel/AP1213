@@ -1,10 +1,21 @@
 \section{Diskussion}
 \label{diskussion}
 	Wie in Kapitel \ref{subsec:fehler} dargestellt, sind die bekannten Systematischen Fehler gering.
-	Dennoch weichen die gemessenen Leistungswerte der Monozelle von der Theoriekurve ab.
-	Die l"asst m"oglicherweise sich durch Messfehler und nicht ber"ucksichtigte Kabelwiderst"ande erkl"aren.
-	Ein weiterer Indiz f"ur fehlerhafte Messung ist das Ergebnis der Leerlaufspannung der Monozelle mit und ohne Gegenspannung.
-	W"ahrend ohne Gegenspannung ein Wert von 
+	Dennoch weichen die gemessenen Leistungswerte der Monozelle von der Theoriekurve ab (siehe Abb. \ref{fig:graph_monozelle_leistung}).
+	Wie im Folgenden erl"autert wird, liegt das wom"oglich an einer fehlerhaften Messung der Spannungswerte $U_{0,-}$ mit ver"anderlichem Aussenwiderstand $R_\mathrm{A}$.
+
+	Der Wert der direkten Spannungsmessung der Monozelle $U_{0,\mathrm{d}} = \SI{1.65 (2)}{\volt}$ und der Wert durch Ausgleichsrechnung bei Gegenspannung $U_{0,+} = \SI{1.68 (3)}{\volt}$ stimmen mit Ber"ucksichtigung der Fehler "uberein.
+	Weil dieser Wert jedoch um etwa $\Delta U = \SI{.23}{\volt}$ vom Wert $U_{0,-}$ abweicht deutet dies ebenfalls auf eine fehlerhafte Messung mit variablem Widerstand $R_\mathrm{A}$ hin.
+
+	Weil also zwei von drei Messungen auf das gleiche Ergebnis f"uhren, l"asst sich sagen, dass die Leerlaufspannung der Monozelle durch diesen Versuch zu
+
+	\begin{equation*}
+		(U_{0,\mathrm{d}} + U_{0,+}) / 2 = \SI{1.66 (4)}{\volt}
+	\end{equation*}
+
+	bestimmt werden kann. Dabei wird die erste, fehlerbehaftete Messung nicht ber"ucksichtigt.
+
+	\enlargethispage{3cm}
 
 \begin{thebibliography}{9}
 	\bibitem{anleitung} Physikalisches Anf"angerpraktikum der TU Dortmund: Versuch Nr.301 - Leerlaufspannung und Innenwiderstand von Spannungsquellen. \url{http://129.217.224.2/HOMEPAGE/PHYSIKER/BACHELOR/AP/SKRIPT/V301.pdf}. Stand: Mai 2013.
