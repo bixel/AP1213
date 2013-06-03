@@ -2,10 +2,10 @@ reset
 set term pdfcairo
 set output "saegezahn.pdf"
 set sample 10000
-set xlabel "n"
-set ylabel "U[V]"
-set yrange[0:3]
-set xrange[0:10]
-f(x) = a/(x+b)
+set xlabel "ln(n)"
+set ylabel "ln(U[V]/1V)"
+set xrange[0.5:20]
+set logscale
+f(x) = a*x**b
 fit f(x) "seagezahn.dat" using 1:2 via b,a
-plot f(x) title "Fit 1/x", "seagezahn.dat" using 1:2 lt 3 title "Messdaten"
+plot f(x) title "Ausgleichsgerade", "seagezahn.dat" using 1:2 lt 3 title "Messdaten"

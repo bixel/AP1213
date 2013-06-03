@@ -1,10 +1,11 @@
 reset
+set term pdfcairo
+set output "rechteck.pdf"
 set sample 10000
-set xlabel "n"
-set ylabel "U[V]"
-set yrange[0:4]
-f(x) = a/(x+b)
+set xlabel "ln(n)"
+set ylabel "ln(U[V]/1V)"
+set xrange[0.5:20]
+set logscale
+f(x) = a*x**b
 fit f(x) "rechteck.dat" using 1:2 via b,a
-g(x) = a/(x)
-fit g(x) "rechteck.dat" using 1:2 via a
-plot f(x) title "Fit 1/x", g(x),  "rechteck.dat" using 1:2 lt 3 title "Messdaten"
+plot f(x) title "Ausgleichsgerade",  "rechteck.dat" using 1:2 lt 3 title "Messdaten"
