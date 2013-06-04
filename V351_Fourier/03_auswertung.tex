@@ -1,21 +1,34 @@
 \section{Auswertung}
 \label{sec:auswertung}
 
+\subsection{Theoretische Vorbereitung} % (fold)
+\label{sub:theoretische_vorbereitung}
+
+Die Fourierkoeffizienten in der theoretischen Vorbereitung ergaben mittels der Gleichungen \eqref{eqn:a_n} und \eqref{eqn:b_n} f"ur die Rechtecks-, die S"agezahn- und die Dreiecksspannung:
+
+\begin{eqnarray*}
+\text{Rechteck}: b_\mathrm{n} &=& \frac{4}{n \pi}, n \, \text{ungerade} \qquad ,\\
+\text{S"agezahn}: b_\mathrm{n} &=& \frac{\pi^2}{n}  \qquad ,\\
+\text{Dreieck}: a_\mathrm{n} &=& \frac{4}{n^2 \pi^2}, n \,\text{ungerade} \qquad .\\
+\end{eqnarray*}
+
+\clearpage
+
 \subsection{Fourier-Amplituden von drei verschiedenen Schwingungsformen} % (fold)
 \label{sub:fourier_amplituden_von_drei_verschiedenen_}
 
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width = 8cm]{img/rechteck.pdf}
-	\caption{Graphische Darstellung der Fourier-Amplituden einer Rechtecksspannung und einem 1/x fit.}
+	\caption{Graphische Darstellung der Fourier-Amplituden einer Rechtecksspannung und einem $a \cdot x^b$ fit.}
 	\label{gra:recht}
 
 	\includegraphics[width = 8cm]{img/dreieck.pdf}
-	\caption{Graphische Darstellung der Fourier-Amplituden einer Dreiecksspannung und einem 1/$x^2$ fit.}
+	\caption{Graphische Darstellung der Fourier-Amplituden einer Dreiecksspannung und einem $a \cdot x^b$ fit.}
 	\label{gra:dreieck}
 
 	\includegraphics[width = 8cm]{img/saegezahn.pdf}
-	\caption{Graphische Darstellung der Fourier-Amplituden einer S"agezahnspannung und einem 1/x fit.}
+	\caption{Graphische Darstellung der Fourier-Amplituden einer S"agezahnspannung und einem $a \cdot x^b$ fit.}
 	\label{gra:saege}
 \end{figure}
 
@@ -26,35 +39,27 @@
 
 Bei der Messung der ersten 9, von null verschiedenen, Fourieramplituden einer Rechtecks-, einer Dreiecks- und einer S"agezahnschwingung ergaben sich die in Tabelle \ref{tab:messwerte} gemessenen Werte. Die Daten sind in den Graphiken \ref{gra:recht}, \ref{gra:dreieck} und \ref{gra:saege} dargestellt.
 
-Die Fourierkoeffizienten der Funktionen wurden nach den Gleichungen \eqref{eqn:a_n} und \eqref{eqn:b_n} errechnet und lauten:
+Eine Ausgleichsrechnung mithilfe der Funktion $a*x^b$ ergab folgende Werte:
 
 \begin{eqnarray*}
-\text{Rechteck}: b_\mathrm{n} &=& \frac{4}{n \pi}, n \, \text{ungerade} \qquad ,\\
-\text{S"agezahn}: b_\mathrm{n} &=& \frac{\pi^2}{n}  \qquad ,\\
-\text{Dreieck}: a_\mathrm{n} &=& \frac{4}{n^2 \pi^2}, n \,\text{ungerade} \qquad .\\
+	&\text{Dreiecksspannung}& \\
+	a &=& \SI{2.220 (5)}{} \\
+	b &=& \SI{-1.955 (14)}{} \\
+	&\text{Rechtecksspannung}& \\
+	a &=& \SI{3.695  (22)}{} \\
+	b &=& \SI{-1.025 (9)}{} \\
+	&\text{S"agezahnspannung}& \\
+	a &=& \SI{1.878 (9)}{} \\
+	b &=& \SI{-0.968 (7)}{}
 \end{eqnarray*}
+
 
 Bei der Rechtecks- und S"agezahnspannung ist eine erwartete Abnahme der Amplitude mit 1/x erkennbar.
 Die Dreiecksspannung hingegen l"asst eine erwartete 1/$x^2$ Abh"angigkeit erkennen.
 
-Eine Ausgleichsrechnung mithilfe der Funktion $a/(x+b)$ bzw. $a/(x+b)^2$ ergab folgende Werte:
+Die geringen Abweichungen des Exponenten von den Erwarteten k"onnten sich durch die Analyse Bauteile des Oszilloskops erkl"aren lassen. 
 
-\begin{table}[!h]
-\begin{center}
-\begin{tabular}{|r|r|r|r|r|r|}
-\hline
-Dreieck & & Rechteck & & S"agezahn &\\
-a & b & a & b & a & b\\
-\hline
-\hline
-2.43 & 0.05 & 3.49 & -0.06 & 1.98 & 0.06\\
-\hline
-\end{tabular}
-\label{}
-\end{center}
-\end{table}
-
-Da die Punkte alle auf dem Fit liegen, jedoch $b \neq 0$ ist, scheinen systematische Fehler vorzuliegen. Dies k"onnte an den Analyse Bauteilen des Oszilloskops liegen, sodass eine minimale Verschiebung entsteht.
+\clearpage
 
 \subsection{Sukzessive Zusammensetzung verschiedener Schwingungsformen aus deren Komponenten}
 \label{sub:sukzessive_zusammensetzung_verschiedener_schwingungsformen_aus_deren_komponenten}
@@ -73,7 +78,7 @@ Da die Punkte alle auf dem Fit liegen, jedoch $b \neq 0$ ist, scheinen systemati
 	\caption{Fouriersynthese einer S"agezahnspannung aus den ersten 9 Oberschwingungen.}
 	\label{fg:saege}
 \end{figure}
-
+\clearpage
 \input{b.tex}
 
 Bei der sukzessiven Zusammensetzung verschiedener Schwingungsformen aus deren Komponten ergaben sich f"ur die Rechtecksspannung, die Dreiecksspannung und die S"agezahnspannung die in den Graphiken \ref{fg:recht}, \ref{fg:dreieck} und \ref{fg:saege} gezeigten Bilder auf dem Oszilloskop.
