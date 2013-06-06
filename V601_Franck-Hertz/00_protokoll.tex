@@ -1,0 +1,98 @@
+\documentclass{scrartcl}
+	%enthaelt eqnref{}-Operator
+	\usepackage{amsmath}
+
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage[ngerman]{babel}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%wrapfig fuer schoene umflossene Figuren
+	\usepackage{wrapfig}
+
+	%zum formatieren von captions
+	\usepackage{caption}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%UTF-8 encoding
+	%\usepackage[applemac]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{lmodern}
+
+	%enthaelt pfeile mit text
+	\usepackage{amssymb}
+
+	%ermoeglicht Hyperlinks - Schein aber KACKE zu sein :D
+	\usepackage{url}
+
+	%damit lualatex formeln richtig darstellt klappt anscheinend auch nicht :P
+	%\usepackage{unicode-math}
+
+	% Vertikal Tabellenzellen verbinden
+	\usepackage{multirow}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent 0pt
+
+\begin{document}
+	
+	\vspace*{3cm}
+
+	\begin{center}
+		\large
+		TU Dortmund
+	\end{center}
+
+	\begin{center}
+		\Huge
+		V601 - Franck-Hertz Versuch
+	\end{center}
+
+	% \begin{center}
+	% 	\large
+	% 	Korrektur
+	% \end{center}
+
+	\vspace{6cm} % Bei Korrektur nur 5cm foer schoeneres Layout sonst 6cm
+	\begin{center}
+		\begin{minipage}[b]{8cm}
+			\Large
+			Markus Stabrin \\
+			\normalsize
+			markus.stabrin@tu-dortmund.de \\
+
+			\Large
+			Kevin Heinicke\\
+			\normalsize
+			kevin.heinicke@tu-dortmund.de \\
+			\\
+			\\
+
+			Versuchsdatum: 4. Juni 2013 \\
+			\\
+			Abgabedatum: 11. Juni 2013
+		\end{minipage}
+	\end{center}
+
+	\thispagestyle{empty}
+
+	\newpage
+
+	\input{01_theorie_einleitung.tex}
+
+	\input{02_durchfuehrung.tex}
+
+	\input{03_auswertung.tex}
+
+	\input{04_diskussion_literatur.tex}
+
+\end{document}
