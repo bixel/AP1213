@@ -16,7 +16,7 @@
 	Zwischen Gl"uhkathode und einem, in der Mitte des Gef"a"ses befestigtem Drahtgitter, wird eine Spannung $U_\mathrm{B}$ angelegt, sodass die Elektronen in Richtung des Drahtgitters beschleunigt werden.
 
 	Hinter dem Drahtgitter, im oberen Teil des Gef"a"ses befindet sich eine weitere Elektrode, die zum Drahtgitter ein negatives Potential $U_\mathrm{A}$ besitzt.
-	Elektronen, die das Drahtgitter passieren und gen"ugend Energie besitzten, k"onnen das Potential $U_\mathrm{A}$ "uberwinden und als Auffangstrom $I_\mathrm{A}$ in der Elektrode gemessen werden.
+	Elektronen, die das Drahtgitter passieren und gen"ugend Energie besitzten, k"onnen das Potential $U_\mathrm{A}$ "uberwinden und als Auff"angerstrom $I_\mathrm{A}$ in der Elektrode gemessen werden.
 	Langsame Elektronen werden dagegen zur"uck zum Drahtgitter gelenkt und von diesem absorbiert. 
 	\\*
 
@@ -59,7 +59,7 @@
 
 			\item Die Kurve erscheint abgeflacht und verbreitert, weil die Elektronen nicht mit konstanter Geschwindigkeit aus dem Gl"uhdraht austreten.
 			Die Elektronen besitzen stattdessen ein Energiespektrum, welches als Fermi-Dirac-Verteilung bezeichnet wird.
-			Dadurch f"allt der Auffangstrom $I_\mathrm{A}$ nach einem Maximum nicht mehr unstetig auf den Wert 0 ab, sondern n"ahert sich stetig einem Minumum, das nicht 0 ist.
+			Dadurch f"allt der Auff"angerstrom $I_\mathrm{A}$ nach einem Maximum nicht mehr unstetig auf den Wert 0 ab, sondern n"ahert sich stetig einem Minumum, das nicht 0 ist.
 
 			\item Die Wahrscheinlichkeit, dass die Elektronen mit Quecksilberatomen kollidieren h"angt stark vom Dampfdruck $p$ des Quecksilbergases ab.
 			Dieser legt die freie Wegl"ange $\overline{w}$ fest, die ein Elektron durchschnittlich zur"ucklegen muss, um mit einem Quecksilberatom zu kollidieren.
@@ -79,10 +79,36 @@
 		\caption{Aufbau der hier verwendeten Apparatur \cite{anleitung}. \label{fig:aufbau-exakt}}
 	\end{figure}
 
-	Die hier verwendeta Apparatur ist in Abbildung \ref{fig:aufbau-exakt} dargestellt.
-	Das gesamte, mit Quecksilberdampf bef"ullte Gef"a"s befindet sich in einem Blechgeh"ause, welches durch einen elektronischen Temperaturreglers erhitzt werden kann.
+	Die hier verwendete Apparatur ist in Abbildung \ref{fig:aufbau-exakt} dargestellt.
+	Das gesamte, mit Quecksilberdampf bef"ullte Gef"a"s befindet sich in einem Blechgeh"ause, welches durch einen elektronischen Temperaturregler erhitzt werden kann.
 	Die Temperatur $T$ wird mit einem elektronischen Thermometer gemessen.
-	Die Brems- und Beschleunigungsspannungen $U_\mathrm{A}$ und $U_\mathrm{B}$ k"onnen kontinuierlich von 0 auf $U_\mathrm{A} = \SI{11}{\volt}$ bzw. $U_\mathrm{B} = \SI{60}{\volt}$ geregelt werden.
-	Dabei kann die Zeit $t$, in der geregelt wird zwischen $t = \SI{30}{\second}$ und $t = \SI{5}{\minute}$ variiert werden.
+	Die Brems- und Beschleunigungsspannungen $U_\mathrm{A}$ und $U_\mathrm{B}$ k"onnen kontinuierlich zwischen 0 und $U_\mathrm{A} = \SI{11}{\volt}$ bzw. $U_\mathrm{B} = \SI{60}{\volt}$ geregelt werden.
+	Dabei kann die Zeit $t$, in der die Spannung geregelt wird, zwischen $t = \SI{30}{\second}$ und $t = \SI{5}{\minute}$ variiert werden.
 
-	
+	Der XY-Schreiber muss vor der ersten Messung justiert werden, indem ohne Eingangssignal der Nullpunkt beider Richtungen auf den Nullpunkt der Skalierung eingestellt wird.
+	Der Y-Eingang wird dann mit dem Signal des Picoamperemeters, welches den Auff"angerstrom $I_\mathrm{A}$ misst, gespeist, 
+	der X-Eingang wahlweise mit der Spannung $U_\mathrm{A}$ oder $U_\mathrm{B}$.
+
+	Vor jeder Messung m"ussen die maximalen Werte f"ur Strom und Spannung eingestellt werden, sodass die Auslenkungen des XY-Schreibers f"ur diese ebenfalls maximiert werden k"onnen.
+	Dadurch ist sichergestellt, dass der XY-Schreiber nicht "uberregelt.
+	\\*
+
+	Zuerst wird die integrale Energieverteilung der beschleunigten Elektronen bestimmt.
+	Dazu wird der Auff"angerstrom $I_\mathrm{A}$ in Abh"angigkeit der Bremsspannung $U_\mathrm{A}$ bei konstanter Beschleunigungsspannung $U_\mathrm{B} = \SI{11}{\volt}$ gemessen.
+	Diese Messung wird bei Zimmertemperatur $T \approx \SI{20}{\celsius}$ und bei einer erh"ohten Temperatur $T \approx \SI{150}{\celsius}$ durchgef"uhrt.
+	Aus dem Diagramm bei Zimmertemperatur l"asst sich dann das Kontaktpotential $K$ ablesen.
+	\\*
+
+	Anschlie"send wird bei einer Temperatur von $T \approx \SI{180}{\celsius}$ eine Frank-Hertz-Kurve aufgenommen.
+	Dazu wird bei konstanter Auff"angerspannung $U_\mathrm{A} \approx \SI{1}{\volt}$ die Beschleunigungsspannung $U_\mathrm{B}$ von 0 auf $U_\mathrm{B} = \SI{60}{\volt}$ geregelt.
+	Aus der Kurve kann dann durch Abstandsmessung der Maxima die Energiedifferenz $\Delta E$ aus Kapitel \ref{subsec:ww} bestimmt werden.
+	\\*
+
+	Schlie"slich wird bei einer Temperatur $T \approx \SI{105}{\celsius}$ und einer Auff"angerspannung $U_\mathrm{A} = \SI{-30}{\volt}$ der Auff"angerstrom $I_\mathrm{A}$ gemessen.
+	Dabei ist darauf zu achten, dass die Polung des Y-Eingangs sowie des Picoamperemeters getauscht werden muss.
+	Der Strom $I_\mathrm{A}$ ist hierbei zun"achst nicht messbar und steigt ab einer Bestimmten Spannung $U$ stark, nahezu sprunghaft an.
+	Durch extrapolation dieser Kurve auf den Wert $I_\mathrm{A} = 0$ l"asst sich dann die Ionisationsspannung $U_\mathrm{ion}$ und damit die Ionisationsenergie $E_\mathrm{ion}$ f"ur Quecksilber bestimmen:
+
+	\begin{equation}
+		E_\mathrm{ion} = e \cdot U_\mathrm{ion}
+	\end{equation}
