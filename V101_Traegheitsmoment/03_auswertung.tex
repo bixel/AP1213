@@ -31,8 +31,8 @@
 			D = \SI{19.9 (43)}{\milli \newton \meter \per \radian} \,.
 		\end{equation*}
 
-		Berechnet man mit diesem Wert jedoch das Eigentr"agheismoment der Apparatur, ergeben sich negative Werte.
-		Ein besserer Wert ergibt sich durch eine lineare Ausgleichsrechnung, die im folgenden Kapitel \ref{subsec:eigentraegheitsmoment} durchgef"uhrt wird.
+		% Berechnet man mit diesem Wert jedoch das Eigentr"agheismoment der Apparatur, ergeben sich negative Werte.
+		% Ein besserer Wert ergibt sich durch eine lineare Ausgleichsrechnung, die im folgenden Kapitel \ref{subsec:eigentraegheitsmoment} durchgef"uhrt wird.
 		% Diese ergibt
 
 		% \begin{equation*}
@@ -109,35 +109,41 @@
 
 		Die Gleichungen \eqref{dauer} und \eqref{eqn:gesamtmoment} liefern den Zusammenhang
 
-		\begin{equation*}
-			T^2 = \frac{4 \pi^2}{D} \left(I_\mathrm{D} + I_\mathrm{Stange} + 2\left(I_\mathrm{m,c} + ma^2 \right)\right) \,.
-		\end{equation*}
-		mit
 		\begin{eqnarray*}
-			B & = & I_\mathrm{D} + I_\mathrm{Stange} \Leftrightarrow I_\mathrm{D} = B - I_\mathrm{Stange} \\
-			\Rightarrow \quad T^2 & = & \frac{4\pi^2}{D}\left(B + 2\left(I_\mathrm{m,c} + ma^2\right)\right) \,.
+			T^2 & = & \frac{4 \pi^2}{D} \left(I_\mathrm{D} + I_\mathrm{Stange} + 2\left(I_\mathrm{m,c} + ma^2 \right)\right) \,, \\
+			\mathrm{mit} \quad M & = & \frac{8 \pi^2}{D} m a^2 \\
+			B & = & \frac{4 \pi^2}{D}(I_\mathrm{D} + I_\mathrm{Stange} + 2I_\mathrm{m,c}) \\
+			\Rightarrow \quad T^2 & = & M a^2 + B \,.
 		\end{eqnarray*}
 
+		% mit
+		% \begin{eqnarray*}
+		% 	B & = & I_\mathrm{D} + I_\mathrm{Stange} \Leftrightarrow I_\mathrm{D} = B - I_\mathrm{Stange} \\
+		% 	\Rightarrow \quad T^2 & = & \frac{4\pi^2}{D}\left(B + 2\left(I_\mathrm{m,c} + ma^2\right)\right) \,.
+		% \end{eqnarray*}
+
+		\clearpage
+
 		Das Eigentr"agheitsmoment $I_\mathrm{D}$ kann also durch Messung von $T$ und $a$ mit einer Ausgleichsrechnung f"ur den Parameter $B$ bestimmt werden (siehe Abb. \ref{fig:graph2}).
-		Zudem l"asst sich mit dieser Rechnung $D$ bestimmen.
-		Wie in Kapitel \ref{subsec:winkelrichtgroesse} erw"ahnt liefert diese Rechnung einen besseren Wert f"ur $D$.
+		% Zudem l"asst sich mit dieser Rechnung $D$ bestimmen.
+		% Wie in Kapitel \ref{subsec:winkelrichtgroesse} erw"ahnt liefert diese Rechnung einen besseren Wert f"ur $D$.
 
 		Die Ausgleichsrechnung durch \emph{python} liefert
 
 		\begin{eqnarray*}
-			B & = & \SI{5.33 (22)}{\gram \meter \squared} \\
-			\Rightarrow \quad I_\mathrm{D} & = & \SI{2.44 (22)}{\gram \meter \squared} \,,
+			B & = & \SI{3.63 (13)}{\gram \meter \squared} \\
+			\Rightarrow \quad I_\mathrm{D} & = & \SI{.176 (3)}{\gram \meter \squared} \,,
 		\end{eqnarray*}
 
-		sowie
+		% sowie
 
-		\begin{equation*}
-			D = \SI{57.9 (3)}{\milli \newton \meter \per \radian} \,.
-		\end{equation*}
+		% \begin{equation*}
+		% 	D = \SI{57.9 (3)}{\milli \newton \meter \per \radian} \,.
+		% \end{equation*}
 
 		Die zur Berechnung genutzten Daten werden in Tabelle \ref{tabelle:eigentraegheitsmoment} aufgef"uhrt.
-		Da das Eigentr"agheitsmoment jedoch gr"o"ser ist als die Tr"agheitsmomente der untersuchten Objekte, w"urden sich negative Tr"agheitsmomente ergeben.
-		Das ergibt physikalisch keinen Sinn, weshalb $I_\mathrm{D}$ in den sp"ateren Rechnungen nicht abgezogen wird.
+		% Da das Eigentr"agheitsmoment jedoch gr"o"ser ist als die Tr"agheitsmomente der untersuchten Objekte, w"urden sich negative Tr"agheitsmomente ergeben.
+		% Das ergibt physikalisch keinen Sinn, weshalb $I_\mathrm{D}$ in den sp"ateren Rechnungen nicht abgezogen wird.
 
 		\begin{table}[h!]
 			\begin{center}

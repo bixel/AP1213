@@ -9,8 +9,8 @@ a, T, N = np.genfromtxt('messung2_T.txt', unpack = True)
 
 T /= N
 
-for i in range(0, np.size(T)):
-	print(np.round(T[i], 2))
+# for i in range(0, np.size(T)):
+# 	print(np.round(T[i], 2))
 
 a *= .01
 #D = 0.000184899164944
@@ -27,11 +27,14 @@ fitting_durchlaeufe = 1000
 parameter, varianz = curve_fit(fitting_funktion, a, T ** 2, p0 = vorschlagswerte, maxfev = fitting_durchlaeufe)
 
 print(parameter)
+print(np.sqrt(varianz))
 # print("B = " + str(parameter[0]) + "gm^2")
 # print(np.sqrt(varianz[0][0]))
 # print("D = " + str(parameter[1]) + "gm^2")
 # print(np.sqrt(varianz[1][1]))
 print(8 * np.pi ** 2 / parameter[0] * m / 2)
+print("Ic = " + str(round(parameter[1] * D / 4 * np.pi**2 - .00289 - 2 * .000058, 3)))
+print("Delta Ic = " + str(round(np.sqrt(varianz[1][1]) * D / 4 * np.pi**2 - .00289 - 2 * .000058, 3)))
 
 
 plt.plot(a ** 2, T ** 2, "kx")
