@@ -1,0 +1,8 @@
+reset
+set term pdfcairo
+set output "t20.pdf"
+set key left
+set sample 10000
+set xlabel "Ua[V]"
+set ylabel "I(Ua) - I(Ua+dUa) (u.a.)"
+plot "a1-3.dat" using 1:4 lt 3 title "Messdaten"

@@ -1,0 +1,10 @@
+reset
+set term pdfcairo
+set output "t150.pdf"
+set sample 10000
+set key right
+set xlabel "Ua[V]"
+set ylabel "I(Ua) - I(Ua+dUa) (u.a.)"
+set xrange[0.9:6]
+set yrange[0:1.25]
+plot "a2-3.dat" using 1:4 lt 3 title "Messdaten"
