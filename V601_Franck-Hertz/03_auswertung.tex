@@ -7,10 +7,10 @@
 \input{weg.tex}
 
 Das Verh"altnis von der L"ange der verwendeten R"ohre $a$ zu der freien Wegl"ange der Elektronen $\bar{w}$ soll etwa einen Faktor von $1000 - 4000$ ergeben.
-Nach den Formeln \eqref{p} und\eqref{w} ergaben sich die Werte aus Tabelle \ref{tab:weg} f"ur $p_\mathrm{s"at}$ und $\bar{w}$ mit $a = \SI{1}{\centi\meter}$.
+Nach den Formeln \eqref{eqn:p} und\eqref{eqn:w} ergaben sich die Werte aus Tabelle \ref{tab:weg} f"ur $p_\mathrm{s"at}$ und $\bar{w}$ mit $a = \SI{1}{\centi\meter}$.
 
 Es ist zu erkennen, dass die Temperaturen $\SI{25}{^\circ}$ und $\SI{105}{^\circ}$ nicht f"ur eine Franck-Hertz Kurve geeignet sind, da das Verh"altnis zu niedrig ist.
-Bei der Temperatur von $\SI{190}{^\circ}$ ist es schon etwas zu hoch, jedoch lassen sich noch akzeptable Ergebnisse erzielen, w"ahrend bei $\SI{150}{^\circ}$ das Verh"altnis sehr gut ist.
+Bei der Temperatur von $\SI{190}{^\circ}$ ist es schon etwas zu hoch, jedoch lassen sich noch akzeptable Ergebnisse erzielen, w"ahrend bei $\SI{150}{^\circ}$ das Verh"altnis in den geforderten Bereich f"allt.
 
 \subsection{Energieverteilung der beschleunigten Elektronen} % (fold)
 \label{sub:energieverteilung_der_beschleunigten_elektronen}
@@ -24,22 +24,23 @@ Bei der Temperatur von $\SI{190}{^\circ}$ ist es schon etwas zu hoch, jedoch las
 	\centering
 	\includegraphics[width = 10cm]{img/t20.pdf}
 	\caption{Energieverteilung der beschleunigten Elektronen bei $\SI{25}{^\circ}$.}
-	\label{gra}
+	\label{gra:25}
 \end{figure}
 
-Bei der Messung der Energieverteilung der beschleunigten Elektronen bei Zimmertemperatur ergab sich ein maximaler Anstieg der Kurve bei:
+Bei der Messung der Energieverteilung der beschleunigten Elektronen bei Zimmertemperatur ergab sich aus Tabelle \ref{a1} ein maximaler Anstieg der Kurve bei:
 
 \begin{equation}
 	U_\mathrm{a,max} = \SI{9.75}{\volt}
 \end{equation}
 
-Mithilfe der Formel:
+Die Energieverteilung der Elektronen ist in Graphik \ref{gra:25} dargestellt.
+Mithilfe des Zusammenhangs aus Gl. \eqref{eqn:k} ergibt sich f"ur das kontaktpotential:
 
 \begin{equation}
-	U_\mathrm{b} - U_\mathrm{a,max} = K
+	U_\mathrm{b} - U_\mathrm{b,eff} = K
 \end{equation}
 
-ergibt sich f"ur $U_\mathrm{b} = \SI{11}{\volt}$:
+Mit $U_\mathrm{b} = \SI{11}{\volt}$ und $U_\mathrm{b,eff} = U_\mathrm{a,max}$ ergibt sich nun:
 
 \begin{equation}
 	K = \SI{1.25}{\volt}
@@ -48,7 +49,7 @@ ergibt sich f"ur $U_\mathrm{b} = \SI{11}{\volt}$:
 Qualitativ l"asst sich sagen, dass der gr"o"ste Teil der Elektronen Energien von $\SI{9.25}{\volt} - \SI{10}{\volt}$ besitzt.
 
 \subsubsection{$\si{150}{^\circ C}$} % (fold)
-\label{sub:_si}
+\label{sub:_sis}
 
 \input{a2.tex}
 
@@ -56,5 +57,49 @@ Qualitativ l"asst sich sagen, dass der gr"o"ste Teil der Elektronen Energien von
 	\centering
 	\includegraphics[width = 10cm]{img/t150.pdf}
 	\caption{Energieverteilung der beschleunigten Elektronen bei $\SI{150}{^\circ}$.}
-	\label{gra}
+	\label{gra:150}
 \end{figure}
+
+Aus den Wertepaaren der Energieverteilung in Tabelle \ref{a2} ist zu erkennen, dass mit zunehmender Bremsspannung $U_\mathrm{a}$ sich die Energie der Elektronen dem Wert $0$ ann"ahert.
+Die Werte sind in Graphik \ref{gra:150} dargestellt.
+
+Im Vergleich zu der Kurve bei $\SI{25}{^\circ}$, welche einen Peak bei ca. $\SI{9.75}{\volt}$ besitzt, f"allt der Graph bei $\SI{150}{^\circ}$ bis ca. $\SI{4}{\volt}$ konstant.
+Ab etwa $\SI{5}{\volt}$ ist die Verteilung konstant $0$.
+
+Dieser Abbruch ist durch die Anregungsenergie der Quecksilberatome bei $U \approx \SI{4.9}{\volt}$ zu erkl"aren.
+Fallen Elektronen gr"o"ser oder gleich dieser Energie auf ein Atom, gibt dieses den Anregungsbetrag an die "au"seren Elektronen ab. So dass diese Elektronen nun im niedrigen Spannungsbereich aufzufinden sind.
+
+Der konstante Abfall der Energie l"asst sich durch die Fermie-Dirac-Verteilung erkl"aren. So nimmt die Wahrscheinlichkeit mit h"oheren Energien ab.
+
+Die stufenartige Form der Kurve ist auf das gew"ahlte Ableseverfahren und die nahezu linearen Bereiche der integralen Kurve zurück zu f"uhren.
+
+\subsection{Die Franck-Hertz Kurve} % (fold)
+\label{sub:die_franck_hertz_kurve}
+
+\input{u1.tex}
+
+Aus der Franck-Hertz Kurve ergaben sich die Anregungspotentiale und Energien aus Tabelle \ref{tab:anregung}. Die Anregungsenergie wurde nach Gleichung \eqref{eqn:anregung} berechnet.
+
+F"ur die Wellenl"ange gilt:
+
+\begin{equation}
+	\lambda = \frac{h c}{e_\mathrm{0} U_\mathrm{1}}
+\end{equation}
+
+Es ist eine Abflachung und Verbreiterung der Franck-Hertz Kurve (Anhang) mit zunehmender Beschleunigungsspannung zu erkennen. Da diese jedoch nur sehr gering bei $U_\mahtrm{b} = \SI{11}{\volt}$ sind kann der Effekt der elastischen St"o"se vernachl"assigt werden.
+
+\subsection{Ionisierungsspannung} % (fold)
+\label{sub:ionisierungsspannung}
+
+Eine Extrapolation der Kurve auf den Wert $I_\mathrm{A} = 0$ ergab:
+
+\begin{equation}
+	U_\mathrm{x} \approx \SI{13}{\volt}
+\end{equation}
+
+$U_\mathrm{ion}$ ist nun durch den Zusammenhang $U_\mathrm{ion} = U_\mathrm{x} - K$ gegeben.
+Mit dem Wert f"ur K aus \ref{sub:_si} ergibt sich f"ur die Ionisationsspannung:
+
+\begin{eqnarray*}
+	U_\mathrm{ion} &\approx& \SI{11.75}{\volt} \\
+\end{eqnarray*}
