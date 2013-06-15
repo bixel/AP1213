@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.70.2-2012062819 (TeX Live 2012) (format=lualatex 2013.1.13)  26 MAY 2013 20:42
+This is LuaTeX, Version beta-0.70.2-2012062819 (TeX Live 2012) (format=lualatex 2013.1.13)  15 JUN 2013 13:08
  restricted \write18 enabled.
 **00_protokoll.tex
 (./00_protokoll.tex
@@ -1107,144 +1107,161 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 1.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-))
-(./02_durchfuehrung.tex) (./03_auswertung.tex
+)
+<img/huygen.jpg, id=9, 323.70938pt x 216.05719pt>
+File: img/huygen.jpg Graphic file (type jpg)
+ <use img/huygen.jpg>
+Package pdftex.def Info: img/huygen.jpg used on input line 42.
+(pdftex.def)             Requested size: 227.62204pt x 151.92471pt.
+
+
+LaTeX Warning: Citation `anleitung.' on page 2 undefined on input line 43.
+
+
+LaTeX Warning: Citation `anleitung.' on page 2 undefined on input line 43.
+
+[2 <./img/huygen.jpg>] [3]
+<img/dispersion.JPG, id=25, 310.15875pt x 112.92188pt>
+File: img/dispersion.JPG Graphic file (type jpg)
+
+<use img/dispersion.JPG>
+Package pdftex.def Info: img/dispersion.JPG used on input line 153.
+(pdftex.def)             Requested size: 227.62204pt x 82.87164pt.
+ [4]
+<img/aufloesung.JPG, id=30, 402.75468pt x 176.15813pt>
+File: img/aufloesung.JPG Graphic file (type jpg)
+
+<use img/aufloesung.JPG>
+Package pdftex.def Info: img/aufloesung.JPG used on input line 188.
+(pdftex.def)             Requested size: 284.52756pt x 124.44684pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5 <./img/dispersion.JPG>]) (./02_durchfuehrung.tex
+<img/symmetrisch.JPG, id=34, 271.0125pt x 136.25906pt>
+File: img/symmetrisch.JPG Graphic file (type jpg)
+
+<use img/symmetrisch.JPG>
+Package pdftex.def Info: img/symmetrisch.JPG used on input line 11.
+(pdftex.def)             Requested size: 284.52756pt x 143.05959pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6 <./img/aufloesung.JPG>] <img/gonio.JPG, id=38, 422.32782pt x 176.15813pt>
+File: img/gonio.JPG Graphic file (type jpg)
+
+<use img/gonio.JPG>
+Package pdftex.def Info: img/gonio.JPG used on input line 38.
+(pdftex.def)             Requested size: 341.43306pt x 142.41849pt.
+ [7 <./img/symmetrisch.JPG> <./img/gonio.JPG>]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 52.
 
+<img/phi.JPG, id=44, 257.46187pt x 191.21437pt>
+File: img/phi.JPG Graphic file (type jpg)
+ <use img/phi.JPG>
+Package pdftex.def Info: img/phi.JPG used on input line 57.
+(pdftex.def)             Requested size: 227.62204pt x 169.05693pt.
 
-LaTeX Warning: Reference `eqn:phi' on page 2 undefined on input line 7.
+<img/eta.JPG, id=45, 215.30438pt x 138.5175pt>
+File: img/eta.JPG Graphic file (type jpg)
+ <use img/eta.JPG>
+Package pdftex.def Info: img/eta.JPG used on input line 77.
+(pdftex.def)             Requested size: 227.62204pt x 146.44527pt.
 
-
-LaTeX Warning: Reference `sec:diskussion' on page 2 undefined on input line 16.
-
-
-
-LaTeX Warning: Reference `eqn:mu' on page 2 undefined on input line 18.
-
-(./data/messung_phi.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(./data/messung_mu.tex)
+[8 <./img/phi.JPG>] <img/omega.JPG, id=50, 344.03531pt x 196.48407pt>
+File: img/omega.JPG Graphic file (type jpg)
+
+<use img/omega.JPG>
+Package pdftex.def Info: img/omega.JPG used on input line 90.
+(pdftex.def)             Requested size: 341.43306pt x 194.99951pt.
+) (./03_auswertung.tex [9 <./img/eta.JPG> <./img/omega.JPG>] (./data/messung_mu
+.tex)
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2] [3]
-
-LaTeX Warning: Reference `eqn:dispersion1' on page 4 undefined on input line 71
-.
-
-
-LaTeX Warning: Reference `eqn:dispersion2' on page 4 undefined on input line 71
-.
-
-
-LaTeX Warning: Reference `eqn:dispersion2' on page 4 undefined on input line 98
-.
-
-
-LaTeX Warning: Reference `eqn:dispersion1' on page 4 undefined on input line 98
-.
-
-<img/dispersion1.pdf, id=23, 505.89pt x 303.534pt>
+[10] [11] <img/dispersion1.pdf, id=60, 505.89pt x 328.8285pt>
 File: img/dispersion1.pdf Graphic file (type pdf)
- <use img/dispersion1.pdf>
-Package pdftex.def Info: img/dispersion1.pdf used on input line 103.
-(pdftex.def)             Requested size: 426.79134pt x 256.07838pt.
 
-Overfull \hbox (8.53578pt too wide) in paragraph at lines 103--104
+<use img/dispersion1.pdf>
+Package pdftex.def Info: img/dispersion1.pdf used on input line 122.
+(pdftex.def)             Requested size: 426.79134pt x 277.41826pt.
+
+Overfull \hbox (8.53578pt too wide) in paragraph at lines 122--123
  [][][] 
  []
 
-
-LaTeX Warning: Reference `eqn:dispersion1' on page 4 undefined on input line 10
-4.
-
-
-LaTeX Warning: Reference `eqn:dispersion1' on page 4 undefined on input line 10
-4.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<img/dispersion2.pdf, id=24, 505.89pt x 303.534pt>
+<img/dispersion2.pdf, id=61, 505.89pt x 354.12299pt>
 File: img/dispersion2.pdf Graphic file (type pdf)
  <use img/dispersion2.pdf>
-Package pdftex.def Info: img/dispersion2.pdf used on input line 109.
-(pdftex.def)             Requested size: 426.79134pt x 256.07838pt.
-
-Overfull \hbox (8.53578pt too wide) in paragraph at lines 109--110
- [][][] 
- []
-
-
-LaTeX Warning: Reference `eqn:dispersion2' on page 4 undefined on input line 11
-0.
-
-
-LaTeX Warning: Reference `eqn:dispersion2' on page 4 undefined on input line 11
-0.
+Package pdftex.def Info: img/dispersion2.pdf used on input line 128.
+(pdftex.def)             Requested size: 369.88582pt x 258.92368pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[4
+<img/dispersionNichtLinear.pdf, id=62, 505.89pt x 328.8285pt>
+File: img/dispersionNichtLinear.pdf Graphic file (type pdf)
 
-] [5 <./img/dispersion1.pdf> <./img/dispersion2.pdf>]
-
-LaTeX Warning: Reference `eqn:abbe' on page 6 undefined on input line 117.
-
-
-LaTeX Warning: Reference `sec:durchfuehrung' on page 6 undefined on input line 
-134.
+<use img/dispersionNichtLinear.pdf>
+Package pdftex.def Info: img/dispersionNichtLinear.pdf used on input line 134.
+(pdftex.def)             Requested size: 369.88582pt x 240.42915pt.
 
 
-LaTeX Warning: Reference `eqn:dispersion1' on page 6 undefined on input line 14
-0.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
+[12 <./img/dispersion1.pdf>] [13 <./img/dispersion2.pdf> <./img/dispersionNicht
+Linear.pdf>] [14
 
-LaTeX Warning: Reference `eqn:dispersion1' on page 6 undefined on input line 15
-5.
+]) (./04_diskussion_literatur.tex [15
 
-
-LaTeX Warning: Reference `eqn:dispersion1exakt' on page 6 undefined on input li
-ne 155.
-
-[6
-
-]) (./04_diskussion_literatur.tex
-Overfull \hbox (0.55136pt too wide) in paragraph at lines 3--5
+]
+Overfull \hbox (0.55136pt too wide) in paragraph at lines 5--7
 []\T1/lmr/m/n/10.95 Zu-nächst muss fest-ge-hal-ten wer-den, dass die Durch-f
 üh-rung die-ses Ver-suchs ei-ni-ge Schwie-
  []
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 13.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 22.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)) [7]
-(./00_protokoll.aux)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+[][]\T1/lmr/m/n/10.95 Carl Zeiss Vi-si-on GmbH. Grund-la-gen -- Op-tik & Au-ge 
+-- Abbe-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+\T1/lmr/m/n/10.95 Zahl. $\T1/lmtt/m/n/10.95 http : / / www . zeiss . de / 41256
+80F0052EC92 / Contents-[]Frame /
+ []
+
+) [16
+
+] (./00_protokoll.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  )
 
 Here is how much of LuaTeX's memory you used:
- 14937 strings out of 494982
+ 15015 strings out of 494982
  100000,383344 words of node,token memory allocated
- 406 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 53 glue_spec, 1 write nodes
-   avail lists: 2:53,3:147,4:1414,5:150,6:1576,7:164,9:515,10:174
- 17797 multiletter control sequences out of 65536+200000
+ 654 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 28 kern, 53 glue_spec, 1 write nodes
+   avail lists: 2:58,3:276,4:1504,5:219,6:2258,7:142,9:596,10:283
+ 17857 multiletter control sequences out of 65536+200000
  69 fonts using 2724035 bytes
- 61i,17n,51p,338b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,22n,51p,613b,1025s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/te
-xlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2012/tex
-mf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2012/texmf-dist/fo
-nts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/dv
+xlive/2012/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2012
+/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2012/texmf-dis
+t/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2012/texmf-dist/fonts/enc/dv
 ips/lm/lm-mathsy.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/
 lmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/loc
@@ -1257,11 +1274,12 @@ pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texl
 ive/2012/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2012/t
 exmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2012/texmf-dist/f
-onts/type1/public/lm/lmtt10.pfb>
-Output written on 00_protokoll.pdf (7 pages, 255137 bytes).
+onts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msam10.pfb>
+Output written on 00_protokoll.pdf (16 pages, 485034 bytes).
 
-PDF statistics: 202 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+PDF statistics: 301 PDF objects out of 1000 (max. 8388607)
+ 146 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

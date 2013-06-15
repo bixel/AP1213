@@ -33,8 +33,8 @@ print(np.sqrt(varianz))
 # print("D = " + str(parameter[1]) + "gm^2")
 # print(np.sqrt(varianz[1][1]))
 print(8 * np.pi ** 2 / parameter[0] * m / 2)
-print("Ic = " + str(round(parameter[1] * D / 4 * np.pi**2 - .00289 - 2 * .000058, 3)))
-print("Delta Ic = " + str(round(np.sqrt(varianz[1][1]) * D / 4 * np.pi**2 - .00289 - 2 * .000058, 3)))
+print("Ic = " + str(parameter[1] * D / (4 * np.pi**2) - .00289 - 2 * .000058))
+print("Delta Ic = " + str(np.sqrt(varianz[1][1]) * D / 4 * np.pi**2 - .00289 - 2 * .000058))
 
 
 plt.plot(a ** 2, T ** 2, "kx")
