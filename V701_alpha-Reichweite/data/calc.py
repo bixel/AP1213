@@ -72,7 +72,7 @@ if True:
 		deltaM = np.sqrt(varianz[0][0])
 		deltaB = np.sqrt(varianz[1][1])
 
-		print("energieXMittel = " + str(fitFunktion(xMittel, m, b)))
+		print("energieXMittel = " + str(fitFunktion(xMittel, m, b)) + "+-" + str(np.sqrt((xMittel * deltaM) ** 2 + deltaB ** 2)))
 		print("dE/dx = " + str(m) + "+-" + str(deltaM))
 
 		plt.plot(lEffTheorie, fitFunktion(lEffTheorie, m, b), "b-")
