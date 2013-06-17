@@ -1,0 +1,7 @@
+set term pdfcairo
+set output "ladung.pdf"
+set xlabel "U[V]"
+set ylabel "Q[e]"
+set xrange [400:700]
+set yrange[2:10]
+plot "dat.dat" u 1:2:3 with errorbars title "Messpunkte"
