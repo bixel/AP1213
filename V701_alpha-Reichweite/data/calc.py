@@ -124,8 +124,8 @@ koeffizienten, unsicherheit = curve_fit(gaussFunktion, balkenNummer, balken, max
 
 fig = plt.gcf()
 
-plt.bar(k + 1, balken / np.sum(balken), color = "r", width = .8)
 plt.plot(x, gaussFunktion(x, 1), "b-")
+plt.bar(k + 1, balken / np.sum(balken), color = "r", width = .8)
 #plt.hist(zaehlrate, balkenzahl, color="r", normed = True, align = "mid")
 
 plt.grid(which = "both")
@@ -133,7 +133,7 @@ plt.xlim([0, 10])
 plt.ylim([0, .25])
 plt.xlabel(r"$\mathrm{H\"aufigkeitsbereich}$")
 plt.ylabel(r"$\mathrm{rel.\, H\"aufigkeit}$")
-plt.legend(["Messwerte", "Gaussfunktion"], "upper right")
+plt.legend(["Gaussfunktion", "Messwerte"], "upper right")
 plt.savefig("../img/verteilungGauss.pdf")
 plt.clf()
 
@@ -149,7 +149,7 @@ plt.bar(k + 1, balken / np.sum(balken), color = "r", width = .4)
 plt.bar(kPoisson + .4, poissonBalken, color = "b", width = .4)
 
 plt.grid(which = "both")
-plt.legend(["Messwete", "Poissonverteilung"], "upper right")
+plt.legend(["Messwerte", "Poissonverteilung"], "upper right")
 plt.ylim([0, .25])
 plt.xlabel(r"$\mathrm{H\"aufigkeitsbereich}$")
 plt.ylabel(r"$\mathrm{rel.\, H\"aufigkeit}$")
