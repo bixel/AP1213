@@ -1,0 +1,57 @@
+\section{Auswertung}
+\label{sec:auswertung}
+	Im Folgenden werden einige Mittelwerte gebildet.
+	Bei einer Anzahl von $n$ Messwerten $x_\mathrm{i}$ gilt f"ur den Mittelwert $x$:
+
+	\begin{equation*}
+		x = \frac{1}{n} \sum_{\mathrm{i} = 0}^n {x_\mathrm{i}} \,.
+	\end{equation*}
+
+	Die Varianz $\sigma_x$ dieses Wertes, bzw. dessen Fehler $\Delta x$ betragen
+
+	\begin{equation*}
+		\Delta x^2 = \sigma_x = \frac{1}{n - 1} \sum_{\mathrm{i} = 0}^n{\left(x_\mathrm{i} - x\right)^2} \,.
+	\end{equation*}
+
+	\subsection{Bestimmung der mittleren Reichweite $R_\mathrm{m}$ mit der entsprechenden Energie $E_\mathrm{m}$}
+	\label{subsec:mittlere_reichweite}
+		Zur Ermittlung der mittleren Reichweite $R_\mathrm{m}$ wird die Z"ahlrate $z$ gegen die effektive L"ange $x_\mathrm{eff}$ aufgetragen.
+		Durch die abfallende Flanke (siehe Abbildungen \ref{fig:zaehlrate1} und \ref{fig:zaehlrate2}) wird eine Lineare Ausgleichsgerade der Form $z = mx + b$ gelegt.
+		Die mittlere Reichweite $R_\mathrm{m}$ entspricht der x-Koordinate dieser Ausgleichgerade an der Stelle der halben, maximalen Z"ahlrate $z_\mathrm{max}$.
+
+		Es gilt also
+
+		\begin{equation*}
+			R_\mathrm{m} = \frac{\frac{z_\mathrm{max}}{2} - b}{m} \,.
+		\end{equation*}
+
+		Die maximale Energie $E$, die bei einer Messung detektiert wird, ist proportional zum gemessenen Kanal $c$.
+		Mit Kenntnis der Energie $E_\mathrm{max}$ bei einer bestimmten l"ange $x_\mathrm{eff}$ lassen sich somit alle Energiewerte berechnen.
+
+		Die Messwerte der beiden Messungen sind in den Tabellen \ref{table:messung1-1} und \ref{table:messung1-2} aufgef"uhrt.
+		Die Werte, die zur Ausgleichsrechnung benutzt werden, sind mit "*" markiert.
+
+		\clearpage
+		Die Ausgleichsrechnung der ersten Messreihe bei $x_0 = \SI{2.6}{\centi \meter}$ liefert
+
+		% \begin{table}[h!]
+		% 	\begin{center}
+		% 		\begin{tabular}{rclcrcl}
+		% 			$m$ & $=$ & $\SI{-1120(8)}{\per \second \per \centi \per \meter}$ & $,$ & $b$ & $=$ & $\SI{2657(16)}{\per \second}$\\
+		% 			\hspace{.2cm} \\
+		% 			$\Rightarrow R_\mathrm{m}$ & $=$ & $\SI{2.13(2)}{\centi \meter}$ & $,$ & $E_\mathrm{m}$ & $=$ & $\SI{1.65(15)}{\mega \electronvolt}$\\
+		% 		\end{tabular}
+		% 	\end{center}
+		% \end{table}
+
+		\begin{eqnarray*}
+			m = \SI{-1120(8)}{\per \second \per \centi \per \meter} &,& b = \SI{2657(16)}{\per \second} \\
+			\Rightarrow R_\mathrm{m} = \SI{2.13(2)}{\centi \meter} &,& E_\mathrm{m} = \SI{1.65(15)}{\mega \electronvolt} \,.
+		\end{eqnarray*}
+
+		Die Ausgleichsrechnung der ersten Messreihe bei $x_0 = \SI{2.8}{\centi \meter}$ liefert
+
+		\begin{eqnarray*}
+			m = \SI{-1115(60)}{\per \second \per \centi \per \meter} &,& b = \SI{2648(129)}{\per \second} \\
+			\Rightarrow R_\mathrm{m} = \SI{2.14(16)}{\centi \meter} &,& E_\mathrm{m} = \SI{1.67(8)}{\mega \electronvolt} \,.
+		\end{eqnarray*}
