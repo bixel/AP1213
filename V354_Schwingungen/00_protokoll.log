@@ -1,6 +1,6 @@
-This is LuaTeX, Version beta-0.70.2-2012060719 (MiKTeX 2.9 64-bit)  (format=lualatex 2012.10.13)  14 JAN 2013 10:55
-**protokoll.tex
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/protokoll.tex
+This is LuaTeX, Version beta-0.70.2-2012060719 (MiKTeX 2.9 64-bit)  (format=lualatex 2012.10.13)  30 DEC 2012 22:02
+**00_protokoll.tex
+(c:/Users/Markus/AP1213/V354_Schwingungen/00_protokoll.tex
 LaTeX2e <2011/06/27>
 LuaTeX adaptation of babel <v3.8m-luatex-1.5> and hyphenation patterns for engl
 ish, loaded.
@@ -568,19 +568,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-No file protokoll.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:/Program Files/MiKTeX 2.9/tex/latex/ltxmisc/url.sty"
+\Urlmuskip=\muskip17
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(c:/Users/Markus/AP1213/V354_Schwingungen/00_protokoll.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 ("C:/Program Files/MiKTeX 2.9/tex/latex/beamer/base/translator/dicts/translator
 -basic-dictionary/translator-basic-dictionary-English.dict"
@@ -609,342 +623,77 @@ File: siunitx-binary.cfg 2012/09/18 v2.5j siunitx: Binary units
 \everyMPtoPDFconversion=\toks23
 )
 \c__siunitx_mathsf_int=\count347
+LaTeX Font Info:    Try loading font information for U+msa on input line 31.
+ ("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 31.
+
+("C:/Program Files/MiKTeX 2.9/tex/latex/amsfonts/umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
 \c__siunitx_mathtt_int=\count348
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--51
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--58
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--58
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--58
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--62
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
 
 [1
 
 {C:/Users/Markus/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/theorie_einleitung.tex
-Overfull \hbox (0.18701pt too wide) in paragraph at lines 2--5
-[]\OT1/cmr/m/n/10.95 In diesem Versuch wurde die Ablenkung von Elektronen in el
-ektrischen und magnetischen
- []
+(c:/Users/Markus/AP1213/V354_Schwingungen/01_theorie_einleitung.tex)
+(c:/Users/Markus/AP1213/V354_Schwingungen/02_durchfuehrung.tex)
+(c:/Users/Markus/AP1213/V354_Schwingungen/03_auswertung.tex
+(c:/Users/Markus/AP1213/V354_Schwingungen/aufgabe_c.tex
 
-<img/ablenkung.png, id=8, 889.3225pt x 372.39125pt>
-File: img/ablenkung.png Graphic file (type png)
- <use img/ablenkung.png>
-Package pdftex.def Info: img/ablenkung.png used on input line 29.
-(pdftex.def)             Requested size: 398.33858pt x 166.79604pt.
+! LaTeX Error: There's no line here to end.
 
-
-LaTeX Warning: Reference `wehnelt' on page 2 undefined on input line 34.
-
-
-Overfull \hbox (17.86044pt too wide) in paragraph at lines 34--35
-[][]\OT1/cmr/m/n/10.95 Unter Ber[]ucksichtigung der Beschleunigungsspannung $\O
-ML/cmm/m/it/10.95 U[]$ \OT1/cmr/m/n/10.95 (siehe []) gilt f[]ur die Verschiebun
-g
- []
-
-[2 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/ablenkung.png>]
-<img/wehnelt-z.jpg, id=17, 1245.65375pt x 696.6025pt>
-File: img/wehnelt-z.jpg Graphic file (type jpg)
- <use img/wehnelt-z.jpg>
-Package pdftex.def Info: img/wehnelt-z.jpg used on input line 54.
-(pdftex.def)             Requested size: 398.33858pt x 222.7579pt.
-
-[3 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/wehnelt-z.jpg>]
-
-LaTeX Warning: Reference `theta' on page 4 undefined on input line 81.
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-<img/magnetfeld.jpg, id=28, 874.26625pt x 743.77875pt>
-File: img/magnetfeld.jpg Graphic file (type jpg)
-
-<use img/magnetfeld.jpg>
-Package pdftex.def Info: img/magnetfeld.jpg used on input line 118.
-(pdftex.def)             Requested size: 341.43306pt x 290.46976pt.
-)
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/durchfuehrung.tex
-Overfull \hbox (5.35776pt too wide) in paragraph at lines 4--9
-\OT1/cmr/m/n/10.95 die gew[]unschte Be-schleu-ni-gungs-span-nun-g angelegt word
-en. Die nun auf dem Leuchtschirm
- []
-
-
-Overfull \hbox (14.02663pt too wide) in paragraph at lines 4--9
-\OT1/cmr/m/n/10.95 erschienene Abbildung des Elektronesstrahls wurde nun mit Hi
-lfe der Fokussierungspannung
- []
-
-[5 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/magnetfeld.jpg>]
-<img/501a.png, id=32, 536.0025pt x 225.09094pt>
-File: img/501a.png Graphic file (type png)
- <use img/501a.png>
-Package pdftex.def Info: img/501a.png used on input line 15.
-(pdftex.def)             Requested size: 398.33858pt x 167.27907pt.
-
-
-LaTeX Warning: Reference `501a' on page 6 undefined on input line 20.
-
-<img/501b.png, id=33, 547.2947pt x 259.7203pt>
-File: img/501b.png Graphic file (type png)
- <use img/501b.png>
-Package pdftex.def Info: img/501b.png used on input line 26.
-(pdftex.def)             Requested size: 398.33858pt x 189.03546pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `501b' on page 6 undefined on input line 31.
-
-
-Overfull \hbox (8.00194pt too wide) in paragraph at lines 31--35
-\OT1/cmr/m/n/10.95 gebaut werden. Nun wurde versucht durch Ver[]anderung der S[
-]agezahnfrequenz $\OML/cmm/m/it/10.95 []$ \OT1/cmr/m/n/10.95 stehende
- []
-
-
-Overfull \hbox (9.95078pt too wide) in paragraph at lines 31--35
-\OT1/cmr/m/n/10.95 und die Sinusfrequenz ein rationales Verh[]altnis bilden. In
- diesem Fall sollten die Situationen
- []
-
-
-Overfull \hbox (20.83952pt too wide) in paragraph at lines 31--35
-\OT1/cmr/m/n/10.95 quenz-z[]ah-ler ablesen werden. $\OML/cmm/m/it/10.95 U[]$ \O
-T1/cmr/m/n/10.95 wurde konstant gehalten und die Maximale Strahlauslenkung
- []
-
-[6 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501a.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 48--72
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--72
-
- []
-
-
-Overfull \hbox (5.22095pt too wide) in paragraph at lines 48--72
-\OT1/cmr/m/n/10.95 Magnetnadel parallel zur horizontalen Drehachse des Ger[]ate
-s liegt. Anschlieend schwenkt
- []
-
-[7 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501b.png>]
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/auswertung.tex
-
-LaTeX Warning: Reference `tabelle_1' on page 8 undefined on input line 9.
-
-
-LaTeX Warning: Reference `tabelle_2' on page 8 undefined on input line 9.
-
-
-LaTeX Warning: Reference `501a200' on page 8 undefined on input line 9.
-
-
-LaTeX Warning: Reference `501a400' on page 8 undefined on input line 9.
-
-
-LaTeX Warning: Reference `tabelle_5' on page 8 undefined on input line 10.
-
-
-LaTeX Warning: Reference `501a' on page 8 undefined on input line 10.
-
-
-Overfull \hbox (23.2122pt too wide) in paragraph at lines 9--13
-[]\OT1/cmr/m/n/10.95 F[]ur Aufgabe 501a ergaben sich die Messwerte aus den Tabe
-llen [] und []. Die dazugeh[]ohrigen
- []
-
-
-Overfull \hbox (37.67937pt too wide) in paragraph at lines 9--13
-\OT1/cmr/m/n/10.95 Berechnung des Proportionalit[]atsfaktors $[]$ muss darauf g
-eachtet werden, dass die Ablenkplatten
- []
-
-
-LaTeX Warning: Reference `tabelle_5' on page 8 undefined on input line 31.
-
-
-LaTeX Warning: Reference `501a' on page 8 undefined on input line 31.
-
-[8] (c:/Users/Markus/AP1213/V501-2_E-B-Feld/tabelle1.tex)
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/tabelle2.tex)
-<img/501a200.jpg, id=47, 481.8pt x 361.35pt>
-File: img/501a200.jpg Graphic file (type jpg)
- <use img/501a200.jpg>
-Package pdftex.def Info: img/501a200.jpg used on input line 39.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
-
-<img/501a250.jpg, id=48, 481.8pt x 361.35pt>
-File: img/501a250.jpg Graphic file (type jpg)
- <use img/501a250.jpg>
-Package pdftex.def Info: img/501a250.jpg used on input line 44.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
-
-<img/501a300.jpg, id=49, 481.8pt x 361.35pt>
-File: img/501a300.jpg Graphic file (type jpg)
- <use img/501a300.jpg>
-Package pdftex.def Info: img/501a300.jpg used on input line 50.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
-
-<img/501a350.jpg, id=50, 481.8pt x 361.35pt>
-File: img/501a350.jpg Graphic file (type jpg)
- <use img/501a350.jpg>
-Package pdftex.def Info: img/501a350.jpg used on input line 55.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
-
-<img/501a400.jpg, id=51, 481.8pt x 361.35pt>
-File: img/501a400.jpg Graphic file (type jpg)
- <use img/501a400.jpg>
-Package pdftex.def Info: img/501a400.jpg used on input line 61.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
-
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/tabelle5.tex)
-<img/501a.jpg, id=52, 481.8pt x 361.35pt>
-File: img/501a.jpg Graphic file (type jpg)
- <use img/501a.jpg>
-Package pdftex.def Info: img/501a.jpg used on input line 70.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/tabelle3.tex
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) <img/501b.jpg, id=53, 481.8pt x 361.35pt>
-File: img/501b.jpg Graphic file (type jpg)
- <use img/501b.jpg>
-Package pdftex.def Info: img/501b.jpg used on input line 79.
-(pdftex.def)             Requested size: 341.43306pt x 256.0806pt.
- [9] [10 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501a200.jpg> <c:/Users/Mar
-kus/AP1213/V501-2_E-B-Feld/img/501a250.jpg>] [11 <c:/Users/Markus/AP1213/V501-2
-_E-B-Feld/img/501a300.jpg> <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501a350.
-jpg>] [12 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501a400.jpg>]
-
-LaTeX Warning: Reference `tabelle_4' on page 13 undefined on input line 89.
-
-
-LaTeX Warning: Reference `502a250' on page 13 undefined on input line 89.
-
-
-LaTeX Warning: Reference `502a450' on page 13 undefined on input line 89.
-
-[13 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501a.jpg>]
-
-Package amsmath Warning: Foreign command \over;
-(amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 104.
-
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 111.
-
-("C:/Program Files/MiKTeX 2.9/tex/latex/base/ts1cmr.fd"
-File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-) [14 <c:/Users/Markus/AP1213/V501-2_E-B-Feld/img/501b.jpg>] [15]
-(c:/Users/Markus/AP1213/V501-2_E-B-Feld/tabelle4.tex)
-
-LaTeX Warning: File `img/502a250.jpg' not found on input line 122.
-
-
-! Package pdftex.def Error: File `img/502a250.jpg' not found.
-
-See the pdftex.def package documentation for explanation.
+See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.122 ...degraphics[width = 14cm]{img/502a250.jpg}
-                                                  
+l.17 \newline
+             
 ? 
-
-LaTeX Warning: File `img/502a450.jpg' not found on input line 126.
-
-
-! Package pdftex.def Error: File `img/502a450.jpg' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 ...degraphics[width = 14cm]{img/502a450.jpg}
-                                                  
-? 
-
-LaTeX Warning: Float too large for page by 257.45728pt on input line 129.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) (c:/Users/Markus/AP1213/V501-2_E-B-Feld/diskussion_literatur.tex [16])
-Overfull \hbox (3.8129pt too wide) in paragraph at lines 21--76
-\OT1/cmr/m/n/10.95 suchs-an-lei-tung []Ablenkung eines Elektronenstrahls im ele
-ktrischen Feld\ und []Ablenkung
- []
-
-
-Overfull \hbox (1.06798pt too wide) in paragraph at lines 21--76
-\OT1/cmr/m/n/10.95 eines Elektronenstrahls im transversalen Magnetfeld\ der TU 
-Dortmund (Stand 29.10.12)
- []
-
-[17] [18] (c:/Users/Markus/AP1213/V501-2_E-B-Feld/protokoll.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
+)) (c:/Users/Markus/AP1213/V354_Schwingungen/04_diskussion_literatur.tex
+[2]) [3] (c:/Users/Markus/AP1213/V354_Schwingungen/00_protokoll.aux) )
 
 Here is how much of LuaTeX's memory you used:
- 12065 strings out of 495011
+ 12283 strings out of 495011
  100000,319454 words of node,token memory allocated
- 587 words of node memory still in use:
+ 366 words of node memory still in use:
     nodes
-   avail lists: 2:40,3:141,4:1671,5:242,6:2541,7:248,9:337,10:25
- 15131 multiletter control sequences out of 65536+200000
- 49 fonts using 1936935 bytes
- 61i,15n,51p,593b,855s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Markus\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\t
-crm1095.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on protokoll.pdf (18 pages, 683708 bytes).
+   avail lists: 2:18,3:56,4:1363,5:18,6:659,7:155,9:230,10:7
+ 15384 multiletter control sequences out of 65536+200000
+ 51 fonts using 2015791 bytes
+ 61i,14n,51p,283b,1023s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on 00_protokoll.pdf (3 pages, 59671 bytes).
 
-PDF statistics: 140 PDF objects out of 1000 (max. 8388607)
+PDF statistics: 28 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
