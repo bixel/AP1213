@@ -24,6 +24,8 @@ if True:
 
 		energieFaktor = 4 / maxCnl[0]
 		energie = energieFaktor * maxCnl
+		for i in range(0, np.size(p)):
+			print("p = " + str(p[i]) + "\t\tcounts = " + str(counts[i]) + "\tz = " + str(round(zaehlrate[i], 2)) + "\tc = " + str(maxCnl[i]) + "\tE = " + str(round(energie[i], 3)))
 
 		#Zaehlrate
 		fitFunktion = lambda x, m, b: m * x + b
@@ -94,6 +96,9 @@ T = 10
 counts = np.genfromtxt("messung2.txt", unpack = True)
 zaehlrate = counts / T
 
+for i in range(0, np.size(zaehlrate), 1):
+	print(round(zaehlrate[i], 2))
+
 mittelwert = np.sum(zaehlrate) / np.size(zaehlrate)
 varianz = 1. / (np.size(zaehlrate) - 1.) * np.sum((zaehlrate - mittelwert) ** 2)
 
@@ -123,6 +128,7 @@ gaussFunktion = lambda x, A: A / (varianz * np.sqrt(2 * np.pi)) * np.e ** (- .5 
 koeffizienten, unsicherheit = curve_fit(gaussFunktion, balkenNummer, balken, maxfev = 1000)
 
 fig = plt.gcf()
+fig.set_size_inches(12 * .7, 7 * .7)
 
 plt.plot(x, gaussFunktion(x, 1), "b-")
 plt.bar(k + 1, balken / np.sum(balken), color = "r", width = .8)
@@ -144,6 +150,7 @@ for i in kPoisson:
 	poissonBalken = np.append(poissonBalken, [poissonLambda ** i / math.factorial(i) * math.exp(-poissonLambda)])
 
 fig = plt.gcf()
+fig.set_size_inches(12 * .7, 7 * .7)
 
 plt.bar(k + 1, balken / np.sum(balken), color = "r", width = .4)
 plt.bar(kPoisson + .4, poissonBalken, color = "b", width = .4)

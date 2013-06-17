@@ -16,7 +16,7 @@
 	\subsection{Bestimmung der mittleren Reichweite $R_\mathrm{m}$ mit der entsprechenden Energie $E_\mathrm{m}$}
 	\label{subsec:mittlere_reichweite}
 		Zur Ermittlung der mittleren Reichweite $R_\mathrm{m}$ wird die Z"ahlrate $z$ gegen die effektive L"ange $x_\mathrm{eff}$ aufgetragen.
-		Durch die abfallende Flanke (siehe Abbildungen \ref{fig:zaehlrate1} und \ref{fig:zaehlrate2}) wird eine Lineare Ausgleichsgerade der Form $z = mx + b$ gelegt.
+		Durch die abfallende Flanke (siehe Abbildungen \ref{fig:zaehlrate1} und \ref{fig:zaehlrate2}) wird eine Lineare Ausgleichsgerade der Form $z(x) = mx + b$ gelegt.
 		Die mittlere Reichweite $R_\mathrm{m}$ entspricht der x-Koordinate dieser Ausgleichgerade an der Stelle der halben, maximalen Z"ahlrate $z_\mathrm{max}$.
 
 		Es gilt also
@@ -29,11 +29,10 @@
 		Mit Kenntnis der Energie $E_\mathrm{max}$ bei einer bestimmten l"ange $x_\mathrm{eff}$ lassen sich somit alle Energiewerte berechnen.
 
 		Die Messwerte der beiden Messungen sind in den Tabellen \ref{table:messung1-1} und \ref{table:messung1-2} aufgef"uhrt.
-		Die Werte, die zur Ausgleichsrechnung benutzt werden, sind mit "*" markiert.
+		Die Werte, die zur Ausgleichsrechnung benutzt werden, sind farbig \textcolor{red}{rot} markiert.
 
 		\clearpage
-		Die Ausgleichsrechnung der ersten Messreihe bei $x_0 = \SI{2.6}{\centi \meter}$ liefert
-
+		Die Ausgleichsrechnung durch \emph{python} der ersten Messreihe bei $x_{0,2} = \SI{2.6}{\centi \meter}$ liefert
 		% \begin{table}[h!]
 		% 	\begin{center}
 		% 		\begin{tabular}{rclcrcl}
@@ -43,15 +42,153 @@
 		% 		\end{tabular}
 		% 	\end{center}
 		% \end{table}
-
 		\begin{eqnarray*}
-			m = \SI{-1120(8)}{\per \second \per \centi \per \meter} &,& b = \SI{2657(16)}{\per \second} \\
-			\Rightarrow R_\mathrm{m} = \SI{2.13(2)}{\centi \meter} &,& E_\mathrm{m} = \SI{1.65(15)}{\mega \electronvolt} \,.
+			m_1 = \SI{-1120(8)}{\per \second \per \centi \per \meter} &,& b_1 = \SI{2657(16)}{\per \second} \\
+			\Rightarrow R_\mathrm{m,1} = \SI{2.13(2)}{\centi \meter} &,& E_\mathrm{m,1} = \SI{1.65(15)}{\mega \electronvolt} \,,
 		\end{eqnarray*}
 
-		Die Ausgleichsrechnung der ersten Messreihe bei $x_0 = \SI{2.8}{\centi \meter}$ liefert
+		sowie bei $x_{0,1} = \SI{2.8}{\centi \meter}$
+		\begin{eqnarray*}
+			m_2 = \SI{-1115(60)}{\per \second \per \centi \per \meter} &,& b_2 = \SI{2648(129)}{\per \second} \\
+			\Rightarrow R_\mathrm{m,2} = \SI{2.14(16)}{\centi \meter} &,& E_\mathrm{m,2} = \SI{1.67(8)}{\mega \electronvolt} \,.
+		\end{eqnarray*}
+
+		Die Abbildungen \ref{fig:zaehlrate1} und \ref{fig:zaehlrate2} beinhalten die entsprechenden Kurven dieser Messung.
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Messwerte bei Basisl"ange $x_{0,1}$ und einer Messzeit $T = \SI{120}{\second}$ \label{table:messung1-1}}
+				\begin{tabular}{|r|r|r|r|r|}
+					\hline
+						\multicolumn{1}{|c|}{$p [\SI{}{\milli \bar}]$}& 
+						\multicolumn{1}{c|}{Counts} & 
+						\multicolumn{1}{c|}{$z \left[\SI{}{\per \second}\right]$} & 
+						\multicolumn{1}{c|}{Channel $c$} & 
+						\multicolumn{1}{c|}{$E [\SI{}{\mega \electronvolt}]$} \\
+					\hline 
+					\hline
+						\input{data/messung1-1.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Messwerte bei Basisl"ange $x_{0,2}$ und einer Messzeit $T = \SI{120}{\second}$ \label{table:messung1-2}}
+				\begin{tabular}{|r|r|r|r|r|}
+					\hline
+						\multicolumn{1}{|c|}{$p [\SI{}{\milli \bar}]$}& 
+						\multicolumn{1}{c|}{Counts} & 
+						\multicolumn{1}{c|}{$z \left[\SI{}{\per \second}\right]$} & 
+						\multicolumn{1}{c|}{Channel $c$} & 
+						\multicolumn{1}{c|}{$E [\SI{}{\mega \electronvolt}]$} \\
+					\hline 
+					\hline
+						\input{data/messung1-2.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 13cm]{img/zaehlrate1.pdf}
+			\caption{Graph zur Bestimmung der mittleren Reichweite $R_\mathrm{m}$ bei Basisl"ange $x_{0,1}$ \label{fig:zaehlrate1}}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 15cm]{img/zaehlrate2.pdf}
+			\caption{Graph zur Bestimmung der mittleren Reichweite $R_\mathrm{m}$ bei Basisl"ange $x_{0,2}$ \label{fig:zaehlrate2}}
+		\end{figure}
+
+		\clearpage
+
+	\subsection{Energieverlust $-\mathrm{d}E$ pro Weg $\mathrm{d}x$}
+	\label{subsec:energieverlust}
+		Tr"agt man die in Tabellen \ref{table:messung1-1} und \ref{table:messung1-2} aufgef"uhrten Energien $E$ gegen die effektive L"ange $x_\mathrm{eff}$ auf, l"asst sich der Energieverlust $-\mathrm{d}E / \mathrm{d}x$ durch eine lineare Ausgleichsgerade der Form $E(x) = mx + b$ bestimmen.
+		Die Steigung $m$ entspricht hierbei dem Energieverlust $\mathrm{d}E / \mathrm{d}x$.
+
+		Die Ausgleichsrechnung durch \emph{python} liefert
+
+		\begin{equation*}
+			-\frac{\mathrm{d}E}{\mathrm{d}x} = \SI{1.10944(606)}{\mega \electronvolt \per \centi \meter}
+		\end{equation*}
+
+		f"ur die Messung bei der Basisl"ange $x_{0,1}$ und
+
+		\begin{equation*}
+			-\frac{\mathrm{d}E}{\mathrm{d}x} = \SI{1.10938(335)}{\mega \electronvolt \per \centi \meter}
+		\end{equation*}
+
+		f"ur die Messung bei der Basisl"ange $x_{0,1}$.
+
+		Die entsprechenden Graphen sind in Abbildung \ref{fig:energie1} und \ref{fig:energie2} dargestellt.
+		Die zur Ausgleichsrechnung benutzten Messwerte sind in Tabellen \ref{table:messung1-1} und \ref{table:messung1-2} \textcolor{blue}{blau} gekennzeichnet.
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 13cm]{img/energie1.pdf}
+			\caption{Lineare Ausgleichsgerade f"ur Energie $E$ und L"ange $x_\mathrm{eff}$ bei einer Basisl"ange von $x_{0,1}$ \label{fig:energie1}}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 13cm]{img/energie2.pdf}
+			\caption{Lineare Ausgleichsgerade f"ur Energie $E$ und L"ange $x_\mathrm{eff}$ bei einer Basisl"ange von $x_{0,1}$ \label{fig:energie2}}
+		\end{figure}
+
+		\clearpage
+
+	\subsection{Statistik des radioaktiven Zerfalls}
+	\label{subsec:statistik}
+		Tabelle \ref{table:messung2} enth"alt die Z"ahlraten dieser Messung.
+		Die Messwerte sind im Anhang aufgef"uhrt.
+		Es wurde jeweils "uber $T = \SI{10}{\second}$ gemessen.
+		Zur Erstellung eines Histogramms wurde die Gr"o"se $\Delta N$ der H"aufigkeitsbereiche auf
+
+		\begin{equation*}
+			\Delta N = \SI{9.75}{}
+		\end{equation*}
+
+		festgelegt.
+		Hierdurch erh"alt man acht Bereiche, in denen Zerf"alle gemessen werden.
+		Der Erwartungswert $\overline{z}$, sowie die Varianz $\sigma_z$ betragen
 
 		\begin{eqnarray*}
-			m = \SI{-1115(60)}{\per \second \per \centi \per \meter} &,& b = \SI{2648(129)}{\per \second} \\
-			\Rightarrow R_\mathrm{m} = \SI{2.14(16)}{\centi \meter} &,& E_\mathrm{m} = \SI{1.67(8)}{\mega \electronvolt} \,.
+			\overline{z} & = & \SI{506.613}{\per \second} \,, \\
+			\sigma_z & = & \SI{290.672}{\per \second} \,.
 		\end{eqnarray*}
+
+		Die Abbildungen \ref{fig:verteilungGauss} und \ref{fig:verteilungPoisson} beinhalten die Histogramme mitsamt einer Gausskurve, bzw. einer Poissonverteilung.
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Messwerte zur Ermittlung der Statistik des radioaktiven Zerfalls \label{table:messung2}}
+				\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+					\hline
+						\multicolumn{10}{|c|}{$z \left[\SI{}{\per \second}\right]$} \\
+					\hline 
+					\hline
+						\input{data/messung2.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\clearpage
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 14cm]{img/verteilungGauss.pdf}
+			\caption{Statistik des radioaktiven Zerfalls in Gegen"uberstellung zur Gausskurve \label{fig:verteilungGauss}}
+		\end{figure}
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width = 14cm]{img/verteilungPoisson.pdf}
+			\caption{Statistik des radioaktiven Zerfalls in Gegen"uberstellung zur Poissonverteilung \label{fig:verteilungPoisson}}
+		\end{figure}
+
+	\clearpage
