@@ -13,10 +13,89 @@
 	Bei noch h"oheren Frequenzen handelt es sich um Hyperschall.
 	Der Bereich unter $\nu = \SI{16}{\hertz}$ wird als Infraschall bezeichnet.
 
-	Eine eindimensionale Schallwelle $p$, die sich in $x$-Richtung ausbreitet wird beschrieben durch
+	\subsection{Ausbreitung von Schallwellen}
+	\label{subsec:ausbreitung}
 
-	\begin{equation}
-		p(x,t) = p_0 + v_0 Z \cos{(\omega t - kx)} \,.
-	\end{equation}
+		Eine eindimensionale Schallwelle $p$, die sich in $x$-Richtung ausbreitet wird beschrieben durch
 
-	Dabei bezeichnet $p_0$ den Normaldruck, $v_0$ die Schallschnelle und $Z = \rho c$ die akustische Impedanz mit der Dichte $\rho$ und der Schallgeschwindigkeit $c$.
+		\begin{equation}
+			p(x,t) = p_0 + v_0 Z \cos{(\omega t - kx)} \,.
+		\end{equation}
+
+		Dabei bezeichnet $p_0$ den Normaldruck, $v_0$ die Schallschnelle und $Z = \rho c$ die akustische Impedanz mit der Dichte $\rho$ des durchstrahlten Materials und der Schallgeschwindigkeit $c$.
+
+		F"ur die Schallgeschwindigkeit $c_\mathrm{fl}$ in Fl"ussigkeiten und Gasen gilt der einfache Zusammenhang
+
+		\begin{equation}
+			c_\mathrm{fl} = \sqrt{\frac{1}{\kappa \rho}} \,,
+		\end{equation}
+
+		Mit der Kompressibilit"atszahl $\kappa$. \\
+
+		In Festk"orpern ist h"angt die Schallgeschwindgkeit auf kompliziertere Art und Weise von der Beschaffenheit des Materials ab.
+		Auf Grund der inneren Struktur und den daraus resultierenden Schubspannungen kann eine Schallwelle auch transversale Anteile enthalten.
+		Die Schallgeschwindigkeit unterscheidet sich dann f"ur die transversale und die longitudinale Welle.
+		F"ur den Longitudinalanteil der Welle gilt mit dem Elastizit"atsmodul $E$ des Festk"orpers
+
+		\begin{equation}
+			c_\mathrm{fe} = \sqrt{\frac{E}{\rho}} \,.
+		\end{equation}
+
+		
+		\clearpage
+		Auf dem Weg durch ein Material nimmt die Amplitude der Schallwelle exponentiell, abh"angig vom Absorptionskoeffizienten $\alpha$, ab:
+
+		\begin{equation}
+			I(x) \propto e^{\alpha x} \,.
+		\end{equation}
+
+		Wie bei elektromagnetischen Wellen werden Schallwellen an Grenzfl"achen ebenso reflektiert oder transmittiert.
+		Bezeichnen $Z_1$ und $Z_2$ die akustischen Impedanzen der beiteiligten Materialien, gilt f"ur den Reflexionskoeffizienten $R$ und den Transmissionskoeffizienten $T$:
+
+		\begin{eqnarray}
+			R & = & \left(\frac{Z_1 - Z_2}{Z_1 + Z_2}\right)^2 \,, \\
+			T & = & 1 - R \,.
+		\end{eqnarray}
+
+	\subsection{Erzeugung von Ultraschall}
+	\label{subsec:erzeugung}
+		F"ur die Erzeugung von Ultraschallwellen kann der reziproke piezze-elektrischen Effekt genutzt werden.
+		Ein piezzo-elektrischer Kristall, wie zum Beispiel Quarz, besitzt die Eigenschaft, sich unter Einwirkung eines elektrischen Feldes zu verformen.
+		In Umkehrung induziert dieser Kristall bei einer Krafteinwirkung ein elektrisches Feld.
+
+		Wird ein solcher Kristall nun mit einem elektrischen Wechselfeld angeregt, emittiert er je nach Frequenz des Feldes Ultraschall.
+		Bei Resonanz k"onnen damit gro"se Ultraschallamplituden erzeugt werden.
+
+		Umgekehrt kann das Feld, welches der Kristall bei Ultraschalleinstrahlung erzeugt, gemessen werden, sodass er als Sender und Empf"anger dient.
+
+	\subsection{Ultraschallverfahren}
+	\label{subsec:verfahren}
+		Zun"achst werden zwei Verfahren der Ultraschalltechnik vorgestellt.
+		Beide Verfahren nutzen aus, dass Schall an St"orstellen in einem Medium (z.B. Verschmutzungen, Materialfehler) reflektiert und teilweise absorbiert wird.
+
+		\begin{itemize}
+			\item Beim \emph{Durchschallungsverfahren} wird die Probe zwischen eine Sender- und eine Empf"angersonde gespannt.
+			Nachdem der Sender einen Schallimpuls erzeugt, trifft dieser Impuls nach einer gewissen Zeit $t$ auf den Empf"anger.
+			Die Intensit"at des empfangenen Impulses sinkt mit der Gr"o"se der Probe.
+			Zudem wird sie verkleinert, falls der Schallimpuls in der Probe auf eine St"orstelle trifft.
+
+			\item Der Sender dient beim \emph{Impuls-Echo-Verfahren} auch als Empf"anger.
+			Nachdem ein Schallimpuls gesendet wird, wird die Laufzeit $t$ und die Intensit"at des reflektierten Impulses gemessen.
+			Mit Kenntnis der Schallgeschwindigkeit $c$ in der untersuchten Probe l"asst sich der Abstand $s$ der St"orstelle zur Sonde bestimmen:
+
+			\begin{equation}
+				s = \frac{1}{2}ct \,.
+			\end{equation}
+		\end{itemize}
+
+		Die Laufzeitdiagramme, die durch die genannten Ultraschallverfahren aufgenommen werden, lassen sich wiederum auf verschiedene Weise auswerten.
+		In der Medizin gibt es drei unterschiedliche Darstellungsarten:
+
+		\begin{itemize}
+			\item Mit dem Amplituden-Scan (\emph{A-Scan}) wird die Echoammplitude gegen die Laufzeit aufgetragen.
+
+			\item Der Brightness-Scan (\emph{B-Scan}) stellt die Echoamplituden in Farbstufen dar.
+			Durch Bewegung der Sonde kann dadurch ein zweidimensionales Bild erzeugt werden.
+
+			\item Der Time-Motion-Scan (\emph{TM-Scan}) nimmt durch eine schnelle Abtastung der Probe, bzw. des zu untersuchenden K"orperteiles eine zeitliche Bildfolge auf, wodurch sogar Bewegungen innerhalb der Probe sichtbar gemacht werden k"onnen.
+		\end{itemize}
