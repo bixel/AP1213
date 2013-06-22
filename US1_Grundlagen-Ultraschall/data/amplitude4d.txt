@@ -1,0 +1,11 @@
+reset
+set term pdfcairo
+set output "a4d.pdf"
+set key left
+set sample 10000
+set xlabel "t [µs]"
+set ylabel "s [mm]"
+set xrange[14:50]
+h(x) = e*x+f
+fit h(x) "amplitudedurch.dat" u 6:5 via e,f
+plot h(x) title "Ausgleichsgerade", "amplitudedurch.dat" u 6:5 lt 3 title "Messpunkte"

@@ -1,0 +1,10 @@
+reset
+set term pdfcairo
+set output "a1d.pdf"
+set key left
+set sample 10000
+set xlabel "t [µs]"
+set ylabel "s [mm]"
+f(x) = a*x+b
+fit f(x) "amplitudedurch.dat" u 2:1 via a,b
+plot f(x) title "Ausgleichsgerade", "amplitudedurch.dat" u 2:1 lt 3 title "Messpunkte"

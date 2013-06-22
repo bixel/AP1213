@@ -1,0 +1,10 @@
+reset
+set term pdfcairo
+set output "a2e.pdf"
+set key left
+set sample 10000
+set xlabel "t [µs]"
+set ylabel "s [mm]"
+g(x) = c*x+d
+fit g(x) "amplitudeecho.dat" u 4:3 via c,d
+plot g(x) title "Ausgleichsgerade", "amplitudeecho.dat" u 4:3 lt 3 title "Messpunkte"
