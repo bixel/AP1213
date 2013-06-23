@@ -1,16 +1,232 @@
 \section{Auswertung}
 \label{sec:auswertung}
 
+\subsection{Bestimmung der Schallgeschwindigkeit in Acrylglas} % (fold)
+\label{sub:bestimmung_der_schallgeschwindigkeit_in_acrylglas}
 
 \input{amplitude1.tex}
 \input{amplitude2.tex}
 \input{amplitude4.tex}
-\input{loch.tex}
-\input{loch1.tex}
-\input{loch2.tex}
-\input{loch4.tex}
+
+In den Tabellen \ref{a1}, \ref{a2} und \ref{a4} sind die Messergebnisse aufgetragen, die sich beim Puls-Echo und beim Durchschallungs Verfahren ergaben.
+Eine lineare Ausgleichsrechnung der Verfahren mittels $f(x) = m \cdot x + a$ ergibt die gesuchten gr"o"sen. Die Steigung $m$ gibt dabei die Schallgeschwindigkeit $v$ an. Die Verschiebung des Y-Achsenabschnitts gibt eine effektive L"ange des Zylinders an. Diese entspricht der zu durchlaufenden Schicht der Sonde unter der Annahme, dass in dieser die Schallgeschwindigkeit gleich der in Acrylglas ist. Somit ist der Betrag von $a$ gleich $\delta s$, was die zweifache Differenz der effektiven mit der realen L"ange des Zylinders entspricht.
+
+\subsubsection{1 MHz Sonde} % (fold)
+\label{sub:1_mhz_sonde}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 13cm]{img/a1e.pdf}
+	\caption{Bestimmung der Schallgeschwindigkeit von Acrylglas mit dem Puls-Echo Verfahren. Dabei ist die Zeit, welche von der Schallwelle ben"otigt wird um den Zylinder einmal zu durchqueren, gegen die H"ohe des Zylinders aufgetragen.}
+	\label{a1e}
+\end{figure}
+
+In Graphik \ref{a1e} sind die Ergebnisse des Puls-Echo Verfahrens aufgetragen. Es wurde eine lineare Auslgeichsrechnung durchgef"uhrt, welche zu folgenden Ergebnissen f"uhrte:
+
+\begin{eqnarray*}
+	m = v &=& \SI{2.73263 (403)}{\milli\meter\per\micro\per\second}\\
+	|a| = |2 \cdot \delta s| &=& |\SI{-3.01301 (13200)}{\milli\meter}|\\
+	\delta s &=& \SI{1.50651 (6600)}{\milli\meter}
+\end{eqnarray*}
+
+\clearpage
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 13cm]{img/a1d.pdf}
+	\caption{Bestimmung der Schallgeschwindigkeit von Acrylglas mit dem Durchschallungs Verfahren. Dabei ist die Zeit, welche von der Schallwelle ben"otigt wird um den Zylinder einmal zu durchqueren, gegen die H"ohe des Zylinders aufgetragen.}
+	\label{a1d}
+\end{figure}
+
+
+In Graphik \ref{a1d} sind die Ergebnisse des Durchschallungs Verfahrens aufgetragen. Es wurde eine lineare Auslgeichsrechnung durchgef"uhrt, welche zu folgenden Ergebnissen f"uhrte:
+
+\begin{eqnarray*}
+	m = v &=& \SI{2.70968 (646)}{\milli\meter\per\micro\per\second}\\
+	|a| = |2 \cdot \delta s| &=& |\SI{-5.38561 (21880)}{\milli\meter}|\\
+	\delta s &=& \SI{2.69281 (10940)}{\milli\meter}
+\end{eqnarray*}
+
+In Tabelle \ref{r1} sind die wichtigen gr"o"sen noch einmal zusammengefa"st. $\delta t$ gibt ist dabei aus den Mittelwerten von $v$ und $\delta s$ errechnet worden. Dies ist die konstante Laufzeitkorrektur f"ur die $\SI{1}{\mega\hertz}$ Sonde, welche durch die Anpassungsschicht entsteht.
+
 \input{regres1.tex}
+
+\subsubsection{2 MHz Sonde} % (fold)
+\label{sub:1_mhz_sonde}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 13cm]{img/a2e.pdf}
+	\caption{Bestimmung der Schallgeschwindigkeit von Acrylglas mit dem Puls-Echo Verfahren. Dabei ist die Zeit, welche von der Schallwelle ben"otigt wird um den Zylinder einmal zu durchqueren, gegen die H"ohe des Zylinders aufgetragen.}
+	\label{a2e}
+\end{figure}
+
+In Graphik \ref{a2e} sind die Ergebnisse des Puls-Echo Verfahrens aufgetragen. Es wurde eine lineare Auslgeichsrechnung durchgef"uhrt, welche zu folgenden Ergebnissen f"uhrte:
+
+\begin{eqnarray*}
+	m = v &=& \SI{2.72803 (133)}{\milli\meter\per\micro\per\second}\\
+	|a| = |2 \cdot \delta s| &=& |\SI{-1.69098 (4316)}{\milli\meter}|\\
+	\delta s &=& \SI{0.84549 (2158)}{\milli\meter}
+\end{eqnarray*}
+
+\clearpage
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 13cm]{img/a2d.pdf}
+	\caption{Bestimmung der Schallgeschwindigkeit von Acrylglas mit dem Durchschallungs Verfahren. Dabei ist die Zeit, welche von der Schallwelle ben"otigt wird um den Zylinder einmal zu durchqueren, gegen die H"ohe des Zylinders aufgetragen.}
+	\label{a2d}
+\end{figure}
+
+
+In Graphik \ref{a2d} sind die Ergebnisse des Durchschallungs Verfahrens aufgetragen. Es wurde eine lineare Auslgeichsrechnung durchgef"uhrt, welche zu folgenden Ergebnissen f"uhrte:
+
+\begin{eqnarray*}
+	m = v &=& \SI{2.68243 (2163)}{\milli\meter\per\micro\per\second}\\
+	|a| = |2 \cdot \delta s| &=& |\SI{-1.84306 (71260)}{\milli\meter}|\\
+	\delta s &=& \SI{0.92153 (35630)}{\milli\meter}
+\end{eqnarray*}
+
+In Tabelle \ref{r2} sind die wichtigen gr"o"sen noch einmal zusammengefa"st. $\delta t$ gibt ist dabei aus den Mittelwerten von $v$ und $\delta s$ errechnet worden. Dies ist die konstante Laufzeitkorrektur f"ur die $\SI{2}{\mega\hertz}$ Sonde, welche durch die Anpassungsschicht entsteht.
+
 \input{regres2.tex}
+
+\subsubsection{4 MHz Sonde} % (fold)
+\label{sub:1_mhz_sonde}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 13cm]{img/a4e.pdf}
+	\caption{Bestimmung der Schallgeschwindigkeit von Acrylglas mit dem Puls-Echo Verfahren. Dabei ist die Zeit, welche von der Schallwelle ben"otigt wird um den Zylinder einmal zu durchqueren, gegen die H"ohe des Zylinders aufgetragen.}
+	\label{a4e}
+\end{figure}
+
+In Graphik \ref{a4e} sind die Ergebnisse des Puls-Echo Verfahrens aufgetragen. Es wurde eine lineare Auslgeichsrechnung durchgef"uhrt, welche zu folgenden Ergebnissen f"uhrte:
+
+\begin{eqnarray*}
+	m = v &=& \SI{2.73728 (139)}{\milli\meter\per\micro\per\second}\\
+	|a| = |2 \cdot \delta s| &=& |\SI{-1.01035 (4458)}{\milli\meter}|\\
+	\delta s &=& \SI{0.50518 (2229)}{\milli\meter}
+\end{eqnarray*}
+
+\clearpage
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 13cm]{img/a4d.pdf}
+	\caption{Bestimmung der Schallgeschwindigkeit von Acrylglas mit dem Durchschallungs Verfahren. Dabei ist die Zeit, welche von der Schallwelle ben"otigt wird um den Zylinder einmal zu durchqueren, gegen die H"ohe des Zylinders aufgetragen.}
+	\label{a4d}
+\end{figure}
+
+
+In Graphik \ref{a4d} sind die Ergebnisse des Durchschallungs Verfahrens aufgetragen. Es wurde eine lineare Auslgeichsrechnung durchgef"uhrt, welche zu folgenden Ergebnissen f"uhrte:
+
+\begin{eqnarray*}
+	m = v &=& \SI{2.73728 (140)}{\milli\meter\per\micro\per\second}\\
+	|a| = |2 \cdot \delta s| &=& |\SI{-2.51585 (4530)}{\milli\meter}|\\
+	\delta s &=& \SI{1.25793 (2265)}{\milli\meter}
+\end{eqnarray*}
+
+In Tabelle \ref{r4} sind die wichtigen gr"o"sen noch einmal zusammengefa"st. $\delta t$ gibt ist dabei aus den Mittelwerten von $v$ und $\delta s$ errechnet worden. Dies ist die konstante Laufzeitkorrektur f"ur die $\SI{4}{\mega\hertz}$ Sonde, welche durch die Anpassungsschicht entsteht.
+
 \input{regres4.tex}
+
+
+\subsection{Bestimmung der Lochbreite im Acrylglas} % (fold)
+\label{sub:bestimmung_der_lochbreite_im_acrylglas}
+
+\input{loch.tex}
+
+Die H"ohe der gest"orten Probe betr"agt:
+
+\begin{equation*}
+	h = \SI{79.7 (2)}{\milli\meter}
+\end{equation*}
+
+In Tabelle \ref{loch} sind die gemessen Werte zur Bestimmung der Breite der St"orstellen nach \ref{sec:durchfuehrung} Abb. \ref{fig:klotz} in Acrylglas aufgelistet. Es ist zu beachten, dass die Breite der St"orstelle 10 nicht untersucht werden konnte, da diese nur von einer Seite beschallt werden konnte. Zu erkl"aren ist dies, weil diese im Schatten der sehr viel gr"o"seren St"orstelle 11 liegt.
+
+Zur Bestimmung der Breite ist es zun"achst notwendig die Strecke von beiden Seiten zur St"orstelle zu ermitteln.
+Da dies mit Impuls-Echo Verfahren durchgef"uhrt wird, muss die Zeit $t$ halbiert werden. Diese entspricht nun der Zeit, welche zum Erreichen der St"orstelle gebraucht wird.
+Aus den zuvor ermittelten Schallgeschwindigkeiten f"ur die einzelnen Sonden l"asst sich daraus die Strecke nach Gleichung \eqref{s1} berechnen. Nun muss noch die L"ange $\delta s$ abgezogen werden, da diese dem Weg in der Sonde entspricht. Das gleiche wird mit den Ergebnissen auf der R"uckseite durchgef"uhrt. Nun gilt f"ur die Breite der St"orstellen:
+
+\begin{eqnarray*}
+	b &=& h - (d_\mathrm{hin} - d_\mathrm{r"uck})\\
+	\Delta  b &=& = \sqrt{\left(\Delta h \right)^2 + (\Delta s_\mathrm{1})^2 + (\Delta s_\mathrm{2})^2}\\
+	\Delta s_\mathrm{1,2} &=& \sqrt{(\Delta s_\mathrm{eff,1,2})^2 + (\Delta \delta s)^2}\\
+	\Delta s_\mathrm{eff,1,2} &=& \frac{1}{2} t \Delta v
+\end{eqnarray*}
+
+\subsubsection{1 MHz Sonde} % (fold)
+\label{sub:1_mhz_sonde}
+
+\input{loch1.tex}
+
+In Tabelle \ref{loch1} sind die Breiten der St"orstellen, sowie die zur Berechnung ben"otigten Werte aufgelistet. Hierbei konnte besonders gut weiter entfernte St"orstellen und die R"uckwand erkannt werden. Dabei geht jedoch die Sch"arfe verloren.
+
+\clearpage
+\subsubsection{2 MHz Sonde} % (fold)
+\label{sub:1_mhz_sonde}
+
+\input{loch2.tex}
+
+In Tabelle \ref{loch2} sind die Breiten der St"orstellen, sowie die zur Berechnung ben"otigten Werte aufgelistet. Bei diesem Verfahren konnten sowohl nahe als auch weiter entfernte St"orstellen relativ scharf dargestellt werden.
+
+\clearpage
+\subsubsection{4 MHz Sonde} % (fold)
+\label{sub:1_mhz_sonde}
+
+\input{loch4.tex}
+
+In Tabelle \ref{loch4} sind die Breiten der St"orstellen, sowie die zur Berechnung ben"otigten Werte aufgelistet. Weiter entfernte St"orstellen waren nicht mehr gut messbar, doch nahe St"orstellen wurden besonders scharf dargestellt.
+
+\clearpage
+
+\subsection{B-Scan einer gest"orten Probe} % (fold)
+\label{sub:b_scan_einer_gest_orten_probe}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 10.5cm]{img/1MHZ.jpg}
+	\caption{B-Scan der gest"orten Probe mit einer $\SI{1}{\mega\hertz}$ Sonde.}
+	\label{b1}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 10.5cm]{img/2MHZ.jpg}
+	\caption{B-Scan der gest"orten Probe mit einer $\SI{2}{\mega\hertz}$ Sonde.}
+	\label{b2}
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 10.5cm]{img/4MHZ.jpg}
+	\caption{B-Scan der gest"orten Probe mit einer $\SI{4}{\mega\hertz}$ Sonde.}
+	\label{b4}
+\end{figure}
+
+Es ist zu erkennen, dass die Reichweite der Ultraschallwelle mit zunehmender Frequenz abnimmt. Jedoch nimmt auch die Sch"arfe der dargestellten St"orstellen zu. Es kann gesagt werden, dass hohe Frequenzen zwar weniger tief eindringen, doch im nahen Bereich eine sehr gute Aufl"osung erreichen, w"ahrend mit weniger hohen Frequenzen mehr ein gesamt"uberblick erreicht wird, doch keine genauen Aussagen getroffen werden k"onnen.
+
+\subsection{Abmessungen eines Auges} % (fold)
+\label{sub:das_auge}
+
 \input{auge1.tex}
+
+In Tabelle \ref{auge1} sind die Messdaten des Auges aufgelistet.
+
+Die Schallgeschwindigkeiten in der Linse $v_\mathrm{L}$ und dem Rest $v_\mathrm{GK}$ des Auges betr"agt:
+
+\begin{eqnarray*}
+	v_\mathrm{L} = \SI{2.5}{\milli\meter\per\micro\per\second}\\
+	v_\mathrm{GK} = \SI{1.41}{\milli\meter\per\micro\per\second}
+\end{eqnarray*}
+
+Bei dieser Methode muss zun"achst die Laufzeitkorrektur $2 \delta t$ von den gemessenen Zeiten abgezogen werden.
+Um den Abstand zwischen Sonde und Iris zu berechnen, muss nun die neue Zeit durch zwei geteilt werden und diese mit $v_\mathrm{GK}$ multipliziert werden.
+
+Bei den weiteren Abst"anden wird die, f"ur den vorherigen Abstand, gemessene Zeit von der nun ben"otigten Zeit abgezogen. Es bleibt die Zeit "ubrig, welche die Welle ben"otigt um von dem vorherigen Me"spunkt wieder an diesen zur"uckzukehren. Diese Zeit durch zwei geteilt und mit der dort wirkenden Geschwindigkeit multipliziert ergibt nun den gesuchten Abstand.
+
+Die Abst"ande der einzelnen Messbereiche sind in Tabelle \ref{loch2} augelistet.
+\clearpage
 \input{auge2.tex}
+
