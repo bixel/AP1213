@@ -42,7 +42,7 @@ if True:
 		zaehlrateMax = np.max(zaehlrate)
 		a = zaehlrateMax / 2
 
-		xMittel = ((a - b) / m)
+		xMittel = ((a - b) / m) * .1
 		deltaXMittel = np.sqrt((deltaB / m)**2 + ((a-b) * deltaM / m**2)**2)
 		print("m = " + str(m) + "+-" + str(deltaM))
 		print("b = " + str(b) + "+-" + str(deltaB))

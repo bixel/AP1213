@@ -86,7 +86,7 @@ fig = plt.gcf() #Gibt Referent auf die aktuelle Figur - "get current figure"
 fig.set_size_inches(10 * .7, 7 * .7)
 
 plt.grid(which = 'both')
-plt.savefig('../img/dispersion2.pdf')
+plt.savefig('../img/dispersion2falsch.pdf')
 plt.clf()
 
 
@@ -102,10 +102,12 @@ plt.legend(["Messwerte", "Dispersionsgleichung 1"], "lower right")
 fig.set_size_inches(10 * .7, 6.5 * .7)
 
 plt.grid(which = 'both')
-plt.savefig('../img/dispersion1.pdf')
+plt.savefig('../img/dispersion1falsch.pdf')
 plt.clf()
 
 fig = plt.gcf() #Gibt Referent auf die aktuelle Figur - "get current figure"
+
+#nOptimal = nOptimal[::-1]
 
 plt.plot(wellenlaenge, nOptimal, "kx")
 plt.plot(wellenlaengeTheorie, dispersionsgleichungOptimal(wellenlaengeTheorie), "b-")
