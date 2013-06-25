@@ -96,10 +96,10 @@
 		Die Ausgleichsrechnung liefert die Koeffizienten
 
 		\begin{eqnarray*}
-			A_0 & = & \SI{2.217(6)}{} \,, \\
-			A_2 & = & \SI{1.509(103)e-14}{\per \meter \squared} \,, \\
-			A_0' & = & \SI{2.372(9)}{} \,, \\
-			A_2' & = & \SI{3.480(384)e11}{\meter \tothe{2}}\,. \\
+			A_0 & = & \SI{2.372(9)}{} \,, \\
+			A_2 & = & \SI{1.509(103)e-14}{\meter \squared} \,, \\
+			A_0' & = & \SI{2.217(6)}{} \,, \\
+			A_2' & = & \SI{3.480(384)e11}{\per \meter \tothe{2}}\,. \\
 		\end{eqnarray*}
 
 		% Bei den gestrichenen Koeffizienten ist zu bemerken, dass der Fehler die Gr"o"senbegrenzng des Rechnerspeichers f"ur Flie"skommazahlen erreicht hat und daher einen unendlichen Wert liefert.
@@ -109,8 +109,8 @@
 		Um eine Entscheidung f"ur eine der Dispersionsgleichungen zu treffen, werden die Abweichungsquadrate berechnet:
 
 		\begin{eqnarray*}
-			s^2 & = & \SI{0.0106}{} \,, \\
-			s'^2 & = & \SI{5.645e+48}{} \,. \\
+			s^2 & = & \SI{0.03607}{} \,, \\
+			s'^2 & = & \SI{0.03609}{} \,. \\
 		\end{eqnarray*}
 
 		Weil die Abweichung $s'^2$ f"ur Gleichung \eqref{eqn:dispersion2} gr"o"ser, als $s^2$ ist, wird die hier auftretende Dispersion durch Gleichung \eqref{eqn:dispersion1} beschrieben.
@@ -178,7 +178,9 @@
 
 		\begin{eqnarray*}
 			A & = & b \frac{A_2}{\lambda^3} \frac{1}{\sqrt{A_0 + \frac{A_2}{\lambda^2}}} \,, \\
-			\Delta A & = & \left[\left(\frac{b A_2}{2 \lambda^3 \left( A_0 + \frac{A_2}{\lambda^2} \right)^\frac{3}{2}} \right)^2 \Delta A_0^2 + \left(\frac{-2 b \lambda^2 + b A_2}{2 \lambda^5 \left(A_0 + \frac{A_2}{\lambda^2}\right)^\frac{3}{2}}\right)^2\Delta A_2^2\right]^\frac{1}{2} \,.
+			\Delta A & = & \left[\left(\frac{b A_2}{2 \lambda^3 \left( A_0 + \frac{A_2}{\lambda^2} \right)^\frac{3}{2}} \right)^2 \Delta A_0^2 + 
+				\left[\frac{b}{\lambda^3 \left(A_0 + \frac{A_2}{\lambda^2}\right)^\frac{1}{2}} - \frac{A_2 b}{2\lambda^5 \left(A_0 + \frac{A_2}{\lambda^2}\right)^\frac{3}{2}}\right]^2 \Delta A_2^2
+			\right]^\frac{1}{2} \,.
 		\end{eqnarray*}
 
 		\clearpage
@@ -186,8 +188,8 @@
 		Bei einer Basisl"ange $b = \SI{3}{\centi \meter}$ folgt f"ur das Aufl"osungsverm"ogen des hier vorliegenden Prismas bei den Fraunhoferwellenl"angen $\lambda_\mathrm{C} = \SI{656}{\nano \meter}$ und $\lambda_\mathrm{F} = \SI{486}{\nano \meter}$:
 
 		\begin{eqnarray*}
-			A_\mathrm{C} & = & \SI{1068(32)}{} \,, \\
-			A_\mathrm{F} & = & \SI{2611(76)}{} \,. \\
+			A_\mathrm{C} & = & \SI{1068(66)}{} \,, \\
+			A_\mathrm{F} & = & \SI{2611(165)}{} \,. \\
 		\end{eqnarray*}
 
 	\subsection{Berechnung des n"achsten Absorptionspunktes $\lambda_\mathrm{1}$}
