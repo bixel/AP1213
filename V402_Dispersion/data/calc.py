@@ -51,7 +51,7 @@ vorschlagswerte1 = np.array([1., 1.])
 dispersionsgleichung2 = lambda x, A0, A2: A0 + A2 * x
 vorschlagswerte2 = np.array([1., 1.])
 
-nOptimal = nOptimal[::-1]
+#nOptimal = nOptimal[::-1]
 wellenlaenge *= 1e-9
 
 koeffizienten1, varianzen1 = curve_fit(dispersionsgleichung1, wellenlaenge ** 2, nOptimal ** 2, p0 = vorschlagswerte1, maxfev = 1000)
@@ -61,10 +61,10 @@ koeffizienten2, varianzen2 = curve_fit(dispersionsgleichung2, 1 / wellenlaenge *
 print("A0' = " + str(koeffizienten1[0]) + " +- " + str(np.sqrt(varianzen1[0][0])))
 print("A2' = " + str(koeffizienten1[1]) + " +- " + str(np.sqrt(varianzen1[1][1])))
 
-s1quadrat = 1. / (np.size(wellenlaenge) - 2.) * np.sum((nOptimal ** 2 - koeffizienten1[0] - koeffizienten1[1] / wellenlaenge ** 2) ** 2)
+s1quadrat = 1. / (np.size(wellenlaenge) - 2.) * np.sum((nOptimal ** 2 - koeffizienten1[0] - koeffizienten2[1] / wellenlaenge ** 2) ** 2)
 print("s'^2 = " + str(s1quadrat))
 
-s2quadrat = 1. / (np.size(wellenlaenge) - 2.) * np.sum((nOptimal ** 2 - koeffizienten2[0] + koeffizienten2[1] * wellenlaenge ** 2) ** 2)
+s2quadrat = 1. / (np.size(wellenlaenge) - 2.) * np.sum((nOptimal ** 2 - koeffizienten2[0] + koeffizienten1[1] * wellenlaenge ** 2) ** 2)
 print("s^2 = " + str(s2quadrat))
 
 print("A0 = " + str(koeffizienten2[0]) + " +- " + str(np.sqrt(varianzen2[0][0])))
@@ -74,12 +74,12 @@ print("A2 = " + str(koeffizienten2[1]) + " +- " + str(np.sqrt(varianzen2[1][1]))
 #print(varianzen2)
 
 wellenlaengeTheorie = np.arange(np.min(wellenlaenge), np.max(wellenlaenge), 1e-12)
-dispersionsgleichungOptimal = lambda x: koeffizienten2[0] + koeffizienten2[1] / x**2
+dispersionsgleichungOptimal = lambda x: np.sqrt(koeffizienten2[0] + koeffizienten2[1] / x**2)
 
 plt.plot(wellenlaenge ** 2, nOptimal ** 2, "kx")
 plt.plot(wellenlaengeTheorie ** 2, dispersionsgleichung1(wellenlaengeTheorie ** 2, koeffizienten1[0], koeffizienten1[1]), "r-")
 plt.ylabel(r'$n^2$')
-plt.xlabel(r'$\lambda^2 \, [\mathrm{m}^2]$')
+plt.xlabel(r'$1 / \lambda^2 \, [1 / \mathrm{m}^2]$')
 plt.legend(["Messwerte", "Dispersionsgleichung 2"])
 
 fig = plt.gcf() #Gibt Referent auf die aktuelle Figur - "get current figure"
@@ -96,7 +96,7 @@ plt.plot(1 / wellenlaenge ** 2, nOptimal ** 2, "kx")
 plt.plot(1 / wellenlaengeTheorie ** 2, dispersionsgleichung2(1 / wellenlaengeTheorie ** 2, koeffizienten2[0], koeffizienten2[1]), "b-")
 
 plt.ylabel(r'$n^2$')
-plt.xlabel(r'$1 / \lambda^2 \, [1 / \mathrm{m}^2]$')
+plt.xlabel(r'$\lambda^2 \, [\mathrm{m}^2]$')
 plt.legend(["Messwerte", "Dispersionsgleichung 1"], "lower right")
 
 fig.set_size_inches(10 * .7, 6.5 * .7)
@@ -107,12 +107,12 @@ plt.clf()
 
 fig = plt.gcf() #Gibt Referent auf die aktuelle Figur - "get current figure"
 
-plt.plot(wellenlaenge, nOptimal ** 2, "kx")
+plt.plot(wellenlaenge, nOptimal, "kx")
 plt.plot(wellenlaengeTheorie, dispersionsgleichungOptimal(wellenlaengeTheorie), "b-")
 
-plt.ylabel(r'$n^2$')
+plt.ylabel(r'$n$')
 plt.xlabel(r'$\lambda \, [\mathrm{m}]$')
-plt.legend(["Messwerte", "Dispersionsgleichung 1"], "upper right")
+plt.legend(["Messwerte", "Dispersionsgleichung 1"], "lower right")
 
 fig.set_size_inches(10 * .7, 6.5 * .7)
 
@@ -144,9 +144,9 @@ deltaA0 = np.sqrt(varianzen2[0][0])
 A2 = koeffizienten2[1]
 deltaA2 = np.sqrt(varianzen2[1][1])
 aufloesungC = b * (A2 / lambdaC**3) * 1. / np.sqrt(A0 + A2 / lambdaC**2)
-deltaAufloesungC = np.sqrt((b * A2 / (2. * lambdaC**3 * (A0 + A2 / lambdaC**2) ** 1.5))**2 * deltaA0**2 + ((-2 * b * lambdaC**2 + b * A2) / (2. * lambdaC**5 * (A0 + A2 / lambdaC**2) ** 1.5))**2 * deltaA2**2)
+deltaAufloesungC = np.sqrt((b * A2 / (2. * lambdaC**3 * (A0 + A2 / lambdaC**2) ** 1.5))**2 * deltaA0**2 + (b / (lambdaC**3 *np.sqrt(A0 + A2 / lambdaC ** 2)) - b * A2 / (lambdaC ** 5 * np.sqrt(A0 + A2 / lambdaC ** 2) ** 3))**2 * deltaA2**2)
 aufloesungF = b * (A2 / lambdaF**3) * 1. / np.sqrt(A0 + A2 / lambdaF**2)
-deltaAufloesungF = np.sqrt((b * A2 / (2. * lambdaF**3 * (A0 + A2 / lambdaF**2) ** 1.5))**2 * deltaA0**2 + ((-2 * b * lambdaF**2 + b * A2) / (2. * lambdaF**5 * (A0 + A2 / lambdaF**2) ** 1.5))**2 * deltaA2**2)
+deltaAufloesungF = np.sqrt((b * A2 / (2. * lambdaF**3 * (A0 + A2 / lambdaF**2) ** 1.5))**2 * deltaA0**2 + (b / (lambdaF**3 *np.sqrt(A0 + A2 / lambdaF ** 2)) - b * A2 / (lambdaF ** 5 * np.sqrt(A0 + A2 / lambdaF ** 2) ** 3))**2 * deltaA2**2)
 
 print("AC = " + str(round(aufloesungC)) + "+-" + str(round(deltaAufloesungC)))
 print("AF = " + str(round(aufloesungF)) + "+-" + str(round(deltaAufloesungF)))
