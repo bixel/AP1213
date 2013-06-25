@@ -124,11 +124,11 @@ lambdaC = 656e-9
 lambdaD = 589e-9
 lambdaF = 486e-9
 
-c = np.sqrt(dispersionsgleichung2(1/lambdaC ** 2, koeffizienten2[0], koeffizienten2[1]))
+c = np.sqrt(dispersionsgleichung2(1/lambdaC ** 2, koeffizienten1[0], koeffizienten2[1]))
 deltaC = .5 * np.sqrt(1/(koeffizienten2[0] + koeffizienten2[1] / lambdaC**2) * (varianzen2[0][0] + varianzen2[1][1] / lambdaC**4))
-d = np.sqrt(dispersionsgleichung2(1/lambdaD ** 2, koeffizienten2[0], koeffizienten2[1]))
+d = np.sqrt(dispersionsgleichung2(1/lambdaD ** 2, koeffizienten1[0], koeffizienten2[1]))
 deltaD = .5 * np.sqrt(1/(koeffizienten2[0] + koeffizienten2[1] / lambdaD**2) * (varianzen2[0][0] + varianzen2[1][1] / lambdaD**4))
-f = np.sqrt(dispersionsgleichung2(1/lambdaF ** 2, koeffizienten2[0], koeffizienten2[1]))
+f = np.sqrt(dispersionsgleichung2(1/lambdaF ** 2, koeffizienten1[0], koeffizienten2[1]))
 deltaF = .5 * np.sqrt(1/(koeffizienten2[0] + koeffizienten2[1] / lambdaF**2) * (varianzen2[0][0] + varianzen2[1][1] / lambdaF**4))
 print("nC = " + str(round(c, 5)) + "+-" + str(round(deltaC,5)))
 print("nD = " + str(round(d, 5)) + "+-" + str(round(deltaD,5)))
@@ -139,7 +139,7 @@ abbe = (d - 1.) / (f - c)
 print("abbe = " + str(round(abbe, 4)) + "+-" + str(round(np.sqrt((1/(f-c) * deltaD) ** 2 + ((1-d)/((f-c)**2)*deltaF) ** 2 + ((d-1)/((f-c)**2)*deltaC) ** 2),4)))
 
 b = 3e-2
-A0 = koeffizienten2[0]
+A0 = koeffizienten1[0]
 deltaA0 = np.sqrt(varianzen2[0][0])
 A2 = koeffizienten2[1]
 deltaA2 = np.sqrt(varianzen2[1][1])
@@ -153,6 +153,6 @@ print("AF = " + str(round(aufloesungF)) + "+-" + str(round(deltaAufloesungF)))
 
 print(np.sqrt(A2 / (A0 - 1)))
 
-print("lambda1 = " + str(np.sqrt(A2 / (A0 - 1.))) + "+-" + str(.5 * np.sqrt(A2 / (A0 - 1.) ** 3 * deltaA0 ** 2 + 1. / (A2 * (A0 - 1.)) * deltaA2 ** 2)))
+print("lambda1 = " + str(np.sqrt(- A2 / (A0 - 1.))) + "+-" + str(.5 * np.sqrt(- A2 / (A0 - 1.) ** 3 * deltaA0 ** 2 + 1. / (- A2 * (A0 - 1.)) * deltaA2 ** 2)))
 
 
