@@ -53,9 +53,9 @@ print("\tm = " + str(m))
 print("\tMs = " + str(Ms))
 print("\tL = " + str(L) + "\n")
 
-print("\tx [mm]\t\tD [mm]:")
+print("\tx [mm]\t\tD0 [mm]\t\tDm [mm]\t\tD [mm]:")
 for i in range(0, np.size(x), 1):
-	print("\t" + str(x[i]) + "\t\t" + str(D[i]))
+	print("\t" + str(x[i]) + "\t\t" + str(D0[i]) + "\t\t" + str(Dm[i]) + "\t\t" + str(D[i]))
 print("\n")
 
 print("\tcMittel = " + str(round(cMittel, 3)) + "+-" + str(round(cMittelError, 3)))
@@ -79,7 +79,8 @@ plt.xlim([0, (L * 530**2 - 530**3 / 3)])
 plt.ylim([0, 5.0])
 
 plt.grid(which = "both")
-plt.savefig("../img/plot1.pdf")
+plt.savefig("../img/plot1.pdf", bbox_inches = "tight")
+fig.set_size_inches(10 * .7, 6 * .7)
 
 plt.clf()
 
@@ -99,6 +100,7 @@ x *= 10
 x = x[::-1]
 
 r = np.genfromtxt("ausmasse2.txt", unpack = True)
+r /= 2
 rMittel = np.sum(r) / np.size(r)
 rMittelError = np.sqrt(1. / (np.size(r) - 1.) * np.sum((r - rMittel) ** 2))
 
@@ -119,9 +121,9 @@ print("\tm = " + str(m))
 print("\tMs = " + str(Ms))
 print("\tL = " + str(L) + "\n")
 
-print("\tx [mm]\t\tD [mm]:")
+print("\tx [mm]\t\tD0 [mm]\t\tDm [mm]\t\tD [mm]:")
 for i in range(0, np.size(x), 1):
-	print("\t" + str(x[i]) + "\t\t" + str(D[i]))
+	print("\t" + str(x[i]) + "\t\t" + str(D0[i]) + "\t\t" + str(Dm[i]) + "\t\t" + str(D[i]))
 print("\n")
 
 print("\trMittel = " + str(round(rMittel, 3)) + "+-" + str(round(rMittelError, 3)))
@@ -144,13 +146,14 @@ plt.xlim([0, (L * 530**2 - 530**3 / 3)])
 plt.ylim([0, 3.5])
 
 plt.grid(which = "both")
-plt.savefig("../img/plot2.pdf")
+fig.set_size_inches(10 * .7, 6 * .7)
+plt.savefig("../img/plot2.pdf", bbox_inches = "tight")
 
 plt.clf()
 
 
 #############
-# MESSUNG 2 #
+# MESSUNG 3 #
 #############
 m = 1648.3
 Ms = 394.5
@@ -177,7 +180,7 @@ I = np.pi / 4 * rMittel ** 4
 IError = cMittel**3 * np.pi * rMittelError
 
 ELinks = F / (48. * ALinks * I)
-ELinksError = F / (2 * ALinks * I) * np.sqrt((IError / I)**2 + (ALinksError / ALinks)**2)
+ELinksError = F / (48 * ALinks * I) * np.sqrt((IError / I)**2 + (ALinksError / ALinks)**2)
 
 #b = - F / (48 * E * I) * L**3
 koeffizienten2, varianzen2 = curve_fit(lineareGleichung, (4 * xRechts**3 - 12 * L * xRechts**2 + 9 * L**2 * xRechts - L**3), DRechts)
@@ -186,7 +189,7 @@ ARechts = koeffizienten2[0]
 ARechtsError = np.sqrt(varianzen2[0][0])
 
 ERechts = F / (48. * ARechts * I)
-ERechtsError = F / (2 * ARechts * I) * np.sqrt((IError / I)**2 + (ARechtsError / ARechts)**2)
+ERechtsError = F / (48 * ARechts * I) * np.sqrt((IError / I)**2 + (ARechtsError / ARechts)**2)
 
 EMittel = (ERechts + ELinks) / 2
 EMittelError = np.sqrt(ELinksError**2 + ERechtsError**2)
@@ -221,13 +224,13 @@ plt.plot((4 * xTheorieRechts**3 - 12 * L * xTheorieRechts**2 + 9 * L**2 * xTheor
 
 plt.ylabel(r"$D\,[\mathrm{mm}]$")
 plt.xlabel(r"$\chi\,,\,\phi\,\left[\mathrm{mm}^3\right]$")
-plt.legend(["lin. Messwerte", "Ausgleichsgerade"], "upper left")
+plt.legend(["lin. Messwerte re.", "Ausgleichsgerade", "lin. Messwerte li.", "Ausgleichsgerade"], "upper left")
 
 # plt.xlim([0, (L * 530**2 - 530**3 / 3)])
 # plt.ylim([0, 3.5])
 
 plt.grid(which = "both")
-plt.savefig("../img/plot3.pdf")
+plt.savefig("../img/plot3.pdf", bbox_inches = "tight")
 
 plt.clf()
 

@@ -1,5 +1,16 @@
+\clearpage
 \section{Auswertung}
 	\label{sec:auswertung}
+	Im Folgenden werden einige Mittelwerte gebildet.
+	Bei einer Anzahl von $n$ Messwerten $x_\mathrm{i}$ gilt f"ur den Mittelwert $x$:
+	\begin{equation*}
+		x = \frac{1}{n} \sum_{\mathrm{i} = 0}^n {x_\mathrm{i}} \,.
+	\end{equation*}
+
+	Die Varianz $\sigma_x$ dieses Wertes, bzw. dessen Fehler $\Delta x$ betragen
+	\begin{equation*}
+		\Delta x^2 = \sigma_x = \frac{1}{n - 1} \sum_{\mathrm{i} = 0}^n{\left(x_\mathrm{i} - x\right)^2} \,.
+	\end{equation*}
 
 	\subsection{Einseitige Einspannung}
 	\label{subsec:einseitig}
@@ -44,3 +55,139 @@
 			\Rightarrow \quad E & = & \SI{65.947(743)}{\kilo \newton \per \milli \meter \cubed} \,.
 		\end{eqnarray*}
 
+		Anschlie"send wird die Biegung eines zylindrischen Stabes mit Radius $r$ gemessen.
+		F"ur das Fl"achentr"agheitsmoment $I$ gilt dabei
+		\begin{eqnarray*}
+			I & = & \frac{\pi}{4}r^4 \,\\
+			\Delta I & = & \pi r^3 \Delta r \,. \\
+		\end{eqnarray*}
+
+		Der Radius $r$ wird wiederum durch Mittelung "uber zehn Messwerte des Durchmessers bestimmt und es folgt
+		\begin{eqnarray*}
+			r & = & \SI{4.972(3)}{\milli \meter} \, \\
+			\Rightarrow \quad I & = & \SI{7677(16)}{\milli \meter \tothe{4}} \,. 
+		\end{eqnarray*}
+
+		Mit dem Gewicht der Masse $m$ folgt die Kraft $F$:
+		\begin{eqnarray*}
+			m & = & \SI{267.8}{\gram} \, \\
+			\Rightarrow \quad F & = & \SI{2.627}{\newton} \,.
+		\end{eqnarray*}
+
+		Die Ausgleichsrechnung liefert hierf"ur:
+		\begin{eqnarray*}
+			a & = & \SI{3.33(32)e-8}{\milli \meter \tothe{4}} \\
+			\Rightarrow \quad E & = & \SI{82.127(1552)}{\kilo \newton \per \milli \meter \cubed} \,.
+		\end{eqnarray*}
+
+		Tabellen \ref{table:messung1} und \ref{table:ausmasse1} beinhalten die entsprechenden Messdaten.
+		Abbildungen \ref{fig:plot1} und \ref{fig:plot2} zeigen die Ausgleichsgerade und die Messwerte.
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Messdaten f"ur Biegung $D$ der St"abe \label{table:messung1}}
+				\begin{tabular}{|r|r|r|r|r|r|r|}
+					\hline
+						\multicolumn{1}{|c|}{} &
+						\multicolumn{3}{c|}{Quadratisch} &
+						\multicolumn{3}{c|}{Zylindrisch} \\
+					\hline
+						\multicolumn{1}{|c|}{$x\,[\SI{}{\milli \meter}]$} &  
+						\multicolumn{1}{c|}{$D_0\,[\SI{}{\milli \meter}]$} &  
+						\multicolumn{1}{c|}{$D_\mathrm{m}\,[\SI{}{\milli \meter}]$} &  
+						\multicolumn{1}{c|}{$D\,[\SI{}{\milli \meter}]$} &  
+						\multicolumn{1}{c|}{$D_0\,[\SI{}{\milli \meter}]$} &  
+						\multicolumn{1}{c|}{$D_\mathrm{m}\,[\SI{}{\milli \meter}]$} &  
+						\multicolumn{1}{c|}{$D\,[\SI{}{\milli \meter}]$} \\
+					\hline 
+					\hline
+						\input{data/messung1.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Messwerte zur Bestimmung von Breite $b$ und Durchmesser $r$ der St"abe \label{table:ausmasse1}}
+				\begin{tabular}{|r|r||r|r|}
+					\hline
+						\multicolumn{2}{|c|}{$b\,[\SI{}{\milli \meter}]$} & \multicolumn{2}{c|}{$r\,[\SI{}{\milli \meter}]$} \\
+					\hline 
+					\hline
+						\input{data/ausmasse1.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 13cm]{img/plot1.pdf}
+			\caption{Lineare Ausgleichsrechnung f"ur den quadratischen Stab \label{fig:plot1}}
+		\end{figure}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 13cm]{img/plot2.pdf}
+			\caption{Lineare Ausgleichsrechnung f"ur den zylindrischen Stab \label{fig:plot2}}
+		\end{figure}
+
+		\clearpage
+
+	\subsection{Beidseite Auflage}
+	\label{subsec:beidseitig}
+		Der zylindrische Stab aus Kapitel \ref{subsec:einseitig} wird nun beidseitig aufgelegt und das Gewicht der Masse $m$ wird mittig befestigt.
+		Durch zwei Ausgleichsrechnungen der Form $D = a_\mathrm{re}\chi$ f"ur die rechte Seite des Stabes bzw. $D = a_\mathrm{li}\phi$ f"ur die linke Seite des Stabes lassen sich zwei Werte $E_\mathrm{rechts}$ und $E_\mathrm{links}$ der Elastizit"at bestimmen.
+
+		Dabei ist
+		\begin{eqnarray*}
+			\chi & = & 3L^2x - 4x^3 \, \\
+			\phi & = & 4x^3 - 12 Lx^2 + 9L^2x - L^3 \,, \\
+			E_\mathrm{re,li} & = & \frac{F}{48 a_\mathrm{re,li} I} \,.
+		\end{eqnarray*}
+
+		Mit dem Gewicht der Masse $m$ folgt die Kraft $F$:
+		\begin{eqnarray*}
+			m & = & \SI{1648.3}{\gram} \, \\
+			\Rightarrow \quad F & = & \SI{16.17}{\newton} \,.
+		\end{eqnarray*}
+
+		Das Fl"achentr"agheitsmoment $I$ bleibt unver"andert zu Kapitel \ref{subsec:einseitig}.
+		Die Ausgleichsrechnungen liefern dann
+		\begin{eqnarray*}
+			E_\mathrm{re} & = & \SI{73.806(1444)}{\kilo \newton \per \milli \meter \squared} \,, \\
+			E_\mathrm{li} & = & \SI{60.007(2481)}{\kilo \newton \per \milli \meter \squared} \,, \\
+			\overline{E} = \frac{E_\mathrm{re} + E_\mathrm{li}}{2} & = & \SI{66907(2871)}{\kilo \newton \per \milli \meter \squared} \,.
+		\end{eqnarray*}
+
+		Tabelle \ref{table:messung3} und Abbildung \ref{fig:plot3} zeigen die Messdaten, sowie die Ausgleichsgeraden.
+
+		\begin{table}[h!]
+			\begin{center}
+				\caption{Messdaten bei beidseitiger Auflage des zylindrischen Stabes \label{table:messung3}}
+				\begin{tabular}{|r|r|r|r||r|r|r|r|}
+					\hline
+						\multicolumn{1}{|c|}{$x\,[\mathrm{mm}]$} & 
+						\multicolumn{1}{c|}{$D_0\,[\mathrm{mm}]$} & 
+						\multicolumn{1}{c|}{$D_\mathrm{m}\,[\mathrm{mm}]$} &
+						\multicolumn{1}{c||}{$D\,[\mathrm{mm}]$} & 
+						\multicolumn{1}{c|}{$x\,[\mathrm{mm}]$} & 
+						\multicolumn{1}{c|}{$D_0\,[\mathrm{mm}]$} & 
+						\multicolumn{1}{c|}{$D_\mathrm{m}\,[\mathrm{mm}]$} &
+						\multicolumn{1}{c|}{$D\,[\mathrm{mm}]$} \\
+					\hline 
+					\hline
+						\input{data/messung3.tex}
+					\hline 
+				\end{tabular}
+			\end{center}
+		\end{table}
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width = 13cm]{img/plot3.pdf}
+			\caption{Ausgleichsgeraden bei beidseitiger Einspannung \label{fig:plot3}}
+		\end{figure}
+
+		\clearpage
