@@ -1,10 +1,46 @@
 \section{Auswertung}
 	\label{sec:auswertung}
-	Zur Bestimmung des Elastizit"atsmodules der beiden Stangen, wird jeweils eine lineare Ausgleichsrechnung der Form $D(x) = a\chi$ mit Gleichung \eqref{eqn:einseitig} durchgef"uhrt.
-	Hierf"ur wird die Durchbiegung $D$ gegen das Argument
 
-	\begin{equation}
-		\chi = Lx^2 - \frac{x^3}{3}
-	\end{equation}
+	\subsection{Einseitige Einspannung}
+	\label{subsec:einseitig}
+		Zur Bestimmung des Elastizit"atsmodules der beiden Stangen, wird jeweils eine lineare Ausgleichsrechnung der Form $D(x) = a\chi$ mit Gleichung \eqref{eqn:einseitig} durchgef"uhrt.
+		Hierf"ur wird die Durchbiegung $D$ gegen das Argument
+		\begin{equation*}
+			\chi = Lx^2 - \frac{x^3}{3}
+		\end{equation*}
 
-	aufgetragen.
+		aufgetragen. Aus der Steigung $a$ l"asst sich mit Kenntnis der Kraft $F$, die am Stab angreift und des Fl"achentr"agheitsmomentes $I$ die Elastizit"at $E$ bestimmen:
+		\begin{eqnarray*}
+			a & = & \frac{F}{2EI} \\
+			\Leftrightarrow \quad E & = & \frac{F}{2aI} \,.
+		\end{eqnarray*}
+
+		F"ur die Kraft $F$ gilt mit der Erdbeschleunigung $g = \SI{9.81}{\newton \per \kilo \gram}$:
+		\begin{equation*}
+			F = mg
+		\end{equation*}
+
+		Zun"achst wird ein quadratischer Stab mit Breite $b$ gemessen. Hier gilt f"ur das Fl"achentr"agheitsmoment $I$ und den Fehler $\Delta I$:
+		\begin{eqnarray*}
+			I & = & \frac{b^4}{12} \,, \\
+			\Delta I & = & \frac{b^3}{3}\Delta b \,.
+		\end{eqnarray*}
+
+		Die Breite des Stabes wird durch Mittelung "uber zehn Messwerte bestimmt und es folgt:
+		\begin{eqnarray*}
+			b & = & \SI{9.96(1)}{\milli \meter} \, \\
+			\Rightarrow \quad I & = & \SI{820.1(27)}{\milli \meter \tothe{4}} \,. 
+		\end{eqnarray*}
+
+		Mit der Gewichtmasse $m$ folgt die Kraft $F$:
+		\begin{eqnarray*}
+			m & = & \SI{542.5}{\gram} \, \\
+			\Rightarrow \quad F & = & \SI{5.322}{\newton} \,.
+		\end{eqnarray*}
+
+		Die lineare Ausgleichsrechnung liefert dann:
+		\begin{eqnarray*}
+			a & = & \SI{4.916(53)e-08}{\milli \meter \tothe{4}} \\
+			\Rightarrow \quad E & = & \SI{65.947(743)}{\kilo \newton \per \milli \meter \cubed} \,.
+		\end{eqnarray*}
+

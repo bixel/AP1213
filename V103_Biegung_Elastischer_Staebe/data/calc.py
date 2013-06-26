@@ -60,9 +60,10 @@ print("\n")
 
 print("\tcMittel = " + str(round(cMittel, 3)) + "+-" + str(round(cMittelError, 3)))
 
+print("\tF = " + str(round(F, 3)))
 print("\tI = " + str(round(I, 3)) + "+-" + str(round(IError, 3)))
 
-#print("\tA = " + str(A) + "+-" + str(AError))
+print("\tA = " + str(A) + "+-" + str(AError))
 print("\tE = " + str(E) + "+-" + str(EError))
 
 fig = plt.gcf()
@@ -124,8 +125,10 @@ for i in range(0, np.size(x), 1):
 print("\n")
 
 print("\trMittel = " + str(round(rMittel, 3)) + "+-" + str(round(rMittelError, 3)))
+print("\tF = " + str(round(F, 3)))
+print("\tI = " + str(round(I, 3)) + "+-" + str(round(IError, 3)))
 
-#print("\tA = " + str(A) + "+-" + str(AError))
+print("\tA = " + str(A) + "+-" + str(AError))
 print("\tE = " + str(E) + "+-" + str(EError))
 
 fig = plt.gcf()
@@ -199,6 +202,7 @@ for i in range(0, np.size(x), 1):
 print("\n")
 
 print("\trMittel = " + str(round(rMittel, 3)) + "+-" + str(round(rMittelError, 3)))
+print("\tF = " + str(round(F, 3)))
 
 #print("\tA = " + str(A) + "+-" + str(AError))
 print("\tELinks = " + str(ELinks) + "+-" + str(ELinksError))
