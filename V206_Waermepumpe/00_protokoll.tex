@@ -1,0 +1,104 @@
+\documentclass[twoside, openany]{scrartcl}
+	%enthaelt eqnref{}-Operator
+	\usepackage{amsmath}
+
+	%ngerman fur Umlaute, Anf"hrungszeichen, etc.%
+	\usepackage[ngerman]{babel}
+
+	%siunitx fur SI-Einheitesnsystem%
+	\usepackage{siunitx}
+	\sisetup{
+	    locale=DE,
+	    separate-uncertainty=true,
+    	per-mode=fraction
+	}
+
+	%wrapfig fuer schoene umflossene Figuren
+	\usepackage{wrapfig}
+
+	% Damit die Seitenraender nun auch richtig sind :P
+	\usepackage[hmarginratio=3:2]{geometry}
+
+	%zum formatieren von captions
+	\usepackage{caption}
+
+	%graphicx fur Bildeinbindung%
+	\usepackage{graphicx}
+
+	%fuer schoene Farben :)
+	\usepackage{color}
+
+	%UTF-8 encoding
+	%\usepackage[applemac]{inputenc}
+	\usepackage[T1]{fontenc}
+	\usepackage[utf8]{inputenc}
+	\usepackage{lmodern}
+
+	%enthaelt pfeile mit text
+	\usepackage{amssymb}
+
+	%ermoeglicht Hyperlinks - Schein aber KACKE zu sein :D
+	\usepackage{url}
+
+	%damit lualatex formeln richtig darstellt klappt anscheinend auch nicht :P
+	%\usepackage{unicode-math}
+
+	% Vertikal Tabellenzellen verbinden
+	\usepackage{multirow}
+
+	%Texteinzug vor Absatz entfernen%
+	\parindent 0pt
+
+\begin{document}
+	
+	\vspace*{3cm}
+
+	\begin{center}
+		\large
+		TU Dortmund
+	\end{center}
+
+	\begin{center}
+		\Huge
+		V206 - Die W"armepumpe
+	\end{center}
+
+	% \begin{center}
+	% 	\large
+	% 	Korrektur
+	% \end{center}
+
+	\vspace{6cm} % Bei Korrektur nur 5cm foer schoeneres Layout sonst 6cm
+	\begin{center}
+		\begin{minipage}[b]{8cm}
+			\Large
+			Markus Stabrin \\
+			\normalsize
+			markus.stabrin@tu-dortmund.de \\
+
+			\Large
+			Kevin Heinicke\\
+			\normalsize
+			kevin.heinicke@tu-dortmund.de \\
+			\\
+			\\
+
+			Versuchsdatum: 2. Juli 2013 \\
+			\\
+			Abgabedatum: 9. Juli 2013
+		\end{minipage}
+	\end{center}
+
+	\thispagestyle{empty}
+
+	\newpage
+
+	\input{01_theorie_einleitung.tex}
+
+	\input{02_durchfuehrung.tex}
+
+	\input{03_auswertung.tex}
+
+	\input{04_diskussion_literatur.tex}
+
+\end{document}
