@@ -13,8 +13,8 @@ g = 9.81
 
 gleichungEinseitig = lambda x, A: A * (L * x**2 - x**3 / 3)
 gleichungBeidseiig = lambda x, A: A * (3 * L**2 * x - 4 * x**3)
-lineareGleichung = lambda x, a: a * x
-lineareGleichungOffset = lambda x, a: a * x + b
+#lineareGleichung = lambda x, a: a * x
+lineareGleichungOffset = lambda x, a, b: a * x + b
 
 #############
 # MESSUNG 1 #
@@ -34,9 +34,9 @@ xTheorie = np.arange(0, 530, (np.max(x) - np.min(x)) / 1000)
 a, b = np.genfromtxt("ausmasse1.txt", unpack = True)
 c = np.append(a, b)
 cMittel = np.sum(c) / np.size(c)
-cMittelError = np.sqrt(1. / (np.size(c) - 1.) * np.sum((c - cMittel) ** 2))
+cMittelError = np.sqrt(1. / (np.size(c) * (np.size(c) - 1.)) * np.sum((c - cMittel) ** 2))
 
-koeffizienten, varianzen = curve_fit(lineareGleichung, (L * x**2 - x**3 / 3), D)
+koeffizienten, varianzen = curve_fit(lineareGleichungOffset, (L * x**2 - x**3 / 3), D)
 
 A = koeffizienten[0]
 AError = np.sqrt(varianzen[0][0])
@@ -69,7 +69,7 @@ print("\tE = " + str(E) + "+-" + str(EError))
 fig = plt.gcf()
 
 plt.plot((L * x**2 - x**3 / 3), D, "kx")
-plt.plot((L * xTheorie**2 - xTheorie**3 / 3), lineareGleichung((L * xTheorie**2 - xTheorie**3 / 3), koeffizienten[0]), "r-")
+plt.plot((L * xTheorie**2 - xTheorie**3 / 3), lineareGleichungOffset((L * xTheorie**2 - xTheorie**3 / 3), koeffizienten[0], koeffizienten[1]), "r-")
 
 plt.ylabel(r"$D\,[\mathrm{mm}]$")
 plt.xlabel(r"$Lx^2 - \frac{x^3}{3}\,\left[\mathrm{mm}^3\right]$")
@@ -102,9 +102,9 @@ x = x[::-1]
 r = np.genfromtxt("ausmasse2.txt", unpack = True)
 r /= 2
 rMittel = np.sum(r) / np.size(r)
-rMittelError = np.sqrt(1. / (np.size(r) - 1.) * np.sum((r - rMittel) ** 2))
+rMittelError = np.sqrt(1. / (np.size(r) * (np.size(r) - 1.)) * np.sum((r - rMittel) ** 2))
 
-koeffizienten, varianzen = curve_fit(lineareGleichung, (L * x**2 - x**3 / 3), D)
+koeffizienten, varianzen = curve_fit(lineareGleichungOffset, (L * x**2 - x**3 / 3), D)
 
 A = koeffizienten[0]
 AError = np.sqrt(varianzen[0][0])
@@ -136,7 +136,7 @@ print("\tE = " + str(E) + "+-" + str(EError))
 fig = plt.gcf()
 
 plt.plot((L * x**2 - x**3 / 3), D, "kx")
-plt.plot((L * xTheorie**2 - xTheorie**3 / 3), lineareGleichung((L * xTheorie**2 - xTheorie**3 / 3), koeffizienten[0]), "r-")
+plt.plot((L * xTheorie**2 - xTheorie**3 / 3), lineareGleichungOffset((L * xTheorie**2 - xTheorie**3 / 3), koeffizienten[0], koeffizienten[1]), "r-")
 
 plt.ylabel(r"$D\,[\mathrm{mm}]$")
 plt.xlabel(r"$Lx^2 - \frac{x^3}{3}\,\left[\mathrm{mm}^3\right]$")
@@ -170,7 +170,7 @@ xRechts = x[13:26:1]
 xTheorieLinks = np.arange(0, 277.5, .1)
 xTheorieRechts = np.arange(277.5, 555, .1)
 
-koeffizienten1, varianzen1 = curve_fit(lineareGleichung, (3 * L**2 * xLinks - 4 * xLinks**3), DLinks)
+koeffizienten1, varianzen1 = curve_fit(lineareGleichungOffset, (3 * L**2 * xLinks - 4 * xLinks**3), DLinks)
 
 ALinks = koeffizienten1[0]
 ALinksError = np.sqrt(varianzen1[0][0])
@@ -183,7 +183,7 @@ ELinks = F / (48. * ALinks * I)
 ELinksError = F / (48 * ALinks * I) * np.sqrt((IError / I)**2 + (ALinksError / ALinks)**2)
 
 #b = - F / (48 * E * I) * L**3
-koeffizienten2, varianzen2 = curve_fit(lineareGleichung, (4 * xRechts**3 - 12 * L * xRechts**2 + 9 * L**2 * xRechts - L**3), DRechts)
+koeffizienten2, varianzen2 = curve_fit(lineareGleichungOffset, (4 * xRechts**3 - 12 * L * xRechts**2 + 9 * L**2 * xRechts - L**3), DRechts)
 
 ARechts = koeffizienten2[0]
 ARechtsError = np.sqrt(varianzen2[0][0])
@@ -217,10 +217,10 @@ print("\tEMittel = " + str(EMittel) + "+-" + str(EMittelError))
 fig = plt.gcf()
 
 plt.plot((3 * L**2 * xLinks - 4 * xLinks**3), DLinks, "rx")
-plt.plot((3 * L**2 * xTheorieLinks - 4 * xTheorieLinks**3), lineareGleichung((3 * L**2 * xTheorieLinks - 4 * xTheorieLinks**3), koeffizienten1[0]), "r-")
+plt.plot((3 * L**2 * xTheorieLinks - 4 * xTheorieLinks**3), lineareGleichungOffset((3 * L**2 * xTheorieLinks - 4 * xTheorieLinks**3), koeffizienten1[0], koeffizienten1[1]), "r-")
 
 plt.plot((4 * xRechts**3 - 12 * L * xRechts**2 + 9 * L**2 * xRechts - L**3), DRechts, "bx")
-plt.plot((4 * xTheorieRechts**3 - 12 * L * xTheorieRechts**2 + 9 * L**2 * xTheorieRechts - L**3), lineareGleichung((4 * xTheorieRechts**3 - 12 * L * xTheorieRechts**2 + 9 * L**2 * xTheorieRechts - L**3), koeffizienten2[0]), "b-")
+plt.plot((4 * xTheorieRechts**3 - 12 * L * xTheorieRechts**2 + 9 * L**2 * xTheorieRechts - L**3), lineareGleichungOffset((4 * xTheorieRechts**3 - 12 * L * xTheorieRechts**2 + 9 * L**2 * xTheorieRechts - L**3), koeffizienten2[0], koeffizienten2[1]), "b-")
 
 plt.ylabel(r"$D\,[\mathrm{mm}]$")
 plt.xlabel(r"$\chi\,,\,\phi\,\left[\mathrm{mm}^3\right]$")
