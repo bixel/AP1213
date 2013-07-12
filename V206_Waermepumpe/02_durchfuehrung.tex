@@ -3,7 +3,7 @@
 	\begin{wrapfigure}{r}{8cm}
 		\centering
 		\includegraphics[width = 8cm]{img/pumpe.jpeg}
-		\caption{Schemenhafter Aufbau der verwendeten W"armepumpe \label{fig:pumpe}}
+		\caption{Schemenhafter Aufbau der verwendeten W"armepumpe \cite{anleitung} \label{fig:pumpe}}
 	\end{wrapfigure}
 
 	Im Folgenden wird der Aufbau einer W"armepumpe erl"autert.
@@ -41,9 +41,9 @@
 	Beim hier verwendeten Gas handelt es sich um Dichlordifluormethan. \\
 
 	Aus den Messdaten soll dann die reale G"uteziffer $\nu$ bestimmt werden.
-	Mit Hilfe des Differenzenquotienten der Temperatur $T_1$ zur Zeit $t$ l"asst sich $\nu$ durch Ausgleichsrechnung ermitteln. Es gilt
+	Mit Hilfe des Differenzenquotienten der Temperatur $T_1$ zur Zeit $t$ l"asst sich $\nu$ durch eine Ausgleichsrechnung ermitteln. Es gilt
 	\begin{equation}
-		\nu = (m_1 c_\mathrm{W} + m_\mathrm{k} c_\mathrm{k}) \frac{\Delta T_1}{\Delta t} \frac{1}{W} \,,
+		\nu = \frac{\mathrm{d}Q1}{\mathrm{d}t \cdot W} = (m_1 c_\mathrm{W} + m_\mathrm{k} c_\mathrm{k}) \frac{\Delta T_1}{\Delta t} \frac{1}{W} \,, \label{nu_real}
 	\end{equation}
 
 	wobei $m_1 c_\mathrm{W}$ die W"armekapazit"at des Wassers, $M_\mathrm{k} c_\mathrm{k}$ die W"armekapazit"at des Gef"a"ses mit Kupferrohr und $W$ die zeitlich gemittelte Leistung des Kompressors bezeichnet. \\
@@ -51,12 +51,12 @@
 	Anschlie"send wird der Massendurchsatz $\Delta m / \Delta t$ des Transportmediums berechnet.
 	Bei der Verdampfung des Mediums wird pro Zeit und Masse die Verdampfungsw"arme $L$ verbraucht und es gilt
 	\begin{equation}
-		(m_2 c_\mathrm{W} + m_\mathrm{k} c_\mathrm{k}) \frac{\Delta T_2}{\Delta t} = L \frac{\Delta m}{\Delta t} \,.
+		(m_2 c_\mathrm{W} + m_\mathrm{k} c_\mathrm{k}) \frac{\Delta T_2}{\Delta t} = L \frac{\Delta m}{\Delta t} \,. \label{masse_theo}
 	\end{equation}
 
 	Schlie"slich soll die mechanische Kpmpressorleistung $W_\mathrm{m}$ bestimmt werden.
 	Durch Integration des Druckes im Kompressor und Hinzunahme der Poissonschen Gleichung l"asst sich diese Bestimmen.
 	Mit $\kappa$, dem Verh"altnis der Molw"armen $c_\mathrm{p}$ und $c_\mathrm{v}$ sowie $\rho$, der Dichte des Transportmediums gilt
 	\begin{equation}
-		W_\mathrm{m} = \frac{1}{\kappa -1} \left[p_\mathrm{b} \left(\frac{p_\mathrm{a}}{p_\mathrm{b}}\right)^\frac{1}{\kappa} - p_\mathrm{a}\right] \frac{1}{\rho}\frac{\Delta m}{\Delta t} \,.
+		W_\mathrm{m} = \frac{1}{\kappa -1} \left[p_\mathrm{b} \left(\frac{p_\mathrm{a}}{p_\mathrm{b}}\right)^\frac{1}{\kappa} - p_\mathrm{a}\right] \frac{1}{\rho}\frac{\Delta m}{\Delta t} \,. \label{arbeitarbeit}
 	\end{equation}

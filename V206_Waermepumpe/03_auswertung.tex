@@ -1,2 +1,109 @@
 \clearpage
 \section{Auswertung}
+
+\subsection{Fehlerrechnung} % (fold)
+\label{sub:fehlerrechnung}
+
+Folgende Fehlerformeln werden in dieser Auswertung verwendet:
+
+\begin{eqnarray}
+	\Delta T'_\mathrm{1,2} &=& \left((|2t| \Delta a)^2 + (\Delta b)^2\right)^\frac{1}{2}\\
+	\Delta W &=& \left(\frac{1}{n(n-1)}\sum_1^n (x_\mathrm{i}-\bar{x})^2\right)^\frac{1}{2}\\
+	\Delta \nu &=& \left((|1/\bar{W}| \Delta T'_\mathrm{1})^2 + (|T'_\mathrm{1}/\bar{W}^2| \Delta W)^2\right)^\frac{1}{2}\\
+	\Delta T_\mathrm{1,2} &=& \left((|t^2| \Delta a)^2 + (|t| \Delta b)^2 + (\Delta c)^2\right)^\frac{1}{2}\\
+	\Delta \nu_\mathrm{theo} &=& \left(\left(|\frac{2T_\mathrm{1}-T_\mathrm{2}}{(T_\mathrm{1}-T_\mathrm{2})^2}| \Delta T_\mathrm{1}\right)^2 + \left(|\frac{T_\mathrm{1}}{(T_\mathrm{1}-T_\mathrm{2})^2}| \Delta T_\mathrm{2}\right)^2\right)^\frac{1}{2}\\
+	\Delta \frac{\mathrm{d}m}{\mathrm{d}t} &=& \left(\left(|\frac{1}{L}|\Delta T'_\mathrm{2}\right)^2 + \left(|\frac{T'_\mathrm{2}}{L^2}| \Delta L \right)^2\right)^\frac{1}{2}	
+\end{eqnarray}
+
+\subsection{Approximierung der Temperaturkurven} % (fold)
+\label{sub:approximieren_der_temperaturkurven}
+
+\input{daten.tex}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 10cm]{img/fit.pdf}
+	\caption{Darstellung der Temperatur in Abh"angigkeit von der Zeit.}
+	\label{fit}
+\end{figure}
+
+F"ur den fit kamen folgende Funktionen in Frage:
+
+\begin{eqnarray}
+T(t) &=& A t^2 + B t + C \label{T11}\\
+T(t) &=& \frac{A}{1+B t^\alpha}\\
+T(t) &=& \frac{A t^\alpha}{1 + B t^\alpha} + C
+\end{eqnarray}
+
+Es wurde sich f"ur die Funktion \eqref{T11} entschieden, da diese die geringste Abweichung von den Messpunkten zeigte.
+In Tabelle \ref{daten} sind die gemessenen Gr"o"sen aufgelistet. In Graphik \ref{fit} ist die Temperatur in Abh"angigkeit von der Zeit dargestellt.
+Mittels einer nicht linearen Ausgleichsgerade der Form $A t^2 + B t +c$ ergaben sich die Werte aus Tabelle \ref{ergebnisse} f"ur A,B und C.
+
+\input{fitergebnisse.tex}
+
+\subsection{G"uteziffer} % (fold)
+\label{sub:g_uteziffer}
+
+\input{guete.tex}
+
+F"ur den Mittelwert der abgelesenen Arbeit $A$ errechnet sich:
+
+\begin{equation}
+	A = \SI{211.97 (150)}{\watt}
+\end{equation}
+
+$T'_\mathrm{1}$ stellt dabei die Ableitung von $T_\mathrm{1}$ nach $t$ dar.
+F"ur die G"uteziffer ergaben sich die Werte, welche in Tabelle \ref{guete} aufgelistet sind.
+Der Wert f"ur $\nu_\mathrm{theo}$ berechnet sich nach Gleichung \eqref{nu_theo}.
+Der Wert f"ur $\nu$ wurde aus Gleichung \eqref{nu_real} berechnet.
+
+\subsection{Massendurchsatz} % (fold)
+\label{sub:massendurchsatz}
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width = 10cm]{img/masse.pdf}
+	\caption{Graphik zur Bestimmung der Verdampfungsw"arme L aus einer linearen Ausgleichsgerade.}
+	\label{L}
+\end{figure}
+
+\input{masse.tex}
+
+Die Werte zur Bestimmung des Massendurchsatzes sind in Tabelle \ref{masse} dargestellt.
+Die Verdampfungsw"arme L ist aus einer linearen Ausgleichsgeraden errechenbar. Nun l"asst sich durch umstellen der Gleichung \eqref{masse_theo} nach $\mathrm{d}m/\mathrm{d}t$ der Massendurchsatz berechnen.
+
+Es gilt:
+
+\begin{equation}
+	ln(p) = \frac{L}{R}\frac{1}{T}+ B
+\end{equation}
+
+Dabei stellt $R \approx$ 8,31 die ideale Gaskonstante dar.
+
+Die Ausgleichsrechnung mittels $f(x)=m x + b$ ergibt:
+
+\begin{eqnarray}
+	m = \SI{-29.3(18)}{}\\
+	b = \SI{3.04(5)}{}
+\end{eqnarray}
+
+Daraus folgt:
+
+\begin{equation}
+	L = -m \cdot R = \SI{243.61 (1497)}{\joule\per\gram}
+\end{equation}
+
+
+
+\subsection{Mechanische Arbeit des Kompressors} % (fold)
+\label{sub:mechanische_arbeit}
+
+\input{arbeit1.tex}
+
+Die gegebenen Werte zur Bestimmung der mechanischen Arbeit des Kompressors sind in Tabelle \ref{arbeit1} dargestellt \cite{anleitung}. Der Wert f"ur $p_\mathrm{a}$ blieb "uber dem betrachteten Bereich konstant.
+
+Mithilfe der Formel \ref{arbeitarbeit} kann nun die Arbeit errechnet werden. Die Ergebnisse sind in Tabelle \ref{arbeit2} dargestellt.
+
+\input{arbeit2.tex}
+
+\clearpage
